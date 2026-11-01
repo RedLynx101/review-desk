@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import ctypes
 from io import BytesIO
 
 import pypdfium2 as pdfium
@@ -73,6 +74,39 @@ def _pdf_with_script() -> bytes:
         b"4 0 obj<</S/JavaScript/JS(app.alert('should never run'))>>endobj\n"
         b"trailer<</Root 1 0 R>>\n%%EOF\n"
     )
+
+
+def test_ordinary_documents_are_not_reported_as_carrying_active_content():
+    """Compressed streams can spell "/AA" by chance. It happened on a generated receipt."""
+    from review_desk.synth.content import make_document
+    from review_desk.synth.generate import DEFAULT_SEED, render_all
+
+    settings = Settings()
+    for index in range(30):
+        pdf, _ = render_all(make_document("dev", index, DEFAULT_SEED), ("clean",))["clean"]
+        assert inspect_upload(pdf, settings).active_content == (), index
+
+
+def test_active_content_markers_inside_a_stream_do_not_count():
+    buffer = BytesIO()
+    canvas = Canvas(buffer, pageCompression=0)
+    canvas.drawString(72, 720, "/AA /JS /OpenAction written as ordinary text")
+    canvas.showPage()
+    canvas.save()
+    assert inspect_upload(buffer.getvalue(), SETTINGS).active_content == ()
+
+
+def test_an_attachment_is_reported():
+    """PDFium counts these, so it doesn't matter whether the marker is visible in the raw bytes."""
+    import pypdfium2.raw as raw
+
+    document = pdfium.PdfDocument(_pdf())
+    name = ctypes.create_string_buffer("note.txt\0".encode("utf-16-le"))
+    assert raw.FPDFDoc_AddAttachment(document.raw, ctypes.cast(name, raw.FPDF_WIDESTRING))
+    output = BytesIO()
+    document.save(output)
+    document.close()
+    assert "embedded_file" in inspect_upload(output.getvalue(), SETTINGS).active_content
 
 
 def test_active_content_is_detected_and_reported():

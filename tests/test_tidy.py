@@ -138,6 +138,12 @@ def test_a_price_that_only_repeats_the_amount_is_dropped_when_no_quantity_is_pri
     assert row.unit_price is None and row.amount == "21.11"
 
 
+def test_a_price_read_where_the_amount_should_be_is_moved_to_the_amount():
+    doc = document(["Rye rolls, half doz    5.21", "Oat cookie    1.98"])
+    row = complete_row(doc, _row("Rye rolls, half doz", unit_price="5.21", line=1))
+    assert row.unit_price is None and row.amount == "5.21"
+
+
 def test_a_vendor_name_wrapped_onto_a_row_above_is_joined():
     doc = document(["Larkspindle Signal    Invoice", "Repair & Sons Ltd    Date"])
     assert complete_vendor(doc, Cited(text="Repair & Sons Ltd", line=2)).text == "Larkspindle Signal Repair & Sons Ltd"

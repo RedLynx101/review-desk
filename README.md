@@ -5,9 +5,9 @@ extracted against a strict schema, each with a confidence score built from check
 its source highlighted on the page. Low-confidence fields go to a review queue, nothing exports until a
 person approves it, and a hash-chained audit log records what happened.
 
-**Status: under construction.** Milestones 1 and 2 of 5 are done: synthetic test documents and the
-extraction pipeline. The review screen, the audit log and the held-out accuracy report don't exist yet, so
-this README makes no claims about them. No client deployment yet.
+**Status: under construction.** Milestones 1 to 3 of 5 are done: synthetic test documents, the extraction
+pipeline, and the review queue with its audit log. The held-out accuracy report doesn't exist yet, so this README
+makes no claims about held-out accuracy. No client deployment yet.
 
 Built with AI coding agents under Noah Hicks's review.
 
@@ -32,12 +32,59 @@ Built with AI coding agents under Noah Hicks's review.
    printed where the model said, how sure OCR was, whether a matching label sits beside it, and whether the
    numbers add up. [docs/CONFIDENCE.md](docs/CONFIDENCE.md) has the signals and what they can't catch.
 
+## The review desk
+
+```
+.venv/Scripts/python -m review_desk.desk serve                                # uses your model endpoint
+.venv/Scripts/python -m review_desk.desk serve --replay results/runs/dev-first  # no model needed
+.venv/Scripts/python -m review_desk.desk verify                               # recompute the audit chain
+```
+
+Then open http://127.0.0.1:8765. Each document opens with its page beside its fields. Picking a field
+highlights where it's printed and lists the checks behind its score, and flagged values come first. The review
+can be done from the keyboard: `J`/`K` move, `N` jumps to the next value to check, `Enter` accepts, `E` edits,
+`A` approves, `]` goes to the next document, `?` lists the rest.
+
+`--replay` answers from a finished evaluation run instead of calling a model. It matches files by hash, so
+generate the same documents first (`python -m review_desk.synth generate --split dev --count 60`). Scans may
+only match on the same platform and pinned versions, and any file it doesn't know shows the failure screen.
+
+### What the server enforces
+
+These rules live in the server, in [store.py](src/review_desk/desk/store.py), and tests call the API directly to
+check that the screen isn't what's holding them up.
+
+- **Nothing exports until a person approves.** Export is refused before approval, and after any later edit.
+- **An approval covers exact values.** It stores a hash of what was approved. If a value changes any other way,
+  including directly in the database, the hashes disagree, export refuses, and the approval is voided and logged.
+- **Approval waits for the work.** Every flagged value has to be confirmed or corrected, and every failed sum
+  acknowledged. The request also has to name the revision on screen, so nobody approves values they haven't seen.
+
+### The audit log
+
+Every action lands in the same transaction as its event: who, what, when, old and new values. Each event's hash
+covers the one before it, so editing, removing or reordering an event breaks the chain from that point. The newest
+hash is also kept in a separate file, which catches events cut off the end. `verify` recomputes all of it.
+
+The limit: someone who can rewrite both the database and that file can build a new chain from scratch. Keeping the
+newest hash somewhere else closes that, and every export carries the hash at that moment.
+
+### Untrusted files
+
+- PDFs are parsed and rendered in a child process with a time limit, so a hostile file costs one failed
+  document. The server itself only ever serves the images that process wrote.
+- Size and page limits apply. Files are stored under generated ids, so a filename never reaches a path. All
+  document text reaches the screen as text, never as markup, and CSV cells that could run as formulas are neutralized.
+- It listens on localhost and refuses other addresses unless told otherwise, because there's no login. Pages on
+  other sites can't drive it: state-changing requests need a custom header, Host and Origin are checked, and a
+  strict content security policy keeps scripts local. Nothing loads from outside, including fonts.
+
 ## First numbers, on the tuning set
 
 These come from [results/runs/dev-first](results/runs/dev-first/summary.md): `prism-ml/bonsai-27b` (1-bit
-quantization, 8192 context, temperature 0, no page images) on 60 synthetic renderings from the dev split. The
-scoring rules were tuned while looking at these same documents, so expect a held-out run to do worse. **The
-held-out set hasn't been run yet.**
+quantization, 8192 context, temperature 0, no page images) on 60 synthetic renderings from the dev split, scored at
+commit `eb20086`. The scoring rules were tuned while looking at these same documents and have changed a little
+since, so expect a held-out run to do worse. **The held-out set hasn't been run yet.**
 
 | Scan quality | Documents | Printed values right | Printed values OCR could read at all |
 |---|---|---|---|

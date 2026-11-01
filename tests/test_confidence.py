@@ -190,6 +190,19 @@ def test_a_null_quantity_on_a_row_that_prints_one_is_flagged():
     assert _outcome(items[0].cells["quantity"], "absence") == "fail"
 
 
+def test_a_blank_quantity_is_believed_on_a_text_layer_but_not_on_a_scan():
+    """A receipt line that only prints an amount shouldn't send a person to check digital PDFs."""
+    rows = ["Fernwhistle Bakehouse Co.", "Wood screws, box    5.40", "Total    $5.40"]
+    arguments = dict(
+        rows=rows, subtotal={"text": None, "line": None}, tax=[], total={"text": "$5.40", "line": 3}, document_number={"text": None, "line": None},
+        line_items=[{"description": "Wood screws, box", "quantity": None, "unit_price": None, "amount": "5.40", "line": 2}],
+    )
+    _, digital, _ = _assess(**arguments)
+    assert not digital[0].cells["quantity"].needs_review
+    _, scanned, _ = _assess(doc=document(rows, source="ocr", confidence=0.96), **arguments)
+    assert scanned[0].cells["quantity"].needs_review
+
+
 def test_score_is_logistic_of_base_plus_effects_and_never_uses_a_model_opinion():
     signals = [Signal(name="source", outcome="pass", detail="x"), Signal(name="label", outcome="fail", detail="y")]
     score, updated = score_signals("amount", signals, {"base.amount": 2.0, "source.pass": 1.0, "label.fail": -3.0})

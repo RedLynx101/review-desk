@@ -147,10 +147,6 @@ def complete_row(document, row: ItemReading) -> ItemReading:
             times = _QTY_PRICE.match(below.text)
             if times and (quantity is None or price is None or price == row.amount):
                 quantity, price = times[1], times[2]
-        parsed_price, parsed_amount = parse_amount(price), parse_amount(amount)
-        if quantity is None and parsed_price and parsed_amount and parsed_price.value == parsed_amount.value:
-            # With no quantity printed, a "unit price" equal to the amount is the amount read twice.
-            price = None
         if amount is None and numbers:
             parsed_quantity, parsed_price = parse_quantity(quantity), parse_amount(price)
             last_text, last_value = numbers[-1]
@@ -159,6 +155,10 @@ def complete_row(document, row: ItemReading) -> ItemReading:
                     amount = last_text
             elif len(numbers) == 1:
                 amount = last_text
+        parsed_price, parsed_amount = parse_amount(price), parse_amount(amount)
+        if quantity is None and parsed_price and parsed_amount and parsed_price.value == parsed_amount.value:
+            # With no quantity printed, a "unit price" equal to the amount is the amount read twice.
+            price = None
 
     if description != (row.description or ""):
         update["description"] = description

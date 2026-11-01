@@ -8,9 +8,14 @@ each package's own files; the script fails if a pin has no entry or a copyleft l
 | Package | Version | License |
 |---|---|---|
 | annotated-types | 0.8.0 | MIT |
+| anyio | 4.16.0 | MIT |
 | cffi | 2.1.1 | MIT-0 |
 | charset-normalizer | 3.5.2 | MIT |
+| click | 8.5.0 | BSD-3-Clause |
+| colorama | 0.4.6 | BSD-3-Clause |
 | cryptography | 50.0.2 | Apache-2.0 OR BSD-3-Clause |
+| h11 | 0.16.0 | MIT |
+| idna | 3.20 | BSD-3-Clause |
 | numpy | 2.5.4 | BSD-3-Clause, with bundled 0BSD, MIT, Zlib and CC0-1.0 parts |
 | pdfminer.six | 20260107 | MIT |
 | pdfplumber | 0.11.10 | MIT |
@@ -20,17 +25,21 @@ each package's own files; the script fails if a pin has no entry or a copyleft l
 | pydantic_core | 2.50.2 | MIT |
 | pypdfium2 | 5.14.0 | BSD-3-Clause OR Apache-2.0; bundled PDFium build is BSD-3-Clause/Apache-2.0 with permissive parts |
 | reportlab | 5.1.0 | BSD-3-Clause |
+| starlette | 1.10.0 | BSD-3-Clause |
 | typing-inspection | 0.4.4 | MIT |
 | typing_extensions | 4.16.0 | PSF-2.0 |
+| uvicorn | 0.54.0 | BSD-3-Clause |
 
 ## Development dependencies
 
 | Package | Version | License |
 |---|---|---|
-| colorama | 0.4.6 | BSD-3-Clause |
+| greenlet | 3.5.6 | MIT AND PSF-2.0 |
 | iniconfig | 2.3.1 | MIT |
 | packaging | 26.3 | Apache-2.0 OR BSD-2-Clause |
+| playwright | 1.64.1 | Apache-2.0 |
 | pluggy | 1.7.0 | MIT |
+| pyee | 14.0.0 | MIT |
 | Pygments | 2.21.0 | BSD-2-Clause |
 | pytest | 9.2.0 | MIT |
 
@@ -49,5 +58,7 @@ each package's own files; the script fails if a pin has no entry or a copyleft l
 - The model client uses the standard library's `http.client`. HTTP libraries such as httpx pull in
   certifi, which is MPL-2.0, and they read proxy settings and can follow redirects, which this app
   shouldn't do with a document.
+- The server uses Starlette rather than FastAPI. FastAPI adds nothing this app needs, and its docs pages
+  load from a CDN by default, which would break the no-outside-connections rule.
 - The PDFium build bundles permissive third-party parts (FreeType under its FTL option, ICU, libjpeg-turbo,
   OpenJPEG, libpng, zlib and others). Their notices are in the pypdfium2 wheel's `BUILD_LICENSES` folder.

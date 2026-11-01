@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import asyncio
 import json
 
 from review_desk.intake import Intake
@@ -28,6 +29,75 @@ def model_reply(content: str, finish: str = "stop", **message_extra) -> HttpResp
         "usage": {"prompt_tokens": 10, "completion_tokens": 20},
     }
     return HttpResponse(200, json.dumps(payload).encode())
+
+
+class AsgiClient:
+    """Calls an ASGI app directly, with no network. Keeps httpx (and certifi, MPL-2.0) out of the repo."""
+
+    def __init__(self, app, *, host: str = "127.0.0.1:8765"):
+        self.app = app
+        self.host = host
+
+    def request(self, method: str, path: str, *, json_body=None, body: bytes | None = None, headers: dict | None = None, host: str | None = None):
+        query = b""
+        if "?" in path:
+            path, query_text = path.split("?", 1)
+            query = query_text.encode()
+        payload = body if body is not None else (json.dumps(json_body).encode() if json_body is not None else b"")
+        merged = {"host": host or self.host}
+        if method not in ("GET", "HEAD"):
+            merged["x-review-desk"] = "1"
+        merged.update({k.lower(): v for k, v in (headers or {}).items()})
+        scope = {
+            "type": "http", "asgi": {"version": "3.0"}, "http_version": "1.1", "method": method, "scheme": "http", "path": path,
+            "raw_path": path.encode(), "query_string": query, "root_path": "", "server": ("127.0.0.1", 8765), "client": ("127.0.0.1", 50000),
+            "headers": [(k.encode(), str(v).encode()) for k, v in merged.items() if v is not None],
+        }
+        return asyncio.run(self._call(scope, payload))
+
+    async def _call(self, scope, payload):
+        sent_body = False
+        response = AsgiResponse()
+
+        async def receive():
+            nonlocal sent_body
+            if not sent_body:
+                sent_body = True
+                return {"type": "http.request", "body": payload, "more_body": False}
+            await asyncio.sleep(3600)
+            return {"type": "http.disconnect"}
+
+        async def send(message):
+            if message["type"] == "http.response.start":
+                response.status = message["status"]
+                response.headers = {k.decode().lower(): v.decode() for k, v in message.get("headers", [])}
+            elif message["type"] == "http.response.body":
+                response.body += message.get("body", b"")
+
+        await self.app(scope, receive, send)
+        return response
+
+    def get(self, path, **kwargs):
+        return self.request("GET", path, **kwargs)
+
+    def post(self, path, **kwargs):
+        return self.request("POST", path, **kwargs)
+
+    def patch(self, path, **kwargs):
+        return self.request("PATCH", path, **kwargs)
+
+    def delete(self, path, **kwargs):
+        return self.request("DELETE", path, **kwargs)
+
+
+class AsgiResponse:
+    def __init__(self):
+        self.status = 0
+        self.headers: dict = {}
+        self.body = b""
+
+    def json(self):
+        return json.loads(self.body)
 
 
 def document(rows: list[str], *, source: str = "text_layer", confidence: float = 1.0, width: float = 612.0, height: float = 792.0) -> DocumentText:

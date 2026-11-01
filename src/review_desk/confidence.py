@@ -54,6 +54,7 @@ DEFAULT_WEIGHTS: dict[str, float] = {
     "arithmetic.pass": 2.5, "arithmetic.weak": -1.5, "arithmetic.fail": -3.0,
     "column.pass": 2.0, "column.fail": -6.0,
     "absence.pass": 1.0, "absence.weak": -0.5, "absence.fail": -3.0,
+    "absence.pass@item_number": 2.5,
     "position.pass": 0.5, "position.weak": -0.5, "position.fail": -2.0,
     "date_order.pass": 0.5, "date_order.weak": -1.5, "date_order.fail": -3.0,
     "evidence.pass": 0.5, "evidence.weak": -1.0, "evidence.fail": -3.0,
@@ -479,8 +480,10 @@ def _document_type_field(document, reading: ModelReading, weights, threshold) ->
         signal = _signal("evidence", "weak", "The page doesn't settle this by name.")
     match = None
     for candidate in find_text(document, claim, fuzzy_floor=1.1):
-        match = candidate
-        break
+        # "Invoice To" names a party, not the document. A highlight there would mislead.
+        if not re.search(rf"{claim}\s+to\b", candidate.line.text, re.IGNORECASE):
+            match = candidate
+            break
     return _result("document_type", claim, claim, "document_type", [signal], boxes(match) if match else [], weights, threshold)
 
 
@@ -575,7 +578,12 @@ def _item_number_cell(document, name, text, parsed_value, row, amount, arithmeti
             return _result(name, None, None, "item_number", [_signal("absence", "fail", "This row has no amount.")], [], weights, threshold)
         if _row_has_other_numbers(document, row, amount):
             return _result(name, None, None, "item_number", [_signal("absence", "fail", f"Line {line_number} prints a number this row doesn't use.")], [], weights, threshold)
-        return _result(name, None, None, "item_number", [_signal("absence", "pass", "Not printed on this line.")], [], weights, threshold)
+        line = document.line(line_number)
+        if line is not None and document.pages[line.page].source == "text_layer":
+            # A text layer lists everything printed on the row, so a blank really is a blank.
+            return _result(name, None, None, "item_number", [_signal("absence", "pass", "Not printed on this line.")], [], weights, threshold)
+        # OCR can drop a number that's right there, especially beside table rules.
+        return _result(name, None, None, "item_number", [_signal("absence", "weak", "OCR found nothing here, but it can miss numbers on a table row.")], [], weights, threshold)
     if parsed_value is None:
         return _result(name, None, text, "item_number", [_signal("format", "fail", f"\"{text}\" isn't a number.")], [], weights, threshold)
     match, held = _cell_match(document, parsed_value, row, taken, side=side)
