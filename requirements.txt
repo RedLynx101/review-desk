@@ -1,0 +1,11 @@
+# Exact pins for everything the app runs on. Licenses: THIRD_PARTY_LICENSES.md
+cffi==2.1.1
+charset-normalizer==3.5.2
+cryptography==50.0.2
+numpy==2.5.4
+pdfminer.six==20260107
+pdfplumber==0.11.10
+pillow==13.0.0
+pycparser==3.12
+pypdfium2==5.14.0
+reportlab==5.1.0

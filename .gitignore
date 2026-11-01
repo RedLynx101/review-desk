@@ -1,0 +1,38 @@
+# Internal working notes
+HANDOFF.md
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+build/
+dist/
+
+# Generated documents, uploads and local state. Regenerate with `python -m review_desk.synth`.
+data/
+uploads/
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+
+# Test output
+test-results/
+playwright-report/
+.coverage
+htmlcov/
+
+# OS and editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

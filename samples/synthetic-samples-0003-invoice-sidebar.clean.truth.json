@@ -1,0 +1,737 @@
+{
+ "anomalies": [],
+ "base_id": "synthetic-samples-0003-invoice-sidebar",
+ "condition": "clean",
+ "degradation": null,
+ "distractors_present": {
+  "bank_note": true,
+  "cash_and_change": false,
+  "customer_id": false,
+  "deposit_and_balance": true,
+  "order_date": false,
+  "remit_to": false,
+  "ship_to": false
+ },
+ "doc_id": "synthetic-samples-0003-invoice-sidebar.clean",
+ "document_type": "invoice",
+ "fields": {
+  "bill_to_name": {
+   "locations": [
+    {
+     "bbox": [
+      194.0,
+      92.78,
+      344.63,
+      102.28
+     ],
+     "page": 0,
+     "printed": "Imaginary Orchard Holdings"
+    }
+   ],
+   "value": "Imaginary Orchard Holdings"
+  },
+  "currency": {
+   "evidence": "symbol_in_amounts",
+   "locations": [
+    {
+     "bbox": [
+      499.49,
+      365.4,
+      559.28,
+      375.4
+     ],
+     "page": 0,
+     "printed": "2.501,05 \u20ac"
+    }
+   ],
+   "value": "EUR"
+  },
+  "discount": {
+   "locations": [],
+   "value": null
+  },
+  "document_number": {
+   "locations": [
+    {
+     "bbox": [
+      18,
+      160.78,
+      70.88,
+      170.28
+     ],
+     "page": 0,
+     "printed": "00035790"
+    }
+   ],
+   "value": "00035790"
+  },
+  "document_type": {
+   "locations": [
+    {
+     "bbox": [
+      194.0,
+      43.77,
+      236.97,
+      67.77
+     ],
+     "page": 0,
+     "printed": "Bill"
+    }
+   ],
+   "value": "invoice"
+  },
+  "due_date": {
+   "locations": [
+    {
+     "bbox": [
+      18,
+      220.78,
+      78.1,
+      230.28
+     ],
+     "page": 0,
+     "printed": "31.05.2024"
+    }
+   ],
+   "value": "2024-05-31"
+  },
+  "issue_date": {
+   "locations": [
+    {
+     "bbox": [
+      18,
+      190.78,
+      78.1,
+      200.28
+     ],
+     "page": 0,
+     "printed": "01.05.2024"
+    }
+   ],
+   "value": "2024-05-01"
+  },
+  "purchase_order": {
+   "locations": [
+    {
+     "bbox": [
+      18,
+      250.78,
+      57.66,
+      260.28
+     ],
+     "page": 0,
+     "printed": "044345"
+    }
+   ],
+   "value": "044345"
+  },
+  "shipping": {
+   "locations": [],
+   "value": null
+  },
+  "subtotal": {
+   "locations": [
+    {
+     "bbox": [
+      513.32,
+      336.02,
+      559.28,
+      344.52
+     ],
+     "page": 0,
+     "printed": "2.101,72 \u20ac"
+    }
+   ],
+   "value": "2101.72"
+  },
+  "tax": {
+   "locations": [
+    {
+     "bbox": [
+      521.43,
+      351.02,
+      559.28,
+      359.52
+     ],
+     "page": 0,
+     "printed": "399,33 \u20ac"
+    }
+   ],
+   "value": "399.33"
+  },
+  "total": {
+   "locations": [
+    {
+     "bbox": [
+      499.49,
+      365.4,
+      559.28,
+      375.4
+     ],
+     "page": 0,
+     "printed": "2.501,05 \u20ac"
+    }
+   ],
+   "value": "2501.05"
+  },
+  "vendor_name": {
+   "locations": [
+    {
+     "bbox": [
+      18,
+      46.12,
+      144.64,
+      59.12
+     ],
+     "page": 0,
+     "printed": "Mossgrove Paper"
+    },
+    {
+     "bbox": [
+      18,
+      62.12,
+      125.57,
+      75.12
+     ],
+     "page": 0,
+     "printed": "Goods S.A.R.L."
+    }
+   ],
+   "value": "Mossgrove Paper Goods S.A.R.L."
+  }
+ },
+ "generator_version": 1,
+ "index": 3,
+ "layout": "sidebar",
+ "line_items": [
+  {
+   "amount": {
+    "locations": [
+     {
+      "bbox": [
+       534.95,
+       170.02,
+       559.28,
+       178.52
+      ],
+      "page": 0,
+      "printed": "65,65"
+     }
+    ],
+    "value": "65.65"
+   },
+   "description": {
+    "locations": [
+     {
+      "bbox": [
+       196.0,
+       170.02,
+       310.8,
+       178.52
+      ],
+      "page": 0,
+      "printed": "Index tabs, assorted colors"
+     }
+    ],
+    "value": "Index tabs, assorted colors"
+   },
+   "quantity": {
+    "locations": [
+     {
+      "bbox": [
+       426.46,
+       170.02,
+       437.28,
+       178.52
+      ],
+      "page": 0,
+      "printed": "13"
+     }
+    ],
+    "value": "13"
+   },
+   "unit_price": {
+    "locations": [
+     {
+      "bbox": [
+       480.35,
+       170.02,
+       499.28,
+       178.52
+      ],
+      "page": 0,
+      "printed": "5,05"
+     }
+    ],
+    "value": "5.05"
+   }
+  },
+  {
+   "amount": {
+    "locations": [
+     {
+      "bbox": [
+       529.54,
+       187.02,
+       559.28,
+       195.52
+      ],
+      "page": 0,
+      "printed": "261,81"
+     }
+    ],
+    "value": "261.81"
+   },
+   "description": {
+    "locations": [
+     {
+      "bbox": [
+       196.0,
+       187.02,
+       345.71,
+       195.52
+      ],
+      "page": 0,
+      "printed": "Kraft envelopes, 9 x 12, box of 250"
+     }
+    ],
+    "value": "Kraft envelopes, 9 x 12, box of 250"
+   },
+   "quantity": {
+    "locations": [
+     {
+      "bbox": [
+       431.87,
+       187.02,
+       437.28,
+       195.52
+      ],
+      "page": 0,
+      "printed": "9"
+     }
+    ],
+    "value": "9"
+   },
+   "unit_price": {
+    "locations": [
+     {
+      "bbox": [
+       474.95,
+       187.02,
+       499.28,
+       195.52
+      ],
+      "page": 0,
+      "printed": "29,09"
+     }
+    ],
+    "value": "29.09"
+   }
+  },
+  {
+   "amount": {
+    "locations": [
+     {
+      "bbox": [
+       529.54,
+       204.02,
+       559.28,
+       212.52
+      ],
+      "page": 0,
+      "printed": "820,80"
+     }
+    ],
+    "value": "820.80"
+   },
+   "description": {
+    "locations": [
+     {
+      "bbox": [
+       196.0,
+       204.02,
+       375.33,
+       212.52
+      ],
+      "page": 0,
+      "printed": "Custom letterhead printing, two color, per"
+     },
+     {
+      "bbox": [
+       196.0,
+       214.52,
+       235.73,
+       223.02
+      ],
+      "page": 0,
+      "printed": "thousand"
+     }
+    ],
+    "value": "Custom letterhead printing, two color, per thousand"
+   },
+   "quantity": {
+    "locations": [
+     {
+      "bbox": [
+       431.87,
+       204.02,
+       437.28,
+       212.52
+      ],
+      "page": 0,
+      "printed": "4"
+     }
+    ],
+    "value": "4"
+   },
+   "unit_price": {
+    "locations": [
+     {
+      "bbox": [
+       469.54,
+       204.02,
+       499.28,
+       212.52
+      ],
+      "page": 0,
+      "printed": "205,20"
+     }
+    ],
+    "value": "205.20"
+   }
+  },
+  {
+   "amount": {
+    "locations": [
+     {
+      "bbox": [
+       529.54,
+       231.52,
+       559.28,
+       240.02
+      ],
+      "page": 0,
+      "printed": "451,47"
+     }
+    ],
+    "value": "451.47"
+   },
+   "description": {
+    "locations": [
+     {
+      "bbox": [
+       196.0,
+       231.52,
+       375.33,
+       240.02
+      ],
+      "page": 0,
+      "printed": "Custom letterhead printing, two color, per"
+     },
+     {
+      "bbox": [
+       196.0,
+       242.02,
+       264.07,
+       250.52
+      ],
+      "page": 0,
+      "printed": "thousand (lot 2)"
+     }
+    ],
+    "value": "Custom letterhead printing, two color, per thousand (lot 2)"
+   },
+   "quantity": {
+    "locations": [
+     {
+      "bbox": [
+       431.87,
+       231.52,
+       437.28,
+       240.02
+      ],
+      "page": 0,
+      "printed": "3"
+     }
+    ],
+    "value": "3"
+   },
+   "unit_price": {
+    "locations": [
+     {
+      "bbox": [
+       469.54,
+       231.52,
+       499.28,
+       240.02
+      ],
+      "page": 0,
+      "printed": "150,49"
+     }
+    ],
+    "value": "150.49"
+   }
+  },
+  {
+   "amount": {
+    "locations": [
+     {
+      "bbox": [
+       529.54,
+       259.02,
+       559.28,
+       267.52
+      ],
+      "page": 0,
+      "printed": "130,16"
+     }
+    ],
+    "value": "130.16"
+   },
+   "description": {
+    "locations": [
+     {
+      "bbox": [
+       196.0,
+       259.02,
+       350.54,
+       267.52
+      ],
+      "page": 0,
+      "printed": "Ledger book, 300 pages, hardbound"
+     }
+    ],
+    "value": "Ledger book, 300 pages, hardbound"
+   },
+   "quantity": {
+    "locations": [
+     {
+      "bbox": [
+       431.87,
+       259.02,
+       437.28,
+       267.52
+      ],
+      "page": 0,
+      "printed": "8"
+     }
+    ],
+    "value": "8"
+   },
+   "unit_price": {
+    "locations": [
+     {
+      "bbox": [
+       474.95,
+       259.02,
+       499.28,
+       267.52
+      ],
+      "page": 0,
+      "printed": "16,27"
+     }
+    ],
+    "value": "16.27"
+   }
+  },
+  {
+   "amount": {
+    "locations": [
+     {
+      "bbox": [
+       529.54,
+       276.02,
+       559.28,
+       284.52
+      ],
+      "page": 0,
+      "printed": "186,11"
+     }
+    ],
+    "value": "186.11"
+   },
+   "description": {
+    "locations": [
+     {
+      "bbox": [
+       196.0,
+       276.02,
+       339.14,
+       284.52
+      ],
+      "page": 0,
+      "printed": "Index tabs, assorted colors (lot 2)"
+     }
+    ],
+    "value": "Index tabs, assorted colors (lot 2)"
+   },
+   "quantity": {
+    "locations": [
+     {
+      "bbox": [
+       426.46,
+       276.02,
+       437.28,
+       284.52
+      ],
+      "page": 0,
+      "printed": "37"
+     }
+    ],
+    "value": "37"
+   },
+   "unit_price": {
+    "locations": [
+     {
+      "bbox": [
+       480.35,
+       276.02,
+       499.28,
+       284.52
+      ],
+      "page": 0,
+      "printed": "5,03"
+     }
+    ],
+    "value": "5.03"
+   }
+  },
+  {
+   "amount": {
+    "locations": [
+     {
+      "bbox": [
+       534.95,
+       293.02,
+       559.28,
+       301.52
+      ],
+      "page": 0,
+      "printed": "40,42"
+     }
+    ],
+    "value": "40.42"
+   },
+   "description": {
+    "locations": [
+     {
+      "bbox": [
+       196.0,
+       293.02,
+       296.04,
+       301.52
+      ],
+      "page": 0,
+      "printed": "Pallet delivery handling"
+     }
+    ],
+    "value": "Pallet delivery handling"
+   },
+   "quantity": {
+    "locations": [
+     {
+      "bbox": [
+       431.87,
+       293.02,
+       437.28,
+       301.52
+      ],
+      "page": 0,
+      "printed": "1"
+     }
+    ],
+    "value": "1"
+   },
+   "unit_price": {
+    "locations": [
+     {
+      "bbox": [
+       474.95,
+       293.02,
+       499.28,
+       301.52
+      ],
+      "page": 0,
+      "printed": "40,42"
+     }
+    ],
+    "value": "40.42"
+   }
+  },
+  {
+   "amount": {
+    "locations": [
+     {
+      "bbox": [
+       529.54,
+       310.02,
+       559.28,
+       318.52
+      ],
+      "page": 0,
+      "printed": "145,30"
+     }
+    ],
+    "value": "145.30"
+   },
+   "description": {
+    "locations": [
+     {
+      "bbox": [
+       196.0,
+       310.02,
+       324.38,
+       318.52
+      ],
+      "page": 0,
+      "printed": "Pallet delivery handling (lot 2)"
+     }
+    ],
+    "value": "Pallet delivery handling (lot 2)"
+   },
+   "quantity": {
+    "locations": [
+     {
+      "bbox": [
+       431.87,
+       310.02,
+       437.28,
+       318.52
+      ],
+      "page": 0,
+      "printed": "2"
+     }
+    ],
+    "value": "2"
+   },
+   "unit_price": {
+    "locations": [
+     {
+      "bbox": [
+       474.95,
+       310.02,
+       499.28,
+       318.52
+      ],
+      "page": 0,
+      "printed": "72,65"
+     }
+    ],
+    "value": "72.65"
+   }
+  }
+ ],
+ "locale": "eu",
+ "notice": "SYNTHETIC. Invented test document with known answers. Not a real invoice or receipt.",
+ "page_count": 1,
+ "page_sizes": [
+  [
+   595.28,
+   841.89
+  ]
+ ],
+ "seed": "1032032911118813405",
+ "split": "samples",
+ "synthetic": true,
+ "tax_printed_as_separate_lines": false
+}

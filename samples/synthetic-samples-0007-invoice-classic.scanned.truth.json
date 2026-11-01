@@ -1,0 +1,546 @@
+{
+ "anomalies": [],
+ "base_id": "synthetic-samples-0007-invoice-classic",
+ "condition": "scanned",
+ "degradation": {
+  "bed_gray": 230,
+  "bed_points": 0,
+  "blur_radius": 0.338,
+  "brightness": -2.1,
+  "contrast": 0.952,
+  "dpi": 199,
+  "grayscale": false,
+  "jpeg_quality": 79,
+  "noise_sigma": 3.97,
+  "severity": "light",
+  "shadow": 0.0,
+  "skew_degrees": 0.131,
+  "speckle_fraction": 0.0
+ },
+ "distractors_present": {
+  "bank_note": false,
+  "cash_and_change": false,
+  "customer_id": false,
+  "deposit_and_balance": false,
+  "order_date": false,
+  "remit_to": false,
+  "ship_to": true
+ },
+ "doc_id": "synthetic-samples-0007-invoice-classic.scanned",
+ "document_type": "invoice",
+ "fields": {
+  "bill_to_name": {
+   "locations": [
+    {
+     "bbox": [
+      49.64,
+      170.73,
+      124.34,
+      179.27
+     ],
+     "page": 0,
+     "printed": "Fictitia Sampleton"
+    }
+   ],
+   "value": "Fictitia Sampleton"
+  },
+  "currency": {
+   "evidence": "symbol_in_amounts",
+   "locations": [
+    {
+     "bbox": [
+      500.4,
+      396.76,
+      542.42,
+      406.11
+     ],
+     "page": 0,
+     "printed": "\u00a31,381.97"
+    }
+   ],
+   "value": "GBP"
+  },
+  "discount": {
+   "locations": [
+    {
+     "bbox": [
+      510.23,
+      365.21,
+      542.5,
+      373.38
+     ],
+     "page": 0,
+     "printed": "-\u00a3127.96"
+    }
+   ],
+   "value": "127.96"
+  },
+  "document_number": {
+   "locations": [
+    {
+     "bbox": [
+      515.13,
+      81.07,
+      549.14,
+      89.24
+     ],
+     "page": 0,
+     "printed": "PV47584"
+    }
+   ],
+   "value": "PV47584"
+  },
+  "document_type": {
+   "locations": [
+    {
+     "bbox": [
+      452.61,
+      50.2,
+      549.21,
+      69.81
+     ],
+     "page": 0,
+     "printed": "INVOICE"
+    }
+   ],
+   "value": "invoice"
+  },
+  "due_date": {
+   "locations": [
+    {
+     "bbox": [
+      501.07,
+      107.04,
+      549.09,
+      115.24
+     ],
+     "page": 0,
+     "printed": "21 May 2025"
+    }
+   ],
+   "value": "2025-05-21"
+  },
+  "issue_date": {
+   "locations": [
+    {
+     "bbox": [
+      501.1,
+      94.04,
+      549.11,
+      102.24
+     ],
+     "page": 0,
+     "printed": "06 May 2025"
+    }
+   ],
+   "value": "2025-05-06"
+  },
+  "purchase_order": {
+   "locations": [
+    {
+     "bbox": [
+      512.04,
+      120.06,
+      549.06,
+      128.24
+     ],
+     "page": 0,
+     "printed": "PO-51872"
+    }
+   ],
+   "value": "PO-51872"
+  },
+  "shipping": {
+   "locations": [],
+   "value": null
+  },
+  "subtotal": {
+   "locations": [
+    {
+     "bbox": [
+      506.51,
+      349.2,
+      542.53,
+      357.38
+     ],
+     "page": 0,
+     "printed": "\u00a31,279.60"
+    }
+   ],
+   "value": "1279.60"
+  },
+  "tax": {
+   "locations": [
+    {
+     "bbox": [
+      513.19,
+      381.21,
+      542.46,
+      389.38
+     ],
+     "page": 0,
+     "printed": "\u00a3230.33"
+    }
+   ],
+   "value": "230.33"
+  },
+  "total": {
+   "locations": [
+    {
+     "bbox": [
+      500.4,
+      396.76,
+      542.42,
+      406.11
+     ],
+     "page": 0,
+     "printed": "\u00a31,381.97"
+    }
+   ],
+   "value": "1381.97"
+  },
+  "vendor_name": {
+   "locations": [
+    {
+     "bbox": [
+      49.9,
+      50.01,
+      237.87,
+      63.66
+     ],
+     "page": 0,
+     "printed": "Puddlefern Sign Painters Ltd"
+    }
+   ],
+   "value": "Puddlefern Sign Painters Ltd"
+  }
+ },
+ "generator_version": 1,
+ "index": 7,
+ "layout": "classic",
+ "line_items": [
+  {
+   "amount": {
+    "locations": [
+     {
+      "bbox": [
+       517.98,
+       252.22,
+       542.75,
+       260.38
+      ],
+      "page": 0,
+      "printed": "121.57"
+     }
+    ],
+    "value": "121.57"
+   },
+   "description": {
+    "locations": [
+     {
+      "bbox": [
+       55.46,
+       251.17,
+       141.21,
+       259.46
+      ],
+      "page": 0,
+      "printed": "Removal of old signage"
+     }
+    ],
+    "value": "Removal of old signage"
+   },
+   "quantity": {
+    "locations": [
+     {
+      "bbox": [
+       394.24,
+       251.94,
+       398.75,
+       260.05
+      ],
+      "page": 0,
+      "printed": "1"
+     }
+    ],
+    "value": "1"
+   },
+   "unit_price": {
+    "locations": [
+     {
+      "bbox": [
+       447.99,
+       252.06,
+       472.75,
+       260.22
+      ],
+      "page": 0,
+      "printed": "121.57"
+     }
+    ],
+    "value": "121.57"
+   }
+  },
+  {
+   "amount": {
+    "locations": [
+     {
+      "bbox": [
+       517.94,
+       270.22,
+       542.71,
+       278.38
+      ],
+      "page": 0,
+      "printed": "106.98"
+     }
+    ],
+    "value": "106.98"
+   },
+   "description": {
+    "locations": [
+     {
+      "bbox": [
+       55.41,
+       269.17,
+       114.17,
+       277.4
+      ],
+      "page": 0,
+      "printed": "Design proofing"
+     }
+    ],
+    "value": "Design proofing"
+   },
+   "quantity": {
+    "locations": [
+     {
+      "bbox": [
+       387.44,
+       269.93,
+       398.71,
+       278.05
+      ],
+      "page": 0,
+      "printed": "1.5"
+     }
+    ],
+    "value": "1.5"
+   },
+   "unit_price": {
+    "locations": [
+     {
+      "bbox": [
+       452.44,
+       270.07,
+       472.71,
+       278.22
+      ],
+      "page": 0,
+      "printed": "71.32"
+     }
+    ],
+    "value": "71.32"
+   }
+  },
+  {
+   "amount": {
+    "locations": [
+     {
+      "bbox": [
+       517.9,
+       288.22,
+       542.67,
+       296.38
+      ],
+      "page": 0,
+      "printed": "196.90"
+     }
+    ],
+    "value": "196.90"
+   },
+   "description": {
+    "locations": [
+     {
+      "bbox": [
+       55.37,
+       287.17,
+       138.63,
+       295.46
+      ],
+      "page": 0,
+      "printed": "Design proofing (lot 2)"
+     }
+    ],
+    "value": "Design proofing (lot 2)"
+   },
+   "quantity": {
+    "locations": [
+     {
+      "bbox": [
+       382.9,
+       287.92,
+       398.67,
+       296.05
+      ],
+      "page": 0,
+      "printed": "4.25"
+     }
+    ],
+    "value": "4.25"
+   },
+   "unit_price": {
+    "locations": [
+     {
+      "bbox": [
+       452.4,
+       288.07,
+       472.67,
+       296.22
+      ],
+      "page": 0,
+      "printed": "46.33"
+     }
+    ],
+    "value": "46.33"
+   }
+  },
+  {
+   "amount": {
+    "locations": [
+     {
+      "bbox": [
+       517.86,
+       306.22,
+       542.63,
+       314.38
+      ],
+      "page": 0,
+      "printed": "235.70"
+     }
+    ],
+    "value": "235.70"
+   },
+   "description": {
+    "locations": [
+     {
+      "bbox": [
+       55.33,
+       305.17,
+       138.59,
+       313.46
+      ],
+      "page": 0,
+      "printed": "Design proofing (lot 3)"
+     }
+    ],
+    "value": "Design proofing (lot 3)"
+   },
+   "quantity": {
+    "locations": [
+     {
+      "bbox": [
+       382.86,
+       305.92,
+       398.63,
+       314.05
+      ],
+      "page": 0,
+      "printed": "4.75"
+     }
+    ],
+    "value": "4.75"
+   },
+   "unit_price": {
+    "locations": [
+     {
+      "bbox": [
+       452.36,
+       306.07,
+       472.63,
+       314.22
+      ],
+      "page": 0,
+      "printed": "49.62"
+     }
+    ],
+    "value": "49.62"
+   }
+  },
+  {
+   "amount": {
+    "locations": [
+     {
+      "bbox": [
+       517.82,
+       324.22,
+       542.59,
+       332.38
+      ],
+      "page": 0,
+      "printed": "618.45"
+     }
+    ],
+    "value": "618.45"
+   },
+   "description": {
+    "locations": [
+     {
+      "bbox": [
+       55.29,
+       323.17,
+       140.55,
+       331.46
+      ],
+      "page": 0,
+      "printed": "Vinyl banner, 3 ft x 8 ft"
+     }
+    ],
+    "value": "Vinyl banner, 3 ft x 8 ft"
+   },
+   "quantity": {
+    "locations": [
+     {
+      "bbox": [
+       394.07,
+       323.94,
+       398.59,
+       332.05
+      ],
+      "page": 0,
+      "printed": "5"
+     }
+    ],
+    "value": "5"
+   },
+   "unit_price": {
+    "locations": [
+     {
+      "bbox": [
+       447.82,
+       324.06,
+       472.59,
+       332.22
+      ],
+      "page": 0,
+      "printed": "123.69"
+     }
+    ],
+    "value": "123.69"
+   }
+  }
+ ],
+ "locale": "gb",
+ "notice": "SYNTHETIC. Invented test document with known answers. Not a real invoice or receipt.",
+ "page_count": 1,
+ "page_sizes": [
+  [
+   597.71,
+   843.38
+  ]
+ ],
+ "seed": "2784997474819541467",
+ "split": "samples",
+ "synthetic": true,
+ "tax_printed_as_separate_lines": false
+}

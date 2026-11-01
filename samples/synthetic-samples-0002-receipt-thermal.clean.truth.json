@@ -1,0 +1,467 @@
+{
+ "anomalies": [],
+ "base_id": "synthetic-samples-0002-receipt-thermal",
+ "condition": "clean",
+ "degradation": null,
+ "distractors_present": {
+  "bank_note": false,
+  "cash_and_change": true,
+  "customer_id": false,
+  "deposit_and_balance": false,
+  "order_date": false,
+  "remit_to": false,
+  "ship_to": false
+ },
+ "doc_id": "synthetic-samples-0002-receipt-thermal.clean",
+ "document_type": "receipt",
+ "fields": {
+  "bill_to_name": {
+   "locations": [],
+   "value": null
+  },
+  "currency": {
+   "evidence": "printed_note",
+   "locations": [
+    {
+     "bbox": [
+      63.0,
+      287.28,
+      153.0,
+      293.18
+     ],
+     "page": 0,
+     "printed": "Amounts shown in GBP"
+    }
+   ],
+   "value": "GBP"
+  },
+  "discount": {
+   "locations": [],
+   "value": null
+  },
+  "document_number": {
+   "locations": [
+    {
+     "bbox": [
+      40.6,
+      91.15,
+      91.6,
+      97.83
+     ],
+     "page": 0,
+     "printed": "TXN0013633"
+    }
+   ],
+   "value": "TXN0013633"
+  },
+  "document_type": {
+   "locations": [
+    {
+     "bbox": [
+      10.0,
+      70.18,
+      76.3,
+      76.71
+     ],
+     "page": 0,
+     "printed": "Customer Copy"
+    }
+   ],
+   "value": "receipt"
+  },
+  "due_date": {
+   "locations": [],
+   "value": null
+  },
+  "issue_date": {
+   "locations": [
+    {
+     "bbox": [
+      35.5,
+      80.65,
+      91.6,
+      87.33
+     ],
+     "page": 0,
+     "printed": "06 Jun 2024"
+    }
+   ],
+   "value": "2024-06-06"
+  },
+  "purchase_order": {
+   "locations": [],
+   "value": null
+  },
+  "shipping": {
+   "locations": [],
+   "value": null
+  },
+  "subtotal": {
+   "locations": [
+    {
+     "bbox": [
+      175.4,
+      223.65,
+      206.0,
+      230.33
+     ],
+     "page": 0,
+     "printed": "133.17"
+    }
+   ],
+   "value": "133.17"
+  },
+  "tax": {
+   "locations": [
+    {
+     "bbox": [
+      180.5,
+      234.15,
+      206.0,
+      240.83
+     ],
+     "page": 0,
+     "printed": "26.63"
+    }
+   ],
+   "value": "26.63"
+  },
+  "total": {
+   "locations": [
+    {
+     "bbox": [
+      175.4,
+      244.68,
+      206.0,
+      251.21
+     ],
+     "page": 0,
+     "printed": "159.80"
+    }
+   ],
+   "value": "159.80"
+  },
+  "vendor_name": {
+   "locations": [
+    {
+     "bbox": [
+      27.0,
+      15.74,
+      189.0,
+      23.42
+     ],
+     "page": 0,
+     "printed": "QUILLFEATHER STATIONERS LTD"
+    }
+   ],
+   "value": "Quillfeather Stationers Ltd"
+  }
+ },
+ "generator_version": 1,
+ "index": 2,
+ "layout": "thermal",
+ "line_items": [
+  {
+   "amount": {
+    "locations": [
+     {
+      "bbox": [
+       185.6,
+       122.65,
+       206.0,
+       129.33
+      ],
+      "page": 0,
+      "printed": "4.62"
+     }
+    ],
+    "value": "4.62"
+   },
+   "description": {
+    "locations": [
+     {
+      "bbox": [
+       10.0,
+       122.65,
+       91.6,
+       129.33
+      ],
+      "page": 0,
+      "printed": "Paper clips, tin"
+     }
+    ],
+    "value": "Paper clips, tin"
+   },
+   "quantity": {
+    "locations": [
+     {
+      "bbox": [
+       20.0,
+       133.78,
+       24.5,
+       139.68
+      ],
+      "page": 0,
+      "printed": "3"
+     }
+    ],
+    "value": "3"
+   },
+   "unit_price": {
+    "locations": [
+     {
+      "bbox": [
+       38.0,
+       133.78,
+       56.0,
+       139.68
+      ],
+      "page": 0,
+      "printed": "1.54"
+     }
+    ],
+    "value": "1.54"
+   }
+  },
+  {
+   "amount": {
+    "locations": [
+     {
+      "bbox": [
+       180.5,
+       142.65,
+       206.0,
+       149.33
+      ],
+      "page": 0,
+      "printed": "21.78"
+     }
+    ],
+    "value": "21.78"
+   },
+   "description": {
+    "locations": [
+     {
+      "bbox": [
+       10.0,
+       142.65,
+       91.6,
+       149.33
+      ],
+      "page": 0,
+      "printed": "Gel pens, 6 pack"
+     }
+    ],
+    "value": "Gel pens, 6 pack"
+   },
+   "quantity": {
+    "locations": [
+     {
+      "bbox": [
+       20.0,
+       153.78,
+       24.5,
+       159.68
+      ],
+      "page": 0,
+      "printed": "3"
+     }
+    ],
+    "value": "3"
+   },
+   "unit_price": {
+    "locations": [
+     {
+      "bbox": [
+       38.0,
+       153.78,
+       56.0,
+       159.68
+      ],
+      "page": 0,
+      "printed": "7.26"
+     }
+    ],
+    "value": "7.26"
+   }
+  },
+  {
+   "amount": {
+    "locations": [
+     {
+      "bbox": [
+       180.5,
+       162.65,
+       206.0,
+       169.33
+      ],
+      "page": 0,
+      "printed": "38.55"
+     }
+    ],
+    "value": "38.55"
+   },
+   "description": {
+    "locations": [
+     {
+      "bbox": [
+       10.0,
+       162.65,
+       91.6,
+       169.33
+      ],
+      "page": 0,
+      "printed": "Fountain pen ink"
+     }
+    ],
+    "value": "Fountain pen ink"
+   },
+   "quantity": {
+    "locations": [
+     {
+      "bbox": [
+       20.0,
+       173.78,
+       24.5,
+       179.68
+      ],
+      "page": 0,
+      "printed": "3"
+     }
+    ],
+    "value": "3"
+   },
+   "unit_price": {
+    "locations": [
+     {
+      "bbox": [
+       38.0,
+       173.78,
+       60.5,
+       179.68
+      ],
+      "page": 0,
+      "printed": "12.85"
+     }
+    ],
+    "value": "12.85"
+   }
+  },
+  {
+   "amount": {
+    "locations": [
+     {
+      "bbox": [
+       180.5,
+       182.65,
+       206.0,
+       189.33
+      ],
+      "page": 0,
+      "printed": "16.46"
+     }
+    ],
+    "value": "16.46"
+   },
+   "description": {
+    "locations": [
+     {
+      "bbox": [
+       10.0,
+       182.65,
+       71.2,
+       189.33
+      ],
+      "page": 0,
+      "printed": "Wax seal kit"
+     }
+    ],
+    "value": "Wax seal kit"
+   },
+   "quantity": {
+    "implied": "1",
+    "locations": [],
+    "value": null
+   },
+   "unit_price": {
+    "locations": [],
+    "value": null
+   }
+  },
+  {
+   "amount": {
+    "locations": [
+     {
+      "bbox": [
+       180.5,
+       193.15,
+       206.0,
+       199.83
+      ],
+      "page": 0,
+      "printed": "51.76"
+     }
+    ],
+    "value": "51.76"
+   },
+   "description": {
+    "locations": [
+     {
+      "bbox": [
+       10.0,
+       193.15,
+       81.4,
+       199.83
+      ],
+      "page": 0,
+      "printed": "Sketchbook, A5"
+     }
+    ],
+    "value": "Sketchbook, A5"
+   },
+   "quantity": {
+    "locations": [
+     {
+      "bbox": [
+       20.0,
+       204.28,
+       24.5,
+       210.18
+      ],
+      "page": 0,
+      "printed": "4"
+     }
+    ],
+    "value": "4"
+   },
+   "unit_price": {
+    "locations": [
+     {
+      "bbox": [
+       38.0,
+       204.28,
+       60.5,
+       210.18
+      ],
+      "page": 0,
+      "printed": "12.94"
+     }
+    ],
+    "value": "12.94"
+   }
+  }
+ ],
+ "locale": "gb",
+ "notice": "SYNTHETIC. Invented test document with known answers. Not a real invoice or receipt.",
+ "page_count": 1,
+ "page_sizes": [
+  [
+   216.0,
+   348.5
+  ]
+ ],
+ "seed": "6636292751147713157",
+ "split": "samples",
+ "synthetic": true,
+ "tax_printed_as_separate_lines": false
+}

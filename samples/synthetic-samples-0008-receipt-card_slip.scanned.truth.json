@@ -1,0 +1,325 @@
+{
+ "anomalies": [],
+ "base_id": "synthetic-samples-0008-receipt-card_slip",
+ "condition": "scanned",
+ "degradation": {
+  "bed_gray": 231,
+  "bed_points": 0,
+  "blur_radius": 0.323,
+  "brightness": -0.2,
+  "contrast": 0.934,
+  "dpi": 196,
+  "grayscale": false,
+  "jpeg_quality": 69,
+  "noise_sigma": 2.94,
+  "severity": "light",
+  "shadow": 0.0,
+  "skew_degrees": -0.318,
+  "speckle_fraction": 0.0
+ },
+ "distractors_present": {
+  "bank_note": false,
+  "cash_and_change": false,
+  "customer_id": false,
+  "deposit_and_balance": false,
+  "order_date": false,
+  "remit_to": false,
+  "ship_to": false
+ },
+ "doc_id": "synthetic-samples-0008-receipt-card_slip.scanned",
+ "document_type": "receipt",
+ "fields": {
+  "bill_to_name": {
+   "locations": [],
+   "value": null
+  },
+  "currency": {
+   "evidence": "symbol_in_amounts",
+   "locations": [
+    {
+     "bbox": [
+      143.82,
+      149.32,
+      180.54,
+      159.03
+     ],
+     "page": 0,
+     "printed": "$27.07"
+    },
+    {
+     "bbox": [
+      435.86,
+      287.09,
+      470.64,
+      296.29
+     ],
+     "page": 0,
+     "printed": "$27.07"
+    }
+   ],
+   "value": "USD"
+  },
+  "discount": {
+   "locations": [
+    {
+     "bbox": [
+      441.42,
+      257.09,
+      470.48,
+      266.26
+     ],
+     "page": 0,
+     "printed": "-$2.78"
+    }
+   ],
+   "value": "2.78"
+  },
+  "document_number": {
+   "locations": [
+    {
+     "bbox": [
+      414.74,
+      174.48,
+      470.01,
+      183.28
+     ],
+     "page": 0,
+     "printed": "TXN0045258"
+    }
+   ],
+   "value": "TXN0045258"
+  },
+  "document_type": {
+   "locations": [
+    {
+     "bbox": [
+      143.97,
+      175.88,
+      216.75,
+      184.78
+     ],
+     "page": 0,
+     "printed": "Customer Copy"
+    }
+   ],
+   "value": "receipt"
+  },
+  "due_date": {
+   "locations": [],
+   "value": null
+  },
+  "issue_date": {
+   "locations": [
+    {
+     "bbox": [
+      252.49,
+      148.53,
+      322.97,
+      158.42
+     ],
+     "page": 0,
+     "printed": "Mar 20, 2026"
+    }
+   ],
+   "value": "2026-03-20"
+  },
+  "purchase_order": {
+   "locations": [],
+   "value": null
+  },
+  "shipping": {
+   "locations": [],
+   "value": null
+  },
+  "subtotal": {
+   "locations": [
+    {
+     "bbox": [
+      438.85,
+      242.09,
+      470.39,
+      251.27
+     ],
+     "page": 0,
+     "printed": "$27.79"
+    }
+   ],
+   "value": "27.79"
+  },
+  "tax": {
+   "locations": [
+    {
+     "bbox": [
+      444.74,
+      272.09,
+      470.56,
+      281.24
+     ],
+     "page": 0,
+     "printed": "$2.06"
+    }
+   ],
+   "value": "2.06"
+  },
+  "total": {
+   "locations": [
+    {
+     "bbox": [
+      143.82,
+      149.32,
+      180.54,
+      159.03
+     ],
+     "page": 0,
+     "printed": "$27.07"
+    },
+    {
+     "bbox": [
+      435.86,
+      287.09,
+      470.64,
+      296.29
+     ],
+     "page": 0,
+     "printed": "$27.07"
+    }
+   ],
+   "value": "27.07"
+  },
+  "vendor_name": {
+   "locations": [
+    {
+     "bbox": [
+      143.57,
+      102.02,
+      381.75,
+      118.35
+     ],
+     "page": 0,
+     "printed": "Tumbledown Bakehouse Co."
+    }
+   ],
+   "value": "Tumbledown Bakehouse Co."
+  }
+ },
+ "generator_version": 1,
+ "index": 8,
+ "layout": "card_slip",
+ "line_items": [
+  {
+   "amount": {
+    "locations": [
+     {
+      "bbox": [
+       444.34,
+       200.1,
+       470.16,
+       209.24
+      ],
+      "page": 0,
+      "printed": "$4.72"
+     }
+    ],
+    "value": "4.72"
+   },
+   "description": {
+    "locations": [
+     {
+      "bbox": [
+       144.11,
+       201.64,
+       192.36,
+       210.9
+      ],
+      "page": 0,
+      "printed": "Oat cookie"
+     }
+    ],
+    "value": "Oat cookie"
+   },
+   "quantity": {
+    "locations": [
+     {
+      "bbox": [
+       342.3,
+       200.77,
+       348.07,
+       209.8
+      ],
+      "page": 0,
+      "printed": "4"
+     }
+    ],
+    "value": "4"
+   },
+   "unit_price": {
+    "locations": [],
+    "value": null
+   }
+  },
+  {
+   "amount": {
+    "locations": [
+     {
+      "bbox": [
+       438.71,
+       217.09,
+       470.25,
+       226.27
+      ],
+      "page": 0,
+      "printed": "$23.07"
+     }
+    ],
+    "value": "23.07"
+   },
+   "description": {
+    "locations": [
+     {
+      "bbox": [
+       144.21,
+       218.6,
+       198.77,
+       227.9
+      ],
+      "page": 0,
+      "printed": "Quiche slice"
+     }
+    ],
+    "value": "Quiche slice"
+   },
+   "quantity": {
+    "locations": [
+     {
+      "bbox": [
+       342.4,
+       217.77,
+       348.17,
+       226.8
+      ],
+      "page": 0,
+      "printed": "3"
+     }
+    ],
+    "value": "3"
+   },
+   "unit_price": {
+    "locations": [],
+    "value": null
+   }
+  }
+ ],
+ "locale": "us",
+ "notice": "SYNTHETIC. Invented test document with known answers. Not a real invoice or receipt.",
+ "page_count": 1,
+ "page_sizes": [
+  [
+   616.41,
+   795.67
+  ]
+ ],
+ "seed": "6659256334530330941",
+ "split": "samples",
+ "synthetic": true,
+ "tax_printed_as_separate_lines": false
+}

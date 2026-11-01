@@ -1,0 +1,484 @@
+{
+ "anomalies": [],
+ "base_id": "synthetic-samples-0006-invoice-boxed",
+ "condition": "scanned",
+ "degradation": {
+  "bed_gray": 242,
+  "bed_points": 0,
+  "blur_radius": 0.103,
+  "brightness": -0.9,
+  "contrast": 0.952,
+  "dpi": 203,
+  "grayscale": false,
+  "jpeg_quality": 85,
+  "noise_sigma": 3.82,
+  "severity": "light",
+  "shadow": 0.0,
+  "skew_degrees": 0.032,
+  "speckle_fraction": 0.0
+ },
+ "distractors_present": {
+  "bank_note": false,
+  "cash_and_change": false,
+  "customer_id": true,
+  "deposit_and_balance": false,
+  "order_date": false,
+  "remit_to": false,
+  "ship_to": false
+ },
+ "doc_id": "synthetic-samples-0006-invoice-boxed.scanned",
+ "document_type": "invoice",
+ "fields": {
+  "bill_to_name": {
+   "locations": [
+    {
+     "bbox": [
+      40.47,
+      179.21,
+      178.29,
+      188.08
+     ],
+     "page": 0,
+     "printed": "Exampleburg Pickle Exchange"
+    }
+   ],
+   "value": "Exampleburg Pickle Exchange"
+  },
+  "currency": {
+   "evidence": "symbol_in_amounts",
+   "locations": [
+    {
+     "bbox": [
+      533.55,
+      380.2,
+      571.36,
+      388.09
+     ],
+     "page": 0,
+     "printed": "$1,263.07"
+    }
+   ],
+   "value": "USD"
+  },
+  "discount": {
+   "locations": [],
+   "value": null
+  },
+  "document_number": {
+   "locations": [
+    {
+     "bbox": [
+      40.5,
+      123.21,
+      78.54,
+      132.02
+     ],
+     "page": 0,
+     "printed": "A044464"
+    }
+   ],
+   "value": "A044464"
+  },
+  "document_type": {
+   "locations": [
+    {
+     "bbox": [
+      453.89,
+      68.49,
+      515.58,
+      82.4
+     ],
+     "page": 0,
+     "printed": "INVOICE"
+    }
+   ],
+   "value": "invoice"
+  },
+  "due_date": {
+   "locations": [
+    {
+     "bbox": [
+      310.5,
+      123.36,
+      342.2,
+      132.17
+     ],
+     "page": 0,
+     "printed": "4/23/26"
+    }
+   ],
+   "value": "2026-04-23"
+  },
+  "issue_date": {
+   "locations": [
+    {
+     "bbox": [
+      175.5,
+      123.28,
+      201.92,
+      132.09
+     ],
+     "page": 0,
+     "printed": "4/9/26"
+    }
+   ],
+   "value": "2026-04-09"
+  },
+  "purchase_order": {
+   "locations": [
+    {
+     "bbox": [
+      445.5,
+      123.43,
+      472.97,
+      132.24
+     ],
+     "page": 0,
+     "printed": "K4944"
+    }
+   ],
+   "value": "K4944"
+  },
+  "shipping": {
+   "locations": [
+    {
+     "bbox": [
+      545.39,
+      342.21,
+      571.38,
+      350.09
+     ],
+     "page": 0,
+     "printed": "$50.45"
+    }
+   ],
+   "value": "50.45"
+  },
+  "subtotal": {
+   "locations": [
+    {
+     "bbox": [
+      533.58,
+      323.2,
+      571.4,
+      331.09
+     ],
+     "page": 0,
+     "printed": "$1,133.29"
+    }
+   ],
+   "value": "1133.29"
+  },
+  "tax": {
+   "locations": [
+    {
+     "bbox": [
+      545.38,
+      361.21,
+      571.37,
+      369.09
+     ],
+     "page": 0,
+     "printed": "$79.33"
+    }
+   ],
+   "value": "79.33"
+  },
+  "total": {
+   "locations": [
+    {
+     "bbox": [
+      533.55,
+      380.2,
+      571.36,
+      388.09
+     ],
+     "page": 0,
+     "printed": "$1,263.07"
+    }
+   ],
+   "value": "1263.07"
+  },
+  "vendor_name": {
+   "locations": [
+    {
+     "bbox": [
+      42.54,
+      45.98,
+      257.3,
+      59.05
+     ],
+     "page": 0,
+     "printed": "Bramblecrest Gasket Works Inc."
+    }
+   ],
+   "value": "Bramblecrest Gasket Works Inc."
+  }
+ },
+ "generator_version": 1,
+ "index": 6,
+ "layout": "boxed",
+ "line_items": [
+  {
+   "amount": {
+    "locations": [
+     {
+      "bbox": [
+       545.44,
+       253.68,
+       571.43,
+       261.56
+      ],
+      "page": 0,
+      "printed": "357.88"
+     }
+    ],
+    "value": "357.88"
+   },
+   "description": {
+    "locations": [
+     {
+      "bbox": [
+       41.43,
+       253.4,
+       178.93,
+       261.34
+      ],
+      "page": 0,
+      "printed": "Gasket sheet, 1/8 in. x 36 in. x 36 in."
+     }
+    ],
+    "value": "Gasket sheet, 1/8 in. x 36 in. x 36 in."
+   },
+   "quantity": {
+    "locations": [
+     {
+      "bbox": [
+       426.7,
+       253.61,
+       431.43,
+       261.48
+      ],
+      "page": 0,
+      "printed": "4"
+     }
+    ],
+    "value": "4"
+   },
+   "unit_price": {
+    "locations": [
+     {
+      "bbox": [
+       480.16,
+       253.64,
+       501.43,
+       261.52
+      ],
+      "page": 0,
+      "printed": "89.47"
+     }
+    ],
+    "value": "89.47"
+   }
+  },
+  {
+   "amount": {
+    "locations": [
+     {
+      "bbox": [
+       545.43,
+       270.68,
+       571.42,
+       278.56
+      ],
+      "page": 0,
+      "printed": "301.05"
+     }
+    ],
+    "value": "301.05"
+   },
+   "description": {
+    "locations": [
+     {
+      "bbox": [
+       41.42,
+       270.4,
+       126.94,
+       278.31
+      ],
+      "page": 0,
+      "printed": "Neoprene gasket, 4 in."
+     }
+    ],
+    "value": "Neoprene gasket, 4 in."
+   },
+   "quantity": {
+    "locations": [
+     {
+      "bbox": [
+       421.97,
+       270.61,
+       431.42,
+       278.48
+      ],
+      "page": 0,
+      "printed": "27"
+     }
+    ],
+    "value": "27"
+   },
+   "unit_price": {
+    "locations": [
+     {
+      "bbox": [
+       480.15,
+       270.64,
+       501.42,
+       278.52
+      ],
+      "page": 0,
+      "printed": "11.15"
+     }
+    ],
+    "value": "11.15"
+   }
+  },
+  {
+   "amount": {
+    "locations": [
+     {
+      "bbox": [
+       545.42,
+       287.68,
+       571.42,
+       295.56
+      ],
+      "page": 0,
+      "printed": "223.56"
+     }
+    ],
+    "value": "223.56"
+   },
+   "description": {
+    "locations": [
+     {
+      "bbox": [
+       41.41,
+       287.4,
+       185.97,
+       295.34
+      ],
+      "page": 0,
+      "printed": "Custom die-cut seal, per drawing 44-B"
+     }
+    ],
+    "value": "Custom die-cut seal, per drawing 44-B"
+   },
+   "quantity": {
+    "locations": [
+     {
+      "bbox": [
+       426.68,
+       287.61,
+       431.42,
+       295.48
+      ],
+      "page": 0,
+      "printed": "4"
+     }
+    ],
+    "value": "4"
+   },
+   "unit_price": {
+    "locations": [
+     {
+      "bbox": [
+       480.14,
+       287.64,
+       501.42,
+       295.52
+      ],
+      "page": 0,
+      "printed": "55.89"
+     }
+    ],
+    "value": "55.89"
+   }
+  },
+  {
+   "amount": {
+    "locations": [
+     {
+      "bbox": [
+       545.41,
+       304.68,
+       571.41,
+       312.56
+      ],
+      "page": 0,
+      "printed": "250.80"
+     }
+    ],
+    "value": "250.80"
+   },
+   "description": {
+    "locations": [
+     {
+      "bbox": [
+       41.4,
+       304.4,
+       130.23,
+       312.31
+      ],
+      "page": 0,
+      "printed": "EPDM flange seal, 2 in."
+     }
+    ],
+    "value": "EPDM flange seal, 2 in."
+   },
+   "quantity": {
+    "locations": [
+     {
+      "bbox": [
+       421.95,
+       304.61,
+       431.41,
+       312.48
+      ],
+      "page": 0,
+      "printed": "38"
+     }
+    ],
+    "value": "38"
+   },
+   "unit_price": {
+    "locations": [
+     {
+      "bbox": [
+       484.86,
+       304.65,
+       501.41,
+       312.52
+      ],
+      "page": 0,
+      "printed": "6.60"
+     }
+    ],
+    "value": "6.60"
+   }
+  }
+ ],
+ "locale": "us",
+ "notice": "SYNTHETIC. Invented test document with known answers. Not a real invoice or receipt.",
+ "page_count": 1,
+ "page_sizes": [
+  [
+   612.89,
+   792.35
+  ]
+ ],
+ "seed": "17448802325612606782",
+ "split": "samples",
+ "synthetic": true,
+ "tax_printed_as_separate_lines": false
+}

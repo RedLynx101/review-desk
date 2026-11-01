@@ -1,0 +1,451 @@
+{
+ "anomalies": [],
+ "base_id": "synthetic-samples-0000-invoice-classic",
+ "condition": "degraded",
+ "degradation": {
+  "bed_gray": 153,
+  "bed_points": 0,
+  "blur_radius": 1.077,
+  "brightness": -9.4,
+  "contrast": 0.636,
+  "dpi": 93,
+  "grayscale": true,
+  "jpeg_quality": 27,
+  "noise_sigma": 15.99,
+  "severity": "heavy",
+  "shadow": 0.374,
+  "skew_degrees": -2.782,
+  "speckle_fraction": 0.0045
+ },
+ "distractors_present": {
+  "bank_note": false,
+  "cash_and_change": false,
+  "customer_id": false,
+  "deposit_and_balance": true,
+  "order_date": false,
+  "remit_to": false,
+  "ship_to": false
+ },
+ "doc_id": "synthetic-samples-0000-invoice-classic.degraded",
+ "document_type": "invoice",
+ "fields": {
+  "bill_to_name": {
+   "locations": [
+    {
+     "bbox": [
+      55.68,
+      180.31,
+      154.66,
+      193.46
+     ],
+     "page": 0,
+     "printed": "Fictionville Parks Office"
+    }
+   ],
+   "value": "Fictionville Parks Office"
+  },
+  "currency": {
+   "evidence": "printed_note",
+   "locations": [
+    {
+     "bbox": [
+      66.89,
+      412.61,
+      132.72,
+      422.98
+     ],
+     "page": 0,
+     "printed": "All amounts in USD"
+    }
+   ],
+   "value": "USD"
+  },
+  "discount": {
+   "locations": [],
+   "value": null
+  },
+  "document_number": {
+   "locations": [
+    {
+     "bbox": [
+      533.84,
+      82.42,
+      567.69,
+      92.14
+     ],
+     "page": 0,
+     "printed": "A087865"
+    }
+   ],
+   "value": "A087865"
+  },
+  "document_type": {
+   "locations": [
+    {
+     "bbox": [
+      417.48,
+      51.74,
+      566.75,
+      78.3
+     ],
+     "page": 0,
+     "printed": "TAX INVOICE"
+    }
+   ],
+   "value": "invoice"
+  },
+  "due_date": {
+   "locations": [
+    {
+     "bbox": [
+      541.09,
+      108.39,
+      568.96,
+      117.81
+     ],
+     "page": 0,
+     "printed": "7/14/25"
+    }
+   ],
+   "value": "2025-07-14"
+  },
+  "issue_date": {
+   "locations": [
+    {
+     "bbox": [
+      540.46,
+      95.4,
+      568.32,
+      104.83
+     ],
+     "page": 0,
+     "printed": "6/14/25"
+    }
+   ],
+   "value": "2025-06-14"
+  },
+  "purchase_order": {
+   "locations": [],
+   "value": null
+  },
+  "shipping": {
+   "locations": [],
+   "value": null
+  },
+  "subtotal": {
+   "locations": [
+    {
+     "bbox": [
+      541.35,
+      319.58,
+      573.21,
+      329.2
+     ],
+     "page": 0,
+     "printed": "1,507.05"
+    }
+   ],
+   "value": "1507.05"
+  },
+  "tax": {
+   "locations": [],
+   "value": null
+  },
+  "total": {
+   "locations": [
+    {
+     "bbox": [
+      536.87,
+      335.14,
+      574.02,
+      346.17
+     ],
+     "page": 0,
+     "printed": "1,507.05"
+    }
+   ],
+   "value": "1507.05"
+  },
+  "vendor_name": {
+   "locations": [
+    {
+     "bbox": [
+      50.45,
+      68.0,
+      246.7,
+      90.71
+     ],
+     "page": 0,
+     "printed": "Mistlebrook Signal Repair Co."
+    }
+   ],
+   "value": "Mistlebrook Signal Repair Co."
+  }
+ },
+ "generator_version": 1,
+ "index": 0,
+ "layout": "classic",
+ "line_items": [
+  {
+   "amount": {
+    "locations": [
+     {
+      "bbox": [
+       544.26,
+       240.67,
+       569.38,
+       249.97
+      ],
+      "page": 0,
+      "printed": "281.47"
+     }
+    ],
+    "value": "281.47"
+   },
+   "description": {
+    "locations": [
+     {
+      "bbox": [
+       65.58,
+       253.9,
+       297.16,
+       273.23
+      ],
+      "page": 0,
+      "printed": "Preventive maintenance, includes filter swap and belt inspection"
+     }
+    ],
+    "value": "Preventive maintenance, includes filter swap and belt inspection"
+   },
+   "quantity": {
+    "locations": [
+     {
+      "bbox": [
+       420.66,
+       247.66,
+       425.55,
+       255.97
+      ],
+      "page": 0,
+      "printed": "1"
+     }
+    ],
+    "value": "1"
+   },
+   "unit_price": {
+    "locations": [
+     {
+      "bbox": [
+       474.35,
+       244.07,
+       499.46,
+       253.36
+      ],
+      "page": 0,
+      "printed": "281.47"
+     }
+    ],
+    "value": "281.47"
+   }
+  },
+  {
+   "amount": {
+    "locations": [
+     {
+      "bbox": [
+       545.14,
+       258.65,
+       570.25,
+       267.95
+      ],
+      "page": 0,
+      "printed": "404.40"
+     }
+    ],
+    "value": "404.40"
+   },
+   "description": {
+    "locations": [
+     {
+      "bbox": [
+       66.45,
+       279.65,
+       138.25,
+       291.21
+      ],
+      "page": 0,
+      "printed": "Cable harness, 12 ft"
+     }
+    ],
+    "value": "Cable harness, 12 ft"
+   },
+   "quantity": {
+    "locations": [
+     {
+      "bbox": [
+       421.53,
+       265.64,
+       426.42,
+       273.95
+      ],
+      "page": 0,
+      "printed": "6"
+     }
+    ],
+    "value": "6"
+   },
+   "unit_price": {
+    "locations": [
+     {
+      "bbox": [
+       479.71,
+       262.05,
+       500.33,
+       271.12
+      ],
+      "page": 0,
+      "printed": "67.40"
+     }
+    ],
+    "value": "67.40"
+   }
+  },
+  {
+   "amount": {
+    "locations": [
+     {
+      "bbox": [
+       546.01,
+       276.63,
+       571.12,
+       285.92
+      ],
+      "page": 0,
+      "printed": "426.20"
+     }
+    ],
+    "value": "426.20"
+   },
+   "description": {
+    "locations": [
+     {
+      "bbox": [
+       67.32,
+       295.33,
+       186.31,
+       309.18
+      ],
+      "page": 0,
+      "printed": "Replacement relay module, 24 V"
+     }
+    ],
+    "value": "Replacement relay module, 24 V"
+   },
+   "quantity": {
+    "locations": [
+     {
+      "bbox": [
+       422.41,
+       283.62,
+       427.29,
+       291.93
+      ],
+      "page": 0,
+      "printed": "5"
+     }
+    ],
+    "value": "5"
+   },
+   "unit_price": {
+    "locations": [
+     {
+      "bbox": [
+       480.59,
+       280.03,
+       501.21,
+       289.1
+      ],
+      "page": 0,
+      "printed": "85.24"
+     }
+    ],
+    "value": "85.24"
+   }
+  },
+  {
+   "amount": {
+    "locations": [
+     {
+      "bbox": [
+       546.88,
+       294.61,
+       572.0,
+       303.9
+      ],
+      "page": 0,
+      "printed": "394.98"
+     }
+    ],
+    "value": "394.98"
+   },
+   "description": {
+    "locations": [
+     {
+      "bbox": [
+       68.2,
+       315.02,
+       151.99,
+       327.16
+      ],
+      "page": 0,
+      "printed": "On-site diagnostic visit"
+     }
+    ],
+    "value": "On-site diagnostic visit"
+   },
+   "quantity": {
+    "locations": [
+     {
+      "bbox": [
+       423.28,
+       301.6,
+       428.17,
+       309.91
+      ],
+      "page": 0,
+      "printed": "2"
+     }
+    ],
+    "value": "2"
+   },
+   "unit_price": {
+    "locations": [
+     {
+      "bbox": [
+       476.97,
+       298.01,
+       502.08,
+       307.3
+      ],
+      "page": 0,
+      "printed": "197.49"
+     }
+    ],
+    "value": "197.49"
+   }
+  }
+ ],
+ "locale": "us",
+ "notice": "SYNTHETIC. Invented test document with known answers. Not a real invoice or receipt.",
+ "page_count": 1,
+ "page_sizes": [
+  [
+   650.32,
+   822.19
+  ]
+ ],
+ "seed": "11815514320078394446",
+ "split": "samples",
+ "synthetic": true,
+ "tax_printed_as_separate_lines": false
+}

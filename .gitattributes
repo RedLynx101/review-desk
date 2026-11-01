@@ -1,0 +1,11 @@
+# Text stays LF everywhere. Binary files must never go through line-ending conversion: PDFs can look
+# like text to git, and rewriting their bytes corrupts them.
+* text=auto eol=lf
+*.pdf binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webm binary
+*.mp4 binary
+*.ico binary

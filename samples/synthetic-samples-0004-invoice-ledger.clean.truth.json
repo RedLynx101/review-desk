@@ -1,0 +1,583 @@
+{
+ "anomalies": [],
+ "base_id": "synthetic-samples-0004-invoice-ledger",
+ "condition": "clean",
+ "degradation": null,
+ "distractors_present": {
+  "bank_note": true,
+  "cash_and_change": false,
+  "customer_id": false,
+  "deposit_and_balance": false,
+  "order_date": false,
+  "remit_to": false,
+  "ship_to": false
+ },
+ "doc_id": "synthetic-samples-0004-invoice-ledger.clean",
+ "document_type": "invoice",
+ "fields": {
+  "bill_to_name": {
+   "locations": [
+    {
+     "bbox": [
+      130.4,
+      150.34,
+      281.6,
+      157.41
+     ],
+     "page": 0,
+     "printed": "Testwick Model Railway Guild"
+    }
+   ],
+   "value": "Testwick Model Railway Guild"
+  },
+  "currency": {
+   "evidence": "symbol_in_amounts",
+   "locations": [
+    {
+     "bbox": [
+      519.2,
+      317.37,
+      567.8,
+      324.28
+     ],
+     "page": 0,
+     "printed": "$3,345.49"
+    }
+   ],
+   "value": "USD"
+  },
+  "discount": {
+   "locations": [],
+   "value": null
+  },
+  "document_number": {
+   "locations": [
+    {
+     "bbox": [
+      130.4,
+      110.34,
+      168.2,
+      117.41
+     ],
+     "page": 0,
+     "printed": "A093630"
+    }
+   ],
+   "value": "A093630"
+  },
+  "document_type": {
+   "locations": [
+    {
+     "bbox": [
+      44.0,
+      95.11,
+      90.2,
+      103.56
+     ],
+     "page": 0,
+     "printed": "INVOICE"
+    }
+   ],
+   "value": "invoice"
+  },
+  "due_date": {
+   "locations": [
+    {
+     "bbox": [
+      130.4,
+      134.34,
+      184.4,
+      141.41
+     ],
+     "page": 0,
+     "printed": "05/19/2025"
+    }
+   ],
+   "value": "2025-05-19"
+  },
+  "issue_date": {
+   "locations": [
+    {
+     "bbox": [
+      130.4,
+      122.34,
+      184.4,
+      129.41
+     ],
+     "page": 0,
+     "printed": "05/04/2025"
+    }
+   ],
+   "value": "2025-05-04"
+  },
+  "purchase_order": {
+   "locations": [
+    {
+     "bbox": [
+      400.4,
+      110.34,
+      443.6,
+      117.41
+     ],
+     "page": 0,
+     "printed": "PO-74705"
+    }
+   ],
+   "value": "PO-74705"
+  },
+  "shipping": {
+   "locations": [],
+   "value": null
+  },
+  "subtotal": {
+   "locations": [
+    {
+     "bbox": [
+      519.2,
+      293.34,
+      567.8,
+      300.41
+     ],
+     "page": 0,
+     "printed": "$3,041.35"
+    }
+   ],
+   "value": "3041.35"
+  },
+  "tax": {
+   "locations": [
+    {
+     "bbox": [
+      530.0,
+      305.34,
+      567.8,
+      312.41
+     ],
+     "page": 0,
+     "printed": "$304.14"
+    }
+   ],
+   "value": "304.14"
+  },
+  "total": {
+   "locations": [
+    {
+     "bbox": [
+      519.2,
+      317.37,
+      567.8,
+      324.28
+     ],
+     "page": 0,
+     "printed": "$3,345.49"
+    }
+   ],
+   "value": "3345.49"
+  },
+  "vendor_name": {
+   "locations": [
+    {
+     "bbox": [
+      44.0,
+      44.49,
+      288.8,
+      53.7
+     ],
+     "page": 0,
+     "printed": "COPPERWHISTLE CATERING KITCHEN LLC"
+    }
+   ],
+   "value": "Copperwhistle Catering Kitchen LLC"
+  }
+ },
+ "generator_version": 1,
+ "index": 4,
+ "layout": "ledger",
+ "line_items": [
+  {
+   "amount": {
+    "locations": [
+     {
+      "bbox": [
+       535.4,
+       211.49,
+       567.8,
+       218.56
+      ],
+      "page": 0,
+      "printed": "435.12"
+     }
+    ],
+    "value": "435.12"
+   },
+   "description": {
+    "locations": [
+     {
+      "bbox": [
+       87.2,
+       211.49,
+       211.4,
+       218.56
+      ],
+      "page": 0,
+      "printed": "Box lunches, per person"
+     }
+    ],
+    "value": "Box lunches, per person"
+   },
+   "quantity": {
+    "locations": [
+     {
+      "bbox": [
+       65.6,
+       211.49,
+       76.4,
+       218.56
+      ],
+      "page": 0,
+      "printed": "37"
+     }
+    ],
+    "value": "37"
+   },
+   "unit_price": {
+    "locations": [
+     {
+      "bbox": [
+       465.2,
+       211.49,
+       492.2,
+       218.56
+      ],
+      "page": 0,
+      "printed": "11.76"
+     }
+    ],
+    "value": "11.76"
+   }
+  },
+  {
+   "amount": {
+    "locations": [
+     {
+      "bbox": [
+       524.6,
+       223.49,
+       567.8,
+       230.56
+      ],
+      "page": 0,
+      "printed": "1,137.84"
+     }
+    ],
+    "value": "1137.84"
+   },
+   "description": {
+    "locations": [
+     {
+      "bbox": [
+       87.2,
+       223.49,
+       254.6,
+       230.56
+      ],
+      "page": 0,
+      "printed": "Box lunches, per person (lot 2)"
+     }
+    ],
+    "value": "Box lunches, per person (lot 2)"
+   },
+   "quantity": {
+    "locations": [
+     {
+      "bbox": [
+       65.6,
+       223.49,
+       76.4,
+       230.56
+      ],
+      "page": 0,
+      "printed": "66"
+     }
+    ],
+    "value": "66"
+   },
+   "unit_price": {
+    "locations": [
+     {
+      "bbox": [
+       465.2,
+       223.49,
+       492.2,
+       230.56
+      ],
+      "page": 0,
+      "printed": "17.24"
+     }
+    ],
+    "value": "17.24"
+   }
+  },
+  {
+   "amount": {
+    "locations": [
+     {
+      "bbox": [
+       535.4,
+       235.49,
+       567.8,
+       242.56
+      ],
+      "page": 0,
+      "printed": "169.65"
+     }
+    ],
+    "value": "169.65"
+   },
+   "description": {
+    "locations": [
+     {
+      "bbox": [
+       87.2,
+       235.49,
+       211.4,
+       242.56
+      ],
+      "page": 0,
+      "printed": "Linen rental, per table"
+     }
+    ],
+    "value": "Linen rental, per table"
+   },
+   "quantity": {
+    "locations": [
+     {
+      "bbox": [
+       65.6,
+       235.49,
+       76.4,
+       242.56
+      ],
+      "page": 0,
+      "printed": "15"
+     }
+    ],
+    "value": "15"
+   },
+   "unit_price": {
+    "locations": [
+     {
+      "bbox": [
+       465.2,
+       235.49,
+       492.2,
+       242.56
+      ],
+      "page": 0,
+      "printed": "11.31"
+     }
+    ],
+    "value": "11.31"
+   }
+  },
+  {
+   "amount": {
+    "locations": [
+     {
+      "bbox": [
+       535.4,
+       247.49,
+       567.8,
+       254.56
+      ],
+      "page": 0,
+      "printed": "231.68"
+     }
+    ],
+    "value": "231.68"
+   },
+   "description": {
+    "locations": [
+     {
+      "bbox": [
+       87.2,
+       247.49,
+       254.6,
+       254.56
+      ],
+      "page": 0,
+      "printed": "Linen rental, per table (lot 2)"
+     }
+    ],
+    "value": "Linen rental, per table (lot 2)"
+   },
+   "quantity": {
+    "locations": [
+     {
+      "bbox": [
+       65.6,
+       247.49,
+       76.4,
+       254.56
+      ],
+      "page": 0,
+      "printed": "16"
+     }
+    ],
+    "value": "16"
+   },
+   "unit_price": {
+    "locations": [
+     {
+      "bbox": [
+       465.2,
+       247.49,
+       492.2,
+       254.56
+      ],
+      "page": 0,
+      "printed": "14.48"
+     }
+    ],
+    "value": "14.48"
+   }
+  },
+  {
+   "amount": {
+    "locations": [
+     {
+      "bbox": [
+       535.4,
+       259.49,
+       567.8,
+       266.56
+      ],
+      "page": 0,
+      "printed": "643.28"
+     }
+    ],
+    "value": "643.28"
+   },
+   "description": {
+    "locations": [
+     {
+      "bbox": [
+       87.2,
+       259.49,
+       254.6,
+       266.56
+      ],
+      "page": 0,
+      "printed": "Fruit and cheese platter, large"
+     }
+    ],
+    "value": "Fruit and cheese platter, large"
+   },
+   "quantity": {
+    "locations": [
+     {
+      "bbox": [
+       71.0,
+       259.49,
+       76.4,
+       266.56
+      ],
+      "page": 0,
+      "printed": "8"
+     }
+    ],
+    "value": "8"
+   },
+   "unit_price": {
+    "locations": [
+     {
+      "bbox": [
+       465.2,
+       259.49,
+       492.2,
+       266.56
+      ],
+      "page": 0,
+      "printed": "80.41"
+     }
+    ],
+    "value": "80.41"
+   }
+  },
+  {
+   "amount": {
+    "locations": [
+     {
+      "bbox": [
+       535.4,
+       271.49,
+       567.8,
+       278.56
+      ],
+      "page": 0,
+      "printed": "423.78"
+     }
+    ],
+    "value": "423.78"
+   },
+   "description": {
+    "locations": [
+     {
+      "bbox": [
+       87.2,
+       271.49,
+       297.8,
+       278.56
+      ],
+      "page": 0,
+      "printed": "Fruit and cheese platter, large (lot 2)"
+     }
+    ],
+    "value": "Fruit and cheese platter, large (lot 2)"
+   },
+   "quantity": {
+    "locations": [
+     {
+      "bbox": [
+       71.0,
+       271.49,
+       76.4,
+       278.56
+      ],
+      "page": 0,
+      "printed": "6"
+     }
+    ],
+    "value": "6"
+   },
+   "unit_price": {
+    "locations": [
+     {
+      "bbox": [
+       465.2,
+       271.49,
+       492.2,
+       278.56
+      ],
+      "page": 0,
+      "printed": "70.63"
+     }
+    ],
+    "value": "70.63"
+   }
+  }
+ ],
+ "locale": "us",
+ "notice": "SYNTHETIC. Invented test document with known answers. Not a real invoice or receipt.",
+ "page_count": 1,
+ "page_sizes": [
+  [
+   612.0,
+   792.0
+  ]
+ ],
+ "seed": "10283633128935652119",
+ "split": "samples",
+ "synthetic": true,
+ "tax_printed_as_separate_lines": false
+}

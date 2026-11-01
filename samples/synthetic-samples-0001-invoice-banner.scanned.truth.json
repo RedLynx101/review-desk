@@ -1,0 +1,524 @@
+{
+ "anomalies": [],
+ "base_id": "synthetic-samples-0001-invoice-banner",
+ "condition": "scanned",
+ "degradation": {
+  "bed_gray": 229,
+  "bed_points": 0,
+  "blur_radius": 0.199,
+  "brightness": 1.7,
+  "contrast": 0.941,
+  "dpi": 225,
+  "grayscale": true,
+  "jpeg_quality": 81,
+  "noise_sigma": 2.08,
+  "severity": "light",
+  "shadow": 0.0,
+  "skew_degrees": -0.151,
+  "speckle_fraction": 0.0
+ },
+ "distractors_present": {
+  "bank_note": false,
+  "cash_and_change": false,
+  "customer_id": false,
+  "deposit_and_balance": true,
+  "order_date": false,
+  "remit_to": false,
+  "ship_to": false
+ },
+ "doc_id": "synthetic-samples-0001-invoice-banner.scanned",
+ "document_type": "invoice",
+ "fields": {
+  "bill_to_name": {
+   "locations": [
+    {
+     "bbox": [
+      40.47,
+      149.91,
+      241.24,
+      159.94
+     ],
+     "page": 0,
+     "printed": "Placeholder Falls Community Theatre"
+    }
+   ],
+   "value": "Placeholder Falls Community Theatre"
+  },
+  "currency": {
+   "evidence": "symbol_in_amounts",
+   "locations": [
+    {
+     "bbox": [
+      514.34,
+      356.09,
+      565.04,
+      365.22
+     ],
+     "page": 0,
+     "printed": "$3,357.42"
+    }
+   ],
+   "value": "USD"
+  },
+  "discount": {
+   "locations": [
+    {
+     "bbox": [
+      524.51,
+      339.09,
+      564.99,
+      348.2
+     ],
+     "page": 0,
+     "printed": "-$176.71"
+    }
+   ],
+   "value": "176.71"
+  },
+  "document_number": {
+   "locations": [
+    {
+     "bbox": [
+      40.36,
+      110.3,
+      94.98,
+      119.94
+     ],
+     "page": 0,
+     "printed": "ZZ-5842-E"
+    }
+   ],
+   "value": "ZZ-5842-E"
+  },
+  "document_type": {
+   "locations": [
+    {
+     "bbox": [
+      493.57,
+      27.34,
+      572.19,
+      44.55
+     ],
+     "page": 0,
+     "printed": "INVOICE"
+    }
+   ],
+   "value": "invoice"
+  },
+  "due_date": {
+   "locations": [
+    {
+     "bbox": [
+      306.36,
+      109.58,
+      366.21,
+      119.24
+     ],
+     "page": 0,
+     "printed": "04/08/2026"
+    }
+   ],
+   "value": "2026-04-08"
+  },
+  "issue_date": {
+   "locations": [
+    {
+     "bbox": [
+      173.36,
+      109.93,
+      233.21,
+      119.59
+     ],
+     "page": 0,
+     "printed": "04/01/2026"
+    }
+   ],
+   "value": "2026-04-01"
+  },
+  "purchase_order": {
+   "locations": [],
+   "value": null
+  },
+  "shipping": {
+   "locations": [],
+   "value": null
+  },
+  "subtotal": {
+   "locations": [
+    {
+     "bbox": [
+      519.12,
+      322.09,
+      564.95,
+      331.21
+     ],
+     "page": 0,
+     "printed": "$3,534.13"
+    }
+   ],
+   "value": "3534.13"
+  },
+  "tax": {
+   "locations": [],
+   "value": null
+  },
+  "total": {
+   "locations": [
+    {
+     "bbox": [
+      514.34,
+      356.09,
+      565.04,
+      365.22
+     ],
+     "page": 0,
+     "printed": "$3,357.42"
+    }
+   ],
+   "value": "3357.42"
+  },
+  "vendor_name": {
+   "locations": [
+    {
+     "bbox": [
+      40.14,
+      24.41,
+      349.11,
+      44.22
+     ],
+     "page": 0,
+     "printed": "Puddlefern Sign Painters Co."
+    }
+   ],
+   "value": "Puddlefern Sign Painters Co."
+  }
+ },
+ "generator_version": 1,
+ "index": 1,
+ "layout": "banner",
+ "line_items": [
+  {
+   "amount": {
+    "locations": [
+     {
+      "bbox": [
+       540.9,
+       225.09,
+       566.69,
+       234.15
+      ],
+      "page": 0,
+      "printed": "98.42"
+     }
+    ],
+    "value": "98.42"
+   },
+   "description": {
+    "locations": [
+     {
+      "bbox": [
+       46.67,
+       226.18,
+       152.44,
+       235.46
+      ],
+      "page": 0,
+      "printed": "Removal of old signage"
+     }
+    ],
+    "value": "Removal of old signage"
+   },
+   "quantity": {
+    "locations": [
+     {
+      "bbox": [
+       402.94,
+       225.5,
+       408.69,
+       234.52
+      ],
+      "page": 0,
+      "printed": "1"
+     }
+    ],
+    "value": "1"
+   },
+   "unit_price": {
+    "locations": [
+     {
+      "bbox": [
+       458.9,
+       225.3,
+       484.69,
+       234.37
+      ],
+      "page": 0,
+      "printed": "98.42"
+     }
+    ],
+    "value": "98.42"
+   }
+  },
+  {
+   "amount": {
+    "locations": [
+     {
+      "bbox": [
+       535.22,
+       242.09,
+       566.74,
+       251.17
+      ],
+      "page": 0,
+      "printed": "159.66"
+     }
+    ],
+    "value": "159.66"
+   },
+   "description": {
+    "locations": [
+     {
+      "bbox": [
+       46.71,
+       243.18,
+       151.0,
+       252.46
+      ],
+      "page": 0,
+      "printed": "Vinyl banner, 3 ft x 8 ft"
+     }
+    ],
+    "value": "Vinyl banner, 3 ft x 8 ft"
+   },
+   "quantity": {
+    "locations": [
+     {
+      "bbox": [
+       402.98,
+       242.5,
+       408.74,
+       251.52
+      ],
+      "page": 0,
+      "printed": "1"
+     }
+    ],
+    "value": "1"
+   },
+   "unit_price": {
+    "locations": [
+     {
+      "bbox": [
+       453.22,
+       242.3,
+       484.74,
+       251.38
+      ],
+      "page": 0,
+      "printed": "159.66"
+     }
+    ],
+    "value": "159.66"
+   }
+  },
+  {
+   "amount": {
+    "locations": [
+     {
+      "bbox": [
+       526.68,
+       259.09,
+       566.78,
+       268.19
+      ],
+      "page": 0,
+      "printed": "2,063.04"
+     }
+    ],
+    "value": "2063.04"
+   },
+   "description": {
+    "locations": [
+     {
+      "bbox": [
+       46.76,
+       260.14,
+       167.78,
+       269.46
+      ],
+      "page": 0,
+      "printed": "Hand-lettered window sign"
+     }
+    ],
+    "value": "Hand-lettered window sign"
+   },
+   "quantity": {
+    "locations": [
+     {
+      "bbox": [
+       403.03,
+       259.5,
+       408.78,
+       268.52
+      ],
+      "page": 0,
+      "printed": "4"
+     }
+    ],
+    "value": "4"
+   },
+   "unit_price": {
+    "locations": [
+     {
+      "bbox": [
+       453.27,
+       259.3,
+       484.78,
+       268.38
+      ],
+      "page": 0,
+      "printed": "515.76"
+     }
+    ],
+    "value": "515.76"
+   }
+  },
+  {
+   "amount": {
+    "locations": [
+     {
+      "bbox": [
+       526.72,
+       276.09,
+       566.83,
+       285.19
+      ],
+      "page": 0,
+      "printed": "1,028.94"
+     }
+    ],
+    "value": "1028.94"
+   },
+   "description": {
+    "locations": [
+     {
+      "bbox": [
+       46.8,
+       277.11,
+       177.3,
+       286.46
+      ],
+      "page": 0,
+      "printed": "Installation, two-person crew"
+     }
+    ],
+    "value": "Installation, two-person crew"
+   },
+   "quantity": {
+    "locations": [
+     {
+      "bbox": [
+       388.76,
+       276.5,
+       408.83,
+       285.55
+      ],
+      "page": 0,
+      "printed": "8.25"
+     }
+    ],
+    "value": "8.25"
+   },
+   "unit_price": {
+    "locations": [
+     {
+      "bbox": [
+       453.31,
+       276.3,
+       484.83,
+       285.38
+      ],
+      "page": 0,
+      "printed": "124.72"
+     }
+    ],
+    "value": "124.72"
+   }
+  },
+  {
+   "amount": {
+    "locations": [
+     {
+      "bbox": [
+       535.36,
+       293.09,
+       566.87,
+       302.17
+      ],
+      "page": 0,
+      "printed": "184.07"
+     }
+    ],
+    "value": "184.07"
+   },
+   "description": {
+    "locations": [
+     {
+      "bbox": [
+       46.85,
+       294.06,
+       197.88,
+       303.46
+      ],
+      "page": 0,
+      "printed": "Hand-lettered window sign (lot 2)"
+     }
+    ],
+    "value": "Hand-lettered window sign (lot 2)"
+   },
+   "quantity": {
+    "locations": [
+     {
+      "bbox": [
+       403.12,
+       293.5,
+       408.87,
+       302.52
+      ],
+      "page": 0,
+      "printed": "1"
+     }
+    ],
+    "value": "1"
+   },
+   "unit_price": {
+    "locations": [
+     {
+      "bbox": [
+       453.36,
+       293.3,
+       484.87,
+       302.38
+      ],
+      "page": 0,
+      "printed": "184.07"
+     }
+    ],
+    "value": "184.07"
+   }
+  }
+ ],
+ "locale": "us",
+ "notice": "SYNTHETIC. Invented test document with known answers. Not a real invoice or receipt.",
+ "page_count": 1,
+ "page_sizes": [
+  [
+   614.4,
+   793.92
+  ]
+ ],
+ "seed": "11175808428990832813",
+ "split": "samples",
+ "synthetic": true,
+ "tax_printed_as_separate_lines": false
+}

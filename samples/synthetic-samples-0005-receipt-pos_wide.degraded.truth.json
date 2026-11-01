@@ -1,0 +1,513 @@
+{
+ "anomalies": [],
+ "base_id": "synthetic-samples-0005-receipt-pos_wide",
+ "condition": "degraded",
+ "degradation": {
+  "bed_gray": 120,
+  "bed_points": 43,
+  "blur_radius": 0.733,
+  "brightness": -4.5,
+  "contrast": 0.805,
+  "dpi": 149,
+  "grayscale": false,
+  "jpeg_quality": 53,
+  "noise_sigma": 6.57,
+  "severity": "moderate",
+  "shadow": 0.07,
+  "skew_degrees": -0.701,
+  "speckle_fraction": 0.0009
+ },
+ "distractors_present": {
+  "bank_note": false,
+  "cash_and_change": false,
+  "customer_id": false,
+  "deposit_and_balance": false,
+  "order_date": false,
+  "remit_to": false,
+  "ship_to": false
+ },
+ "doc_id": "synthetic-samples-0005-receipt-pos_wide.degraded",
+ "document_type": "receipt",
+ "fields": {
+  "bill_to_name": {
+   "locations": [],
+   "value": null
+  },
+  "currency": {
+   "evidence": "printed_note",
+   "locations": [
+    {
+     "bbox": [
+      157.27,
+      305.05,
+      236.55,
+      312.95
+     ],
+     "page": 0,
+     "printed": "Amounts shown in GBP"
+    }
+   ],
+   "value": "GBP"
+  },
+  "discount": {
+   "locations": [
+    {
+     "bbox": [
+      304.05,
+      246.21,
+      328.24,
+      254.36
+     ],
+     "page": 0,
+     "printed": "-20.77"
+    }
+   ],
+   "value": "20.77"
+  },
+  "document_number": {
+   "locations": [
+    {
+     "bbox": [
+      98.85,
+      121.43,
+      134.07,
+      129.26
+     ],
+     "page": 0,
+     "printed": "R-729748"
+    }
+   ],
+   "value": "R-729748"
+  },
+  "document_type": {
+   "locations": [
+    {
+     "bbox": [
+      172.73,
+      103.99,
+      216.18,
+      113.77
+     ],
+     "page": 0,
+     "printed": "RECEIPT"
+    }
+   ],
+   "value": "receipt"
+  },
+  "due_date": {
+   "locations": [],
+   "value": null
+  },
+  "issue_date": {
+   "locations": [
+    {
+     "bbox": [
+      288.56,
+      119.05,
+      328.68,
+      126.94
+     ],
+     "page": 0,
+     "printed": "10/07/2024"
+    }
+   ],
+   "value": "2024-07-10"
+  },
+  "purchase_order": {
+   "locations": [],
+   "value": null
+  },
+  "shipping": {
+   "locations": [],
+   "value": null
+  },
+  "subtotal": {
+   "locations": [
+    {
+     "bbox": [
+      302.0,
+      233.21,
+      328.08,
+      241.38
+     ],
+     "page": 0,
+     "printed": "138.49"
+    }
+   ],
+   "value": "138.49"
+  },
+  "tax": {
+   "locations": [
+    {
+     "bbox": [
+      307.04,
+      259.2,
+      328.4,
+      267.32
+     ],
+     "page": 0,
+     "printed": "23.54"
+    }
+   ],
+   "value": "23.54"
+  },
+  "total": {
+   "locations": [
+    {
+     "bbox": [
+      297.87,
+      271.12,
+      328.57,
+      280.75
+     ],
+     "page": 0,
+     "printed": "141.26"
+    }
+   ],
+   "value": "141.26"
+  },
+  "vendor_name": {
+   "locations": [
+    {
+     "bbox": [
+      101.46,
+      62.97,
+      286.51,
+      77.25
+     ],
+     "page": 0,
+     "printed": "Quillfeather Garden Stand Ltd"
+    }
+   ],
+   "value": "Quillfeather Garden Stand Ltd"
+  }
+ },
+ "generator_version": 1,
+ "index": 5,
+ "layout": "pos_wide",
+ "line_items": [
+  {
+   "amount": {
+    "locations": [
+     {
+      "bbox": [
+       305.85,
+       162.21,
+       327.22,
+       170.33
+      ],
+      "page": 0,
+      "printed": "36.70"
+     }
+    ],
+    "value": "36.70"
+   },
+   "description": {
+    "locations": [
+     {
+      "bbox": [
+       87.14,
+       164.38,
+       150.06,
+       173.01
+      ],
+      "page": 0,
+      "printed": "Tomato seedling"
+     }
+    ],
+    "value": "Tomato seedling"
+   },
+   "quantity": {
+    "locations": [
+     {
+      "bbox": [
+       69.69,
+       165.25,
+       79.23,
+       173.22
+      ],
+      "page": 0,
+      "printed": "10"
+     }
+    ],
+    "value": "10"
+   },
+   "unit_price": {
+    "locations": [
+     {
+      "bbox": [
+       256.58,
+       162.87,
+       273.22,
+       170.93
+      ],
+      "page": 0,
+      "printed": "3.67"
+     }
+    ],
+    "value": "3.67"
+   }
+  },
+  {
+   "amount": {
+    "locations": [
+     {
+      "bbox": [
+       310.74,
+       175.21,
+       327.37,
+       183.27
+      ],
+      "page": 0,
+      "printed": "2.44"
+     }
+    ],
+    "value": "2.44"
+   },
+   "description": {
+    "locations": [
+     {
+      "bbox": [
+       87.3,
+       177.58,
+       133.69,
+       186.01
+      ],
+      "page": 0,
+      "printed": "Herb bundle"
+     }
+    ],
+    "value": "Herb bundle"
+   },
+   "quantity": {
+    "locations": [
+     {
+      "bbox": [
+       74.57,
+       178.24,
+       79.39,
+       186.16
+      ],
+      "page": 0,
+      "printed": "1"
+     }
+    ],
+    "value": "1"
+   },
+   "unit_price": {
+    "locations": [
+     {
+      "bbox": [
+       256.74,
+       175.87,
+       273.38,
+       183.93
+      ],
+      "page": 0,
+      "printed": "2.44"
+     }
+    ],
+    "value": "2.44"
+   }
+  },
+  {
+   "amount": {
+    "locations": [
+     {
+      "bbox": [
+       306.17,
+       188.21,
+       327.53,
+       196.33
+      ],
+      "page": 0,
+      "printed": "38.92"
+     }
+    ],
+    "value": "38.92"
+   },
+   "description": {
+    "locations": [
+     {
+      "bbox": [
+       87.46,
+       190.5,
+       140.46,
+       199.01
+      ],
+      "page": 0,
+      "printed": "Terracotta pot"
+     }
+    ],
+    "value": "Terracotta pot"
+   },
+   "quantity": {
+    "locations": [
+     {
+      "bbox": [
+       74.73,
+       191.24,
+       79.55,
+       199.16
+      ],
+      "page": 0,
+      "printed": "4"
+     }
+    ],
+    "value": "4"
+   },
+   "unit_price": {
+    "locations": [
+     {
+      "bbox": [
+       256.9,
+       188.87,
+       273.54,
+       196.93
+      ],
+      "page": 0,
+      "printed": "9.73"
+     }
+    ],
+    "value": "9.73"
+   }
+  },
+  {
+   "amount": {
+    "locations": [
+     {
+      "bbox": [
+       311.06,
+       201.21,
+       327.69,
+       209.27
+      ],
+      "page": 0,
+      "printed": "8.43"
+     }
+    ],
+    "value": "8.43"
+   },
+   "description": {
+    "locations": [
+     {
+      "bbox": [
+       87.61,
+       203.56,
+       135.42,
+       212.0
+      ],
+      "page": 0,
+      "printed": "Twine, spool"
+     }
+    ],
+    "value": "Twine, spool"
+   },
+   "quantity": {
+    "locations": [
+     {
+      "bbox": [
+       74.89,
+       204.24,
+       79.71,
+       212.16
+      ],
+      "page": 0,
+      "printed": "3"
+     }
+    ],
+    "value": "3"
+   },
+   "unit_price": {
+    "locations": [
+     {
+      "bbox": [
+       257.06,
+       201.87,
+       273.7,
+       209.93
+      ],
+      "page": 0,
+      "printed": "2.81"
+     }
+    ],
+    "value": "2.81"
+   }
+  },
+  {
+   "amount": {
+    "locations": [
+     {
+      "bbox": [
+       306.49,
+       214.21,
+       327.85,
+       222.33
+      ],
+      "page": 0,
+      "printed": "52.00"
+     }
+    ],
+    "value": "52.00"
+   },
+   "description": {
+    "locations": [
+     {
+      "bbox": [
+       87.77,
+       216.4,
+       148.35,
+       225.0
+      ],
+      "page": 0,
+      "printed": "Potting soil, bag"
+     }
+    ],
+    "value": "Potting soil, bag"
+   },
+   "quantity": {
+    "locations": [
+     {
+      "bbox": [
+       75.04,
+       217.24,
+       79.87,
+       225.16
+      ],
+      "page": 0,
+      "printed": "4"
+     }
+    ],
+    "value": "4"
+   },
+   "unit_price": {
+    "locations": [
+     {
+      "bbox": [
+       252.49,
+       214.87,
+       273.86,
+       222.99
+      ],
+      "page": 0,
+      "printed": "13.00"
+     }
+    ],
+    "value": "13.00"
+   }
+  }
+ ],
+ "locale": "gb",
+ "notice": "SYNTHETIC. Invented test document with known answers. Not a real invoice or receipt.",
+ "page_count": 1,
+ "page_sizes": [
+  [
+   391.41,
+   415.09
+  ]
+ ],
+ "seed": "15612573172152084137",
+ "split": "samples",
+ "synthetic": true,
+ "tax_printed_as_separate_lines": false
+}

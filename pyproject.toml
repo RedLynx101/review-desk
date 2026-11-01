@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "review-desk"
+version = "0.1.0"
+description = "Invoice and receipt extraction with earned confidence, a review queue and a hash-chained audit log. Runs locally."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+# Exact versions live in requirements.txt. Every dependency must stay under a permissive
+# license; scripts/check_licenses.py enforces that and writes THIRD_PARTY_LICENSES.md.
+dependencies = [
+    "numpy>=2.0",
+    "pdfplumber>=0.11",
+    "pillow>=11",
+    "pypdfium2>=4.30",
+    "reportlab>=4.2",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+markers = [
+    "ocr: needs a Tesseract binary; skipped when none is found",
+]
