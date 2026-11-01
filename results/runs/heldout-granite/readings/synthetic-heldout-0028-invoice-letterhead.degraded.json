@@ -1,0 +1,233 @@
+{
+ "doc_id": "synthetic-heldout-0028-invoice-letterhead.degraded",
+ "pdf_sha256": "db35997e40af0e300bd0f9967a9d147ddb2bb805e6d82eb42ee06b726ded52ee",
+ "model": "granite-4.1-8b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "invoice",
+  "vendor_name": {
+   "text": "Wrenbury Signal Repair Inc.",
+   "line": 1
+  },
+  "document_number": {
+   "text": "ZZ-9033-W",
+   "line": 9
+  },
+  "issue_date": {
+   "text": "2025-02-28",
+   "line": 9
+  },
+  "due_date": {
+   "text": null,
+   "line": null
+  },
+  "purchase_order": {
+   "text": null,
+   "line": null
+  },
+  "bill_to_name": {
+   "text": "Testa McExample",
+   "line": 6
+  },
+  "currency": {
+   "text": "USD",
+   "line": 88
+  },
+  "subtotal": {
+   "text": "12,318.43",
+   "line": 81
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": "118.87",
+   "line": 83
+  },
+  "tax": [
+   {
+    "text": "62.29",
+    "line": 84
+   }
+  ],
+  "total": {
+   "text": "13,299.59",
+   "line": 86
+  },
+  "line_items": [
+   {
+    "description": "Replacement relay module, 24 V",
+    "quantity": null,
+    "unit_price": null,
+    "amount": null,
+    "line": 14
+   },
+   {
+    "description": "Technician labor (lot 2)",
+    "quantity": null,
+    "unit_price": null,
+    "amount": null,
+    "line": 18
+   },
+   {
+    "description": "diagnostic visit",
+    "quantity": "2",
+    "unit_price": null,
+    "amount": "360.50",
+    "line": 22
+   },
+   {
+    "description": "Techmician labor (lot 3)",
+    "quantity": null,
+    "unit_price": null,
+    "amount": null,
+    "line": 23
+   },
+   {
+    "description": "Replacement relay module, 24 V (lot 2)",
+    "quantity": null,
+    "unit_price": null,
+    "amount": null,
+    "line": 25
+   },
+   {
+    "description": "Techmcian labor (lot 4)",
+    "quantity": null,
+    "unit_price": null,
+    "amount": null,
+    "line": 28
+   },
+   {
+    "description": "After-hours call-out surcharge",
+    "quantity": "1",
+    "unit_price": null,
+    "amount": "86.45",
+    "line": 30
+   },
+   {
+    "description": "Replacement relay module, 24 V (lot 3)",
+    "quantity": "2",
+    "unit_price": null,
+    "amount": "122.86",
+    "line": 34
+   },
+   {
+    "description": "Preventive maintenance. includes filler swap and belt inspection",
+    "quantity": "1",
+    "unit_price": null,
+    "amount": "311.39",
+    "line": 36
+   },
+   {
+    "description": "maintenance. inclades filter swap and belt mspecton (lot 2)",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "270.97",
+    "line": 37
+   },
+   {
+    "description": "Techascian labor (bot $)",
+    "quantity": "2",
+    "unit_price": null,
+    "amount": "215.04",
+    "line": 41
+   },
+   {
+    "description": "labor (lot 6)",
+    "quantity": null,
+    "unit_price": null,
+    "amount": null,
+    "line": 43
+   },
+   {
+    "description": "On-site diagnostic visit (lot 2)",
+    "quantity": "2",
+    "unit_price": null,
+    "amount": "195.96",
+    "line": 45
+   },
+   {
+    "description": "Cable harness, 12 fi",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "322.10",
+    "line": 47
+   },
+   {
+    "description": "Technician tabor (lot 7)",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "100.04",
+    "line": 49
+   },
+   {
+    "description": "After-hours call-out surchange (lot 3)",
+    "quantity": "1",
+    "unit_price": null,
+    "amount": "162.17",
+    "line": 51
+   },
+   {
+    "description": "On-site diagnostic visit (lot 3)",
+    "quantity": "2",
+    "unit_price": null,
+    "amount": "376.44",
+    "line": 62
+   },
+   {
+    "description": "Cable harness, 12 ft (lot 2)",
+    "quantity": "4",
+    "unit_price": null,
+    "amount": "186.92",
+    "line": 64
+   },
+   {
+    "description": "After-hours call-out surcharge (lot 6)",
+    "quantity": "i",
+    "unit_price": null,
+    "amount": "135.1",
+    "line": 66
+   },
+   {
+    "description": "Replacement relay module, 24 V (lot 4)",
+    "quantity": "3",
+    "unit_price": null,
+    "amount": "240.24",
+    "line": 68
+   },
+   {
+    "description": "Preventive maimtenance. includes filter swap and belt (lot 3)",
+    "quantity": null,
+    "unit_price": null,
+    "amount": null,
+    "line": 70
+   },
+   {
+    "description": "Technician labor (lot 9)",
+    "quantity": "10",
+    "unit_price": null,
+    "amount": "931.20",
+    "line": 71
+   },
+   {
+    "description": "Technician labor (lot 10)",
+    "quantity": null,
+    "unit_price": null,
+    "amount": null,
+    "line": 73
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 41.9,
+ "attempts": 1,
+ "prompt_tokens": 1764,
+ "completion_tokens": 1398,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 0.0,
+ "failure_history": []
+}

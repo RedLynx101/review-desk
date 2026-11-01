@@ -1,0 +1,46 @@
+{
+ "created": "2026-11-01T14:09:12-0600",
+ "split": "heldout",
+ "base_documents": 30,
+ "conditions": [
+  "clean",
+  "scanned",
+  "degraded"
+ ],
+ "synthetic": true,
+ "generator_version": 1,
+ "master_seed": 20261101,
+ "model": {
+  "id": "prism-ml/bonsai-27b",
+  "type": "vlm",
+  "arch": "qwen35",
+  "publisher": "prism-ml",
+  "quantization": "Q1_0",
+  "max_context_length": 262144,
+  "loaded_context_length": 8192,
+  "state": "loaded"
+ },
+ "model_settings": {
+  "temperature": 0.0,
+  "max_tokens": 3500,
+  "strict_json_schema": true,
+  "images_sent_for_scans": false
+ },
+ "invocations": [
+  {
+   "at": "2026-11-01T14:09:11-0600",
+   "base_documents": 30,
+   "conditions": [
+    "clean",
+    "scanned",
+    "degraded"
+   ],
+   "git": {
+    "commit": "c6b8c7b64c03a9e1a6bdff3872466bdc39a20266",
+    "dirty": false
+   },
+   "prompt_sha256": "83da1fd519d13bab"
+  }
+ ],
+ "python": "3.12.1"
+}

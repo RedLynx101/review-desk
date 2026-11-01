@@ -1,0 +1,100 @@
+{
+ "doc_id": "synthetic-heldout-0002-receipt-thermal.degraded",
+ "pdf_sha256": "f646ffb63c547c505a3ae37fa42a1c7c76239986926cab4821bb88ac7062f42d",
+ "model": "granite-4.1-8b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "receipt",
+  "vendor_name": {
+   "text": "TURNIPSHIRE GARDEN STAND INC.",
+   "line": 4
+  },
+  "document_number": {
+   "text": "TXNO613576",
+   "line": 11
+  },
+  "issue_date": {
+   "text": "06/10/2024",
+   "line": 11
+  },
+  "due_date": {
+   "text": null,
+   "line": null
+  },
+  "purchase_order": {
+   "text": null,
+   "line": null
+  },
+  "bill_to_name": {
+   "text": null,
+   "line": null
+  },
+  "currency": {
+   "text": "$",
+   "line": 23
+  },
+  "subtotal": {
+   "text": "$57.67",
+   "line": 22
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": null,
+   "line": null
+  },
+  "tax": [
+   {
+    "text": "Sales Tax 10% $3.77",
+    "line": 24
+   }
+  ],
+  "total": {
+   "text": "$61.44",
+   "line": 25
+  },
+  "line_items": [
+   {
+    "description": "bundle % 18.40",
+    "quantity": null,
+    "unit_price": null,
+    "amount": null,
+    "line": 14
+   },
+   {
+    "description": "Sx 3.68",
+    "quantity": null,
+    "unit_price": null,
+    "amount": null,
+    "line": 15
+   },
+   {
+    "description": "Potting soil, bag a \u201c39.27",
+    "quantity": null,
+    "unit_price": null,
+    "amount": null,
+    "line": 16
+   },
+   {
+    "description": "So 13.09 So RN I LL a",
+    "quantity": null,
+    "unit_price": null,
+    "amount": null,
+    "line": 18
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 23.3,
+ "attempts": 1,
+ "prompt_tokens": 894,
+ "completion_tokens": 476,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 0.0,
+ "failure_history": []
+}

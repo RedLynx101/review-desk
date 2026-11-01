@@ -1,0 +1,97 @@
+{
+ "doc_id": "synthetic-heldout-0011-receipt-kiosk.scanned",
+ "pdf_sha256": "8e044371b8da8ba2bcb44d58a2c6af61c3b6d8f32ca89b3fa6d7f34bb3adc80a",
+ "model": "prism-ml/bonsai-27b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "receipt",
+  "vendor_name": {
+   "text": "Figgleton Garden Stand Co.",
+   "line": 3
+  },
+  "document_number": {
+   "text": "R-973442",
+   "line": 1
+  },
+  "issue_date": {
+   "text": null,
+   "line": null
+  },
+  "due_date": {
+   "text": null,
+   "line": null
+  },
+  "purchase_order": {
+   "text": null,
+   "line": null
+  },
+  "bill_to_name": {
+   "text": null,
+   "line": null
+  },
+  "currency": {
+   "text": "$",
+   "line": 9
+  },
+  "subtotal": {
+   "text": "$25.33",
+   "line": 9
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": null,
+   "line": null
+  },
+  "tax": [
+   {
+    "text": "$1.01",
+    "line": 10
+   },
+   {
+    "text": "$0.82",
+    "line": 11
+   }
+  ],
+  "total": {
+   "text": "$27.16",
+   "line": 12
+  },
+  "line_items": [
+   {
+    "description": "Herb bundle",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "$2.03 A",
+    "line": 6
+   },
+   {
+    "description": "Terracotta pot",
+    "quantity": "2x",
+    "unit_price": null,
+    "amount": "$19.06 A",
+    "line": 7
+   },
+   {
+    "description": "Twine, spool",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "$4.24 A",
+    "line": 8
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 37.8,
+ "attempts": 1,
+ "prompt_tokens": 795,
+ "completion_tokens": 518,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 0.9,
+ "failure_history": []
+}

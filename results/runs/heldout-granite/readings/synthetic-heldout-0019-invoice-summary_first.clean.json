@@ -1,0 +1,114 @@
+{
+ "doc_id": "synthetic-heldout-0019-invoice-summary_first.clean",
+ "pdf_sha256": "1c20e7066818811ad8ce87e430bceb6560eee06d170498993331abaa9a5bc51c",
+ "model": "granite-4.1-8b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "invoice",
+  "vendor_name": {
+   "text": "Pennywhistle Gasket Works Inc.",
+   "line": 1
+  },
+  "document_number": {
+   "text": "2024/5440",
+   "line": 6
+  },
+  "issue_date": {
+   "text": "10/29/20",
+   "line": 7
+  },
+  "due_date": {
+   "text": null,
+   "line": null
+  },
+  "purchase_order": {
+   "text": null,
+   "line": null
+  },
+  "bill_to_name": {
+   "text": "Testwick Model Railway Guild",
+   "line": 9
+  },
+  "currency": {
+   "text": "USD",
+   "line": 25
+  },
+  "subtotal": {
+   "text": "1,094.08",
+   "line": 19
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": "103.34",
+   "line": 20
+  },
+  "tax": [
+   {
+    "text": "71.12",
+    "line": 21
+   }
+  ],
+  "total": {
+   "text": "1,268.54",
+   "line": 22
+  },
+  "line_items": [
+   {
+    "description": "Custom die-cut seal, per drawing 44-B",
+    "quantity": "4",
+    "unit_price": "46.35",
+    "amount": "185.40",
+    "line": 13
+   },
+   {
+    "description": "EPDM flange seal, 2 in.",
+    "quantity": "47",
+    "unit_price": "5.61",
+    "amount": "263.67",
+    "line": 14
+   },
+   {
+    "description": "Neoprene gasket, 4 in.",
+    "quantity": "16",
+    "unit_price": "15.07",
+    "amount": "241.12",
+    "line": 15
+   },
+   {
+    "description": "EPDM flange seal, 2 in. (lot 2)",
+    "quantity": "6",
+    "unit_price": "4.34",
+    "amount": "26.04",
+    "line": 16
+   },
+   {
+    "description": "Custom die-cut seal, per drawing 44-B (lot 2)",
+    "quantity": "2",
+    "unit_price": "133.61",
+    "amount": "267.22",
+    "line": 17
+   },
+   {
+    "description": "EPDM flange seal, 2 in. (lot 3)",
+    "quantity": "13",
+    "unit_price": "8.51",
+    "amount": "110.63",
+    "line": 18
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 33.8,
+ "attempts": 1,
+ "prompt_tokens": 994,
+ "completion_tokens": 635,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 0.0,
+ "failure_history": []
+}

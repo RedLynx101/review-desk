@@ -1,0 +1,86 @@
+{
+ "doc_id": "synthetic-heldout-0022-invoice-banner.clean",
+ "pdf_sha256": "d94f043dd0b96c3bd5cdfdb962f0334710935e743efc2541e918627182dab26d",
+ "model": "granite-4.1-8b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "invoice",
+  "vendor_name": {
+   "text": "Marrowfen Signal Repair Co.",
+   "line": 1
+  },
+  "document_number": {
+   "text": "00132148",
+   "line": 5
+  },
+  "issue_date": {
+   "text": "2026-05-03",
+   "line": 5
+  },
+  "due_date": {
+   "text": "2026-07-02",
+   "line": 5
+  },
+  "purchase_order": {
+   "text": "CUST-18897",
+   "line": 5
+  },
+  "bill_to_name": {
+   "text": "Imaginary Orchard Holdings",
+   "line": 9
+  },
+  "currency": {
+   "text": "CA$",
+   "line": 13
+  },
+  "subtotal": {
+   "text": "CA$1,274.37",
+   "line": 15
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": "CA$73.38",
+   "line": 16
+  },
+  "tax": [
+   {
+    "text": "CA$165.67",
+    "line": 17
+   }
+  ],
+  "total": {
+   "text": "CA$1,513.42",
+   "line": 18
+  },
+  "line_items": [
+   {
+    "description": "Technician labor",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "CA$1,130.47",
+    "line": 13
+   },
+   {
+    "description": "After-hours call-out surcharge",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "CA$143.90",
+    "line": 14
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 23.3,
+ "attempts": 1,
+ "prompt_tokens": 916,
+ "completion_tokens": 419,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 0.0,
+ "failure_history": []
+}

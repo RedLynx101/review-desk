@@ -1,0 +1,79 @@
+{
+ "doc_id": "synthetic-heldout-0008-receipt-card_slip.degraded",
+ "pdf_sha256": "9dfa00fdc77689e9c8d5657b2e4a350fd3f93aba3a561bca0a65c166e89ca32c",
+ "model": "granite-4.1-8b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "receipt",
+  "vendor_name": {
+   "text": "Figgleton Bakehouse LLC",
+   "line": 7
+  },
+  "document_number": {
+   "text": null,
+   "line": null
+  },
+  "issue_date": {
+   "text": "7/20/2024",
+   "line": 9
+  },
+  "due_date": {
+   "text": null,
+   "line": null
+  },
+  "purchase_order": {
+   "text": null,
+   "line": null
+  },
+  "bill_to_name": {
+   "text": null,
+   "line": null
+  },
+  "currency": {
+   "text": "$",
+   "line": 12
+  },
+  "subtotal": {
+   "text": "395",
+   "line": 12
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": null,
+   "line": null
+  },
+  "tax": [
+   {
+    "text": "16%",
+    "line": 16
+   }
+  ],
+  "total": {
+   "text": "Paid 9.26",
+   "line": 19
+  },
+  "line_items": [
+   {
+    "description": null,
+    "quantity": null,
+    "unit_price": null,
+    "amount": null,
+    "line": null
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 15.2,
+ "attempts": 1,
+ "prompt_tokens": 796,
+ "completion_tokens": 318,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 0.0,
+ "failure_history": []
+}

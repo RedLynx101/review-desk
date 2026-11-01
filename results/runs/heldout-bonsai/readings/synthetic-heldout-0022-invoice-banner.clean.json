@@ -1,0 +1,86 @@
+{
+ "doc_id": "synthetic-heldout-0022-invoice-banner.clean",
+ "pdf_sha256": "d94f043dd0b96c3bd5cdfdb962f0334710935e743efc2541e918627182dab26d",
+ "model": "prism-ml/bonsai-27b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "invoice",
+  "vendor_name": {
+   "text": "Marrowfen Signal Repair Co.",
+   "line": 1
+  },
+  "document_number": {
+   "text": "00032148",
+   "line": 5
+  },
+  "issue_date": {
+   "text": "2026-05-03",
+   "line": 5
+  },
+  "due_date": {
+   "text": "2026-07-02",
+   "line": 5
+  },
+  "purchase_order": {
+   "text": null,
+   "line": null
+  },
+  "bill_to_name": {
+   "text": "Exampleburg Pickle Exchange",
+   "line": 9
+  },
+  "currency": {
+   "text": "CA$",
+   "line": 15
+  },
+  "subtotal": {
+   "text": "1,274.37",
+   "line": 15
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": "73.38",
+   "line": 16
+  },
+  "tax": [
+   {
+    "text": "165.67",
+    "line": 17
+   }
+  ],
+  "total": {
+   "text": "1,513.42",
+   "line": 18
+  },
+  "line_items": [
+   {
+    "description": "Technician labor",
+    "quantity": "11",
+    "unit_price": "102.77",
+    "amount": "1,130.47",
+    "line": 13
+   },
+   {
+    "description": "After-hours call-out surcharge",
+    "quantity": "1",
+    "unit_price": "143.90",
+    "amount": "143.90",
+    "line": 14
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 42.4,
+ "attempts": 1,
+ "prompt_tokens": 984,
+ "completion_tokens": 507,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 1.0,
+ "failure_history": []
+}

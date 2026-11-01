@@ -1,0 +1,128 @@
+{
+ "doc_id": "synthetic-heldout-0001-invoice-banner.scanned",
+ "pdf_sha256": "a8985bc67c82264485fad0a78c06a3ea760381d0775a375aa7b647bed54c9257",
+ "model": "granite-4.1-8b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "invoice",
+  "vendor_name": {
+   "text": "_Tinderfoot Catering Kitche n Co.",
+   "line": 2
+  },
+  "document_number": {
+   "text": "2Z-2862-W",
+   "line": 6
+  },
+  "issue_date": {
+   "text": "Jul 28, 2025",
+   "line": 6
+  },
+  "due_date": {
+   "text": "Aug 12, 2025",
+   "line": 6
+  },
+  "purchase_order": {
+   "text": "CUST-66461",
+   "line": 6
+  },
+  "bill_to_name": {
+   "text": "Placeholder Falls Community Theatre",
+   "line": 10
+  },
+  "currency": {
+   "text": "CA$",
+   "line": 22
+  },
+  "subtotal": {
+   "text": "CA$2,275.86",
+   "line": 22
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": "CAS$51.42",
+   "line": 23
+  },
+  "tax": [
+   {
+    "text": null,
+    "line": null
+   }
+  ],
+  "total": {
+   "text": "CA$2,327.28",
+   "line": 24
+  },
+  "line_items": [
+   {
+    "description": "Coffee service, per gallon",
+    "quantity": "10",
+    "unit_price": "26.43",
+    "amount": "264.30",
+    "line": 14
+   },
+   {
+    "description": "Coffee service, per gallon (lot 2)",
+    "quantity": "4",
+    "unit_price": "26.98",
+    "amount": "107.92",
+    "line": 15
+   },
+   {
+    "description": "Event staffing",
+    "quantity": "10.5",
+    "unit_price": "31.46",
+    "amount": "330.33",
+    "line": 16
+   },
+   {
+    "description": "Box lunches, per person",
+    "quantity": "71",
+    "unit_price": "15.51",
+    "amount": "1,101.21",
+    "line": 17
+   },
+   {
+    "description": "Fruit and cheese platter, large",
+    "quantity": "3",
+    "unit_price": "54.46",
+    "amount": "163.38",
+    "line": 18
+   },
+   {
+    "description": "Coffee service, per gallon (lot 3)",
+    "quantity": "4",
+    "unit_price": "17.50",
+    "amount": "70.00",
+    "line": 19
+   },
+   {
+    "description": "Coffee service, per gallon (lot 4)",
+    "quantity": "5",
+    "unit_price": "17.72",
+    "amount": "88.60",
+    "line": 20
+   },
+   {
+    "description": "Linen rental, per table",
+    "quantity": "12",
+    "unit_price": "12.51",
+    "amount": "150.12",
+    "line": 21
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 31.7,
+ "attempts": 1,
+ "prompt_tokens": 1053,
+ "completion_tokens": 728,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 0.0,
+ "failure_history": []
+}

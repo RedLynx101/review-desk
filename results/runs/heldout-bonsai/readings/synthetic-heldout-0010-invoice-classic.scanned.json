@@ -1,0 +1,345 @@
+{
+ "doc_id": "synthetic-heldout-0010-invoice-classic.scanned",
+ "pdf_sha256": "006353028913f7726af5e4cdb33bb32de38defc26d137e4ff8fe933dae95377d",
+ "model": "prism-ml/bonsai-27b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "invoice",
+  "vendor_name": {
+   "text": "Cobbleworth Lawn & Hedge LLC",
+   "line": 1
+  },
+  "document_number": {
+   "text": "FIN 00-0009894",
+   "line": 7
+  },
+  "issue_date": {
+   "text": "2026-02-09",
+   "line": 3
+  },
+  "due_date": {
+   "text": "2026-03-26",
+   "line": 4
+  },
+  "purchase_order": {
+   "text": null,
+   "line": null
+  },
+  "bill_to_name": {
+   "text": "Imaginary Orchard Holdings",
+   "line": 11
+  },
+  "currency": {
+   "text": "$",
+   "line": 56
+  },
+  "subtotal": {
+   "text": "12,400.05",
+   "line": 56
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": "65.07",
+   "line": 57
+  },
+  "tax": [
+   {
+    "text": "1,023.00",
+    "line": 58
+   }
+  ],
+  "total": {
+   "text": "13,488.12",
+   "line": 59
+  },
+  "line_items": [
+   {
+    "description": "Irrigation head replacement",
+    "quantity": "3",
+    "unit_price": "30.63",
+    "amount": "91.89",
+    "line": 14
+   },
+   {
+    "description": "Mowing and edging visit",
+    "quantity": "7",
+    "unit_price": "39.53",
+    "amount": "276.71",
+    "line": 15
+   },
+   {
+    "description": "Aeration and overseed, front and rear beds",
+    "quantity": "2",
+    "unit_price": "291.23",
+    "amount": "582.46",
+    "line": 16
+   },
+   {
+    "description": "Mulch, shredded hardwood, cubic yard",
+    "quantity": "5",
+    "unit_price": "42.23",
+    "amount": "211.15",
+    "line": 17
+   },
+   {
+    "description": "Mulch, shredded hardwood, cubic yard (lot 2)",
+    "quantity": "8",
+    "unit_price": "42.48",
+    "amount": "339.84",
+    "line": 18
+   },
+   {
+    "description": "Mulch, shredded hardwood, cubic yard (lot 3)",
+    "quantity": "18",
+    "unit_price": "33.86",
+    "amount": "609.48",
+    "line": 19
+   },
+   {
+    "description": "Mowing and edging visit (lot 2)",
+    "quantity": "5",
+    "unit_price": "80.37",
+    "amount": "401.85",
+    "line": 20
+   },
+   {
+    "description": "Aeration and overseed, front and rear beds (lot 2)",
+    "quantity": "1",
+    "unit_price": "259.58",
+    "amount": "259.58",
+    "line": 21
+   },
+   {
+    "description": "Aeration and overseed, front and rear beds (lot 3)",
+    "quantity": "3",
+    "unit_price": "233.28",
+    "amount": "699.84",
+    "line": 22
+   },
+   {
+    "description": "Irrigation head replacement (lot 2)",
+    "quantity": "5",
+    "unit_price": "31.61",
+    "amount": "158.05",
+    "line": 23
+   },
+   {
+    "description": "Aeration and overseed, front and rear beds (lot 4)",
+    "quantity": "1",
+    "unit_price": "351.87",
+    "amount": "351.87",
+    "line": 24
+   },
+   {
+    "description": "Mowing and edging visit (lot 3)",
+    "quantity": "3",
+    "unit_price": "51.01",
+    "amount": "153.03",
+    "line": 25
+   },
+   {
+    "description": "Mowing and edging visit (lot 4)",
+    "quantity": "5",
+    "unit_price": "47.70",
+    "amount": "238.50",
+    "line": 26
+   },
+   {
+    "description": "Aeration and overseed, front and rear beds (lot 5)",
+    "quantity": "1",
+    "unit_price": "203.20",
+    "amount": "203.20",
+    "line": 27
+   },
+   {
+    "description": "Irrigation head replacement (lot 3)",
+    "quantity": "12",
+    "unit_price": "16.03",
+    "amount": "192.36",
+    "line": 28
+   },
+   {
+    "description": "Aeration and overseed, front and rear beds (lot 6)",
+    "quantity": "2",
+    "unit_price": "352.49",
+    "amount": "704.98",
+    "line": 29
+   },
+   {
+    "description": "Hedge trimming, labor",
+    "quantity": "12.5",
+    "unit_price": "38.04",
+    "amount": "475.50",
+    "line": 30
+   },
+   {
+    "description": "Hedge trimming, labor (lot 2)",
+    "quantity": "9",
+    "unit_price": "39.79",
+    "amount": "358.11",
+    "line": 31
+   },
+   {
+    "description": "Irrigation head replacement (lot 4)",
+    "quantity": "12",
+    "unit_price": "28.13",
+    "amount": "337.56",
+    "line": 32
+   },
+   {
+    "description": "Aeration and overseed, front and rear beds (lot 7)",
+    "quantity": "3",
+    "unit_price": "266.48",
+    "amount": "799.44",
+    "line": 33
+   },
+   {
+    "description": "Mowing and edging visit (lot 5)",
+    "quantity": "6",
+    "unit_price": "78.20",
+    "amount": "469.20",
+    "line": 34
+   },
+   {
+    "description": "Mowing and edging visit (lot 6)",
+    "quantity": "1",
+    "unit_price": "59.86",
+    "amount": "59.86",
+    "line": 35
+   },
+   {
+    "description": "Irrigation head replacement (lot 5)",
+    "quantity": "1",
+    "unit_price": "16.07",
+    "amount": "16.07",
+    "line": 36
+   },
+   {
+    "description": "Hedge trimming, labor (lot 3)",
+    "quantity": "12",
+    "unit_price": "36.60",
+    "amount": "439.20",
+    "line": 37
+   },
+   {
+    "description": "Debris haul-away",
+    "quantity": "3",
+    "unit_price": "155.39",
+    "amount": "466.17",
+    "line": 38
+   },
+   {
+    "description": "Mowing and edging visit (lot 7)",
+    "quantity": "5",
+    "unit_price": "57.07",
+    "amount": "285.35",
+    "line": 39
+   },
+   {
+    "description": "Debris haul-away (lot 2)",
+    "quantity": "2",
+    "unit_price": "82.50",
+    "amount": "165.00",
+    "line": 40
+   },
+   {
+    "description": "Mulch, shredded hardwood, cubic yard (lot 4)",
+    "quantity": "4",
+    "unit_price": "37.60",
+    "amount": "150.40",
+    "line": 44
+   },
+   {
+    "description": "Irrigation head replacement (lot 6)",
+    "quantity": "8",
+    "unit_price": "34.69",
+    "amount": "277.52",
+    "line": 45
+   },
+   {
+    "description": "Mulch, shredded hardwood, cubic yard (lot 5)",
+    "quantity": "1",
+    "unit_price": "46.44",
+    "amount": "46.44",
+    "line": 46
+   },
+   {
+    "description": "Mowing and edging visit (lot 8)",
+    "quantity": "4",
+    "unit_price": "90.50",
+    "amount": "362.00",
+    "line": 47
+   },
+   {
+    "description": "Aeration and overseed, front and rear beds (lot 8)",
+    "quantity": "3",
+    "unit_price": "197.50",
+    "amount": "592.50",
+    "line": 48
+   },
+   {
+    "description": "Irrigation head replacement (lot 7)",
+    "quantity": "4",
+    "unit_price": "17.14",
+    "amount": "119.98",
+    "line": 49
+   },
+   {
+    "description": "Mowing and edging visit (lot 9)",
+    "quantity": "4",
+    "unit_price": "67.64",
+    "amount": "270.56",
+    "line": 50
+   },
+   {
+    "description": "Irrigation head replacement (lot 8)",
+    "quantity": "11",
+    "unit_price": "21.13",
+    "amount": "232.43",
+    "line": 51
+   },
+   {
+    "description": "Debris haul-away (lot 3)",
+    "quantity": "2",
+    "unit_price": "87.44",
+    "amount": "174.88",
+    "line": 52
+   },
+   {
+    "description": "Mulch, shredded hardwood, cubic yard (lot 6)",
+    "quantity": "7",
+    "unit_price": "51.71",
+    "amount": "361.97",
+    "line": 53
+   },
+   {
+    "description": "Debris haul-away (lot 4)",
+    "quantity": "2",
+    "unit_price": "76.23",
+    "amount": "152.46",
+    "line": 54
+   },
+   {
+    "description": "Irrigation head replacement (lot 9)",
+    "quantity": "9",
+    "unit_price": "34.74",
+    "amount": "312.66",
+    "line": 55
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 225.1,
+ "attempts": 1,
+ "prompt_tokens": 2204,
+ "completion_tokens": 2940,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 5.9,
+ "failure_history": []
+}

@@ -1,0 +1,128 @@
+{
+ "doc_id": "synthetic-heldout-0007-invoice-letterhead.scanned",
+ "pdf_sha256": "a748451b5e0f04d23eaf6013d0fdfe4ba0c357932662d897a0cc0ec18222e6a3",
+ "model": "prism-ml/bonsai-27b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "invoice",
+  "vendor_name": {
+   "text": "Marrowfen Catering Kitchen Ltd",
+   "line": 1
+  },
+  "document_number": {
+   "text": "00003822",
+   "line": 7
+  },
+  "issue_date": {
+   "text": "29/06/2025",
+   "line": 7
+  },
+  "due_date": {
+   "text": "29/07/2025",
+   "line": 7
+  },
+  "purchase_order": {
+   "text": "080630",
+   "line": 8
+  },
+  "bill_to_name": {
+   "text": "Sampleton Bake Society",
+   "line": 4
+  },
+  "currency": {
+   "text": "GBP",
+   "line": 22
+  },
+  "subtotal": {
+   "text": "3,032.17",
+   "line": 18
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": "73.77",
+   "line": 19
+  },
+  "tax": [
+   {
+    "text": "606.43",
+    "line": 20
+   }
+  ],
+  "total": {
+   "text": "3,712.37",
+   "line": 21
+  },
+  "line_items": [
+   {
+    "description": "Linen rental, per table",
+    "quantity": "11",
+    "unit_price": "14.58",
+    "amount": "160.38",
+    "line": 10
+   },
+   {
+    "description": "Linen rental, per table (lot 2)",
+    "quantity": "17",
+    "unit_price": "12.36",
+    "amount": "210.12",
+    "line": 11
+   },
+   {
+    "description": "Fruit and cheese platter, large",
+    "quantity": "6",
+    "unit_price": "48.30",
+    "amount": "289.80",
+    "line": 12
+   },
+   {
+    "description": "Coffee service, per gallon",
+    "quantity": "7",
+    "unit_price": "18.35",
+    "amount": "128.45",
+    "line": 13
+   },
+   {
+    "description": "Linen rental, per table (lot 3)",
+    "quantity": "16",
+    "unit_price": "12.68",
+    "amount": "202.88",
+    "line": 14
+   },
+   {
+    "description": "Event staffing",
+    "quantity": "16",
+    "unit_price": "36.56",
+    "amount": "584.96",
+    "line": 15
+   },
+   {
+    "description": "Event staffing (lot 2)",
+    "quantity": "21",
+    "unit_price": "22.94",
+    "amount": "481.74",
+    "line": 16
+   },
+   {
+    "description": "Box lunches, per person",
+    "quantity": "74",
+    "unit_price": "13.16",
+    "amount": "973.84",
+    "line": 17
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 67.5,
+ "attempts": 1,
+ "prompt_tokens": 1115,
+ "completion_tokens": 888,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 2.7,
+ "failure_history": []
+}

@@ -1,0 +1,93 @@
+{
+ "doc_id": "synthetic-heldout-0029-receipt-pos_wide.degraded",
+ "pdf_sha256": "50b0afdb72317d5f137341a294c82b0c817cbbef4d8f473e7fb1ae7897423ef9",
+ "model": "granite-4.1-8b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "receipt",
+  "vendor_name": {
+   "text": "Wrenbury StationersLLC",
+   "line": 1
+  },
+  "document_number": {
+   "text": "302470",
+   "line": 7
+  },
+  "issue_date": {
+   "text": null,
+   "line": null
+  },
+  "due_date": {
+   "text": null,
+   "line": null
+  },
+  "purchase_order": {
+   "text": null,
+   "line": null
+  },
+  "bill_to_name": {
+   "text": null,
+   "line": null
+  },
+  "currency": {
+   "text": "$",
+   "line": 5
+  },
+  "subtotal": {
+   "text": "3306",
+   "line": 17
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": null,
+   "line": null
+  },
+  "tax": [
+   {
+    "text": "330",
+    "line": 19
+   }
+  ],
+  "total": {
+   "text": "36.34",
+   "line": 20
+  },
+  "line_items": [
+   {
+    "description": "Paper clips, tin",
+    "quantity": null,
+    "unit_price": "2.04",
+    "amount": "=204",
+    "line": 13
+   },
+   {
+    "description": "Fountain pen ink",
+    "quantity": null,
+    "unit_price": "11.80",
+    "amount": "Ed",
+    "line": 14
+   },
+   {
+    "description": "Wax seat",
+    "quantity": null,
+    "unit_price": "19.20",
+    "amount": "Be",
+    "line": 15
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 13.7,
+ "attempts": 1,
+ "prompt_tokens": 873,
+ "completion_tokens": 410,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 0.0,
+ "failure_history": []
+}

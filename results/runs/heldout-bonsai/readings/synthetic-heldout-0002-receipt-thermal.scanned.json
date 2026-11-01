@@ -1,0 +1,100 @@
+{
+ "doc_id": "synthetic-heldout-0002-receipt-thermal.scanned",
+ "pdf_sha256": "7230391ccec6fc81b5ccbc3b9d481cd654bad257bbc673d5d1f539e0e4b0dc21",
+ "model": "prism-ml/bonsai-27b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "receipt",
+  "vendor_name": {
+   "text": "TURNIPSHIRE  GARDEN  STAND  INC.",
+   "line": 1
+  },
+  "document_number": {
+   "text": "TXN0613576",
+   "line": 7
+  },
+  "issue_date": {
+   "text": "06/10/2024",
+   "line": 6
+  },
+  "due_date": {
+   "text": null,
+   "line": null
+  },
+  "purchase_order": {
+   "text": null,
+   "line": null
+  },
+  "bill_to_name": {
+   "text": null,
+   "line": null
+  },
+  "currency": {
+   "text": "$",
+   "line": 13
+  },
+  "subtotal": {
+   "text": "$57.67",
+   "line": 13
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": null,
+   "line": null
+  },
+  "tax": [
+   {
+    "text": "$5.77",
+    "line": 14
+   }
+  ],
+  "total": {
+   "text": "$63.44",
+   "line": 15
+  },
+  "line_items": [
+   {
+    "description": "Herb  bundle",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "$18.40",
+    "line": 9
+   },
+   {
+    "description": "5  x   3.68",
+    "quantity": null,
+    "unit_price": null,
+    "amount": null,
+    "line": 10
+   },
+   {
+    "description": "Potting soil,  bag",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "$39.27",
+    "line": 11
+   },
+   {
+    "description": "3  x   13.09",
+    "quantity": null,
+    "unit_price": null,
+    "amount": null,
+    "line": 12
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 47.4,
+ "attempts": 1,
+ "prompt_tokens": 852,
+ "completion_tokens": 567,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 1.3,
+ "failure_history": []
+}

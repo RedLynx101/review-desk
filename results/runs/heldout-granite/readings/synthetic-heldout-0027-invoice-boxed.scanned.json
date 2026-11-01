@@ -1,0 +1,97 @@
+{
+ "doc_id": "synthetic-heldout-0027-invoice-boxed.scanned",
+ "pdf_sha256": "35ca3145e81b2cf4c5b18d0f60569437c4254005600b64b3488e7286e34a1013",
+ "model": "granite-4.1-8b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "invoice",
+  "vendor_name": {
+   "text": "Hazelknot Field Instruments LLC",
+   "line": 1
+  },
+  "document_number": {
+   "text": "00033200",
+   "line": 7
+  },
+  "issue_date": {
+   "text": "10/1/25",
+   "line": 7
+  },
+  "due_date": {
+   "text": "10/15/25",
+   "line": 7
+  },
+  "purchase_order": {
+   "text": "024403",
+   "line": 7
+  },
+  "bill_to_name": {
+   "text": "Notta Realperson",
+   "line": 11
+  },
+  "currency": {
+   "text": null,
+   "line": null
+  },
+  "subtotal": {
+   "text": "$4,042.95",
+   "line": 18
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": "$11.77",
+   "line": 19
+  },
+  "tax": [
+   {
+    "text": "State Tax 4% $161.72",
+    "line": 20
+   },
+   {
+    "text": "County Tax 2.5% $101.07",
+    "line": 21
+   }
+  ],
+  "total": {
+   "text": null,
+   "line": null
+  },
+  "line_items": [
+   {
+    "description": "Annual calibration certificate",
+    "quantity": null,
+    "unit_price": "$139.95",
+    "amount": "$559.80",
+    "line": 15
+   },
+   {
+    "description": "Data logger, four channel",
+    "quantity": null,
+    "unit_price": "$630.96",
+    "amount": "$1,892.88",
+    "line": 16
+   },
+   {
+    "description": "Data logger, four channel (lot 2)",
+    "quantity": null,
+    "unit_price": "$530.09",
+    "amount": "$1,590.27",
+    "line": 17
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 14.7,
+ "attempts": 1,
+ "prompt_tokens": 938,
+ "completion_tokens": 485,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 0.0,
+ "failure_history": []
+}

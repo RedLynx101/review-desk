@@ -1,0 +1,81 @@
+{
+ "doc_id": "synthetic-heldout-0013-invoice-sidebar.degraded",
+ "pdf_sha256": "c1df7b0959eae2f4de8e6eaa64105bfc97ffbd92360c209e35785b7e801d53a0",
+ "model": "granite-4.1-8b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "receipt",
+  "vendor_name": {
+   "text": "Lore\u00ae Springs Dental",
+   "line": 12
+  },
+  "document_number": {
+   "text": null,
+   "line": null
+  },
+  "issue_date": {
+   "text": "10/29/2026",
+   "line": 29
+  },
+  "due_date": {
+   "text": null,
+   "line": null
+  },
+  "purchase_order": {
+   "text": null,
+   "line": null
+  },
+  "bill_to_name": {
+   "text": null,
+   "line": null
+  },
+  "currency": {
+   "text": "\u00a3",
+   "line": 16
+  },
+  "subtotal": {
+   "text": null,
+   "line": null
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": null,
+   "line": null
+  },
+  "tax": [],
+  "total": {
+   "text": "\u00a32,224.17",
+   "line": 42
+  },
+  "line_items": [
+   {
+    "description": "Lets! a 13.99 :",
+    "quantity": null,
+    "unit_price": null,
+    "amount": null,
+    "line": 39
+   },
+   {
+    "description": "ew sar Marge Get ty",
+    "quantity": "2",
+    "unit_price": null,
+    "amount": null,
+    "line": 40
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 15.5,
+ "attempts": 1,
+ "prompt_tokens": 1159,
+ "completion_tokens": 301,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 0.0,
+ "failure_history": []
+}

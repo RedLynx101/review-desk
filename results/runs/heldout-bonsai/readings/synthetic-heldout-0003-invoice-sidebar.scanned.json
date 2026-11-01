@@ -1,0 +1,121 @@
+{
+ "doc_id": "synthetic-heldout-0003-invoice-sidebar.scanned",
+ "pdf_sha256": "a88993c6610b0b85139261f92baf69d4a872a9d44ea91a11e3b53cc54b8bc6e8",
+ "model": "prism-ml/bonsai-27b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "invoice",
+  "vendor_name": {
+   "text": ".        s\nRavelstitch Gasket",
+   "line": 1
+  },
+  "document_number": {
+   "text": "2024/9772",
+   "line": 11
+  },
+  "issue_date": {
+   "text": "40/15/24",
+   "line": 15
+  },
+  "due_date": {
+   "text": "11/14/24",
+   "line": 18
+  },
+  "purchase_order": {
+   "text": "084546",
+   "line": 19
+  },
+  "bill_to_name": {
+   "text": "Works Co.",
+   "line": 3
+  },
+  "currency": {
+   "text": "USD",
+   "line": 27
+  },
+  "subtotal": {
+   "text": "1,530.46",
+   "line": 23
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": "43.67",
+   "line": 24
+  },
+  "tax": [
+   {
+    "text": "153.05",
+    "line": 25
+   }
+  ],
+  "total": {
+   "text": "1,727.18",
+   "line": 26
+  },
+  "line_items": [
+   {
+    "description": "Neoprene gasket, 4 in.",
+    "quantity": "21",
+    "unit_price": "17.41",
+    "amount": "365.61",
+    "line": 12
+   },
+   {
+    "description": "Spiral-wound gasket, 6 in. class 150",
+    "quantity": "10",
+    "unit_price": "25.41",
+    "amount": "254.10",
+    "line": 14
+   },
+   {
+    "description": "Neoprene gasket, 4 in. (lot 2)",
+    "quantity": "23",
+    "unit_price": "16.16",
+    "amount": "371.68",
+    "line": 16
+   },
+   {
+    "description": "Rush cutting fee",
+    "quantity": "1",
+    "unit_price": "65.35",
+    "amount": "65.35",
+    "line": 17
+   },
+   {
+    "description": "Rush cutting fee (lot 2)",
+    "quantity": "1",
+    "unit_price": "54.90",
+    "amount": "54.90",
+    "line": 18
+   },
+   {
+    "description": "Gasket sheet, 1/8 in. x 36 in. x 36 in.",
+    "quantity": "4",
+    "unit_price": "86.35",
+    "amount": "345.40",
+    "line": 20
+   },
+   {
+    "description": "Rush cutting fee (lot 3)",
+    "quantity": "1",
+    "unit_price": "73.42",
+    "amount": "73.42",
+    "line": 21
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 69.7,
+ "attempts": 1,
+ "prompt_tokens": 1122,
+ "completion_tokens": 857,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 3.2,
+ "failure_history": []
+}

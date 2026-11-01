@@ -1,0 +1,86 @@
+{
+ "doc_id": "synthetic-heldout-0016-invoice-boxed.clean",
+ "pdf_sha256": "be0e6a7b81c3447f92fee11add22e6a27cd5c0591ab720cc466d015b6a225538",
+ "model": "granite-4.1-8b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "invoice",
+  "vendor_name": {
+   "text": "Turnipshire Field Instruments Inc.",
+   "line": 1
+  },
+  "document_number": {
+   "text": "PO-06081",
+   "line": 6
+  },
+  "issue_date": {
+   "text": "Jul 1, 2026",
+   "line": 6
+  },
+  "due_date": {
+   "text": "Jul 15, 2026",
+   "line": 6
+  },
+  "purchase_order": {
+   "text": "PO-06081",
+   "line": 6
+  },
+  "bill_to_name": {
+   "text": "Ima Placeholder",
+   "line": 10
+  },
+  "currency": {
+   "text": null,
+   "line": null
+  },
+  "subtotal": {
+   "text": "$1,121.46",
+   "line": 16
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": null,
+   "line": null
+  },
+  "tax": [
+   {
+    "text": "$92.52",
+    "line": 17
+   }
+  ],
+  "total": {
+   "text": "$1,213.98",
+   "line": 18
+  },
+  "line_items": [
+   {
+    "description": "Carrying case, foam lined",
+    "quantity": "4",
+    "unit_price": "96.85",
+    "amount": "387.40",
+    "line": 14
+   },
+   {
+    "description": "Thermocouple probe, type K",
+    "quantity": "17",
+    "unit_price": "43.18",
+    "amount": "734.06",
+    "line": 15
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 20.7,
+ "attempts": 1,
+ "prompt_tokens": 908,
+ "completion_tokens": 411,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 0.0,
+ "failure_history": []
+}

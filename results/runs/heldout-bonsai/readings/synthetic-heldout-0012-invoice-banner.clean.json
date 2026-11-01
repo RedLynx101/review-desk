@@ -1,0 +1,107 @@
+{
+ "doc_id": "synthetic-heldout-0012-invoice-banner.clean",
+ "pdf_sha256": "c8d95767b548df76a7652fbf331744211b5ee8f1dc410a810bf1bc3ab8b70798",
+ "model": "prism-ml/bonsai-27b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "invoice",
+  "vendor_name": {
+   "text": "Snugglebrook Sign Painters S.A.R.L.",
+   "line": 1
+  },
+  "document_number": {
+   "text": "TE01935",
+   "line": 5
+  },
+  "issue_date": {
+   "text": "21 Aug 2025",
+   "line": 5
+  },
+  "due_date": {
+   "text": "28 Aug 2025",
+   "line": 5
+  },
+  "purchase_order": {
+   "text": null,
+   "line": null
+  },
+  "bill_to_name": {
+   "text": "Imaginary Orchard Holdings",
+   "line": 9
+  },
+  "currency": {
+   "text": "\u20ac",
+   "line": 18
+  },
+  "subtotal": {
+   "text": "1.363,40 \u20ac",
+   "line": 18
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": "Delivery        21,95 \u20ac",
+   "line": 20
+  },
+  "tax": [
+   {
+    "text": "Mwst. 19%        259,05 \u20ac",
+    "line": 20
+   }
+  ],
+  "total": {
+   "text": "Total Due        1.644,40 \u20ac",
+   "line": 21
+  },
+  "line_items": [
+   {
+    "description": "Removal of old signage",
+    "quantity": "2",
+    "unit_price": "82,31",
+    "amount": "164,62",
+    "line": 13
+   },
+   {
+    "description": "Vinyl banner, 3 ft x 8 ft",
+    "quantity": "6",
+    "unit_price": "70,97",
+    "amount": "425,82",
+    "line": 14
+   },
+   {
+    "description": "Design proofing",
+    "quantity": "2",
+    "unit_price": "48,90",
+    "amount": "97,80",
+    "line": 15
+   },
+   {
+    "description": "Removal of old signage (lot 2)",
+    "quantity": "2",
+    "unit_price": "69,10",
+    "amount": "138,20",
+    "line": 16
+   },
+   {
+    "description": "Installation, two-person crew",
+    "quantity": "4",
+    "unit_price": "134,24",
+    "amount": "536,96",
+    "line": 17
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 56.0,
+ "attempts": 1,
+ "prompt_tokens": 1037,
+ "completion_tokens": 710,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 1.0,
+ "failure_history": []
+}

@@ -1,0 +1,121 @@
+{
+ "doc_id": "synthetic-heldout-0003-invoice-sidebar.clean",
+ "pdf_sha256": "d1893daa6fc38a5a252791004394193eda3dca10a812ed985274aebe02a705ba",
+ "model": "prism-ml/bonsai-27b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "invoice",
+  "vendor_name": {
+   "text": "Ravelstitch Gasket",
+   "line": 1
+  },
+  "document_number": {
+   "text": "2024/9772",
+   "line": 9
+  },
+  "issue_date": {
+   "text": "10/15/24",
+   "line": 12
+  },
+  "due_date": {
+   "text": "11/14/24",
+   "line": 15
+  },
+  "purchase_order": {
+   "text": "084546",
+   "line": 17
+  },
+  "bill_to_name": {
+   "text": "Works Co.",
+   "line": 2
+  },
+  "currency": {
+   "text": "USD",
+   "line": 24
+  },
+  "subtotal": {
+   "text": "1,530.46",
+   "line": 20
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": "43.67",
+   "line": 21
+  },
+  "tax": [
+   {
+    "text": "Sales Tax 10%",
+    "line": 22
+   }
+  ],
+  "total": {
+   "text": "1,727.18",
+   "line": 23
+  },
+  "line_items": [
+   {
+    "description": "Neoprene gasket, 4 in.",
+    "quantity": "21",
+    "unit_price": "17.41",
+    "amount": "365.61",
+    "line": 10
+   },
+   {
+    "description": "Spiral-wound gasket, 6 in. class 150",
+    "quantity": "10",
+    "unit_price": "25.41",
+    "amount": "254.10",
+    "line": 12
+   },
+   {
+    "description": "Neoprene gasket, 4 in. (lot 2)",
+    "quantity": "23",
+    "unit_price": "16.16",
+    "amount": "371.68",
+    "line": 13
+   },
+   {
+    "description": "Rush cutting fee",
+    "quantity": "1",
+    "unit_price": "65.35",
+    "amount": "65.35",
+    "line": 14
+   },
+   {
+    "description": "Rush cutting fee (lot 2)",
+    "quantity": "1",
+    "unit_price": "54.90",
+    "amount": "54.90",
+    "line": 16
+   },
+   {
+    "description": "Gasket sheet, 1/8 in. x 36 in. x 36 in.",
+    "quantity": "4",
+    "unit_price": "86.35",
+    "amount": "345.40",
+    "line": 17
+   },
+   {
+    "description": "Rush cutting fee (lot 3)",
+    "quantity": "1",
+    "unit_price": "73.42",
+    "amount": "73.42",
+    "line": 18
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 69.5,
+ "attempts": 1,
+ "prompt_tokens": 1102,
+ "completion_tokens": 852,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 1.5,
+ "failure_history": []
+}

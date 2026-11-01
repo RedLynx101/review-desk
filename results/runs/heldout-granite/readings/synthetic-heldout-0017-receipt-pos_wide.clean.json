@@ -1,0 +1,107 @@
+{
+ "doc_id": "synthetic-heldout-0017-receipt-pos_wide.clean",
+ "pdf_sha256": "f854d7daeef11064fc049234efd635ad425bbff8a7fb1b01dbf78b2060c7fd31",
+ "model": "granite-4.1-8b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "receipt",
+  "vendor_name": {
+   "text": "Marrowfen Noodle Bar Inc.",
+   "line": 1
+  },
+  "document_number": {
+   "text": "03-1-82931",
+   "line": 4
+  },
+  "issue_date": {
+   "text": "2025-04-07",
+   "line": 4
+  },
+  "due_date": {
+   "text": null,
+   "line": null
+  },
+  "purchase_order": {
+   "text": null,
+   "line": null
+  },
+  "bill_to_name": {
+   "text": null,
+   "line": null
+  },
+  "currency": {
+   "text": "CA$",
+   "line": 13
+  },
+  "subtotal": {
+   "text": "CA$73.70",
+   "line": 13
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": null,
+   "line": null
+  },
+  "tax": [
+   {
+    "text": "GST 5%        CA$3.69",
+    "line": 14
+   }
+  ],
+  "total": {
+   "text": "CA$77.39",
+   "line": 15
+  },
+  "line_items": [
+   {
+    "description": "Barley tea",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "CA$7.26",
+    "line": 8
+   },
+   {
+    "description": "Extra broth",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "CA$3.27",
+    "line": 9
+   },
+   {
+    "description": "Pork dumplings, 6",
+    "quantity": "2",
+    "unit_price": "7.72",
+    "amount": "CA$15.44",
+    "line": 10
+   },
+   {
+    "description": "Miso noodle bowl",
+    "quantity": "3",
+    "unit_price": "12.17",
+    "amount": "CA$36.51",
+    "line": 11
+   },
+   {
+    "description": "Pickled radish",
+    "quantity": "3",
+    "unit_price": "3.74",
+    "amount": "CA$11.22",
+    "line": 12
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 30.6,
+ "attempts": 1,
+ "prompt_tokens": 877,
+ "completion_tokens": 544,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 0.0,
+ "failure_history": []
+}

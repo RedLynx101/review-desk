@@ -1,0 +1,107 @@
+{
+ "doc_id": "synthetic-heldout-0025-invoice-ledger.degraded",
+ "pdf_sha256": "54edc36d599696554cbb5716e49c1a77bd52e19e6504231840210488a2af5d8b",
+ "model": "granite-4.1-8b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "invoice",
+  "vendor_name": {
+   "text": "COBBLEWORTH SIGNAL REPAIR B.V.",
+   "line": 1
+  },
+  "document_number": {
+   "text": "00053606",
+   "line": 8
+  },
+  "issue_date": {
+   "text": "2024-05-21",
+   "line": 10
+  },
+  "due_date": {
+   "text": "2024-06-20",
+   "line": 11
+  },
+  "purchase_order": {
+   "text": "PO-15738",
+   "line": 8
+  },
+  "bill_to_name": {
+   "text": "Sampleton Bake Society",
+   "line": 13
+  },
+  "currency": {
+   "text": "\u20ac",
+   "line": 24
+  },
+  "subtotal": {
+   "text": "529,15",
+   "line": 24
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": null,
+   "line": null
+  },
+  "tax": [
+   {
+    "text": null,
+    "line": null
+   }
+  ],
+  "total": {
+   "text": "29,15",
+   "line": 27
+  },
+  "line_items": [
+   {
+    "description": "On-site visit",
+    "quantity": null,
+    "unit_price": "177,75",
+    "amount": "377,76",
+    "line": 16
+   },
+   {
+    "description": "diagnostic",
+    "quantity": null,
+    "unit_price": null,
+    "amount": null,
+    "line": 17
+   },
+   {
+    "description": "After-hours call-out surcharge",
+    "quantity": null,
+    "unit_price": "120,94",
+    "amount": "120,94",
+    "line": 19
+   },
+   {
+    "description": "Cable harness, 12 ft",
+    "quantity": null,
+    "unit_price": "7,66",
+    "amount": "57,66",
+    "line": 20
+   },
+   {
+    "description": "After-hours call-out aprcharge (lot 2)",
+    "quantity": null,
+    "unit_price": "332,80",
+    "amount": "172,80",
+    "line": 22
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 20.3,
+ "attempts": 1,
+ "prompt_tokens": 1014,
+ "completion_tokens": 539,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 0.0,
+ "failure_history": []
+}

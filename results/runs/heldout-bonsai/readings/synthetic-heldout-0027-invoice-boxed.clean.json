@@ -1,0 +1,97 @@
+{
+ "doc_id": "synthetic-heldout-0027-invoice-boxed.clean",
+ "pdf_sha256": "6c14d2cf0e515a284e59e852b642ee76bb68ecb5e67b914e415327669f870c2c",
+ "model": "prism-ml/bonsai-27b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "invoice",
+  "vendor_name": {
+   "text": "Hazelknot Field Instruments LLC",
+   "line": 1
+  },
+  "document_number": {
+   "text": "00033200",
+   "line": 6
+  },
+  "issue_date": {
+   "text": "10/1/25",
+   "line": 6
+  },
+  "due_date": {
+   "text": "10/15/25",
+   "line": 6
+  },
+  "purchase_order": {
+   "text": "024403",
+   "line": 6
+  },
+  "bill_to_name": {
+   "text": "Notta Realperson",
+   "line": 10
+  },
+  "currency": {
+   "text": "$",
+   "line": 17
+  },
+  "subtotal": {
+   "text": "4,042.95",
+   "line": 17
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": "11.77",
+   "line": 18
+  },
+  "tax": [
+   {
+    "text": "161.72",
+    "line": 19
+   },
+   {
+    "text": "101.07",
+    "line": 20
+   }
+  ],
+  "total": {
+   "text": "4,317.51",
+   "line": 21
+  },
+  "line_items": [
+   {
+    "description": "Annual calibration certificate",
+    "quantity": "4",
+    "unit_price": "139.95",
+    "amount": "559.80",
+    "line": 14
+   },
+   {
+    "description": "Data logger, four channel",
+    "quantity": "3",
+    "unit_price": "630.96",
+    "amount": "1,892.88",
+    "line": 15
+   },
+   {
+    "description": "Data logger, four channel (lot 2)",
+    "quantity": "3",
+    "unit_price": "530.09",
+    "amount": "1,590.27",
+    "line": 16
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 48.9,
+ "attempts": 1,
+ "prompt_tokens": 1038,
+ "completion_tokens": 601,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 1.2,
+ "failure_history": []
+}

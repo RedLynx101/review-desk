@@ -1,0 +1,100 @@
+{
+ "doc_id": "synthetic-heldout-0025-invoice-ledger.clean",
+ "pdf_sha256": "e38572aeb4f8b6312d82bca59c998b0d09938c64fcc3c3034e1ee58469836c06",
+ "model": "granite-4.1-8b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "invoice",
+  "vendor_name": {
+   "text": "COBBLEWORTH SIGNAL REPAIR B.V.",
+   "line": 1
+  },
+  "document_number": {
+   "text": "00053606",
+   "line": 6
+  },
+  "issue_date": {
+   "text": "2024-05-21",
+   "line": 7
+  },
+  "due_date": {
+   "text": "2024-06-20",
+   "line": 8
+  },
+  "purchase_order": {
+   "text": "PO-15738",
+   "line": 6
+  },
+  "bill_to_name": {
+   "text": "Sampleton Bake Society",
+   "line": 10
+  },
+  "currency": {
+   "text": "\u20ac",
+   "line": 19
+  },
+  "subtotal": {
+   "text": "\u20ac529,15",
+   "line": 19
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": null,
+   "line": null
+  },
+  "tax": [
+   {
+    "text": null,
+    "line": null
+   }
+  ],
+  "total": {
+   "text": "\u20ac529,15",
+   "line": 20
+  },
+  "line_items": [
+   {
+    "description": "On-site diagnostic visit",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "\u20ac177,75",
+    "line": 14
+   },
+   {
+    "description": "After-hours call-out surcharge",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "\u20ac120,94",
+    "line": 15
+   },
+   {
+    "description": "Cable harness, 12 ft",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "\u20ac57,66",
+    "line": 16
+   },
+   {
+    "description": "After-hours call-out surcharge (lot 2)",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "\u20ac172,80",
+    "line": 17
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 18.9,
+ "attempts": 1,
+ "prompt_tokens": 913,
+ "completion_tokens": 498,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 0.0,
+ "failure_history": []
+}

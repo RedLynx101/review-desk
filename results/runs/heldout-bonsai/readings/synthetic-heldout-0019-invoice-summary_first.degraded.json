@@ -1,0 +1,18 @@
+{
+ "doc_id": "synthetic-heldout-0019-invoice-summary_first.degraded",
+ "pdf_sha256": "e0d339ce784f9e82694c472832f28787e988ef46a682d23509e0f2ba632e6991",
+ "model": "prism-ml/bonsai-27b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": null,
+ "error_code": "truncated",
+ "error_message": "The model ran out of tokens before finishing its answer.",
+ "raw_text_if_invalid": null,
+ "seconds": null,
+ "attempts": null,
+ "prompt_tokens": null,
+ "completion_tokens": null,
+ "finish_reason": null,
+ "images_sent": 0,
+ "text_seconds": 5.7,
+ "failure_history": []
+}

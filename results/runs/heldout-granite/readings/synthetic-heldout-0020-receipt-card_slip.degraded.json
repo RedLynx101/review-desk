@@ -1,0 +1,107 @@
+{
+ "doc_id": "synthetic-heldout-0020-receipt-card_slip.degraded",
+ "pdf_sha256": "0c66d9c5b5c30fd587198c2254c593207addd3b1df0d312c317aabdb127f3933",
+ "model": "granite-4.1-8b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "receipt",
+  "vendor_name": {
+   "text": "Wrenbury Hardware & SonsLltd",
+   "line": 23
+  },
+  "document_number": {
+   "text": "CARD Sal.",
+   "line": 27
+  },
+  "issue_date": {
+   "text": "14 Aug 2024",
+   "line": 28
+  },
+  "due_date": {
+   "text": null,
+   "line": null
+  },
+  "purchase_order": {
+   "text": null,
+   "line": null
+  },
+  "bill_to_name": {
+   "text": null,
+   "line": null
+  },
+  "currency": {
+   "text": "\u00a3",
+   "line": 28
+  },
+  "subtotal": {
+   "text": "174.86",
+   "line": 28
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": null,
+   "line": null
+  },
+  "tax": [
+   {
+    "text": "VAT 20%",
+    "line": 70
+   }
+  ],
+  "total": {
+   "text": "174.06",
+   "line": 76
+  },
+  "line_items": [
+   {
+    "description": "Work gtoves x3",
+    "quantity": null,
+    "unit_price": "30.63",
+    "amount": null,
+    "line": 44
+   },
+   {
+    "description": "Wood head ; 14.85 i",
+    "quantity": null,
+    "unit_price": null,
+    "amount": null,
+    "line": 48
+   },
+   {
+    "description": "7 x Pawter\u2019s tape = on Drift bit set wae 23.84",
+    "quantity": null,
+    "unit_price": null,
+    "amount": null,
+    "line": 52
+   },
+   {
+    "description": "Pipe wrench, 10 in - j ?",
+    "quantity": null,
+    "unit_price": null,
+    "amount": null,
+    "line": 57
+   },
+   {
+    "description": "Net 171.43 > ea x ; Fe \u201c : \u2019 +4 \u2018 4 oh f 4 ay Discount way). 3 ACs a VAT 20% ; { i ; > ws \u2018i , , Yotal 174.06 \u201cte Me ng = ~ 4 Gee 4 oe 4 Be howd =~ ea Len anne X22 . 7 . j 4 | x t \u2018 > > ea 4 eee . : 4 \u2018 7 f ",
+    "quantity": null,
+    "unit_price": null,
+    "amount": null,
+    "line": 60
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 33.3,
+ "attempts": 1,
+ "prompt_tokens": 1778,
+ "completion_tokens": 617,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 0.0,
+ "failure_history": []
+}

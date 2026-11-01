@@ -186,10 +186,52 @@ def document_table(runs: list[Run]) -> list[str]:
 
 
 def anomaly_table(runs: list[Run]) -> list[str]:
-    lines = ["| Model | Documents with a printed mistake | Flagged for review |", "|---|---|---|"]
+    kinds = (
+        ("total_mismatch", "Total doesn't add up"), ("subtotal_mismatch", "Column doesn't reach the subtotal"),
+        ("line_amount_mismatch", "Line amount isn't quantity times price"), ("missing_number", "No document number printed"),
+    )
+    lines = ["| Model | Printed mistake | Documents | Flagged for review |", "|---|---|---|---|"]
     for run in runs:
-        documents = [d for d in run.documents if d["anomalies"]]
-        lines.append(f"| {run.short} | {len(documents)} | {sum(d['any_flagged'] for d in documents)} |")
+        for kind, label in kinds:
+            documents = [d for d in run.documents if kind in d["anomalies"]]
+            if documents:
+                lines.append(f"| {run.short} | {label} | {len(documents)} | {sum(d['any_flagged'] for d in documents)} |")
+    return lines
+
+
+def anomaly_note(runs: list[Run]) -> str:
+    """Says plainly when a set has no sums that fail, so the table isn't read as testing them."""
+    note = "Printed mistakes are built into some documents. A sum that doesn't work should reach a person. A missing number is different: leaving it blank is the right answer, so nothing has to be flagged."
+    if not any(kind != "missing_number" for run in runs for d in run.documents for kind in d["anomalies"]):
+        note += " No document in this set carries a bad sum, so it doesn't test whether those reach a person."
+    return note
+
+
+def summary_lines(default_run: Run, runs: list[Run]) -> list[str]:
+    def at(run: Run, condition: str) -> dict:
+        return skip_stats(by_condition(run.records, condition))
+
+    clean, scanned, degraded = (at(default_run, condition) for condition in CONDITIONS)
+    heavy = [r for r in by_quality(default_run.records, "heavy") if r["truth"] is not None]
+    known = [r for r in heavy if r["readable"] is not None]
+    lines = [
+        f"At a {THRESHOLD} threshold on the held-out set, {default_run.short} let {_percent(clean['coverage'])} of values on clean PDFs skip review, and {clean['wrong']} of those {clean['skipped']} were wrong. "
+        f"On light scans it was {_percent(scanned['coverage'])}, with {scanned['wrong']} of {scanned['skipped']} wrong.",
+        "",
+        f"**The weak spot is degraded scans.** Only {_percent(degraded['coverage'])} of values skip review there, which is the system working, but {degraded['wrong']} of those {degraded['skipped']} were wrong ({_percent(degraded['error'], 2)}). "
+        f"A bad scan needs a person's eyes on every value, whatever the score says. On the heaviest damage, OCR could read {_percent(sum(bool(r['readable']) for r in known) / len(known) if known else None)} of the printed values, and {_percent(sum(r['correct'] for r in heavy) / len(heavy) if heavy else None)} came out right.",
+    ]
+    others = [run for run in runs if run is not default_run]
+    for other in others:
+        total = skip_stats(other.records)
+        ours = skip_stats(default_run.records)
+        ours_seconds = [d["model_seconds"] for d in default_run.documents if d["model_seconds"]]
+        other_seconds = [d["model_seconds"] for d in other.documents if d["model_seconds"]]
+        lines += [
+            "",
+            f"Across all conditions {default_run.short} skipped review on {_percent(ours['coverage'])} of values with {_percent(ours['error'], 2)} wrong. {other.short} skipped {_percent(total['coverage'])} with {_percent(total['error'], 2)} wrong, "
+            f"and took {sum(other_seconds) / len(other_seconds):.0f} seconds per document against {sum(ours_seconds) / len(ours_seconds):.0f}.",
+        ]
     return lines
 
 
@@ -233,13 +275,15 @@ def render(dev_runs: list[Run], heldout_runs: list[Run], choice: dict) -> str:
         "",
         f"**Default model: `{choice['default']}`.** {choice['reason']}" + ("" if choice["bar_met"] else " The bar wasn't met."),
         "",
+        *summary_lines(default_run, heldout_runs),
+        "",
         "## Setup",
         "",
         f"- Held-out set: {base} base documents, each rendered clean, scanned and degraded, {len(heldout_runs[0].documents)} renderings per model. The split has its own vendor names and three layouts that were never rendered while tuning. Each model ran it once.",
         f"- Models: " + "; ".join(f"`{run.model}` ({run.quantization})" for run in heldout_runs) + f". Through LM Studio, {heldout_runs[0].meta.get('model', {}).get('loaded_context_length')} context, temperature {settings.get('temperature')}, max tokens {settings.get('max_tokens')}, strict JSON schema, no page images.",
         "- OCR: Tesseract 5.3.3 on image pages, after straightening and denoising. Digital PDFs use their text layer, checked against the rendered page.",
         f"- Review threshold {THRESHOLD}, with hand-set weights. Both were fixed before these runs, and neither was refit per model. They were tuned against Bonsai's answers on dev, which may favor Bonsai.",
-        "- Public datasets weren't run. FATURA and CORD passed the license review in [DATASETS.md](../docs/DATASETS.md), but this round used no downloads, so nothing here has been tested on documents this repo's generator didn't make.",
+        "- Public datasets weren't run. FATURA and CORD passed the license review in [DATASETS.md](../docs/DATASETS.md), but this round used no downloads, so nothing here has been tested on documents this repo's generator didn't make. That's the largest gap in this report.",
         "",
         "## What matters most: values that skipped review",
         "",
@@ -271,7 +315,7 @@ def render(dev_runs: list[Run], heldout_runs: list[Run], choice: dict) -> str:
         "",
         *document_table(heldout_runs),
         "",
-        "Printed mistakes are built into some documents, such as a total that doesn't add up. The right outcome is that a person sees them.",
+        anomaly_note(heldout_runs),
         "",
         *anomaly_table(heldout_runs),
         "",

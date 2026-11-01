@@ -1,0 +1,46 @@
+{
+ "created": "2026-11-01T15:42:30-0600",
+ "split": "heldout",
+ "base_documents": 30,
+ "conditions": [
+  "clean",
+  "scanned",
+  "degraded"
+ ],
+ "synthetic": true,
+ "generator_version": 1,
+ "master_seed": 20261101,
+ "model": {
+  "id": "granite-4.1-8b",
+  "type": "llm",
+  "arch": "granite",
+  "publisher": "lmstudio-community",
+  "quantization": "Q4_K_M",
+  "max_context_length": 131072,
+  "loaded_context_length": 8192,
+  "state": "loaded"
+ },
+ "model_settings": {
+  "temperature": 0.0,
+  "max_tokens": 3500,
+  "strict_json_schema": true,
+  "images_sent_for_scans": false
+ },
+ "invocations": [
+  {
+   "at": "2026-11-01T15:42:30-0600",
+   "base_documents": 30,
+   "conditions": [
+    "clean",
+    "scanned",
+    "degraded"
+   ],
+   "git": {
+    "commit": "c6b8c7b64c03a9e1a6bdff3872466bdc39a20266",
+    "dirty": true
+   },
+   "prompt_sha256": "83da1fd519d13bab"
+  }
+ ],
+ "python": "3.12.1"
+}

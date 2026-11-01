@@ -1,0 +1,97 @@
+{
+ "doc_id": "synthetic-heldout-0015-invoice-ledger.degraded",
+ "pdf_sha256": "cc781671d15075400ddded63dd2d492ac469fd5ea2f4dc832cf8e25b9fa4b92f",
+ "model": "granite-4.1-8b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "invoice",
+  "vendor_name": {
+   "text": "Marrowfen Sign Painters Inc.",
+   "line": 1
+  },
+  "document_number": {
+   "text": "KY62400",
+   "line": 9
+  },
+  "issue_date": {
+   "text": "May 16, 2024",
+   "line": 10
+  },
+  "due_date": {
+   "text": "July 15, 2024",
+   "line": 10
+  },
+  "purchase_order": {
+   "text": null,
+   "line": null
+  },
+  "bill_to_name": {
+   "text": "Nonesuch Freight Partners",
+   "line": 12
+  },
+  "currency": {
+   "text": "$",
+   "line": 20
+  },
+  "subtotal": {
+   "text": "$1,008.91",
+   "line": 20
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": null,
+   "line": null
+  },
+  "tax": [
+   {
+    "text": "$40.36",
+    "line": 22
+   },
+   {
+    "text": "$25.22",
+    "line": 23
+   }
+  ],
+  "total": {
+   "text": "$1,074.49",
+   "line": 24
+  },
+  "line_items": [
+   {
+    "description": "Vinyl banner, 3 fr x 8 ft",
+    "quantity": null,
+    "unit_price": null,
+    "amount": null,
+    "line": 16
+   },
+   {
+    "description": "Removal of old signage",
+    "quantity": "2",
+    "unit_price": "$134.97",
+    "amount": "$404.91",
+    "line": 17
+   },
+   {
+    "description": "Vinyl banner, 3 ft x 8 ft (lot 2)",
+    "quantity": "4",
+    "unit_price": "$148.10",
+    "amount": "$296.20",
+    "line": 18
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 23.0,
+ "attempts": 1,
+ "prompt_tokens": 956,
+ "completion_tokens": 482,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 0.0,
+ "failure_history": []
+}

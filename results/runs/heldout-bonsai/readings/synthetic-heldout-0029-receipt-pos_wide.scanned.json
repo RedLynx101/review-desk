@@ -1,0 +1,93 @@
+{
+ "doc_id": "synthetic-heldout-0029-receipt-pos_wide.scanned",
+ "pdf_sha256": "ea8cc48193d22bbfd86b6a409025f2ab7912c19c50a60156c51fd485889c3eac",
+ "model": "prism-ml/bonsai-27b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "receipt",
+  "vendor_name": {
+   "text": "Wrenbury Stationers LLC",
+   "line": 1
+  },
+  "document_number": {
+   "text": "R-967601",
+   "line": 5
+  },
+  "issue_date": {
+   "text": "2024-07-20",
+   "line": 5
+  },
+  "due_date": {
+   "text": null,
+   "line": null
+  },
+  "purchase_order": {
+   "text": null,
+   "line": null
+  },
+  "bill_to_name": {
+   "text": null,
+   "line": null
+  },
+  "currency": {
+   "text": "$",
+   "line": 13
+  },
+  "subtotal": {
+   "text": "33.04",
+   "line": 11
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": null,
+   "line": null
+  },
+  "tax": [
+   {
+    "text": "3.30",
+    "line": 12
+   }
+  ],
+  "total": {
+   "text": "36.34",
+   "line": 13
+  },
+  "line_items": [
+   {
+    "description": "Paper clips, tin",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "2.04",
+    "line": 8
+   },
+   {
+    "description": "Fountain pen ink",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "11.80",
+    "line": 9
+   },
+   {
+    "description": "Wax seal kit",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "19.20",
+    "line": 10
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 41.5,
+ "attempts": 1,
+ "prompt_tokens": 847,
+ "completion_tokens": 503,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 1.1,
+ "failure_history": []
+}

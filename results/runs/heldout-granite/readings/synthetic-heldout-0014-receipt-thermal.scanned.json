@@ -1,0 +1,86 @@
+{
+ "doc_id": "synthetic-heldout-0014-receipt-thermal.scanned",
+ "pdf_sha256": "fab9582a8449ab0c932f01b7019c12a97e07e43ba6797b539f2c352a9e5c4f73",
+ "model": "granite-4.1-8b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "receipt",
+  "vendor_name": {
+   "text": "FIGGLETON HARDWARE LTD",
+   "line": 1
+  },
+  "document_number": {
+   "text": "25-1-01634",
+   "line": 7
+  },
+  "issue_date": {
+   "text": "30 Nov 2025",
+   "line": 6
+  },
+  "due_date": {
+   "text": null,
+   "line": null
+  },
+  "purchase_order": {
+   "text": null,
+   "line": null
+  },
+  "bill_to_name": {
+   "text": null,
+   "line": null
+  },
+  "currency": {
+   "text": "GBP",
+   "line": 16
+  },
+  "subtotal": {
+   "text": "25.30",
+   "line": 13
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": null,
+   "line": null
+  },
+  "tax": [
+   {
+    "text": "20% 5.06",
+    "line": 14
+   }
+  ],
+  "total": {
+   "text": "30.36",
+   "line": 15
+  },
+  "line_items": [
+   {
+    "description": "Painter's tape        ",
+    "quantity": "2",
+    "unit_price": "7.49",
+    "amount": "14.98",
+    "line": 9
+   },
+   {
+    "description": "Hinge, brass, pair        ",
+    "quantity": "2",
+    "unit_price": "5.16",
+    "amount": "10.32",
+    "line": 11
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 20.2,
+ "attempts": 1,
+ "prompt_tokens": 816,
+ "completion_tokens": 392,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 0.0,
+ "failure_history": []
+}

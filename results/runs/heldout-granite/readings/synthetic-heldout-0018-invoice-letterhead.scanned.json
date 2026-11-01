@@ -1,0 +1,93 @@
+{
+ "doc_id": "synthetic-heldout-0018-invoice-letterhead.scanned",
+ "pdf_sha256": "4e3b61c75a3096fb5f906676a4874dc44cfe42d5aff58934650082006d1b9b8d",
+ "model": "granite-4.1-8b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "invoice",
+  "vendor_name": {
+   "text": "Pennywhistle Catering Kitchen Co.",
+   "line": 1
+  },
+  "document_number": {
+   "text": "Invoice",
+   "line": 7
+  },
+  "issue_date": {
+   "text": "2025-10-01",
+   "line": 7
+  },
+  "due_date": {
+   "text": "2025-10-31",
+   "line": 7
+  },
+  "purchase_order": {
+   "text": "PO-97271",
+   "line": 8
+  },
+  "bill_to_name": {
+   "text": "Placeholder Falls Community Theatre",
+   "line": 4
+  },
+  "currency": {
+   "text": "CAD",
+   "line": 16
+  },
+  "subtotal": {
+   "text": "$2,008.75",
+   "line": 13
+  },
+  "discount": {
+   "text": "-$100.44",
+   "line": 14
+  },
+  "shipping": {
+   "text": null,
+   "line": null
+  },
+  "tax": [
+   {
+    "text": null,
+    "line": null
+   }
+  ],
+  "total": {
+   "text": "$1,908.31",
+   "line": 15
+  },
+  "line_items": [
+   {
+    "description": "Event staffing",
+    "quantity": null,
+    "unit_price": "34.52",
+    "amount": "422.87",
+    "line": 10
+   },
+   {
+    "description": "Event staffing (lot 2)",
+    "quantity": "21",
+    "unit_price": "31.78",
+    "amount": "667.38",
+    "line": 11
+   },
+   {
+    "description": "Box lunches, per person",
+    "quantity": "50",
+    "unit_price": "18.37",
+    "amount": "918.50",
+    "line": 12
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 21.8,
+ "attempts": 1,
+ "prompt_tokens": 884,
+ "completion_tokens": 453,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 0.0,
+ "failure_history": []
+}

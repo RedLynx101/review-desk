@@ -1,0 +1,79 @@
+{
+ "doc_id": "synthetic-heldout-0026-receipt-thermal.degraded",
+ "pdf_sha256": "66bd75fe573a0480baef99cc852eaf02e0d2399f20d552382cdc63dd4c3899e5",
+ "model": "prism-ml/bonsai-27b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "receipt",
+  "vendor_name": {
+   "text": null,
+   "line": null
+  },
+  "document_number": {
+   "text": null,
+   "line": null
+  },
+  "issue_date": {
+   "text": null,
+   "line": null
+  },
+  "due_date": {
+   "text": null,
+   "line": null
+  },
+  "purchase_order": {
+   "text": null,
+   "line": null
+  },
+  "bill_to_name": {
+   "text": null,
+   "line": null
+  },
+  "currency": {
+   "text": "\u20ac",
+   "line": 22
+  },
+  "subtotal": {
+   "text": "8,07 \u20ac",
+   "line": 22
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": null,
+   "line": null
+  },
+  "tax": [
+   {
+    "text": null,
+    "line": null
+   }
+  ],
+  "total": {
+   "text": "10,60 \u20ac",
+   "line": 27
+  },
+  "line_items": [
+   {
+    "description": "Barley tes        in.",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "5,96",
+    "line": 18
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 24.7,
+ "attempts": 1,
+ "prompt_tokens": 937,
+ "completion_tokens": 282,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 1.7,
+ "failure_history": []
+}

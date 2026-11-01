@@ -1,0 +1,114 @@
+{
+ "doc_id": "synthetic-heldout-0024-invoice-sidebar.degraded",
+ "pdf_sha256": "329cf923e819111d80f42efc1c865340117098648e318d3883019c68fa79fae5",
+ "model": "prism-ml/bonsai-27b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "invoice",
+  "vendor_name": {
+   "text": "Ravelstitch Field instruments Inc.",
+   "line": 1
+  },
+  "document_number": {
+   "text": null,
+   "line": null
+  },
+  "issue_date": {
+   "text": null,
+   "line": null
+  },
+  "due_date": {
+   "text": null,
+   "line": null
+  },
+  "purchase_order": {
+   "text": null,
+   "line": null
+  },
+  "bill_to_name": {
+   "text": null,
+   "line": null
+  },
+  "currency": {
+   "text": "$",
+   "line": 16
+  },
+  "subtotal": {
+   "text": null,
+   "line": null
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": null,
+   "line": null
+  },
+  "tax": [
+   {
+    "text": "$126.37",
+    "line": 30
+   }
+  ],
+  "total": {
+   "text": "$1,390.06",
+   "line": 31
+  },
+  "line_items": [
+   {
+    "description": "Carrying case,  foam lined",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "$113.04",
+    "line": 15
+   },
+   {
+    "description": "Anowal calibration certificate",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "$112.64",
+    "line": 18
+   },
+   {
+    "description": "Pressure gauge. 0-300 psi",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "$190.74",
+    "line": 20
+   },
+   {
+    "description": "Carrying case,  foam lined (lot 2)",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "$213.60",
+    "line": 22
+   },
+   {
+    "description": "Data logger. four channel",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "$27.75",
+    "line": 24
+   },
+   {
+    "description": "Annual calibration certificate (lot 2)",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "$105.92",
+    "line": 26
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 53.2,
+ "attempts": 1,
+ "prompt_tokens": 1050,
+ "completion_tokens": 667,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 3.0,
+ "failure_history": []
+}

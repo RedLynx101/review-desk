@@ -1,0 +1,111 @@
+{
+ "doc_id": "synthetic-heldout-0023-receipt-kiosk.clean",
+ "pdf_sha256": "4f39552a0069945ab480f56a16bc8805716d6c63bcef7250e0adad088e6265af",
+ "model": "granite-4.1-8b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "receipt",
+  "vendor_name": {
+   "text": "Tinderfoot Noodle Bar Co.",
+   "line": 3
+  },
+  "document_number": {
+   "text": "R-074608",
+   "line": 1
+  },
+  "issue_date": {
+   "text": "April 8, 2024",
+   "line": 5
+  },
+  "due_date": {
+   "text": null,
+   "line": null
+  },
+  "purchase_order": {
+   "text": null,
+   "line": null
+  },
+  "bill_to_name": {
+   "text": null,
+   "line": null
+  },
+  "currency": {
+   "text": "CAD",
+   "line": 15
+  },
+  "subtotal": {
+   "text": "$72.95",
+   "line": 11
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": null,
+   "line": null
+  },
+  "tax": [
+   {
+    "text": "Tax A 4% $2.92",
+    "line": 12
+   },
+   {
+    "text": "Tax B 3.25% $2.37",
+    "line": 13
+   }
+  ],
+  "total": {
+   "text": "$78.24",
+   "line": 14
+  },
+  "line_items": [
+   {
+    "description": "3x Pork dumplings",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "$29.70",
+    "line": 6
+   },
+   {
+    "description": "2x Miso noodle bowl",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "$30.42",
+    "line": 7
+   },
+   {
+    "description": "Barley tea",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "$3.30",
+    "line": 8
+   },
+   {
+    "description": "2x Extra broth",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "$5.76",
+    "line": 9
+   },
+   {
+    "description": "Pickled radish",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "$3.77",
+    "line": 10
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 28.0,
+ "attempts": 1,
+ "prompt_tokens": 819,
+ "completion_tokens": 545,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 0.0,
+ "failure_history": []
+}

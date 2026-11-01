@@ -1,0 +1,107 @@
+{
+ "doc_id": "synthetic-heldout-0005-receipt-pos_wide.clean",
+ "pdf_sha256": "da64045487bda55b4ec781afd731299511fe4917c877b52705cded5ca87cbcc2",
+ "model": "prism-ml/bonsai-27b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "receipt",
+  "vendor_name": {
+   "text": "Sprocketmoor Noodle Bar Ltd",
+   "line": 1
+  },
+  "document_number": {
+   "text": "R-276006",
+   "line": 5
+  },
+  "issue_date": {
+   "text": "19/09/2025",
+   "line": 5
+  },
+  "due_date": {
+   "text": null,
+   "line": null
+  },
+  "purchase_order": {
+   "text": null,
+   "line": null
+  },
+  "bill_to_name": {
+   "text": null,
+   "line": null
+  },
+  "currency": {
+   "text": "GBP",
+   "line": 17
+  },
+  "subtotal": {
+   "text": "62.26",
+   "line": 13
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": null,
+   "line": null
+  },
+  "tax": [
+   {
+    "text": null,
+    "line": null
+   }
+  ],
+  "total": {
+   "text": "62.26",
+   "line": 14
+  },
+  "line_items": [
+   {
+    "description": "Miso noodle bowl",
+    "quantity": "2",
+    "unit_price": "12.40",
+    "amount": "24.80",
+    "line": 8
+   },
+   {
+    "description": "Pork dumplings, 6",
+    "quantity": "3",
+    "unit_price": "6.08",
+    "amount": "18.24",
+    "line": 9
+   },
+   {
+    "description": "Barley tea",
+    "quantity": "2",
+    "unit_price": "2.11",
+    "amount": "4.22",
+    "line": 10
+   },
+   {
+    "description": "Pickled radish",
+    "quantity": "2",
+    "unit_price": "3.72",
+    "amount": "7.44",
+    "line": 11
+   },
+   {
+    "description": "Extra broth",
+    "quantity": "2",
+    "unit_price": "3.78",
+    "amount": "7.56",
+    "line": 12
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 45.1,
+ "attempts": 1,
+ "prompt_tokens": 902,
+ "completion_tokens": 630,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 0.6,
+ "failure_history": []
+}

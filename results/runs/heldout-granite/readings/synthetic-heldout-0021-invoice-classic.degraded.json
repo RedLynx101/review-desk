@@ -1,0 +1,107 @@
+{
+ "doc_id": "synthetic-heldout-0021-invoice-classic.degraded",
+ "pdf_sha256": "85dfb1ea133ba1c96ebb7c705d509a78e8462f7ea2e25a2ac417aab8cc84cb7c",
+ "model": "granite-4.1-8b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "invoice",
+  "vendor_name": {
+   "text": "Cobbleworth Lawn & Hedge Inc.",
+   "line": 1
+  },
+  "document_number": {
+   "text": "2026/2202",
+   "line": 4
+  },
+  "issue_date": {
+   "text": "20 26-03-07",
+   "line": 5
+  },
+  "due_date": {
+   "text": "20 26-04-06",
+   "line": 7
+  },
+  "purchase_order": {
+   "text": "014372",
+   "line": 9
+  },
+  "bill_to_name": {
+   "text": "Ima Placeholder",
+   "line": 13
+  },
+  "currency": {
+   "text": "USD",
+   "line": 33
+  },
+  "subtotal": {
+   "text": "1,556.78",
+   "line": 28
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": "176.14",
+   "line": 22
+  },
+  "tax": [
+   {
+    "text": "85.62",
+    "line": 30
+   }
+  ],
+  "total": {
+   "text": "1,642.40",
+   "line": 31
+  },
+  "line_items": [
+   {
+    "description": "Hedge trimming, labor Debris",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "557.82",
+    "line": 19
+   },
+   {
+    "description": "haul-away",
+    "quantity": "2",
+    "unit_price": "88.07",
+    "amount": "176.14",
+    "line": 21
+   },
+   {
+    "description": "Hedge trimming, labor (lot 2)",
+    "quantity": "13",
+    "unit_price": "36.88",
+    "amount": "479.44",
+    "line": 23
+   },
+   {
+    "description": "Irrigation head replacement",
+    "quantity": "12",
+    "unit_price": "21.17",
+    "amount": "254.04",
+    "line": 25
+   },
+   {
+    "description": "Mowing and edging visit",
+    "quantity": "2",
+    "unit_price": "44.67",
+    "amount": "89.34",
+    "line": 27
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 28.4,
+ "attempts": 1,
+ "prompt_tokens": 1036,
+ "completion_tokens": 557,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 0.0,
+ "failure_history": []
+}

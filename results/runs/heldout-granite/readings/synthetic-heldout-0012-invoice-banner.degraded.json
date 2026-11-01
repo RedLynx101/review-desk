@@ -1,0 +1,79 @@
+{
+ "doc_id": "synthetic-heldout-0012-invoice-banner.degraded",
+ "pdf_sha256": "a7eb578283a71967372cb31503ef169d6abe12ba0e65fc906db0a9cea42447a5",
+ "model": "granite-4.1-8b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "receipt",
+  "vendor_name": {
+   "text": "Sign Painters",
+   "line": 10
+  },
+  "document_number": {
+   "text": "424.87",
+   "line": 43
+  },
+  "issue_date": {
+   "text": "28 Aug 2025",
+   "line": 19
+  },
+  "due_date": {
+   "text": null,
+   "line": null
+  },
+  "purchase_order": {
+   "text": null,
+   "line": null
+  },
+  "bill_to_name": {
+   "text": "CUST 48793",
+   "line": 18
+  },
+  "currency": {
+   "text": "$",
+   "line": 43
+  },
+  "subtotal": {
+   "text": null,
+   "line": null
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": null,
+   "line": null
+  },
+  "tax": [
+   {
+    "text": null,
+    "line": null
+   }
+  ],
+  "total": {
+   "text": "536.98",
+   "line": 50
+  },
+  "line_items": [
+   {
+    "description": "Remove of signage (hot 2)",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "536.98",
+    "line": 50
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 14.5,
+ "attempts": 1,
+ "prompt_tokens": 1311,
+ "completion_tokens": 265,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 0.0,
+ "failure_history": []
+}

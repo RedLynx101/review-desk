@@ -1,0 +1,86 @@
+{
+ "doc_id": "synthetic-heldout-0022-invoice-banner.scanned",
+ "pdf_sha256": "e72a023092d95629afca729ef426aa2e54bcc693726315bc7f69ed5f1723cda5",
+ "model": "granite-4.1-8b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "invoice",
+  "vendor_name": {
+   "text": "Marrowfen.example",
+   "line": 8
+  },
+  "document_number": {
+   "text": "00132148",
+   "line": 10
+  },
+  "issue_date": {
+   "text": "2026-05-03",
+   "line": 10
+  },
+  "due_date": {
+   "text": "2026-07-02",
+   "line": 10
+  },
+  "purchase_order": {
+   "text": "CUST-18897",
+   "line": 10
+  },
+  "bill_to_name": {
+   "text": "Imaginary Orchard Holdings",
+   "line": 14
+  },
+  "currency": {
+   "text": "CA$",
+   "line": 20
+  },
+  "subtotal": {
+   "text": "CA$1,274.37",
+   "line": 20
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": "CA$73.38",
+   "line": 21
+  },
+  "tax": [
+   {
+    "text": "CA$165.67",
+    "line": 22
+   }
+  ],
+  "total": {
+   "text": "CA$1,513.42",
+   "line": 23
+  },
+  "line_items": [
+   {
+    "description": "Technician labor",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "CA$1,130.47",
+    "line": 18
+   },
+   {
+    "description": "After-hours call-out surcharge",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "CA$143.90",
+    "line": 19
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 20.8,
+ "attempts": 1,
+ "prompt_tokens": 947,
+ "completion_tokens": 417,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 0.0,
+ "failure_history": []
+}

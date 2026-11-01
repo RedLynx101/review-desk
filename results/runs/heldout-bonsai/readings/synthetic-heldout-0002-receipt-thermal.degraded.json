@@ -1,0 +1,79 @@
+{
+ "doc_id": "synthetic-heldout-0002-receipt-thermal.degraded",
+ "pdf_sha256": "f646ffb63c547c505a3ae37fa42a1c7c76239986926cab4821bb88ac7062f42d",
+ "model": "prism-ml/bonsai-27b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "receipt",
+  "vendor_name": {
+   "text": "TURNIPSHIRE GARDEN STAND INC.",
+   "line": 4
+  },
+  "document_number": {
+   "text": "TXNO613576",
+   "line": 11
+  },
+  "issue_date": {
+   "text": "06/10/2024",
+   "line": 10
+  },
+  "due_date": {
+   "text": null,
+   "line": null
+  },
+  "purchase_order": {
+   "text": null,
+   "line": null
+  },
+  "bill_to_name": {
+   "text": null,
+   "line": null
+  },
+  "currency": {
+   "text": "$",
+   "line": 23
+  },
+  "subtotal": {
+   "text": "$57.67",
+   "line": 23
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": null,
+   "line": null
+  },
+  "tax": [
+   {
+    "text": "$3.77",
+    "line": 24
+   }
+  ],
+  "total": {
+   "text": "$963.40",
+   "line": 25
+  },
+  "line_items": [
+   {
+    "description": "Potting soil, bag",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "$39.27",
+    "line": 16
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 35.9,
+ "attempts": 1,
+ "prompt_tokens": 938,
+ "completion_tokens": 409,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 2.2,
+ "failure_history": []
+}

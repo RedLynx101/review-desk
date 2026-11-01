@@ -1,0 +1,282 @@
+{
+ "doc_id": "synthetic-heldout-0028-invoice-letterhead.scanned",
+ "pdf_sha256": "1cc633931a057c0c11d7727375b263161c8f52bf45ea2b9195c74ae25786b420",
+ "model": "granite-4.1-8b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "invoice",
+  "vendor_name": {
+   "text": "Wrenbury Signal Repair Inc.",
+   "line": 1
+  },
+  "document_number": {
+   "text": "ZZ-90",
+   "line": 7
+  },
+  "issue_date": {
+   "text": "2025-02-28",
+   "line": 7
+  },
+  "due_date": {
+   "text": "2025-03-15",
+   "line": 7
+  },
+  "purchase_order": {
+   "text": null,
+   "line": null
+  },
+  "bill_to_name": {
+   "text": "Testa McExample",
+   "line": 4
+  },
+  "currency": {
+   "text": "USD",
+   "line": 46
+  },
+  "subtotal": {
+   "text": "12,318.43",
+   "line": 42
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": "118.87",
+   "line": 43
+  },
+  "tax": [
+   {
+    "text": "862.29",
+    "line": 44
+   }
+  ],
+  "total": {
+   "text": "13,299.59",
+   "line": 45
+  },
+  "line_items": [
+   {
+    "description": "Technician labor LETS",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "1,306.48",
+    "line": 9
+   },
+   {
+    "description": "Replacement relay module, 24 V",
+    "quantity": "1",
+    "unit_price": "28.47",
+    "amount": "28.47",
+    "line": 10
+   },
+   {
+    "description": "Technician labor (lot 2)",
+    "quantity": "6.25",
+    "unit_price": "66.35",
+    "amount": "414.69",
+    "line": 11
+   },
+   {
+    "description": "On-site diagnostic visit",
+    "quantity": "2",
+    "unit_price": "180.25",
+    "amount": "360.50",
+    "line": 12
+   },
+   {
+    "description": "Technician labor (lot 3)",
+    "quantity": "9.75",
+    "unit_price": "101.41",
+    "amount": "988.75",
+    "line": 13
+   },
+   {
+    "description": "Replacement relay module, 24 V (lot 2)",
+    "quantity": "6",
+    "unit_price": "71.29",
+    "amount": "427.74",
+    "line": 14
+   },
+   {
+    "description": "Technician labor (lot 4)",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "241.89",
+    "line": 15
+   },
+   {
+    "description": "After-hours call-out surcharge",
+    "quantity": "1",
+    "unit_price": "86.45",
+    "amount": "86.45",
+    "line": 16
+   },
+   {
+    "description": "After-hours call-out surcharge (lot 2)",
+    "quantity": "1",
+    "unit_price": "168.36",
+    "amount": "168.36",
+    "line": 17
+   },
+   {
+    "description": "Replacement relay module, 24 V (lot 3)",
+    "quantity": "2",
+    "unit_price": "61.43",
+    "amount": "122.86",
+    "line": 18
+   },
+   {
+    "description": "Preventive maintenance, includes filter swap and belt inspection",
+    "quantity": "1",
+    "unit_price": "311.39",
+    "amount": "311.39",
+    "line": 19
+   },
+   {
+    "description": "Preventive maintenance, includes filter swap and belt inspection (lot 2)",
+    "quantity": "1",
+    "unit_price": "270.97",
+    "amount": "270.97",
+    "line": 20
+   },
+   {
+    "description": "Technician labor (lot 5)",
+    "quantity": "2",
+    "unit_price": "107.52",
+    "amount": "215.04",
+    "line": 21
+   },
+   {
+    "description": "Technician labor (lot 6)",
+    "quantity": "14.25",
+    "unit_price": "91.06",
+    "amount": "1,297.61",
+    "line": 22
+   },
+   {
+    "description": "On-site diagnostic visit (lot 2)",
+    "quantity": "#2",
+    "unit_price": "97.98",
+    "amount": "195.96",
+    "line": 23
+   },
+   {
+    "description": "Cable harness, 12 ft",
+    "quantity": "5",
+    "unit_price": "64.42",
+    "amount": "322.10",
+    "line": 24
+   },
+   {
+    "description": "Technician labor (lot 7)",
+    "quantity": "1.25",
+    "unit_price": "80.03",
+    "amount": "100.04",
+    "line": 25
+   },
+   {
+    "description": "After-hours call-out surcharge (lot 3)",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "162.17",
+    "line": 26
+   },
+   {
+    "description": "After-hours call-out surcharge (lot 4)",
+    "quantity": "1",
+    "unit_price": "146.88",
+    "amount": "146.88",
+    "line": 27
+   },
+   {
+    "description": "On-site diagnostic visit (lot 3)",
+    "quantity": "2",
+    "unit_price": "227.31",
+    "amount": "454.62",
+    "line": 28
+   },
+   {
+    "description": "Technician labor (lot 8)",
+    "quantity": "9.25",
+    "unit_price": "84.66",
+    "amount": "783.11",
+    "line": 29
+   },
+   {
+    "description": "On-site diagnostic visit (lot 4)",
+    "quantity": "2",
+    "unit_price": "103.09",
+    "amount": "206.18",
+    "line": 30
+   },
+   {
+    "description": "After-hours call-out surcharge (lot 5)",
+    "quantity": "1",
+    "unit_price": "81.99",
+    "amount": "81.99",
+    "line": 31
+   },
+   {
+    "description": "On-site diagnostic visit (lot 5)",
+    "quantity": "2",
+    "unit_price": "188.22",
+    "amount": "376.44",
+    "line": 32
+   },
+   {
+    "description": "Cable harness, 12 ft (lot 2)",
+    "quantity": "4",
+    "unit_price": "46.73",
+    "amount": "186.92",
+    "line": 33
+   },
+   {
+    "description": "After-hours call-out surcharge (lot 6)",
+    "quantity": "1",
+    "unit_price": "135.51",
+    "amount": "135.51",
+    "line": 34
+   },
+   {
+    "description": "Replacement relay module, 24 V (lot 4)",
+    "quantity": "3",
+    "unit_price": "80.08",
+    "amount": "240.24",
+    "line": 35
+   },
+   {
+    "description": "Preventive maintenance, includes filter swap and belt inspection (lot 3)",
+    "quantity": "4",
+    "unit_price": "344.66",
+    "amount": "1,378.64",
+    "line": 36
+   },
+   {
+    "description": "Technician labor (lot 9)",
+    "quantity": "10",
+    "unit_price": "93.12",
+    "amount": "931.20",
+    "line": 37
+   },
+   {
+    "description": "Technician labor (lot 10)",
+    "quantity": "3.75",
+    "unit_price": "100.06",
+    "amount": "375.23",
+    "line": 38
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 56.5,
+ "attempts": 1,
+ "prompt_tokens": 1649,
+ "completion_tokens": 1865,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 0.0,
+ "failure_history": []
+}

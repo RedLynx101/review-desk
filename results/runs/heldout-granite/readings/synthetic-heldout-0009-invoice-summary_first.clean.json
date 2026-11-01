@@ -1,0 +1,79 @@
+{
+ "doc_id": "synthetic-heldout-0009-invoice-summary_first.clean",
+ "pdf_sha256": "6b0eda362319f29d7c3ea3af83d5502bbab4e12406f6b0bccbe358adfbc7f482",
+ "model": "granite-4.1-8b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "invoice",
+  "vendor_name": {
+   "text": "Turnipshire Signal Repair S.A.R.L.",
+   "line": 1
+  },
+  "document_number": {
+   "text": "RX38563",
+   "line": 6
+  },
+  "issue_date": {
+   "text": "14.02.2026",
+   "line": 6
+  },
+  "due_date": {
+   "text": null,
+   "line": 5
+  },
+  "purchase_order": {
+   "text": "PO-01350",
+   "line": 7
+  },
+  "bill_to_name": {
+   "text": "Dummy Mae Ipsum",
+   "line": 8
+  },
+  "currency": {
+   "text": "\u20ac",
+   "line": 3
+  },
+  "subtotal": {
+   "text": "100,10 \u20ac",
+   "line": 14
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": null,
+   "line": null
+  },
+  "tax": [
+   {
+    "text": "TVA 20%        20,02 \u20ac",
+    "line": 15
+   }
+  ],
+  "total": {
+   "text": "120,12 \u20ac",
+   "line": 16
+  },
+  "line_items": [
+   {
+    "description": "After-hours call-out surcharge",
+    "quantity": null,
+    "unit_price": "100,10",
+    "amount": "100,10",
+    "line": 13
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 18.1,
+ "attempts": 1,
+ "prompt_tokens": 843,
+ "completion_tokens": 361,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 0.0,
+ "failure_history": []
+}

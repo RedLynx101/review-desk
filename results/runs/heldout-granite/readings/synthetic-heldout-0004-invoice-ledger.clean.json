@@ -1,0 +1,317 @@
+{
+ "doc_id": "synthetic-heldout-0004-invoice-ledger.clean",
+ "pdf_sha256": "8c88948cb993a1334002d50ff8026562a61fa93756da418118bf21affc55c45b",
+ "model": "granite-4.1-8b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "invoice",
+  "vendor_name": {
+   "text": "SNUGGLEBROOK CATERING KITCHEN LLC",
+   "line": 1
+  },
+  "document_number": {
+   "text": "ZZ-3022-L",
+   "line": 6
+  },
+  "issue_date": {
+   "text": "9/13/25",
+   "line": 7
+  },
+  "due_date": {
+   "text": "10/13/25",
+   "line": 8
+  },
+  "purchase_order": {
+   "text": "CUST-99024",
+   "line": 6
+  },
+  "bill_to_name": {
+   "text": "Imaginary Orchard Holdings",
+   "line": 11
+  },
+  "currency": {
+   "text": null,
+   "line": null
+  },
+  "subtotal": {
+   "text": "$11,950.37",
+   "line": 51
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": null,
+   "line": null
+  },
+  "tax": [
+   {
+    "text": "7%",
+    "line": 52
+   }
+  ],
+  "total": {
+   "text": "$12,786.90",
+   "line": 53
+  },
+  "line_items": [
+   {
+    "description": "Fruit and cheese platter, large",
+    "quantity": "2",
+    "unit_price": "51.37",
+    "amount": "102.74",
+    "line": 15
+   },
+   {
+    "description": "Coffee service, per gallon",
+    "quantity": "10",
+    "unit_price": "25.21",
+    "amount": "252.10",
+    "line": 16
+   },
+   {
+    "description": "Fruit and cheese platter, large (lot 2)",
+    "quantity": "5",
+    "unit_price": "62.41",
+    "amount": "312.05",
+    "line": 17
+   },
+   {
+    "description": "Fruit and cheese platter, large (lot 3)",
+    "quantity": "2",
+    "unit_price": "69.63",
+    "amount": "139.26",
+    "line": 18
+   },
+   {
+    "description": "Event staffing",
+    "quantity": "23.5",
+    "unit_price": "23.91",
+    "amount": "561.89",
+    "line": 19
+   },
+   {
+    "description": "Linen rental, per table",
+    "quantity": "17",
+    "unit_price": "8.99",
+    "amount": "152.83",
+    "line": 20
+   },
+   {
+    "description": "Linen rental, per table (lot 2)",
+    "quantity": "7",
+    "unit_price": "11.47",
+    "amount": "80.29",
+    "line": 21
+   },
+   {
+    "description": "Box lunches, per person",
+    "quantity": "49",
+    "unit_price": "18.50",
+    "amount": "906.50",
+    "line": 22
+   },
+   {
+    "description": "Box lunches, per person (lot 2)",
+    "quantity": "21",
+    "unit_price": "16.98",
+    "amount": "356.58",
+    "line": 23
+   },
+   {
+    "description": "Box lunches, per person (lot 3)",
+    "quantity": "52",
+    "unit_price": "14.95",
+    "amount": "777.40",
+    "line": 24
+   },
+   {
+    "description": "Event staffing (lot 2)",
+    "quantity": "12.25",
+    "unit_price": "33.73",
+    "amount": "413.19",
+    "line": 25
+   },
+   {
+    "description": "Box lunches, per person (lot 4)",
+    "quantity": "77",
+    "unit_price": "13.90",
+    "amount": "1,070.30",
+    "line": 26
+   },
+   {
+    "description": "Event staffing (lot 3)",
+    "quantity": "19.75",
+    "unit_price": "25.32",
+    "amount": "500.07",
+    "line": 27
+   },
+   {
+    "description": "Linen rental, per table (lot 3)",
+    "quantity": "13",
+    "unit_price": "6.38",
+    "amount": "82.94",
+    "line": 28
+   },
+   {
+    "description": "Event staffing (lot 4)",
+    "quantity": "7.75",
+    "unit_price": "32.55",
+    "amount": "252.26",
+    "line": 29
+   },
+   {
+    "description": "Linen rental, per table (lot 4)",
+    "quantity": "4",
+    "unit_price": "6.66",
+    "amount": "26.64",
+    "line": 30
+   },
+   {
+    "description": "Coffee service, per gallon (lot 2)",
+    "quantity": "7",
+    "unit_price": "22.85",
+    "amount": "159.95",
+    "line": 31
+   },
+   {
+    "description": "Event staffing (lot 5)",
+    "quantity": "16.75",
+    "unit_price": "24.34",
+    "amount": "407.70",
+    "line": 32
+   },
+   {
+    "description": "Box lunches, per person (lot 5)",
+    "quantity": "13",
+    "unit_price": "17.74",
+    "amount": "230.62",
+    "line": 33
+   },
+   {
+    "description": "Coffee service, per gallon (lot 3)",
+    "quantity": "10",
+    "unit_price": "20.68",
+    "amount": "206.80",
+    "line": 34
+   },
+   {
+    "description": "Event staffing (lot 6)",
+    "quantity": "19.25",
+    "unit_price": "31.95",
+    "amount": "615.04",
+    "line": 35
+   },
+   {
+    "description": "Event staffing (lot 7)",
+    "quantity": "9.25",
+    "unit_price": "25.65",
+    "amount": "237.26",
+    "line": 36
+   },
+   {
+    "description": "Box lunches, per person (lot 6)",
+    "quantity": "8",
+    "unit_price": "14.71",
+    "amount": "117.68",
+    "line": 37
+   },
+   {
+    "description": "Linen rental, per table (lot 5)",
+    "quantity": "2",
+    "unit_price": "6.64",
+    "amount": "13.28",
+    "line": 38
+   },
+   {
+    "description": "Linen rental, per table (lot 6)",
+    "quantity": "16",
+    "unit_price": "10.72",
+    "amount": "171.52",
+    "line": 39
+   },
+   {
+    "description": "Box lunches, per person (lot 7)",
+    "quantity": "84",
+    "unit_price": "14.34",
+    "amount": "1,204.56",
+    "line": 40
+   },
+   {
+    "description": "Linen rental, per table (lot 7)",
+    "quantity": "18",
+    "unit_price": "7.34",
+    "amount": "132.12",
+    "line": 41
+   },
+   {
+    "description": "Event staffing (lot 8)",
+    "quantity": "23",
+    "unit_price": "31.05",
+    "amount": "714.15",
+    "line": 42
+   },
+   {
+    "description": "Linen rental, per table (lot 8)",
+    "quantity": "3",
+    "unit_price": "10.02",
+    "amount": "30.06",
+    "line": 43
+   },
+   {
+    "description": "Box lunches, per person (lot 8)",
+    "quantity": "18",
+    "unit_price": "17.23",
+    "amount": "310.14",
+    "line": 44
+   },
+   {
+    "description": "Linen rental, per table (lot 9)",
+    "quantity": "20",
+    "unit_price": "10.61",
+    "amount": "212.20",
+    "line": 45
+   },
+   {
+    "description": "Fruit and cheese platter, large (lot 4)",
+    "quantity": "4",
+    "unit_price": "54.84",
+    "amount": "219.36",
+    "line": 46
+   },
+   {
+    "description": "Fruit and cheese platter, large (lot 5)",
+    "quantity": "6",
+    "unit_price": "91.34",
+    "amount": "548.04",
+    "line": 47
+   },
+   {
+    "description": "Coffee service, per gallon (lot 4)",
+    "quantity": "5",
+    "unit_price": "27.29",
+    "amount": "136.45",
+    "line": 48
+   },
+   {
+    "description": "Box lunches, per person (lot 9)",
+    "quantity": "20",
+    "unit_price": "14.82",
+    "amount": "296.40",
+    "line": 49
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 119.8,
+ "attempts": 1,
+ "prompt_tokens": 1788,
+ "completion_tokens": 2134,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 0.0,
+ "failure_history": []
+}

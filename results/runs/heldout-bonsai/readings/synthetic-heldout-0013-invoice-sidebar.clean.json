@@ -1,0 +1,121 @@
+{
+ "doc_id": "synthetic-heldout-0013-invoice-sidebar.clean",
+ "pdf_sha256": "68b024eae681af8601e1a320a2e2bcbc77b3fb19a3590443439f5b51efa3c9a8",
+ "model": "prism-ml/bonsai-27b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "invoice",
+  "vendor_name": {
+   "text": "Figgleton Cartage & Freight LLC",
+   "line": 1
+  },
+  "document_number": {
+   "text": "VQ31651",
+   "line": 9
+  },
+  "issue_date": {
+   "text": "10/29/2024",
+   "line": 12
+  },
+  "due_date": {
+   "text": null,
+   "line": null
+  },
+  "purchase_order": {
+   "text": null,
+   "line": null
+  },
+  "bill_to_name": {
+   "text": "Lorem Springs Dental Cooperative",
+   "line": 4
+  },
+  "currency": {
+   "text": "$",
+   "line": 19
+  },
+  "subtotal": {
+   "text": "3,273.08",
+   "line": 19
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": null,
+   "line": null
+  },
+  "tax": [
+   {
+    "text": "229.12",
+    "line": 20
+   }
+  ],
+  "total": {
+   "text": "3,502.20",
+   "line": 21
+  },
+  "line_items": [
+   {
+    "description": "Fuel surcharge",
+    "quantity": "1",
+    "unit_price": "69.76",
+    "amount": "69.76",
+    "line": 10
+   },
+   {
+    "description": "Local cartage, per stop",
+    "quantity": "12",
+    "unit_price": "73.89",
+    "amount": "886.68",
+    "line": 12
+   },
+   {
+    "description": "Local cartage, per stop (lot 2)",
+    "quantity": "9",
+    "unit_price": "82.57",
+    "amount": "743.13",
+    "line": 13
+   },
+   {
+    "description": "Fuel surcharge (lot 2)",
+    "quantity": "1",
+    "unit_price": "70.91",
+    "amount": "70.91",
+    "line": 15
+   },
+   {
+    "description": "Local cartage, per stop (lot 3)",
+    "quantity": "15",
+    "unit_price": "88.71",
+    "amount": "1,330.65",
+    "line": 16
+   },
+   {
+    "description": "Fuel surcharge (lot 3)",
+    "quantity": "1",
+    "unit_price": "17.93",
+    "amount": "17.93",
+    "line": 17
+   },
+   {
+    "description": "Liftgate service",
+    "quantity": "2",
+    "unit_price": "77.01",
+    "amount": "154.02",
+    "line": 18
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 61.2,
+ "attempts": 1,
+ "prompt_tokens": 1047,
+ "completion_tokens": 798,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 1.1,
+ "failure_history": []
+}

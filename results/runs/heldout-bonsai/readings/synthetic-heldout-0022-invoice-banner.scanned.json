@@ -1,0 +1,86 @@
+{
+ "doc_id": "synthetic-heldout-0022-invoice-banner.scanned",
+ "pdf_sha256": "e72a023092d95629afca729ef426aa2e54bcc693726315bc7f69ed5f1723cda5",
+ "model": "prism-ml/bonsai-27b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "invoice",
+  "vendor_name": {
+   "text": "Exampleburg Pickle Exchange",
+   "line": 14
+  },
+  "document_number": {
+   "text": "00032148",
+   "line": 10
+  },
+  "issue_date": {
+   "text": "2026-05-03",
+   "line": 10
+  },
+  "due_date": {
+   "text": "2026-07-02",
+   "line": 10
+  },
+  "purchase_order": {
+   "text": null,
+   "line": null
+  },
+  "bill_to_name": {
+   "text": "Exampleburg Pickle Exchange",
+   "line": 14
+  },
+  "currency": {
+   "text": "CA$",
+   "line": 20
+  },
+  "subtotal": {
+   "text": "CA$1,274.37",
+   "line": 20
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": "CA$73.38",
+   "line": 21
+  },
+  "tax": [
+   {
+    "text": "CA$165.67",
+    "line": 22
+   }
+  ],
+  "total": {
+   "text": "CA$1,513.42",
+   "line": 23
+  },
+  "line_items": [
+   {
+    "description": "Technician labor",
+    "quantity": "11",
+    "unit_price": "102.77",
+    "amount": "1,130.47",
+    "line": 18
+   },
+   {
+    "description": "After-hours call-out surcharge",
+    "quantity": "1",
+    "unit_price": "143.90",
+    "amount": "143.90",
+    "line": 19
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 42.1,
+ "attempts": 1,
+ "prompt_tokens": 1019,
+ "completion_tokens": 519,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 2.2,
+ "failure_history": []
+}

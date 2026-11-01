@@ -1,7 +1,7 @@
 """Run the review desk.
 
     python -m review_desk.desk serve
-    python -m review_desk.desk serve --replay results/runs/dev-first
+    python -m review_desk.desk serve --replay results/runs/dev-bonsai
     python -m review_desk.desk verify
 
 `--replay` answers from a finished evaluation run instead of calling a model, so the screen can be tried

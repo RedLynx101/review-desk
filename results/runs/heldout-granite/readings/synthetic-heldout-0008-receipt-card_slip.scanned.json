@@ -1,0 +1,86 @@
+{
+ "doc_id": "synthetic-heldout-0008-receipt-card_slip.scanned",
+ "pdf_sha256": "7a91942c2b8fa3ac9d4e0f407c1cadc27af8837daa6672a243912de262b6fe6b",
+ "model": "granite-4.1-8b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "receipt",
+  "vendor_name": {
+   "text": "Figgleton Bakehouse LLC",
+   "line": 3
+  },
+  "document_number": {
+   "text": "32-1-11822",
+   "line": 6
+  },
+  "issue_date": {
+   "text": "08/17/2024",
+   "line": 5
+  },
+  "due_date": {
+   "text": null,
+   "line": null
+  },
+  "purchase_order": {
+   "text": null,
+   "line": null
+  },
+  "bill_to_name": {
+   "text": null,
+   "line": null
+  },
+  "currency": {
+   "text": "USD",
+   "line": 12
+  },
+  "subtotal": {
+   "text": "8.42",
+   "line": 9
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": null,
+   "line": null
+  },
+  "tax": [
+   {
+    "text": "10%",
+    "line": 10
+   }
+  ],
+  "total": {
+   "text": "9.26",
+   "line": 11
+  },
+  "line_items": [
+   {
+    "description": "Oat cookie",
+    "quantity": "x3",
+    "unit_price": null,
+    "amount": null,
+    "line": 7
+   },
+   {
+    "description": "Drip coffee, large",
+    "quantity": null,
+    "unit_price": null,
+    "amount": null,
+    "line": 8
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 20.1,
+ "attempts": 1,
+ "prompt_tokens": 796,
+ "completion_tokens": 373,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 0.0,
+ "failure_history": []
+}

@@ -1,0 +1,86 @@
+{
+ "doc_id": "synthetic-heldout-0026-receipt-thermal.scanned",
+ "pdf_sha256": "b926430612675566867a8196a32ee8df4244614b636b1b20a3b993c59be8a253",
+ "model": "prism-ml/bonsai-27b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "receipt",
+  "vendor_name": {
+   "text": "MARROWFEN NOODLE BAR GMBH",
+   "line": 1
+  },
+  "document_number": {
+   "text": "R-014180",
+   "line": 7
+  },
+  "issue_date": {
+   "text": "29.11.2024",
+   "line": 6
+  },
+  "due_date": {
+   "text": null,
+   "line": null
+  },
+  "purchase_order": {
+   "text": null,
+   "line": null
+  },
+  "bill_to_name": {
+   "text": null,
+   "line": null
+  },
+  "currency": {
+   "text": "\u20ac",
+   "line": 12
+  },
+  "subtotal": {
+   "text": "8,07 \u20ac",
+   "line": 12
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": null,
+   "line": null
+  },
+  "tax": [
+   {
+    "text": "TVA 20%        1,61 \u20ac",
+    "line": 13
+   }
+  ],
+  "total": {
+   "text": "9,68 \u20ac",
+   "line": 14
+  },
+  "line_items": [
+   {
+    "description": "Extra  broth",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "2,11",
+    "line": 9
+   },
+   {
+    "description": "Barley tea",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "5,96",
+    "line": 10
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 37.3,
+ "attempts": 1,
+ "prompt_tokens": 823,
+ "completion_tokens": 464,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 0.9,
+ "failure_history": []
+}

@@ -1,0 +1,93 @@
+{
+ "doc_id": "synthetic-heldout-0006-invoice-boxed.degraded",
+ "pdf_sha256": "b7b9590d1212b412608479897e177bd8080f83f95bd7e08b16d5470bae74b984",
+ "model": "prism-ml/bonsai-27b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "invoice",
+  "vendor_name": {
+   "text": "Marrowfen Catering Kitchen Inc.",
+   "line": 1
+  },
+  "document_number": {
+   "text": null,
+   "line": null
+  },
+  "issue_date": {
+   "text": "Jul 29, 2024",
+   "line": 7
+  },
+  "due_date": {
+   "text": "Aug 5, 2024",
+   "line": 7
+  },
+  "purchase_order": {
+   "text": null,
+   "line": null
+  },
+  "bill_to_name": {
+   "text": "Dummyport Lantern Society",
+   "line": 12
+  },
+  "currency": {
+   "text": "$",
+   "line": 3
+  },
+  "subtotal": {
+   "text": null,
+   "line": null
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": null,
+   "line": null
+  },
+  "tax": [
+   {
+    "text": "Tax 10%",
+    "line": 32
+   }
+  ],
+  "total": {
+   "text": null,
+   "line": null
+  },
+  "line_items": [
+   {
+    "description": "Fruit and cheese platter, large",
+    "quantity": "2)",
+    "unit_price": "75.34",
+    "amount": "150.68",
+    "line": 19
+   },
+   {
+    "description": null,
+    "quantity": "9",
+    "unit_price": "89.10",
+    "amount": null,
+    "line": 22
+   },
+   {
+    "description": "Coffee service, per gallon",
+    "quantity": "6}",
+    "unit_price": "25.47",
+    "amount": "152.82",
+    "line": 25
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 38.0,
+ "attempts": 1,
+ "prompt_tokens": 978,
+ "completion_tokens": 515,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 3.0,
+ "failure_history": []
+}

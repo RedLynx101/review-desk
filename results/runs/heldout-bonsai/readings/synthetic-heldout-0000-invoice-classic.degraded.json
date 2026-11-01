@@ -1,0 +1,114 @@
+{
+ "doc_id": "synthetic-heldout-0000-invoice-classic.degraded",
+ "pdf_sha256": "38593b06706f22b73ccdc748912c335969fc67641d7d93d17dbcff1077163fc1",
+ "model": "prism-ml/bonsai-27b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "invoice",
+  "vendor_name": {
+   "text": "Bumblewick Lawn & Hedge Co.",
+   "line": 1
+  },
+  "document_number": {
+   "text": "00008418",
+   "line": 5
+  },
+  "issue_date": {
+   "text": "07/01/2025",
+   "line": 6
+  },
+  "due_date": {
+   "text": "07/31/2025",
+   "line": 7
+  },
+  "purchase_order": {
+   "text": "PO-41388",
+   "line": 8
+  },
+  "bill_to_name": {
+   "text": "Testa McExample",
+   "line": 12
+  },
+  "currency": {
+   "text": "$",
+   "line": 5
+  },
+  "subtotal": {
+   "text": "262.98",
+   "line": 30
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": "$139.33",
+   "line": 30
+  },
+  "tax": [
+   {
+    "text": "$129 36",
+    "line": 31
+   }
+  ],
+  "total": {
+   "text": "$2,620.72",
+   "line": 32
+  },
+  "line_items": [
+   {
+    "description": "Mowing and edging visit",
+    "quantity": "3",
+    "unit_price": "87.66",
+    "amount": "262.98",
+    "line": 18
+   },
+   {
+    "description": "Mowing and edging visit (lot 2)",
+    "quantity": "5",
+    "unit_price": "81.89",
+    "amount": "409.45",
+    "line": 19
+   },
+   {
+    "description": "Hedge trimming, labor",
+    "quantity": "45",
+    "unit_price": "32.86",
+    "amount": "147.87",
+    "line": 22
+   },
+   {
+    "description": "Aeration and overseed, front and rear beds",
+    "quantity": "3",
+    "unit_price": "272.65",
+    "amount": "817.95",
+    "line": 24
+   },
+   {
+    "description": "Aeration and overseed, front and rear beds (lot 2)",
+    "quantity": "2",
+    "unit_price": "202.08",
+    "amount": "404.16",
+    "line": 26
+   },
+   {
+    "description": "Aeration and overseed, front and rear beds (lot 3)",
+    "quantity": "2",
+    "unit_price": "154.81",
+    "amount": "309.62",
+    "line": 28
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 62.9,
+ "attempts": 1,
+ "prompt_tokens": 1122,
+ "completion_tokens": 782,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 10.4,
+ "failure_history": []
+}

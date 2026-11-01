@@ -1,0 +1,100 @@
+{
+ "doc_id": "synthetic-heldout-0005-receipt-pos_wide.degraded",
+ "pdf_sha256": "b0bae0b09a002675377a2a9c85e444d5964397558d07d7514675bc92f967162e",
+ "model": "granite-4.1-8b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "receipt",
+  "vendor_name": {
+   "text": "Sprocketmoor Noodle Bar Ltd",
+   "line": 1
+  },
+  "document_number": {
+   "text": null,
+   "line": null
+  },
+  "issue_date": {
+   "text": "19/00/2025",
+   "line": 9
+  },
+  "due_date": {
+   "text": null,
+   "line": null
+  },
+  "purchase_order": {
+   "text": null,
+   "line": null
+  },
+  "bill_to_name": {
+   "text": null,
+   "line": null
+  },
+  "currency": {
+   "text": "GBP",
+   "line": 23
+  },
+  "subtotal": {
+   "text": "62.26",
+   "line": 16
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": null,
+   "line": null
+  },
+  "tax": [
+   {
+    "text": null,
+    "line": null
+   }
+  ],
+  "total": {
+   "text": "100.00",
+   "line": 19
+  },
+  "line_items": [
+   {
+    "description": "2 Miso noodle bowd",
+    "quantity": "2",
+    "unit_price": "12.40",
+    "amount": "24.80",
+    "line": 10
+   },
+   {
+    "description": "Pork 6",
+    "quantity": null,
+    "unit_price": "608",
+    "amount": "1824",
+    "line": 11
+   },
+   {
+    "description": "2 Bartey tea",
+    "quantity": "2",
+    "unit_price": "241",
+    "amount": "422.8",
+    "line": 12
+   },
+   {
+    "description": "2 Pickied radish",
+    "quantity": null,
+    "unit_price": "372",
+    "amount": "744",
+    "line": 13
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 24.5,
+ "attempts": 1,
+ "prompt_tokens": 900,
+ "completion_tokens": 466,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 0.0,
+ "failure_history": []
+}

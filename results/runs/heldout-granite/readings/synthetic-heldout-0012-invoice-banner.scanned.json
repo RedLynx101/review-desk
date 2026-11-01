@@ -1,0 +1,111 @@
+{
+ "doc_id": "synthetic-heldout-0012-invoice-banner.scanned",
+ "pdf_sha256": "f07ca2682db3a611dc213b093d0f1b894f83ec9dd22aa5f231ebe6c5c4f2a438",
+ "model": "granite-4.1-8b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "invoice",
+  "vendor_name": {
+   "text": "Snugglebrook Example",
+   "line": 7
+  },
+  "document_number": {
+   "text": "TE01935",
+   "line": 8
+  },
+  "issue_date": {
+   "text": "21 Aug 2025",
+   "line": 8
+  },
+  "due_date": {
+   "text": "28 Aug 2025",
+   "line": 8
+  },
+  "purchase_order": {
+   "text": "CUST-08793",
+   "line": 8
+  },
+  "bill_to_name": {
+   "text": "Imaginary Orchard Holdings",
+   "line": 12
+  },
+  "currency": {
+   "text": "\u20ac",
+   "line": 21
+  },
+  "subtotal": {
+   "text": "1.363,40 \u20ac",
+   "line": 21
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": "21,95 \u20ac",
+   "line": 22
+  },
+  "tax": [
+   {
+    "text": "MwSt. 19%",
+    "line": 23
+   },
+   {
+    "text": "259,05 \u20ac",
+    "line": 24
+   }
+  ],
+  "total": {
+   "text": "1.644,40 \u20ac",
+   "line": 24
+  },
+  "line_items": [
+   {
+    "description": "Removal of old signage",
+    "quantity": "2",
+    "unit_price": "82,31",
+    "amount": "164,62",
+    "line": 16
+   },
+   {
+    "description": "Vinyl banner, 3 ft x 8 ft",
+    "quantity": "6",
+    "unit_price": "70,97",
+    "amount": "425,82",
+    "line": 17
+   },
+   {
+    "description": "Design proofing",
+    "quantity": "2",
+    "unit_price": "48,90",
+    "amount": "97,80",
+    "line": 18
+   },
+   {
+    "description": "Removal of old signage (lot 2)",
+    "quantity": "2",
+    "unit_price": "69,10",
+    "amount": "138,20",
+    "line": 19
+   },
+   {
+    "description": "Installation, two-person crew",
+    "quantity": "4",
+    "unit_price": "134,24",
+    "amount": "536,96",
+    "line": 20
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 31.4,
+ "attempts": 1,
+ "prompt_tokens": 978,
+ "completion_tokens": 588,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 0.0,
+ "failure_history": []
+}

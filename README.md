@@ -5,9 +5,9 @@ extracted against a strict schema, each with a confidence score built from check
 its source highlighted on the page. Low-confidence fields go to a review queue, nothing exports until a
 person approves it, and a hash-chained audit log records what happened.
 
-**Status: under construction.** Milestones 1 to 3 of 5 are done: synthetic test documents, the extraction
-pipeline, and the review queue with its audit log. The held-out accuracy report doesn't exist yet, so this README
-makes no claims about held-out accuracy. No client deployment yet.
+**Status: under construction.** Milestones 1 to 4 of 5 are done: synthetic test documents, the extraction pipeline,
+the review queue with its audit log, and a held-out accuracy report. The demo and gallery are still to come. No client
+deployment yet.
 
 Built with AI coding agents under Noah Hicks's review.
 
@@ -36,7 +36,7 @@ Built with AI coding agents under Noah Hicks's review.
 
 ```
 .venv/Scripts/python -m review_desk.desk serve                                # uses your model endpoint
-.venv/Scripts/python -m review_desk.desk serve --replay results/runs/dev-first  # no model needed
+.venv/Scripts/python -m review_desk.desk serve --replay results/runs/dev-bonsai  # no model needed
 .venv/Scripts/python -m review_desk.desk verify                               # recompute the audit chain
 ```
 
@@ -46,7 +46,7 @@ can be done from the keyboard: `J`/`K` move, `N` jumps to the next value to chec
 `A` approves, `]` goes to the next document, `?` lists the rest.
 
 `--replay` answers from a finished evaluation run instead of calling a model. It matches files by hash, so
-generate the same documents first (`python -m review_desk.synth generate --split dev --count 60`). Scans may
+generate the same documents first (`python -m review_desk.synth generate --split dev --count 15`). Scans may
 only match on the same platform and pinned versions, and any file it doesn't know shows the failure screen.
 
 ### What the server enforces
@@ -79,32 +79,37 @@ newest hash somewhere else closes that, and every export carries the hash at tha
   other sites can't drive it: state-changing requests need a custom header, Host and Origin are checked, and a
   strict content security policy keeps scripts local. Nothing loads from outside, including fonts.
 
-## First numbers, on the tuning set
+## Accuracy
 
-These come from [results/runs/dev-first](results/runs/dev-first/summary.md): `prism-ml/bonsai-27b` (1-bit
-quantization, 8192 context, temperature 0, no page images) on 60 synthetic renderings from the dev split, scored at
-commit `eb20086`. The scoring rules were tuned while looking at these same documents and have changed a little
-since, so expect a held-out run to do worse. **The held-out set hasn't been run yet.**
+Full tables, by field and by condition, are in [results/REPORT.md](results/REPORT.md). The numbers below come from a held-out
+set of 30 synthetic base documents, 90 renderings per model. Its vendor names and three of its layouts were never used
+while tuning, and each model ran it once. The threshold and scoring rules were fixed first.
 
-| Scan quality | Documents | Printed values right | Printed values OCR could read at all |
-|---|---|---|---|
-| Clean PDF | 30 | 99.7% (1213/1217) | 100% |
-| Light scan | 15 | 93.8% (502/535) | 97.4% |
-| Moderate damage | 9 | 52.6% (191/363) | 74.7% |
-| Heavy damage | 6 | 2.9% (5/172) | 12.2% |
-
-Heavily damaged scans are hard for a person to read too. What matters is whether those values reach a reviewer:
+The model is `prism-ml/bonsai-27b` (1-bit quantization, 8192 context, temperature 0, no page images). It was picked over
+`granite-4.1-8b` on the dev split alone, by [a bar committed before any Granite run](docs/MODEL_CHOICE.md).
 
 | Condition | Values | Skip review at 0.90 | Wrong among those skipped |
 |---|---|---|---|
-| Clean PDF | 1346 | 96.2% | 0 of 1295 |
-| Scanned | 599 | 83.1% | 0 of 498 |
-| Degraded | 627 | 15.6% | 5 of 98 |
+| Clean PDF | 1262 | 96.8% | 3 of 1222 (0.25%) |
+| Scanned | 1262 | 87.5% | 7 of 1104 (0.63%) |
+| Degraded | 1294 | 8.2% | 8 of 106 (7.55%) |
 
-Weak spots show in those tables. On degraded scans, the model got only 62.6% of the values OCR could read,
-and 5 of the 98 values that skipped review were wrong. During this run the model server also crashed 3 times
-and then went down for a while, on a machine short of memory and shared with another job. Every affected
-document succeeded when retried. Those failures are recorded in the run's files.
+| Scan quality | Documents | Printed values right | Printed values OCR could read |
+|---|---|---|---|
+| Clean PDF | 30 | 98.8% (1126/1140) | 100% |
+| Light scan | 30 | 96.0% (1094/1140) | 98.9% |
+| Moderate damage | 12 | 51.5% (203/394) | 80.2% |
+| Heavy damage | 18 | 1.9% (14/746) | 15.7% |
+
+What those don't hide:
+
+- **Degraded scans are weak.** Few values skip review there, but 7.55% of the ones that did were wrong. Check every
+  value on a bad scan, whatever its score.
+- **Wrong values do get through.** They were 18 of the 2432 that skipped review. The report and `scored.jsonl` list them, and many are
+  a name or description that looks fine and has no arithmetic to catch it.
+- **It's slow.** About a minute per document on an 8 GB GPU.
+- **These documents are all synthetic.** No public dataset was run, and they say nothing yet about a particular
+  business's paperwork.
 
 ## Synthetic test documents
 

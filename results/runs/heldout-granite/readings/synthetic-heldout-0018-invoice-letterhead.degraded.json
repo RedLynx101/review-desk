@@ -1,0 +1,79 @@
+{
+ "doc_id": "synthetic-heldout-0018-invoice-letterhead.degraded",
+ "pdf_sha256": "a5cd30aec269a517ea5fd2fc7d6aa8cc381de01b8cc48e6e9dc945686f0f517f",
+ "model": "granite-4.1-8b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "receipt",
+  "vendor_name": {
+   "text": null,
+   "line": null
+  },
+  "document_number": {
+   "text": null,
+   "line": null
+  },
+  "issue_date": {
+   "text": null,
+   "line": null
+  },
+  "due_date": {
+   "text": null,
+   "line": null
+  },
+  "purchase_order": {
+   "text": null,
+   "line": null
+  },
+  "bill_to_name": {
+   "text": null,
+   "line": null
+  },
+  "currency": {
+   "text": null,
+   "line": null
+  },
+  "subtotal": {
+   "text": null,
+   "line": null
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": null,
+   "line": null
+  },
+  "tax": [
+   {
+    "text": null,
+    "line": null
+   }
+  ],
+  "total": {
+   "text": null,
+   "line": null
+  },
+  "line_items": [
+   {
+    "description": null,
+    "quantity": null,
+    "unit_price": null,
+    "amount": null,
+    "line": null
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 22.6,
+ "attempts": 1,
+ "prompt_tokens": 4903,
+ "completion_tokens": 293,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 0.0,
+ "failure_history": []
+}

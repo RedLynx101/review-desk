@@ -1,0 +1,114 @@
+{
+ "doc_id": "synthetic-heldout-0020-receipt-card_slip.scanned",
+ "pdf_sha256": "55201cf4093c3755216ea66236c383807a22bf99436f6b9c9b2ee9faa4c5efca",
+ "model": "prism-ml/bonsai-27b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "receipt",
+  "vendor_name": {
+   "text": "Wrenbury Hardware & Sons Ltd",
+   "line": 3
+  },
+  "document_number": {
+   "text": "#95617",
+   "line": 6
+  },
+  "issue_date": {
+   "text": "14 Aug 2024",
+   "line": 5
+  },
+  "due_date": {
+   "text": null,
+   "line": null
+  },
+  "purchase_order": {
+   "text": null,
+   "line": null
+  },
+  "bill_to_name": {
+   "text": null,
+   "line": null
+  },
+  "currency": {
+   "text": "GBP",
+   "line": 17
+  },
+  "subtotal": {
+   "text": "171.43",
+   "line": 13
+  },
+  "discount": {
+   "text": "-25.71",
+   "line": 14
+  },
+  "shipping": {
+   "text": null,
+   "line": null
+  },
+  "tax": [
+   {
+    "text": "VAT 20%",
+    "line": 15
+   }
+  ],
+  "total": {
+   "text": "174.86",
+   "line": 16
+  },
+  "line_items": [
+   {
+    "description": "Work gloves",
+    "quantity": "x 3",
+    "unit_price": null,
+    "amount": "39.69",
+    "line": 7
+   },
+   {
+    "description": "Wood screws, box",
+    "quantity": "x3",
+    "unit_price": null,
+    "amount": "30.63",
+    "line": 8
+   },
+   {
+    "description": "Painter's tape",
+    "quantity": "x 3",
+    "unit_price": null,
+    "amount": "14.55",
+    "line": 9
+   },
+   {
+    "description": "Drill bit set",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "36.32",
+    "line": 10
+   },
+   {
+    "description": "Pipe wrench, 10 in",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "23.84",
+    "line": 11
+   },
+   {
+    "description": "Hinge, brass, pair",
+    "quantity": "x 3",
+    "unit_price": null,
+    "amount": "26.40",
+    "line": 12
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 54.3,
+ "attempts": 1,
+ "prompt_tokens": 894,
+ "completion_tokens": 679,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 2.9,
+ "failure_history": []
+}
