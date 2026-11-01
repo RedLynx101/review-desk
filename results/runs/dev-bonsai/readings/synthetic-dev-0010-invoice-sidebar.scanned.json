@@ -1,0 +1,93 @@
+{
+ "doc_id": "synthetic-dev-0010-invoice-sidebar.scanned",
+ "pdf_sha256": "c19419af8e23eb426342af43890fb4de51646ccf9994106b61a6607afca26b05",
+ "model": "prism-ml/bonsai-27b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "invoice",
+  "vendor_name": {
+   "text": "Repair & Sons Ltd",
+   "line": 2
+  },
+  "document_number": {
+   "text": "#",
+   "line": 8
+  },
+  "issue_date": {
+   "text": null,
+   "line": null
+  },
+  "due_date": {
+   "text": "06/03/2026",
+   "line": 16
+  },
+  "purchase_order": {
+   "text": "PO-68294",
+   "line": 20
+  },
+  "bill_to_name": {
+   "text": null,
+   "line": null
+  },
+  "currency": {
+   "text": "\u00a3",
+   "line": 17
+  },
+  "subtotal": {
+   "text": "1,038.68",
+   "line": 17
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": null,
+   "line": null
+  },
+  "tax": [
+   {
+    "text": "207.74",
+    "line": 19
+   }
+  ],
+  "total": {
+   "text": "1,246.42",
+   "line": 21
+  },
+  "line_items": [
+   {
+    "description": "On-site diagnostic visit",
+    "quantity": "2",
+    "unit_price": "154.33",
+    "amount": "308.66",
+    "line": 11
+   },
+   {
+    "description": "Cable harness, 12 ft",
+    "quantity": "5",
+    "unit_price": "51.18",
+    "amount": "255.90",
+    "line": 13
+   },
+   {
+    "description": "On-site diagnostic visit (lot 2)",
+    "quantity": "2",
+    "unit_price": "237.06",
+    "amount": "474.12",
+    "line": 14
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 47.6,
+ "attempts": 1,
+ "prompt_tokens": 1026,
+ "completion_tokens": 546,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 0.0,
+ "failure_history": []
+}

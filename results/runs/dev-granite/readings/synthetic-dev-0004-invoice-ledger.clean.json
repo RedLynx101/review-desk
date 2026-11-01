@@ -1,0 +1,153 @@
+{
+ "doc_id": "synthetic-dev-0004-invoice-ledger.clean",
+ "pdf_sha256": "ae7ccf86eb27a9d57eea8ad3f3b2b964b14e4056f6fc7f660fe571aece40557f",
+ "model": "granite-4.1-8b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "invoice",
+  "vendor_name": {
+   "text": "NIMBLETHORN GASKET WORKS LLC",
+   "line": 1
+  },
+  "document_number": {
+   "text": "A010115",
+   "line": 6
+  },
+  "issue_date": {
+   "text": "12/21/2025",
+   "line": 6
+  },
+  "due_date": {
+   "text": "01/04/2026",
+   "line": 7
+  },
+  "purchase_order": {
+   "text": "PO-09328",
+   "line": 6
+  },
+  "bill_to_name": {
+   "text": "Sampleton Bake Society",
+   "line": 10
+  },
+  "currency": {
+   "text": null,
+   "line": null
+  },
+  "subtotal": {
+   "text": "$2,651.93",
+   "line": 27
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": null,
+   "line": null
+  },
+  "tax": [
+   {
+    "text": "$106.08",
+    "line": 28
+   },
+   {
+    "text": "$66.30",
+    "line": 29
+   }
+  ],
+  "total": {
+   "text": "$2,824.31",
+   "line": 30
+  },
+  "line_items": [
+   {
+    "description": "Custom die-cut seal, per drawing 44-B",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "110.51",
+    "line": 15
+   },
+   {
+    "description": "Neoprene gasket, 4 in.",
+    "quantity": "32",
+    "unit_price": "3.58",
+    "amount": "114.56",
+    "line": 16
+   },
+   {
+    "description": "Gasket sheet, 1/8 in. x 36 in. x 36 in.",
+    "quantity": "6",
+    "unit_price": "55.00",
+    "amount": "330.00",
+    "line": 17
+   },
+   {
+    "description": "EPDM flange seal, 2 in.",
+    "quantity": "28",
+    "unit_price": "6.03",
+    "amount": "168.84",
+    "line": 18
+   },
+   {
+    "description": "Neoprene gasket, 4 in. (lot 2)",
+    "quantity": "31",
+    "unit_price": "11.56",
+    "amount": "358.36",
+    "line": 19
+   },
+   {
+    "description": "EPDM flange seal, 2 in. (lot 2)",
+    "quantity": "57",
+    "unit_price": "6.05",
+    "amount": "344.85",
+    "line": 20
+   },
+   {
+    "description": "Custom die-cut seal, per drawing 44-B (lot 2)",
+    "quantity": "5",
+    "unit_price": "113.86",
+    "amount": "569.30",
+    "line": 21
+   },
+   {
+    "description": "Custom die-cut seal, per drawing 44-B (lot 3)",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "167.65",
+    "line": 22
+   },
+   {
+    "description": "Gasket sheet, 1/8 in. x 36 in. x 36 in. (lot 2)",
+    "quantity": "3",
+    "unit_price": "65.70",
+    "amount": "197.10",
+    "line": 23
+   },
+   {
+    "description": "Neoprene gasket, 4 in. (lot 3)",
+    "quantity": "35",
+    "unit_price": "6.22",
+    "amount": "217.70",
+    "line": 24
+   },
+   {
+    "description": "Rush cutting fee",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "73.06",
+    "line": 25
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 60.0,
+ "attempts": 1,
+ "prompt_tokens": 1206,
+ "completion_tokens": 940,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 0.0,
+ "failure_history": []
+}

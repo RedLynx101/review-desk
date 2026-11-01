@@ -1,0 +1,114 @@
+{
+ "doc_id": "synthetic-dev-0002-receipt-thermal.degraded",
+ "pdf_sha256": "0bc13292990de18f6f679f422c8dcc8b78bf582b635f338d168ca53b7157c314",
+ "model": "granite-4.1-8b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "receipt",
+  "vendor_name": {
+   "text": "Synthetic Test",
+   "line": 44
+  },
+  "document_number": {
+   "text": "27826",
+   "line": 16
+  },
+  "issue_date": {
+   "text": "Apr 16, 2028",
+   "line": 18
+  },
+  "due_date": {
+   "text": null,
+   "line": null
+  },
+  "purchase_order": {
+   "text": null,
+   "line": null
+  },
+  "bill_to_name": {
+   "text": null,
+   "line": null
+  },
+  "currency": {
+   "text": "$",
+   "line": 38
+  },
+  "subtotal": {
+   "text": "Net $169.92",
+   "line": 37
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": null,
+   "line": null
+  },
+  "tax": [
+   {
+    "text": null,
+    "line": null
+   }
+  ],
+  "total": {
+   "text": "$169.92",
+   "line": 39
+  },
+  "line_items": [
+   {
+    "description": "Painter's tape",
+    "quantity": null,
+    "unit_price": "24.90",
+    "amount": null,
+    "line": 18
+   },
+   {
+    "description": "Drill bit set",
+    "quantity": null,
+    "unit_price": "29.83",
+    "amount": null,
+    "line": 20
+   },
+   {
+    "description": "Work gloves",
+    "quantity": null,
+    "unit_price": "43.37",
+    "amount": null,
+    "line": 22
+   },
+   {
+    "description": "Wood screws, box",
+    "quantity": null,
+    "unit_price": "24.87",
+    "amount": null,
+    "line": 26
+   },
+   {
+    "description": "Pipe wrench, 10 in",
+    "quantity": null,
+    "unit_price": null,
+    "amount": null,
+    "line": 31
+   },
+   {
+    "description": "Hinge, brass, pair",
+    "quantity": null,
+    "unit_price": "27.84",
+    "amount": null,
+    "line": 34
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 29.7,
+ "attempts": 1,
+ "prompt_tokens": 1016,
+ "completion_tokens": 476,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 0.0,
+ "failure_history": []
+}

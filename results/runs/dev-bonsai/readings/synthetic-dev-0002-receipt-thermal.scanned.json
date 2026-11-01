@@ -1,0 +1,114 @@
+{
+ "doc_id": "synthetic-dev-0002-receipt-thermal.scanned",
+ "pdf_sha256": "a9d9fb923a0eaf9a130dceb1088632cc1b773a926f455c8c0dc26e0ec2d7b3ac",
+ "model": "prism-ml/bonsai-27b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "receipt",
+  "vendor_name": {
+   "text": "MOSSGROVE  HARDWARE  INC.",
+   "line": 1
+  },
+  "document_number": {
+   "text": "27826",
+   "line": 7
+  },
+  "issue_date": {
+   "text": "Apr 16,  2025",
+   "line": 6
+  },
+  "due_date": {
+   "text": null,
+   "line": null
+  },
+  "purchase_order": {
+   "text": null,
+   "line": null
+  },
+  "bill_to_name": {
+   "text": null,
+   "line": null
+  },
+  "currency": {
+   "text": "$",
+   "line": 19
+  },
+  "subtotal": {
+   "text": null,
+   "line": null
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": null,
+   "line": null
+  },
+  "tax": [
+   {
+    "text": null,
+    "line": null
+   }
+  ],
+  "total": {
+   "text": "$169.92",
+   "line": 20
+  },
+  "line_items": [
+   {
+    "description": "Painter's  tape",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "24.90",
+    "line": 9
+   },
+   {
+    "description": "Drill  bit  set",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "29.83",
+    "line": 11
+   },
+   {
+    "description": "Work gloves",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "41.37",
+    "line": 12
+   },
+   {
+    "description": "Wood  screws,  box",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "24.87",
+    "line": 14
+   },
+   {
+    "description": "Pipe wrench,  10  in",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "21.11",
+    "line": 16
+   },
+   {
+    "description": "Hinge,  brass,  pair",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "27.84",
+    "line": 17
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 53.8,
+ "attempts": 1,
+ "prompt_tokens": 916,
+ "completion_tokens": 662,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 0.0,
+ "failure_history": []
+}

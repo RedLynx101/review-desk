@@ -1,0 +1,289 @@
+{
+ "doc_id": "synthetic-dev-0003-invoice-sidebar.degraded",
+ "pdf_sha256": "4fac70006b24c471b4209685188d1087bf8f372a0a539897a1b625ef43a96c43",
+ "model": "granite-4.1-8b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "invoice",
+  "vendor_name": {
+   "text": "Copperwhistle Field Instruments Inc.",
+   "line": 2
+  },
+  "document_number": {
+   "text": "INVOICE",
+   "line": 1
+  },
+  "issue_date": {
+   "text": "2026-06-03",
+   "line": 54
+  },
+  "due_date": {
+   "text": "2026-07-18",
+   "line": 55
+  },
+  "purchase_order": {
+   "text": "CUST-15302",
+   "line": 56
+  },
+  "bill_to_name": {
+   "text": "Exampleburg Pickle Exchange Falls Community Theatre",
+   "line": 5
+  },
+  "currency": {
+   "text": "USD",
+   "line": 52
+  },
+  "subtotal": {
+   "text": "17,928.77",
+   "line": 46
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": "Freight        105.75",
+   "line": 47
+  },
+  "tax": [
+   {
+    "text": "States Tax 8.25%",
+    "line": 48
+   }
+  ],
+  "total": {
+   "text": "19,513.64",
+   "line": 50
+  },
+  "line_items": [
+   {
+    "description": "foam lined",
+    "quantity": null,
+    "unit_price": "71.95",
+    "amount": "287.80",
+    "line": 10
+   },
+   {
+    "description": "Carrying case, Pressure gauge. 0-300 psi",
+    "quantity": "7",
+    "unit_price": "71.73",
+    "amount": "$02.11",
+    "line": 12
+   },
+   {
+    "description": "Pressure gauge, 0-300 psi (lot 2)",
+    "quantity": "9",
+    "unit_price": "69.41",
+    "amount": "624.69",
+    "line": 14
+   },
+   {
+    "description": "Thermocouple probe, type K",
+    "quantity": "20",
+    "unit_price": "36.31",
+    "amount": "726.20",
+    "line": 15
+   },
+   {
+    "description": "Thermocouple probe. type K (lot 2)",
+    "quantity": null,
+    "unit_price": "33.84",
+    "amount": "169.20",
+    "line": 16
+   },
+   {
+    "description": "Data logger. four",
+    "quantity": "1",
+    "unit_price": "542.22",
+    "amount": "542.22",
+    "line": 18
+   },
+   {
+    "description": "Data logger, four (lot 2)",
+    "quantity": "1",
+    "unit_price": "653.45",
+    "amount": "653.45",
+    "line": 19
+   },
+   {
+    "description": "Thermocouple probe, type K (lot 3)",
+    "quantity": "17",
+    "unit_price": "50.15",
+    "amount": "852.55",
+    "line": 20
+   },
+   {
+    "description": "Data logger. four channel (lot 3)",
+    "quantity": "3",
+    "unit_price": "337.08",
+    "amount": "1,011.24",
+    "line": 21
+   },
+   {
+    "description": "Pressure gauge. 0-300 psi (lot 3)",
+    "quantity": "11",
+    "unit_price": "38.30",
+    "amount": "421.30",
+    "line": 22
+   },
+   {
+    "description": "Annual calibration certificate",
+    "quantity": "6",
+    "unit_price": "80.19",
+    "amount": "481.14",
+    "line": 23
+   },
+   {
+    "description": "Pressure gauge, 0-300 psi (lot 4)",
+    "quantity": "9",
+    "unit_price": "55.67",
+    "amount": "501.03",
+    "line": 24
+   },
+   {
+    "description": "Carrying case, foam lined (jot 2)",
+    "quantity": "2",
+    "unit_price": "96.81",
+    "amount": "197.62",
+    "line": 25
+   },
+   {
+    "description": "Carrying case, foam fined (lot 3}",
+    "quantity": "2",
+    "unit_price": "84.25",
+    "amount": "168.50",
+    "line": 26
+   },
+   {
+    "description": "Carrying case, foam lined (lot 4)",
+    "quantity": "1",
+    "unit_price": "88.43",
+    "amount": "88.43",
+    "line": 27
+   },
+   {
+    "description": "Annual calidration certificate (lot 2)",
+    "quantity": "6",
+    "unit_price": "137.90",
+    "amount": "827.40",
+    "line": 28
+   },
+   {
+    "description": "Annual calibration certificate (lot 3)",
+    "quantity": "6",
+    "unit_price": "139.55",
+    "amount": "837.30",
+    "line": 29
+   },
+   {
+    "description": "Thermocouple probe, type K (lot 4)",
+    "quantity": "16",
+    "unit_price": "44.20",
+    "amount": "707.20",
+    "line": 30
+   },
+   {
+    "description": "Pressure gauge. 0-300 psi (lot 5)",
+    "quantity": "14",
+    "unit_price": "83.93",
+    "amount": "1,175.02",
+    "line": 31
+   },
+   {
+    "description": "Thermocouple probe, type K (lot 5)",
+    "quantity": "18",
+    "unit_price": "19.09",
+    "amount": "343.62",
+    "line": 32
+   },
+   {
+    "description": "Data logger. four channel (lot 4)",
+    "quantity": "2",
+    "unit_price": "380.35",
+    "amount": "760.70",
+    "line": 33
+   },
+   {
+    "description": "Data logger. four channe! (lot 5)",
+    "quantity": "3",
+    "unit_price": "460.28",
+    "amount": "1,380.84",
+    "line": 34
+   },
+   {
+    "description": "Pressure gauge. 0-300 psi (lot 6)",
+    "quantity": "1",
+    "unit_price": "37.26",
+    "amount": "37.26",
+    "line": 35
+   },
+   {
+    "description": "Carrying case, foam lined (lot 5)",
+    "quantity": "3",
+    "unit_price": "$3.01",
+    "amount": "189.03",
+    "line": 36
+   },
+   {
+    "description": "Carrying case, foam lined (ict 6)",
+    "quantity": "4",
+    "unit_price": "65.30",
+    "amount": "261.20",
+    "line": 37
+   },
+   {
+    "description": "Data logger. four channel (lot 6)",
+    "quantity": "2",
+    "unit_price": "407 88",
+    "amount": "815.76",
+    "line": 38
+   },
+   {
+    "description": "Carrying case, foam lined (lot 7)",
+    "quantity": "1",
+    "unit_price": "6,141",
+    "amount": "61.41",
+    "line": 39
+   },
+   {
+    "description": "Annual calibration certificate (lot 4)",
+    "quantity": "4",
+    "unit_price": "103.73",
+    "amount": "414.92",
+    "line": 40
+   },
+   {
+    "description": "Annual calibration certificate (lot 5)",
+    "quantity": "1",
+    "unit_price": "136.66",
+    "amount": "136.66",
+    "line": 41
+   },
+   {
+    "description": "Data logger, four     (lot 7)",
+    "quantity": "3",
+    "unit_price": "599.69",
+    "amount": "1,799.07",
+    "line": 42
+   },
+   {
+    "description": "Data logger, four channel (lot 8)",
+    "quantity": "2",
+    "unit_price": "491.95",
+    "amount": "983.90",
+    "line": 43
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 118.3,
+ "attempts": 1,
+ "prompt_tokens": 1714,
+ "completion_tokens": 1959,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 0.0,
+ "failure_history": []
+}

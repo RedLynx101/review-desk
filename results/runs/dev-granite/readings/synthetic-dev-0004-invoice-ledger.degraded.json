@@ -1,0 +1,111 @@
+{
+ "doc_id": "synthetic-dev-0004-invoice-ledger.degraded",
+ "pdf_sha256": "7c51e1920fca4d2d59af37adf3ca4b7b53f69580fb2fdd8350ae92055afe9adf",
+ "model": "granite-4.1-8b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "invoice",
+  "vendor_name": {
+   "text": "NIMBLETHORN GASKET WORKS LLC",
+   "line": 4
+  },
+  "document_number": {
+   "text": "aoiolis",
+   "line": 12
+  },
+  "issue_date": {
+   "text": "12/21/2025",
+   "line": 13
+  },
+  "due_date": {
+   "text": "01/04/2026",
+   "line": 15
+  },
+  "purchase_order": {
+   "text": "PO-09326",
+   "line": 12
+  },
+  "bill_to_name": {
+   "text": "Sampleton Bake Society",
+   "line": 17
+  },
+  "currency": {
+   "text": "$",
+   "line": 55
+  },
+  "subtotal": {
+   "text": "569.30",
+   "line": 46
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": null,
+   "line": null
+  },
+  "tax": [
+   {
+    "text": "STATE TAX 4% $106.08",
+    "line": 55
+   },
+   {
+    "text": "COUNTY TAX 2.5% $66.30",
+    "line": 56
+   }
+  ],
+  "total": {
+   "text": "$2,824.31",
+   "line": 57
+  },
+  "line_items": [
+   {
+    "description": "1 Custom die-cut seal, per drawing 44-B (lot 2)",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "113.86",
+    "line": 40
+   },
+   {
+    "description": "569.30",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "569.30",
+    "line": 46
+   },
+   {
+    "description": "1 Custom die-cut seal, per drawing 44-8 (lot 3)",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "167.65",
+    "line": 43
+   },
+   {
+    "description": "3 Gasket sheet, 1/8 in. x 36 in. x 36 in. (ict 2)",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "197.30",
+    "line": 47
+   },
+   {
+    "description": "4 Neoprene gasket, 4 in. (lot 3)",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "217.76",
+    "line": 49
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 39.7,
+ "attempts": 1,
+ "prompt_tokens": 1385,
+ "completion_tokens": 617,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 0.0,
+ "failure_history": []
+}

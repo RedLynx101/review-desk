@@ -1,0 +1,114 @@
+{
+ "doc_id": "synthetic-dev-0011-receipt-thermal.scanned",
+ "pdf_sha256": "52dd7b3fd3fddc501e3d34075f3e4032f7f70c667646c9c1aa23229418d30b82",
+ "model": "granite-4.1-8b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "receipt",
+  "vendor_name": {
+   "text": "LARKSPINDLE BAKEHOUSE & SONS LTD",
+   "line": 1
+  },
+  "document_number": {
+   "text": "11-4-89782",
+   "line": 7
+  },
+  "issue_date": {
+   "text": "04 Jan 2026",
+   "line": 6
+  },
+  "due_date": {
+   "text": null,
+   "line": null
+  },
+  "purchase_order": {
+   "text": null,
+   "line": null
+  },
+  "bill_to_name": {
+   "text": null,
+   "line": null
+  },
+  "currency": {
+   "text": "GBP",
+   "line": 19
+  },
+  "subtotal": {
+   "text": "25.17",
+   "line": 15
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": null,
+   "line": null
+  },
+  "tax": [
+   {
+    "text": "20%",
+    "line": 16
+   }
+  ],
+  "total": {
+   "text": "30.20",
+   "line": 17
+  },
+  "line_items": [
+   {
+    "description": "Rye rolls, half doz",
+    "quantity": null,
+    "unit_price": "5.21",
+    "amount": null,
+    "line": 9
+   },
+   {
+    "description": "Oat cookie",
+    "quantity": null,
+    "unit_price": "1.98",
+    "amount": null,
+    "line": 10
+   },
+   {
+    "description": "Drip coffee, large",
+    "quantity": null,
+    "unit_price": "4.88",
+    "amount": null,
+    "line": 11
+   },
+   {
+    "description": null,
+    "quantity": "2x",
+    "unit_price": "2.44",
+    "amount": null,
+    "line": 12
+   },
+   {
+    "description": "Quiche slice",
+    "quantity": null,
+    "unit_price": "13.10",
+    "amount": null,
+    "line": 13
+   },
+   {
+    "description": null,
+    "quantity": "2x",
+    "unit_price": "6.55",
+    "amount": null,
+    "line": 14
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 32.4,
+ "attempts": 1,
+ "prompt_tokens": 852,
+ "completion_tokens": 552,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 0.0,
+ "failure_history": []
+}

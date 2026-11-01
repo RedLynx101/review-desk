@@ -1,0 +1,79 @@
+{
+ "doc_id": "synthetic-dev-0013-invoice-boxed.degraded",
+ "pdf_sha256": "dfaa7af39ab11ac70cd1e440b4c1945ef83aece8f27f2c30454569320f1c06bc",
+ "model": "granite-4.1-8b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "invoice",
+  "vendor_name": {
+   "text": "Painters LLC",
+   "line": 1
+  },
+  "document_number": {
+   "text": "ZZ-1187-B",
+   "line": 12
+  },
+  "issue_date": {
+   "text": "07/20/2026",
+   "line": 12
+  },
+  "due_date": {
+   "text": "07/27/2026",
+   "line": 12
+  },
+  "purchase_order": {
+   "text": null,
+   "line": null
+  },
+  "bill_to_name": {
+   "text": "Sample Q. Customer",
+   "line": 15
+  },
+  "currency": {
+   "text": "AED",
+   "line": 11
+  },
+  "subtotal": {
+   "text": null,
+   "line": null
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": null,
+   "line": null
+  },
+  "tax": [
+   {
+    "text": null,
+    "line": null
+   }
+  ],
+  "total": {
+   "text": null,
+   "line": null
+  },
+  "line_items": [
+   {
+    "description": "Hand: window sgn ee",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "$$3.27",
+    "line": 22
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 19.5,
+ "attempts": 1,
+ "prompt_tokens": 823,
+ "completion_tokens": 336,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 0.0,
+ "failure_history": []
+}

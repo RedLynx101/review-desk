@@ -1,0 +1,107 @@
+{
+ "doc_id": "synthetic-dev-0001-invoice-banner.scanned",
+ "pdf_sha256": "12afef6b0cbd159f73adb94651e4ad31733916e4df283b930cefe0eb2d866433",
+ "model": "prism-ml/bonsai-27b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "invoice",
+  "vendor_name": {
+   "text": "Copperwhistle Paper Goods B.Y.",
+   "line": 1
+  },
+  "document_number": {
+   "text": "00036234",
+   "line": 8
+  },
+  "issue_date": {
+   "text": "21.06.2024",
+   "line": 8
+  },
+  "due_date": {
+   "text": "05.07.2024",
+   "line": 8
+  },
+  "purchase_order": {
+   "text": "PO-10946",
+   "line": 8
+  },
+  "bill_to_name": {
+   "text": "Fictionville Parks Office",
+   "line": 12
+  },
+  "currency": {
+   "text": "\u20ac",
+   "line": 22
+  },
+  "subtotal": {
+   "text": "1,397.33",
+   "line": 22
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": null,
+   "line": null
+  },
+  "tax": [
+   {
+    "text": "MwsSt. 19%",
+    "line": 23
+   }
+  ],
+  "total": {
+   "text": "1,662.82",
+   "line": 24
+  },
+  "line_items": [
+   {
+    "description": "Bond paper, 20 lb, case of 10 reams",
+    "quantity": "18",
+    "unit_price": "32.95",
+    "amount": "593.10",
+    "line": 17
+   },
+   {
+    "description": "Index tabs, assorted colors",
+    "quantity": "30",
+    "unit_price": "5.17",
+    "amount": "155.10",
+    "line": 18
+   },
+   {
+    "description": "Index tabs, assorted colors (lot 2)",
+    "quantity": "26",
+    "unit_price": "6.16",
+    "amount": "160.16",
+    "line": 19
+   },
+   {
+    "description": "Kraft envelopes, 9 x 12, box of 250",
+    "quantity": "7",
+    "unit_price": "21.21",
+    "amount": "148.47",
+    "line": 20
+   },
+   {
+    "description": "Ledger book, 300 pages, hardbound",
+    "quantity": "10",
+    "unit_price": "34.05",
+    "amount": "340.50",
+    "line": 21
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 54.0,
+ "attempts": 1,
+ "prompt_tokens": 1038,
+ "completion_tokens": 723,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 0.0,
+ "failure_history": []
+}

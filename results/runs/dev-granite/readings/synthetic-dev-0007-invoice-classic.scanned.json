@@ -1,0 +1,121 @@
+{
+ "doc_id": "synthetic-dev-0007-invoice-classic.scanned",
+ "pdf_sha256": "f496da96e8371b839b2cb6c21042d71fd9382392dae5ffae1594917a58ecc1bd",
+ "model": "granite-4.1-8b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "invoice",
+  "vendor_name": {
+   "text": "Nimblethorn Paper Goods GmbH",
+   "line": 1
+  },
+  "document_number": {
+   "text": "A030731",
+   "line": 4
+  },
+  "issue_date": {
+   "text": "01.05.2026",
+   "line": 4
+  },
+  "due_date": {
+   "text": "31.05.2026",
+   "line": 5
+  },
+  "purchase_order": {
+   "text": null,
+   "line": null
+  },
+  "bill_to_name": {
+   "text": "Dummy Mae Ipsum",
+   "line": 9
+  },
+  "currency": {
+   "text": "\u20ac",
+   "line": 15
+  },
+  "subtotal": {
+   "text": "917.19",
+   "line": 20
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": "62.98",
+   "line": 18
+  },
+  "tax": [
+   {
+    "text": null,
+    "line": null
+   }
+  ],
+  "total": {
+   "text": "917.19",
+   "line": 21
+  },
+  "line_items": [
+   {
+    "description": "Ledger book, 300 pages, hardbound",
+    "quantity": "10",
+    "unit_price": "14.12",
+    "amount": "141.20",
+    "line": 13
+   },
+   {
+    "description": "Index tabs, assorted colors",
+    "quantity": "39",
+    "unit_price": "2.49",
+    "amount": "97.11",
+    "line": 14
+   },
+   {
+    "description": "Ledger book, 300 pages, hardbound (lot 2)",
+    "quantity": null,
+    "unit_price": "15.57",
+    "amount": "108.99",
+    "line": 15
+   },
+   {
+    "description": "Bond paper, 20 Ib, case of 10 reams",
+    "quantity": "3",
+    "unit_price": "55.96",
+    "amount": "167.88",
+    "line": 16
+   },
+   {
+    "description": "Index tabs, assorted colors (lot 2)",
+    "quantity": "28",
+    "unit_price": "2.53",
+    "amount": "70.84",
+    "line": 17
+   },
+   {
+    "description": "Pallet delivery handling",
+    "quantity": "Z",
+    "unit_price": null,
+    "amount": "62.98",
+    "line": 18
+   },
+   {
+    "description": "Kraft envelopes, 9 x 12, box of 250",
+    "quantity": "13",
+    "unit_price": "20.63",
+    "amount": "268.19",
+    "line": 19
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 41.3,
+ "attempts": 1,
+ "prompt_tokens": 959,
+ "completion_tokens": 669,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 0.0,
+ "failure_history": []
+}
