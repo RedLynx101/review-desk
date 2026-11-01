@@ -1,0 +1,106 @@
+{
+ "doc_id": "synthetic-dev-0029-receipt-thermal.clean",
+ "pdf_sha256": "beb570ee8dd0cc80024bfc5258134bb7dc9c0d30542d3f8a9fd90d221536564b",
+ "model": "prism-ml/bonsai-27b",
+ "reading": {
+  "document_type": "receipt",
+  "vendor_name": {
+   "text": "TUMBLEDOWN GARDEN STAND LTD",
+   "line": 1
+  },
+  "document_number": {
+   "text": null,
+   "line": null
+  },
+  "issue_date": {
+   "text": "12 September 2026",
+   "line": 7
+  },
+  "due_date": {
+   "text": null,
+   "line": null
+  },
+  "purchase_order": {
+   "text": null,
+   "line": null
+  },
+  "bill_to_name": {
+   "text": null,
+   "line": null
+  },
+  "currency": {
+   "text": "\u00a3",
+   "line": 21
+  },
+  "subtotal": {
+   "text": "\u00a3149.10",
+   "line": 21
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": null,
+   "line": null
+  },
+  "tax": [
+   {
+    "text": "\u00a329.82",
+    "line": 22
+   }
+  ],
+  "total": {
+   "text": "\u00a3205.92",
+   "line": 23
+  },
+  "line_items": [
+   {
+    "description": "Twine, spool",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "4.98",
+    "line": 11
+   },
+   {
+    "description": "Tomato seedling",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "32.30",
+    "line": 12
+   },
+   {
+    "description": "Herb bundle",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "25.10",
+    "line": 14
+   },
+   {
+    "description": "Terracotta pot",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "58.30",
+    "line": 16
+   },
+   {
+    "description": "Potting soil, bag",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "28.42",
+    "line": 18
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 53.2,
+ "attempts": 1,
+ "prompt_tokens": 905,
+ "completion_tokens": 609,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 4.1,
+ "failure_history": []
+}

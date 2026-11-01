@@ -1,0 +1,106 @@
+{
+ "doc_id": "synthetic-dev-0024-invoice-banner.clean",
+ "pdf_sha256": "12ee26647f4b37f6abaf13880693357ae56d46ae8151e07b1d0c4ddd959f604f",
+ "model": "prism-ml/bonsai-27b",
+ "reading": {
+  "document_type": "invoice",
+  "vendor_name": {
+   "text": "Wobblestone Gasket Works LLC",
+   "line": 1
+  },
+  "document_number": {
+   "text": "ZZ-1150-W",
+   "line": 5
+  },
+  "issue_date": {
+   "text": "2024-12-30",
+   "line": 5
+  },
+  "due_date": {
+   "text": "2025-01-13",
+   "line": 5
+  },
+  "purchase_order": {
+   "text": "005598",
+   "line": 5
+  },
+  "bill_to_name": {
+   "text": "Notta Realperson",
+   "line": 9
+  },
+  "currency": {
+   "text": "$",
+   "line": 18
+  },
+  "subtotal": {
+   "text": "958.49",
+   "line": 18
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": null,
+   "line": null
+  },
+  "tax": [
+   {
+    "text": null,
+    "line": null
+   }
+  ],
+  "total": {
+   "text": "958.49",
+   "line": 19
+  },
+  "line_items": [
+   {
+    "description": "Neoprene gasket, 4 in.",
+    "quantity": "33",
+    "unit_price": "7.08",
+    "amount": "233.64",
+    "line": 13
+   },
+   {
+    "description": "Rush cutting fee",
+    "quantity": "1",
+    "unit_price": "50.27",
+    "amount": "50.27",
+    "line": 14
+   },
+   {
+    "description": "Neoprene gasket, 4 in. (lot 2)",
+    "quantity": "37",
+    "unit_price": "14.81",
+    "amount": "547.97",
+    "line": 15
+   },
+   {
+    "description": "Rush cutting fee (lot 2)",
+    "quantity": "1",
+    "unit_price": "38.02",
+    "amount": "38.02",
+    "line": 16
+   },
+   {
+    "description": "Custom die-cut seal, per drawing 44-B",
+    "quantity": "1",
+    "unit_price": "88.59",
+    "amount": "88.59",
+    "line": 17
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 58.0,
+ "attempts": 1,
+ "prompt_tokens": 980,
+ "completion_tokens": 688,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 1.6,
+ "failure_history": []
+}

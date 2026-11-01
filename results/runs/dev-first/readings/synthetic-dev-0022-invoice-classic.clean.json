@@ -1,0 +1,134 @@
+{
+ "doc_id": "synthetic-dev-0022-invoice-classic.clean",
+ "pdf_sha256": "a0925da121a36c74c8d8da41ff2e4cd88d5926195b615291add124cbc463f375",
+ "model": "prism-ml/bonsai-27b",
+ "reading": {
+  "document_type": "invoice",
+  "vendor_name": {
+   "text": "Dapplewood Signal Repair Co.",
+   "line": 1
+  },
+  "document_number": {
+   "text": "LY30628",
+   "line": 3
+  },
+  "issue_date": {
+   "text": "Jun 20, 2026",
+   "line": 4
+  },
+  "due_date": {
+   "text": "Jul 20, 2026",
+   "line": 5
+  },
+  "purchase_order": {
+   "text": "071262",
+   "line": 7
+  },
+  "bill_to_name": {
+   "text": "Nonesuch Freight Partners",
+   "line": 10
+  },
+  "currency": {
+   "text": "$",
+   "line": 23
+  },
+  "subtotal": {
+   "text": "2,742.84",
+   "line": 23
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": "24.68",
+   "line": 24
+  },
+  "tax": [
+   {
+    "text": "274.28",
+    "line": 25
+   }
+  ],
+  "total": {
+   "text": "3,041.80",
+   "line": 26
+  },
+  "line_items": [
+   {
+    "description": "Cable harness, 12 ft",
+    "quantity": "5",
+    "unit_price": "84.67",
+    "amount": "423.35",
+    "line": 14
+   },
+   {
+    "description": "Cable harness, 12 ft (lot 2)",
+    "quantity": "1",
+    "unit_price": "72.10",
+    "amount": "72.10",
+    "line": 15
+   },
+   {
+    "description": "Preventive maintenance, includes filter swap and belt inspection",
+    "quantity": "1",
+    "unit_price": "311.00",
+    "amount": "311.00",
+    "line": 16
+   },
+   {
+    "description": "After-hours call-out surcharge",
+    "quantity": "1",
+    "unit_price": "90.12",
+    "amount": "90.12",
+    "line": 17
+   },
+   {
+    "description": "After-hours call-out surcharge (lot 2)",
+    "quantity": "1",
+    "unit_price": "145.39",
+    "amount": "145.39",
+    "line": 18
+   },
+   {
+    "description": "On-site diagnostic visit",
+    "quantity": "1",
+    "unit_price": "140.22",
+    "amount": "140.22",
+    "line": 19
+   },
+   {
+    "description": "Preventive maintenance, includes filter swap and belt inspection (lot 2)",
+    "quantity": "1",
+    "unit_price": "353.78",
+    "amount": "353.78",
+    "line": 20
+   },
+   {
+    "description": "Cable harness, 12 ft (lot 3)",
+    "quantity": "6",
+    "unit_price": "61.27",
+    "amount": "367.62",
+    "line": 21
+   },
+   {
+    "description": "Preventive maintenance, includes filter swap and belt inspection (lot 3)",
+    "quantity": "2",
+    "unit_price": "419.63",
+    "amount": "839.26",
+    "line": 22
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 80.2,
+ "attempts": 1,
+ "prompt_tokens": 1145,
+ "completion_tokens": 979,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 2.5,
+ "failure_history": []
+}

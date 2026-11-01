@@ -1,4 +1,5 @@
 # Exact pins for everything the app runs on. Licenses: THIRD_PARTY_LICENSES.md
+annotated-types==0.8.0
 cffi==2.1.1
 charset-normalizer==3.5.2
 cryptography==50.0.2
@@ -7,5 +8,9 @@ pdfminer.six==20260107
 pdfplumber==0.11.10
 pillow==13.0.0
 pycparser==3.12
+pydantic==2.14.2
+pydantic_core==2.50.2
 pypdfium2==5.14.0
 reportlab==5.1.0
+typing-inspection==0.4.4
+typing_extensions==4.16.0

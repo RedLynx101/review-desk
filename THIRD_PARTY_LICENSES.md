@@ -7,6 +7,7 @@ each package's own files; the script fails if a pin has no entry or a copyleft l
 
 | Package | Version | License |
 |---|---|---|
+| annotated-types | 0.8.0 | MIT |
 | cffi | 2.1.1 | MIT-0 |
 | charset-normalizer | 3.5.2 | MIT |
 | cryptography | 50.0.2 | Apache-2.0 OR BSD-3-Clause |
@@ -15,8 +16,12 @@ each package's own files; the script fails if a pin has no entry or a copyleft l
 | pdfplumber | 0.11.10 | MIT |
 | pillow | 13.0.0 | MIT-CMU |
 | pycparser | 3.12 | BSD-3-Clause |
+| pydantic | 2.14.2 | MIT |
+| pydantic_core | 2.50.2 | MIT |
 | pypdfium2 | 5.14.0 | BSD-3-Clause OR Apache-2.0; bundled PDFium build is BSD-3-Clause/Apache-2.0 with permissive parts |
 | reportlab | 5.1.0 | BSD-3-Clause |
+| typing-inspection | 0.4.4 | MIT |
+| typing_extensions | 4.16.0 | PSF-2.0 |
 
 ## Development dependencies
 
@@ -41,5 +46,8 @@ each package's own files; the script fails if a pin has no entry or a copyleft l
 
 - PDF rendering and text with coordinates use pypdfium2 and pdfplumber. PyMuPDF would also work,
   but it's AGPL or commercial, and a client reusing this code shouldn't inherit that.
+- The model client uses the standard library's `http.client`. HTTP libraries such as httpx pull in
+  certifi, which is MPL-2.0, and they read proxy settings and can follow redirects, which this app
+  shouldn't do with a document.
 - The PDFium build bundles permissive third-party parts (FreeType under its FTL option, ICU, libjpeg-turbo,
   OpenJPEG, libpng, zlib and others). Their notices are in the pypdfium2 wheel's `BUILD_LICENSES` folder.

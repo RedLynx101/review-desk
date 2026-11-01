@@ -1,0 +1,83 @@
+{
+ "doc_id": "synthetic-dev-0014-receipt-pos_wide.clean",
+ "pdf_sha256": "08875a1e45d9724481dd27d65b32e148796260e42fdc8b9e913bdfe8b3708524",
+ "model": "prism-ml/bonsai-27b",
+ "reading": {
+  "document_type": "receipt",
+  "vendor_name": {
+   "text": "Copperwhistle Noodle Bar LLC",
+   "line": 1
+  },
+  "document_number": {
+   "text": "TXN0841347",
+   "line": 5
+  },
+  "issue_date": {
+   "text": "2024-01-28",
+   "line": 5
+  },
+  "due_date": {
+   "text": null,
+   "line": null
+  },
+  "purchase_order": {
+   "text": null,
+   "line": null
+  },
+  "bill_to_name": {
+   "text": null,
+   "line": null
+  },
+  "currency": {
+   "text": "CA$",
+   "line": 9
+  },
+  "subtotal": {
+   "text": "6.99",
+   "line": 9
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": null,
+   "line": null
+  },
+  "tax": [
+   {
+    "text": "0.91",
+    "line": 10
+   }
+  ],
+  "total": {
+   "text": "7.90",
+   "line": 11
+  },
+  "line_items": [
+   {
+    "description": "3 Barley tea",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "6.99",
+    "line": 8
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 53.2,
+ "attempts": 1,
+ "prompt_tokens": 781,
+ "completion_tokens": 400,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 0.0,
+ "failure_history": [
+  {
+   "code": "unreachable",
+   "message": "Couldn't reach the model at http://localhost:1234/v1."
+  }
+ ]
+}

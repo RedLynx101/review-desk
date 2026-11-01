@@ -30,6 +30,7 @@ COPYLEFT = re.compile(r"\b(AGPL|GPL|LGPL|SSPL|MPL|EUPL|CC-BY-SA|CC-BY-NC)\b", re
 
 #: Normalized package name to the license as read in the package's own files.
 VERIFIED = {
+    "annotated-types": "MIT",
     "cffi": "MIT-0",
     "charset-normalizer": "MIT",
     "colorama": "BSD-3-Clause",
@@ -42,10 +43,14 @@ VERIFIED = {
     "pillow": "MIT-CMU",
     "pluggy": "MIT",
     "pycparser": "BSD-3-Clause",
+    "pydantic": "MIT",
+    "pydantic-core": "MIT",
     "pygments": "BSD-2-Clause",
     "pypdfium2": "BSD-3-Clause OR Apache-2.0; bundled PDFium build is BSD-3-Clause/Apache-2.0 with permissive parts",
     "pytest": "MIT",
     "reportlab": "BSD-3-Clause",
+    "typing-extensions": "PSF-2.0",
+    "typing-inspection": "MIT",
 }
 
 EXTERNAL = (
@@ -127,6 +132,9 @@ def render(dependencies: list[Dependency]) -> str:
         "",
         "- PDF rendering and text with coordinates use pypdfium2 and pdfplumber. PyMuPDF would also work,",
         "  but it's AGPL or commercial, and a client reusing this code shouldn't inherit that.",
+        "- The model client uses the standard library's `http.client`. HTTP libraries such as httpx pull in",
+        "  certifi, which is MPL-2.0, and they read proxy settings and can follow redirects, which this app",
+        "  shouldn't do with a document.",
         "- The PDFium build bundles permissive third-party parts (FreeType under its FTL option, ICU, libjpeg-turbo,",
         "  OpenJPEG, libpng, zlib and others). Their notices are in the pypdfium2 wheel's `BUILD_LICENSES` folder.",
         "",

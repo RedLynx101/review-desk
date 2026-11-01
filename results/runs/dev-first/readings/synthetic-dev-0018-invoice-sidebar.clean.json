@@ -1,0 +1,134 @@
+{
+ "doc_id": "synthetic-dev-0018-invoice-sidebar.clean",
+ "pdf_sha256": "535b777c8986467d569c36045695476daf088b7581a0afb5847cb54ffd502eda",
+ "model": "prism-ml/bonsai-27b",
+ "reading": {
+  "document_type": "invoice",
+  "vendor_name": {
+   "text": "Thistlewick Catering",
+   "line": 1
+  },
+  "document_number": {
+   "text": "ZZ-4229-L",
+   "line": 9
+  },
+  "issue_date": {
+   "text": "2025-09-21",
+   "line": 12
+  },
+  "due_date": {
+   "text": "2025-11-20",
+   "line": 15
+  },
+  "purchase_order": {
+   "text": null,
+   "line": null
+  },
+  "bill_to_name": {
+   "text": "Kitchen Co.",
+   "line": 2
+  },
+  "currency": {
+   "text": "$",
+   "line": 21
+  },
+  "subtotal": {
+   "text": "2051.14",
+   "line": 21
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": "32.12",
+   "line": 22
+  },
+  "tax": [
+   {
+    "text": "133.32",
+    "line": 23
+   }
+  ],
+  "total": {
+   "text": "2216.58",
+   "line": 24
+  },
+  "line_items": [
+   {
+    "description": "Fruit and cheese platter, large",
+    "quantity": "2",
+    "unit_price": "64.09",
+    "amount": "128.18",
+    "line": 10
+   },
+   {
+    "description": "Event staffing",
+    "quantity": "5",
+    "unit_price": "26.34",
+    "amount": "131.70",
+    "line": 12
+   },
+   {
+    "description": "Fruit and cheese platter, large (lot 2)",
+    "quantity": "8",
+    "unit_price": "71.11",
+    "amount": "568.88",
+    "line": 13
+   },
+   {
+    "description": "Coffee service, per gallon",
+    "quantity": "5",
+    "unit_price": "25.16",
+    "amount": "125.80",
+    "line": 14
+   },
+   {
+    "description": "Linen rental, per table",
+    "quantity": "13",
+    "unit_price": "13.63",
+    "amount": "177.19",
+    "line": 16
+   },
+   {
+    "description": "Fruit and cheese platter, large (lot 3)",
+    "quantity": "6",
+    "unit_price": "83.39",
+    "amount": "500.34",
+    "line": 17
+   },
+   {
+    "description": "Coffee service, per gallon (lot 2)",
+    "quantity": "6",
+    "unit_price": "22.35",
+    "amount": "134.10",
+    "line": 18
+   },
+   {
+    "description": "Box lunches, per person",
+    "quantity": "18",
+    "unit_price": "12.77",
+    "amount": "229.86",
+    "line": 19
+   },
+   {
+    "description": "Linen rental, per table (lot 2)",
+    "quantity": "7",
+    "unit_price": "7.87",
+    "amount": "55.09",
+    "line": 20
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 77.5,
+ "attempts": 1,
+ "prompt_tokens": 1153,
+ "completion_tokens": 941,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 2.3,
+ "failure_history": []
+}

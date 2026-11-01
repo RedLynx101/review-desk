@@ -1,0 +1,132 @@
+{
+ "doc_id": "synthetic-dev-0012-invoice-ledger.clean",
+ "pdf_sha256": "a942a986375f6b45382d5b4d9c9d070f817e2f52ebac104064d4daec4154e273",
+ "model": "prism-ml/bonsai-27b",
+ "reading": {
+  "document_type": "invoice",
+  "vendor_name": {
+   "text": "WOBBLESTONE CATERING KITCHEN B.V.",
+   "line": 1
+  },
+  "document_number": {
+   "text": "ZZ-6558-X",
+   "line": 6
+  },
+  "issue_date": {
+   "text": "09.12.2024",
+   "line": 7
+  },
+  "due_date": {
+   "text": "23.12.2024",
+   "line": 8
+  },
+  "purchase_order": {
+   "text": null,
+   "line": null
+  },
+  "bill_to_name": {
+   "text": "Fictionville Parks Office",
+   "line": 9
+  },
+  "currency": {
+   "text": "\u20ac",
+   "line": 23
+  },
+  "subtotal": {
+   "text": "2.544,56 \u20ac",
+   "line": 23
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": "98,35 \u20ac",
+   "line": 24
+  },
+  "tax": [
+   {
+    "text": "MWST. 19%        483,47 \u20ac",
+    "line": 25
+   }
+  ],
+  "total": {
+   "text": "3.126,38 \u20ac",
+   "line": 26
+  },
+  "line_items": [
+   {
+    "description": "Linen rental, per table",
+    "quantity": "13",
+    "unit_price": "12,55",
+    "amount": "163,15",
+    "line": 14
+   },
+   {
+    "description": "Event staffing",
+    "quantity": "15,75",
+    "unit_price": "32,00",
+    "amount": "504,00",
+    "line": 15
+   },
+   {
+    "description": "Event staffing (lot 2)",
+    "quantity": "17,75",
+    "unit_price": "30,14",
+    "amount": "534,99",
+    "line": 16
+   },
+   {
+    "description": "Fruit and cheese platter, large",
+    "quantity": "3",
+    "unit_price": "63,02",
+    "amount": "189,06",
+    "line": 17
+   },
+   {
+    "description": "Box lunches, per person",
+    "quantity": "32",
+    "unit_price": "14,59",
+    "amount": "466,88",
+    "line": 18
+   },
+   {
+    "description": "Box lunches, per person (lot 2)",
+    "quantity": "28",
+    "unit_price": "12,96",
+    "amount": "362,88",
+    "line": 19
+   },
+   {
+    "description": "Coffee service, per gallon",
+    "quantity": "3",
+    "unit_price": "25,00",
+    "amount": "75,00",
+    "line": 20
+   },
+   {
+    "description": "Coffee service, per gallon (lot 2)",
+    "quantity": "10",
+    "unit_price": "24,86",
+    "amount": "248,60",
+    "line": 21
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 118.9,
+ "attempts": 1,
+ "prompt_tokens": 1114,
+ "completion_tokens": 902,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 0.0,
+ "failure_history": [
+  {
+   "code": "unreachable",
+   "message": "Couldn't reach the model at http://localhost:1234/v1."
+  }
+ ]
+}

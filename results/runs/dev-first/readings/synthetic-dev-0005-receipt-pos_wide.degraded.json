@@ -1,0 +1,93 @@
+{
+ "doc_id": "synthetic-dev-0005-receipt-pos_wide.degraded",
+ "pdf_sha256": "2ff3af1fb5c52d2bbd52281f31ef3b9fd5d44a0c1e92e03d562f8d169decc0b7",
+ "model": "prism-ml/bonsai-27b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "receipt",
+  "vendor_name": {
+   "text": "Fernwhistle Garden Stand Co.",
+   "line": 5
+  },
+  "document_number": {
+   "text": null,
+   "line": null
+  },
+  "issue_date": {
+   "text": null,
+   "line": null
+  },
+  "due_date": {
+   "text": null,
+   "line": null
+  },
+  "purchase_order": {
+   "text": null,
+   "line": null
+  },
+  "bill_to_name": {
+   "text": null,
+   "line": null
+  },
+  "currency": {
+   "text": "$",
+   "line": 19
+  },
+  "subtotal": {
+   "text": null,
+   "line": null
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": null,
+   "line": null
+  },
+  "tax": [
+   {
+    "text": null,
+    "line": null
+   }
+  ],
+  "total": {
+   "text": "$73.72",
+   "line": 22
+  },
+  "line_items": [
+   {
+    "description": "Terracotta pot",
+    "quantity": "4",
+    "unit_price": null,
+    "amount": "39.40",
+    "line": 13
+   },
+   {
+    "description": "Herd bundle",
+    "quantity": "2",
+    "unit_price": null,
+    "amount": null,
+    "line": 15
+   },
+   {
+    "description": "Tomato scedting",
+    "quantity": "8",
+    "unit_price": null,
+    "amount": "20.24",
+    "line": 17
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 41.0,
+ "attempts": 1,
+ "prompt_tokens": 894,
+ "completion_tokens": 471,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 6.4,
+ "failure_history": []
+}

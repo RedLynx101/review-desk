@@ -5,11 +5,59 @@ extracted against a strict schema, each with a confidence score built from check
 its source highlighted on the page. Low-confidence fields go to a review queue, nothing exports until a
 person approves it, and a hash-chained audit log records what happened.
 
-**Status: under construction.** Milestone 1 of 5 is done: the repo skeleton and the synthetic test
-documents. The extractor, review screen and accuracy report don't exist yet, so this README makes no
-claims about them. No client deployment yet.
+**Status: under construction.** Milestones 1 and 2 of 5 are done: synthetic test documents and the
+extraction pipeline. The review screen, the audit log and the held-out accuracy report don't exist yet, so
+this README makes no claims about them. No client deployment yet.
 
 Built with AI coding agents under Noah Hicks's review.
+
+## How a document gets read
+
+```
+.venv/Scripts/python -m review_desk extract invoice.pdf
+```
+
+1. **Intake.** Uploads are untrusted: size and page limits, encrypted and malformed files refused, active
+   content detected and reported. Scripts never run, because the code never creates the form environment
+   PDFium needs to run them.
+2. **Words with coordinates.** Digital PDFs use their text layer. Scans go through Tesseract after being
+   straightened and cleaned at their native resolution, with word boxes mapped back to the original page.
+   Digital PDFs get OCR'd too, as a check: a text layer can claim anything, so text that doesn't match the
+   visible page is flagged, and a page whose hidden text mostly isn't visible gets read from its pixels.
+3. **The model copies, it doesn't compute.** A local model (LM Studio by default, any OpenAI-compatible
+   endpoint set by environment variables) gets numbered lines and returns literal values with line
+   citations, under a strict JSON schema. Dates and amounts get parsed in Python. Document text is treated as
+   data, and this is the only network call in the app.
+4. **Earned confidence.** The model's opinion of itself is never used. Each field is scored on whether it's
+   printed where the model said, how sure OCR was, whether a matching label sits beside it, and whether the
+   numbers add up. [docs/CONFIDENCE.md](docs/CONFIDENCE.md) has the signals and what they can't catch.
+
+## First numbers, on the tuning set
+
+These come from [results/runs/dev-first](results/runs/dev-first/summary.md): `prism-ml/bonsai-27b` (1-bit
+quantization, 8192 context, temperature 0, no page images) on 60 synthetic renderings from the dev split. The
+scoring rules were tuned while looking at these same documents, so expect a held-out run to do worse. **The
+held-out set hasn't been run yet.**
+
+| Scan quality | Documents | Printed values right | Printed values OCR could read at all |
+|---|---|---|---|
+| Clean PDF | 30 | 99.7% (1213/1217) | 100% |
+| Light scan | 15 | 93.8% (502/535) | 97.4% |
+| Moderate damage | 9 | 52.6% (191/363) | 74.7% |
+| Heavy damage | 6 | 2.9% (5/172) | 12.2% |
+
+Heavily damaged scans are hard for a person to read too. What matters is whether those values reach a reviewer:
+
+| Condition | Values | Skip review at 0.90 | Wrong among those skipped |
+|---|---|---|---|
+| Clean PDF | 1346 | 96.2% | 0 of 1295 |
+| Scanned | 599 | 83.1% | 0 of 498 |
+| Degraded | 627 | 15.6% | 5 of 98 |
+
+Weak spots show in those tables. On degraded scans, the model got only 62.6% of the values OCR could read,
+and 5 of the 98 values that skipped review were wrong. During this run the model server also crashed 3 times
+and then went down for a while, on a machine short of memory and shared with another job. Every affected
+document succeeded when retried. Those failures are recorded in the run's files.
 
 ## Synthetic test documents
 

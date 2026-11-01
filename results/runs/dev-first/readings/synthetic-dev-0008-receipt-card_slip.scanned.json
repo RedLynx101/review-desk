@@ -1,0 +1,93 @@
+{
+ "doc_id": "synthetic-dev-0008-receipt-card_slip.scanned",
+ "pdf_sha256": "764eabaaa9f4cba47655ca924c5d1e68e17d3b6e2d5009a3bd58cd4d14a92d88",
+ "model": "prism-ml/bonsai-27b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "receipt",
+  "vendor_name": {
+   "text": "Fernwhistle Hardware Inc.",
+   "line": 2
+  },
+  "document_number": {
+   "text": "#37-7-39961",
+   "line": 5
+  },
+  "issue_date": {
+   "text": "October 15, 2024",
+   "line": 4
+  },
+  "due_date": {
+   "text": null,
+   "line": null
+  },
+  "purchase_order": {
+   "text": null,
+   "line": null
+  },
+  "bill_to_name": {
+   "text": null,
+   "line": null
+  },
+  "currency": {
+   "text": "$",
+   "line": 4
+  },
+  "subtotal": {
+   "text": "$36.50",
+   "line": 9
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": null,
+   "line": null
+  },
+  "tax": [
+   {
+    "text": null,
+    "line": null
+   }
+  ],
+  "total": {
+   "text": "$36.50",
+   "line": 10
+  },
+  "line_items": [
+   {
+    "description": "Wood screws, box",
+    "quantity": null,
+    "unit_price": "$5.40",
+    "amount": null,
+    "line": 6
+   },
+   {
+    "description": "Pipe wrench, 10 in",
+    "quantity": null,
+    "unit_price": "$24.38",
+    "amount": null,
+    "line": 7
+   },
+   {
+    "description": "Painter's tape",
+    "quantity": "x2",
+    "unit_price": null,
+    "amount": "$6.72",
+    "line": 8
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 37.8,
+ "attempts": 1,
+ "prompt_tokens": 797,
+ "completion_tokens": 498,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 5.0,
+ "failure_history": []
+}

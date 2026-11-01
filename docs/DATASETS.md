@@ -25,10 +25,12 @@ one is a sample of what a particular business receives.
 - **CORD** is the only source of real receipts here. Its README says store and payment fields were
   removed for legal reasons, so vendor names and dates can't be scored on it: only line items, subtotal,
   tax and total. Amounts are in Indonesian rupiah, which is a hard case for parsing. Images never go in
-  this repo, and the report publishes aggregate numbers only.
+  this repo, the demo or the gallery, which stay clearly synthetic. The report publishes aggregate numbers only.
 
 ## Open point
 
 The FATURA paper's [arXiv page](https://arxiv.org/abs/2311.11856) shows CC BY-NC-SA 4.0. That badge covers the paper. The dataset's own
-Zenodo record says CC BY 4.0, and that record is what this review relies on. Anyone reusing the data
-commercially should read both.
+[Zenodo record](https://zenodo.org/records/10371464) lists "Creative Commons Attribution 4.0 International" under Rights, at the
+record level with no separate license for `FATURA2.zip`. That's what this review relies on, checked on 2026-11-01. The record
+doesn't say in so many words that the license covers the zip file, so anyone reusing the data commercially should read
+both pages themselves. Check the record again before downloading: FATURA gets used only if it still says this.

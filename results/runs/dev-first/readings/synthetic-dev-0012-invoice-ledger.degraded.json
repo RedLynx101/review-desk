@@ -1,0 +1,121 @@
+{
+ "doc_id": "synthetic-dev-0012-invoice-ledger.degraded",
+ "pdf_sha256": "1a89dfff8d326c1fa83d5dd9dbe4cee8ede9fa7477466c40b8654958476fade2",
+ "model": "prism-ml/bonsai-27b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "invoice",
+  "vendor_name": {
+   "text": "WOBBLESTONE CATERING KITCHEN B.V.",
+   "line": 5
+  },
+  "document_number": {
+   "text": null,
+   "line": null
+  },
+  "issue_date": {
+   "text": "09.12.2024",
+   "line": 18
+  },
+  "due_date": {
+   "text": "23.12.2024",
+   "line": 20
+  },
+  "purchase_order": {
+   "text": null,
+   "line": null
+  },
+  "bill_to_name": {
+   "text": "Fictionville Parks Office",
+   "line": 22
+  },
+  "currency": {
+   "text": "\u20ac",
+   "line": 51
+  },
+  "subtotal": {
+   "text": null,
+   "line": null
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": null,
+   "line": null
+  },
+  "tax": [
+   {
+    "text": "19%",
+    "line": 53
+   }
+  ],
+  "total": {
+   "text": null,
+   "line": null
+  },
+  "line_items": [
+   {
+    "description": "Linen rental, per table",
+    "quantity": "45",
+    "unit_price": "75.",
+    "amount": "3288",
+    "line": 27
+   },
+   {
+    "description": "vent staffing",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "1288",
+    "line": 28
+   },
+   {
+    "description": "vent staffing (lot 2)",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "3200",
+    "line": 31
+   },
+   {
+    "description": "Pruit and cheese platter, large",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "3499",
+    "line": 32
+   },
+   {
+    "description": "Box lunches, per person (lot 2)",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "1459",
+    "line": 41
+   },
+   {
+    "description": "Coffee service, per gallon",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "362.68",
+    "line": 42
+   },
+   {
+    "description": "Coffee service, per gallon (lot 2)",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "2500",
+    "line": 46
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 60.6,
+ "attempts": 1,
+ "prompt_tokens": 1482,
+ "completion_tokens": 732,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 6.4,
+ "failure_history": []
+}

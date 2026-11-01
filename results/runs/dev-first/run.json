@@ -1,0 +1,53 @@
+{
+ "created": "2026-11-01T10:19:25-0600",
+ "split": "dev",
+ "synthetic": true,
+ "generator_version": 1,
+ "master_seed": 20261101,
+ "model": {
+  "id": "prism-ml/bonsai-27b",
+  "type": "vlm",
+  "arch": "qwen35",
+  "publisher": "prism-ml",
+  "quantization": "Q1_0",
+  "max_context_length": 262144,
+  "loaded_context_length": 8192,
+  "state": "loaded"
+ },
+ "model_settings": {
+  "temperature": 0.0,
+  "max_tokens": 3500,
+  "strict_json_schema": true,
+  "images_sent_for_scans": false
+ },
+ "python": "3.12.1",
+ "invocations": [
+  {
+   "at": "2026-11-01T10:19:25-0600",
+   "base_documents": 30,
+   "conditions": [
+    "clean"
+   ],
+   "git": {
+    "commit": "c1d03ea821014ef00537dbcd1252f3e5d5327a92",
+    "dirty": true
+   },
+   "prompt_note": "Prompt version with an example invoice number, later removed after the model copied it onto a document."
+  },
+  {
+   "base_documents": 30,
+   "conditions": [
+    "clean"
+   ],
+   "retry_failures": true
+  },
+  {
+   "base_documents": 15,
+   "conditions": [
+    "scanned",
+    "degraded"
+   ],
+   "prompt_note": "Prompt with the example removed. See prompt_sha256 in each reading."
+  }
+ ]
+}

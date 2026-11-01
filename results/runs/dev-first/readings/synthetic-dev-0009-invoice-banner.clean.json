@@ -1,0 +1,112 @@
+{
+ "doc_id": "synthetic-dev-0009-invoice-banner.clean",
+ "pdf_sha256": "c844318367aacfc9545be4b009185a63a19a2cf858ae540c99fc3d7fdb0e8946",
+ "model": "prism-ml/bonsai-27b",
+ "reading": {
+  "document_type": "invoice",
+  "vendor_name": {
+   "text": "Larkspindle Catering Kitchen & Sons Ltd",
+   "line": 1
+  },
+  "document_number": {
+   "text": "2026/8813",
+   "line": 5
+  },
+  "issue_date": {
+   "text": "16 March 2026",
+   "line": 5
+  },
+  "due_date": {
+   "text": null,
+   "line": null
+  },
+  "purchase_order": {
+   "text": null,
+   "line": null
+  },
+  "bill_to_name": {
+   "text": "Testwick Model Railway Guild",
+   "line": 7
+  },
+  "currency": {
+   "text": "GBP",
+   "line": 23
+  },
+  "subtotal": {
+   "text": "1,339.41",
+   "line": 17
+  },
+  "discount": {
+   "text": "-133.94",
+   "line": 18
+  },
+  "shipping": {
+   "text": null,
+   "line": null
+  },
+  "tax": [
+   {
+    "text": "241.09",
+    "line": 19
+   }
+  ],
+  "total": {
+   "text": "1,446.56",
+   "line": 20
+  },
+  "line_items": [
+   {
+    "description": "Coffee service, per gallon",
+    "quantity": "12",
+    "unit_price": "23.75",
+    "amount": "285.00",
+    "line": 11
+   },
+   {
+    "description": "Linen rental, per table",
+    "quantity": "2",
+    "unit_price": "13.80",
+    "amount": "27.60",
+    "line": 12
+   },
+   {
+    "description": "Linen rental, per table (lot 2)",
+    "quantity": "16",
+    "unit_price": "10.50",
+    "amount": "168.00",
+    "line": 13
+   },
+   {
+    "description": "Coffee service, per gallon (lot 2)",
+    "quantity": "10",
+    "unit_price": "17.39",
+    "amount": "173.90",
+    "line": 14
+   },
+   {
+    "description": "Event staffing",
+    "quantity": "5.25",
+    "unit_price": "34.40",
+    "amount": "180.60",
+    "line": 15
+   },
+   {
+    "description": "Event staffing (lot 2)",
+    "quantity": "18.5",
+    "unit_price": "27.26",
+    "amount": "504.31",
+    "line": 16
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 108.7,
+ "attempts": 1,
+ "prompt_tokens": 1014,
+ "completion_tokens": 752,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 0.3
+}

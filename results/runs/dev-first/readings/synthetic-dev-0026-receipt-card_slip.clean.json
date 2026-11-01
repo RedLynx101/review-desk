@@ -1,0 +1,106 @@
+{
+ "doc_id": "synthetic-dev-0026-receipt-card_slip.clean",
+ "pdf_sha256": "93e491f27391425fc412b406c1afba6d4f5ecd5cbd11b3382a0ff99edf7ec50d",
+ "model": "prism-ml/bonsai-27b",
+ "reading": {
+  "document_type": "receipt",
+  "vendor_name": {
+   "text": "Mossgrove Garden Stand Co.",
+   "line": 2
+  },
+  "document_number": {
+   "text": "#TXN0429852",
+   "line": 5
+  },
+  "issue_date": {
+   "text": "03/26/2026",
+   "line": 4
+  },
+  "due_date": {
+   "text": null,
+   "line": null
+  },
+  "purchase_order": {
+   "text": null,
+   "line": null
+  },
+  "bill_to_name": {
+   "text": null,
+   "line": null
+  },
+  "currency": {
+   "text": "$",
+   "line": 4
+  },
+  "subtotal": {
+   "text": "$100.34",
+   "line": 11
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": null,
+   "line": null
+  },
+  "tax": [
+   {
+    "text": "$8.28",
+    "line": 12
+   }
+  ],
+  "total": {
+   "text": "$108.62",
+   "line": 13
+  },
+  "line_items": [
+   {
+    "description": "Terracotta pot",
+    "quantity": "x 5",
+    "unit_price": null,
+    "amount": "$35.90",
+    "line": 6
+   },
+   {
+    "description": "Potting soil, bag",
+    "quantity": "x 4",
+    "unit_price": null,
+    "amount": "$32.24",
+    "line": 7
+   },
+   {
+    "description": "Tomato seedling",
+    "quantity": "x 4",
+    "unit_price": null,
+    "amount": "$17.28",
+    "line": 8
+   },
+   {
+    "description": "Herb bundle",
+    "quantity": "x 5",
+    "unit_price": null,
+    "amount": "$10.55",
+    "line": 9
+   },
+   {
+    "description": "Twine, spool",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "$4.37",
+    "line": 10
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 52.4,
+ "attempts": 1,
+ "prompt_tokens": 837,
+ "completion_tokens": 620,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 1.2,
+ "failure_history": []
+}

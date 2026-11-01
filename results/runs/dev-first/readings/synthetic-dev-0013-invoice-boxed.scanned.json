@@ -1,0 +1,86 @@
+{
+ "doc_id": "synthetic-dev-0013-invoice-boxed.scanned",
+ "pdf_sha256": "c7d56c878c17fc6c2a808f0192caf641d1ad01dd57c50daa1917d53ebd38cf56",
+ "model": "prism-ml/bonsai-27b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "invoice",
+  "vendor_name": {
+   "text": "Mistlebrook Sign Painters LLC",
+   "line": 1
+  },
+  "document_number": {
+   "text": "ZZ-1187-B",
+   "line": 7
+  },
+  "issue_date": {
+   "text": "07/20/2026",
+   "line": 7
+  },
+  "due_date": {
+   "text": "07/27/2026",
+   "line": 7
+  },
+  "purchase_order": {
+   "text": null,
+   "line": null
+  },
+  "bill_to_name": {
+   "text": "Sample Q. Customer",
+   "line": 9
+  },
+  "currency": {
+   "text": "$",
+   "line": 14
+  },
+  "subtotal": {
+   "text": "360.26",
+   "line": 12
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": null,
+   "line": null
+  },
+  "tax": [
+   {
+    "text": "$35.96",
+    "line": 14
+   }
+  ],
+  "total": {
+   "text": "$294.61",
+   "line": 15
+  },
+  "line_items": [
+   {
+    "description": "Hand-lettered window sign",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "360.26",
+    "line": 12
+   },
+   {
+    "description": "Removal of old signage",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "193.01",
+    "line": 13
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 40.5,
+ "attempts": 1,
+ "prompt_tokens": 851,
+ "completion_tokens": 477,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 3.8,
+ "failure_history": []
+}

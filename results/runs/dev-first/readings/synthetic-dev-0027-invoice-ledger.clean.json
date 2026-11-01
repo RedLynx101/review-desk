@@ -1,0 +1,85 @@
+{
+ "doc_id": "synthetic-dev-0027-invoice-ledger.clean",
+ "pdf_sha256": "fa0c9c310ec51e421cdeea02698ac4593a9cbd460141b9d6cb77de9254b9ada1",
+ "model": "prism-ml/bonsai-27b",
+ "reading": {
+  "document_type": "invoice",
+  "vendor_name": {
+   "text": "TUMBLEDOWN SIGN PAINTERS S.A.R.L.",
+   "line": 1
+  },
+  "document_number": {
+   "text": "INV-2024-53055",
+   "line": 6
+  },
+  "issue_date": {
+   "text": "31.05.2024",
+   "line": 7
+  },
+  "due_date": {
+   "text": "30.06.2024",
+   "line": 8
+  },
+  "purchase_order": {
+   "text": "PO-50963",
+   "line": 9
+  },
+  "bill_to_name": {
+   "text": "Exampleburg Pickle Exchange",
+   "line": 10
+  },
+  "currency": {
+   "text": "\u20ac",
+   "line": 19
+  },
+  "subtotal": {
+   "text": "\u20ac986.10",
+   "line": 19
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": null,
+   "line": null
+  },
+  "tax": [
+   {
+    "text": null,
+    "line": null
+   }
+  ],
+  "total": {
+   "text": "\u20ac986.10",
+   "line": 20
+  },
+  "line_items": [
+   {
+    "description": "Vinyl banner, 3 ft x 8 ft",
+    "quantity": "4",
+    "unit_price": "147.59",
+    "amount": "590.36",
+    "line": 16
+   },
+   {
+    "description": "Hand-lettered window sign",
+    "quantity": "1",
+    "unit_price": "395.74",
+    "amount": "395.74",
+    "line": 17
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 47.3,
+ "attempts": 1,
+ "prompt_tokens": 947,
+ "completion_tokens": 513,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 2.8,
+ "failure_history": []
+}

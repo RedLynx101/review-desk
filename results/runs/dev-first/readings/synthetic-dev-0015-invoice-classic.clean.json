@@ -1,0 +1,258 @@
+{
+ "doc_id": "synthetic-dev-0015-invoice-classic.clean",
+ "pdf_sha256": "ae1912b63f0d26bdc02e1618245238acad856f48d8e003e5c6a4bccb332d9221",
+ "model": "prism-ml/bonsai-27b",
+ "reading": {
+  "document_type": "invoice",
+  "vendor_name": {
+   "text": "Nimblethorn Gasket Works Ltd",
+   "line": 1
+  },
+  "document_number": {
+   "text": "ZZ-2831-Z",
+   "line": 3
+  },
+  "issue_date": {
+   "text": "24/02/2026",
+   "line": 4
+  },
+  "due_date": {
+   "text": "11/03/2026",
+   "line": 5
+  },
+  "purchase_order": {
+   "text": null,
+   "line": null
+  },
+  "bill_to_name": {
+   "text": "Notta Realperson",
+   "line": 9
+  },
+  "currency": {
+   "text": "GBP",
+   "line": 45
+  },
+  "subtotal": {
+   "text": "5,971.81",
+   "line": 42
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": null,
+   "line": null
+  },
+  "tax": [
+   {
+    "text": "1,194.36",
+    "line": 43
+   }
+  ],
+  "total": {
+   "text": "7,166.17",
+   "line": 44
+  },
+  "line_items": [
+   {
+    "description": "Spiral-wound gasket, 6 in. class 150",
+    "quantity": "1",
+    "unit_price": "25.24",
+    "amount": "25.24",
+    "line": 13
+   },
+   {
+    "description": "EPDM flange seal, 2 in.",
+    "quantity": "14",
+    "unit_price": "8.05",
+    "amount": "112.70",
+    "line": 14
+   },
+   {
+    "description": "Custom die-cut seal, per drawing 44-B",
+    "quantity": "7",
+    "unit_price": "96.99",
+    "amount": "678.93",
+    "line": 15
+   },
+   {
+    "description": "Spiral-wound gasket, 6 in. class 150 (lot 2)",
+    "quantity": "1",
+    "unit_price": "51.66",
+    "amount": "51.66",
+    "line": 16
+   },
+   {
+    "description": "Neoprene gasket, 4 in.",
+    "quantity": "25",
+    "unit_price": "7.78",
+    "amount": "194.50",
+    "line": 17
+   },
+   {
+    "description": "Gasket sheet, 1/8 in. x 36 in. x 36 in.",
+    "quantity": "6",
+    "unit_price": "93.99",
+    "amount": "563.94",
+    "line": 18
+   },
+   {
+    "description": "Custom die-cut seal, per drawing 44-B (lot 2)",
+    "quantity": "7",
+    "unit_price": "96.09",
+    "amount": "672.63",
+    "line": 19
+   },
+   {
+    "description": "EPDM flange seal, 2 in. (lot 2)",
+    "quantity": "23",
+    "unit_price": "7.26",
+    "amount": "166.98",
+    "line": 20
+   },
+   {
+    "description": "Gasket sheet, 1/8 in. x 36 in. x 36 in. (lot 2)",
+    "quantity": "1",
+    "unit_price": "99.90",
+    "amount": "99.90",
+    "line": 21
+   },
+   {
+    "description": "Gasket sheet, 1/8 in. x 36 in. x 36 in. (lot 3)",
+    "quantity": "1",
+    "unit_price": "70.09",
+    "amount": "70.09",
+    "line": 22
+   },
+   {
+    "description": "Spiral-wound gasket, 6 in. class 150 (lot 3)",
+    "quantity": "4",
+    "unit_price": "29.36",
+    "amount": "117.44",
+    "line": 23
+   },
+   {
+    "description": "EPDM flange seal, 2 in. (lot 3)",
+    "quantity": "41",
+    "unit_price": "2.18",
+    "amount": "89.38",
+    "line": 24
+   },
+   {
+    "description": "Rush cutting fee",
+    "quantity": "1",
+    "unit_price": "27.90",
+    "amount": "27.90",
+    "line": 25
+   },
+   {
+    "description": "Rush cutting fee (lot 2)",
+    "quantity": "1",
+    "unit_price": "41.10",
+    "amount": "41.10",
+    "line": 26
+   },
+   {
+    "description": "Neoprene gasket, 4 in. (lot 2)",
+    "quantity": "5",
+    "unit_price": "5.98",
+    "amount": "29.90",
+    "line": 27
+   },
+   {
+    "description": "EPDM flange seal, 2 in. (lot 4)",
+    "quantity": "45",
+    "unit_price": "4.15",
+    "amount": "186.75",
+    "line": 28
+   },
+   {
+    "description": "Gasket sheet, 1/8 in. x 36 in. x 36 in. (lot 4)",
+    "quantity": "2",
+    "unit_price": "75.69",
+    "amount": "151.38",
+    "line": 29
+   },
+   {
+    "description": "Spiral-wound gasket, 6 in. class 150 (lot 4)",
+    "quantity": "10",
+    "unit_price": "37.01",
+    "amount": "370.10",
+    "line": 30
+   },
+   {
+    "description": "Rush cutting fee (lot 3)",
+    "quantity": "1",
+    "unit_price": "27.31",
+    "amount": "27.31",
+    "line": 31
+   },
+   {
+    "description": "Spiral-wound gasket, 6 in. class 150 (lot 5)",
+    "quantity": "9",
+    "unit_price": "41.37",
+    "amount": "372.33",
+    "line": 32
+   },
+   {
+    "description": "Custom die-cut seal, per drawing 44-B (lot 3)",
+    "quantity": "3",
+    "unit_price": "76.93",
+    "amount": "230.79",
+    "line": 33
+   },
+   {
+    "description": "Custom die-cut seal, per drawing 44-B (lot 4)",
+    "quantity": "5",
+    "unit_price": "92.27",
+    "amount": "461.35",
+    "line": 34
+   },
+   {
+    "description": "Gasket sheet, 1/8 in. x 36 in. x 36 in. (lot 5)",
+    "quantity": "6",
+    "unit_price": "94.47",
+    "amount": "566.82",
+    "line": 35
+   },
+   {
+    "description": "EPDM flange seal, 2 in. (lot 5)",
+    "quantity": "36",
+    "unit_price": "5.76",
+    "amount": "207.36",
+    "line": 36
+   },
+   {
+    "description": "Spiral-wound gasket, 6 in. class 150 (lot 6)",
+    "quantity": "7",
+    "unit_price": "23.24",
+    "amount": "162.68",
+    "line": 37
+   },
+   {
+    "description": "Gasket sheet, 1/8 in. x 36 in. x 36 in. (lot 6)",
+    "quantity": "3",
+    "unit_price": "97.55",
+    "amount": "292.65",
+    "line": 38
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 265.7,
+ "attempts": 1,
+ "prompt_tokens": 1927,
+ "completion_tokens": 2237,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 0.0,
+ "failure_history": [
+  {
+   "code": "unreachable",
+   "message": "Couldn't reach the model at http://localhost:1234/v1."
+  }
+ ]
+}
