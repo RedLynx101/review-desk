@@ -116,55 +116,67 @@ def cord_labels(parse: dict) -> dict:
     return {"fields": {name: label for name, label in fields.items() if label}, "items": items}
 
 
-_FATURA_PREFIX = re.compile(r"^[^:]*:\s*")
-
-
 def _after_label(text: str | None) -> str | None:
-    """FATURA boxes often hold their printed label too, as in "Total: 1234.50 USD"."""
-    return _text(_FATURA_PREFIX.sub("", text or "")) if text else None
+    """FATURA boxes usually hold their printed label too, as in "Invoice Date: 14-Apr-2022"."""
+    if not text:
+        return None
+    return text.split(":", 1)[1].strip() if ":" in text else text.strip()
+
+
+def _last_number(text: str | None) -> str | None:
+    """The amount in a box like "TAX:VAT (3.22%):  28.51 USD" is the last number in it."""
+    tokens = re.findall(r"\d[\d.,]*", text or "")
+    return tokens[-1].rstrip(".,") if tokens else None
+
+
+def _fatura_amount(token: str | None) -> str | None:
+    """FATURA prints amounts like 1234.5 or 1,234.50, so a one- or two-digit tail is cents."""
+    if not token:
+        return None
+    mark = max(token.rfind("."), token.rfind(","))
+    if mark >= 0 and len(token) - mark - 1 in (1, 2):
+        whole, fraction = re.sub(r"[.,]", "", token[:mark]), token[mark + 1 :]
+        return format(Decimal(f"{whole or '0'}.{fraction}"), "f")
+    return re.sub(r"[.,]", "", token)
 
 
 def fatura_labels(annotation: dict) -> dict:
-    """Map FATURA's labeled boxes onto this repo's schema. Its table is one box, so rows aren't scored."""
+    """Map FATURA's labeled boxes onto this repo's schema. Its table has a box and no text, so rows aren't scored."""
 
-    def box(*names: str) -> str | None:
-        for name in names:
-            entry = annotation.get(name)
-            if isinstance(entry, dict) and _text(entry.get("text")):
-                return _text(entry["text"])
-        return None
+    def box(name: str) -> str | None:
+        entry = annotation.get(name)
+        text = entry.get("text") if isinstance(entry, dict) else None
+        return text if isinstance(text, str) and text.strip() else None
 
     fields: dict[str, dict | None] = {}
-    seller = box("SELLER_NAME")
+    seller = _text(box("SELLER_NAME"))
     if seller:
-        fields["vendor_name"] = _label(_after_label(seller), seller)
-    buyer = box("BUYER")
+        fields["vendor_name"] = _label(seller, seller)
+    buyer = _after_label(box("BUYER") or box("BILL_TO"))
     if buyer:
-        # The buyer box runs name, then address, on separate lines that the labels flatten. Only the printed form can be checked.
-        fields["bill_to_name"] = None
+        name = _text(buyer.splitlines()[0])
+        if name and ":" not in name:
+            fields["bill_to_name"] = _label(name, name)
+    number = box("NUMBER")
+    if number:
+        # The number is the last word in the box, whatever label comes before it.
+        value = (number.split() or [None])[-1]
+        if value and re.search(r"\d", value):
+            fields["document_number"] = _label(value, value)
     for name, source in (("issue_date", "DATE"), ("due_date", "DUE_DATE")):
-        raw = box(source)
-        parsed = parse_date(_after_label(raw)) if raw else None
-        if parsed is not None and not parsed.ambiguous:
-            fields[name] = _label(parsed.value.isoformat(), raw)
+        printed = _text(_after_label(box(source)))
+        parsed = parse_date(printed)
+        # A label that could be two dates can't be an answer key.
+        if parsed is not None and parsed.alternative is None:
+            fields[name] = _label(parsed.value.isoformat(), printed)
     for name, source in (("subtotal", "SUB_TOTAL"), ("tax", "TAX"), ("discount", "DISCOUNT"), ("total", "TOTAL")):
-        raw = box(source)
-        if raw and re.search(r"\d", raw):
-            fields[name] = _label(_fatura_amount(_after_label(raw)), raw)
-    return {"fields": {name: label for name, label in fields.items() if label and label["value"] is not None}, "items": []}
-
-
-def _fatura_amount(text: str | None) -> str | None:
-    """FATURA prints plain amounts such as 1234.5 or 1,234.50 with a currency code or symbol beside them."""
-    tokens = re.findall(r"\d[\d.,]*", text or "")
-    if not tokens:
-        return None
-    body = tokens[-1].rstrip(".,")
-    mark = max(body.rfind("."), body.rfind(","))
-    if mark >= 0 and len(body) - mark - 1 in (1, 2):
-        whole, fraction = re.sub(r"[.,]", "", body[:mark]), body[mark + 1 :]
-        return format(Decimal(f"{whole or '0'}.{fraction}").normalize(), "f")
-    return format(Decimal(re.sub(r"[.,]", "", body)).normalize(), "f")
+        token = _last_number(box(source))
+        if token:
+            fields[name] = _label(_fatura_amount(token), token)
+    code = re.search(r"\b([A-Z]{3})\b\s*$", (box("TOTAL") or "").strip())
+    if code:
+        fields["currency"] = _label(code.group(1), code.group(1))
+    return {"fields": {name: label for name, label in fields.items() if label}, "items": []}
 
 
 # Preparing documents -----------------------------------------------------------------------------------
@@ -213,8 +225,8 @@ FATURA_DATASET = {
     "source": "https://zenodo.org/records/10371464",
     "license": "CC BY 4.0",
     "license_checked": "2026-11-01",
-    "attribution": "FATURA: A Multi-Layout Invoice Image Dataset for Document Analysis and Understanding. Limam, Dhiaf, Kessentini. Zenodo, 2023.",
-    "what_it_is": "Template-generated invoice images from 50 templates, made by another team. Not real paper. Labels are boxes with text, so only the fields that map cleanly get scored, and its tables are one box, so line items aren't.",
+    "attribution": "FATURA: A Multi-Layout Invoice Image Dataset for Document Analysis and Understanding. Limam, Dhiaf, Kessentini. Zenodo.",
+    "what_it_is": "Template-generated invoice images from 50 templates, made by another team, at 595 by 841 pixels. Not real paper. Its labels are boxes with text: vendor, bill-to, number, dates, currency and amounts map onto this schema, and tables have no text labels, so line items aren't scored.",
 }
 CORD_DPI = 200.0
 A4_WIDTH_INCHES = 8.27

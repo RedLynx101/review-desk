@@ -203,8 +203,104 @@ def anomaly_note(runs: list[Run]) -> str:
     """Says plainly when a set has no sums that fail, so the table isn't read as testing them."""
     note = "Printed mistakes are built into some documents. A sum that doesn't work should reach a person. A missing number is different: leaving it blank is the right answer, so nothing has to be flagged."
     if not any(kind != "missing_number" for run in runs for d in run.documents for kind in d["anomalies"]):
-        note += " No document in this set carries a bad sum, so it doesn't test whether those reach a person."
+        note += " No document in this set carries a bad sum, so it doesn't test whether those reach a person. The bad-sums set further down does."
     return note
+
+
+BAD_SUM_LABELS = (
+    ("line_amount_mismatch", "Line amount isn't quantity times price"),
+    ("subtotal_mismatch", "Column doesn't reach the subtotal"),
+    ("total_mismatch", "Total doesn't add up"),
+)
+
+
+def _line_arithmetic_failed(run: Run) -> set[str]:
+    return {r["doc_id"] for r in run.records if r["kind"] == "cell" and "arithmetic.fail" in r["signals"]}
+
+
+def sum_check_fired(document: dict, kind: str, line_failures: set[str]) -> bool:
+    """Whether the check built for this kind of mistake went off."""
+    if kind == "line_amount_mismatch":
+        return document["doc_id"] in line_failures
+    check = "totals_sum" if kind == "total_mismatch" else "items_sum"
+    return document["checks"].get(check) == "fail"
+
+
+def bad_sum_table(run: Run) -> list[str]:
+    line_failures = _line_arithmetic_failed(run)
+    lines = ["| Printed mistake | Condition | Documents | Its sum check failed | Something flagged for review |", "|---|---|---|---|---|"]
+    for kind, label in BAD_SUM_LABELS:
+        for condition in CONDITIONS:
+            documents = [d for d in run.documents if kind in d["anomalies"] and d["condition"] == condition]
+            if documents:
+                fired = sum(sum_check_fired(d, kind, line_failures) for d in documents)
+                lines.append(f"| {label} | {condition} | {len(documents)} | {fired} | {sum(d['any_flagged'] for d in documents)} |")
+    return lines
+
+
+def false_alarm_table(run: Run) -> list[str]:
+    """The same checks on documents with no bad sum, so a failure there comes from a misread."""
+    line_failures = _line_arithmetic_failed(run)
+    lines = ["| Condition | Documents with no bad sum | Some sum check failed |", "|---|---|---|"]
+    bad = {kind for kind, _ in BAD_SUM_LABELS}
+    for condition in CONDITIONS:
+        documents = [d for d in run.documents if d["condition"] == condition and not bad & set(d["anomalies"])]
+        alarms = sum(d["doc_id"] in line_failures or "fail" in (d["checks"].get("totals_sum"), d["checks"].get("items_sum")) for d in documents)
+        lines.append(f"| {condition} | {len(documents)} | {alarms} |")
+    return lines
+
+
+def outside_tables(summaries: list[dict]) -> list[str]:
+    head = ["| Dataset | Documents | Labeled values | Skip review | Wrong among skipped | Error | Upper 95% |", "|---|---|---|---|---|---|---|"]
+    fields = ["| Dataset | Field | Values | Right | Amount digits right | OCR could read | Skip review | Wrong among skipped |", "|---|---|---|---|---|---|---|---|"]
+    documents = ["| Dataset | Documents | Failed | Every labeled value right | Nothing flagged | Wrong though nothing flagged | Rows labeled | Rows missed | Rows extra | Mean seconds |", "|---|---|---|---|---|---|---|---|---|---|"]
+    for summary in summaries:
+        name, block, docs = summary["dataset"]["name"], summary["all"], summary["documents"]
+        head.append(f"| {name} | {docs['documents']} | {block['values']} | {_percent(block['coverage'])} | {block['wrong_among_skipped']} of {block['skipped']} | {_percent(block['error'], 2)} | {_percent(block['error_upper_95'], 2)} |")
+        for field, entry in summary["by_field"].items():
+            digits = _ratio(entry["digits_right"], entry["with_digits"]) if entry["with_digits"] else ""
+            fields.append(f"| {name} | {field} | {entry['values']} | {_ratio(entry['right'], entry['values'])} | {digits} | {_ratio(entry['readable'], entry['values'])} | {_percent(entry['coverage'])} | {entry['wrong_among_skipped']} of {entry['skipped']} |")
+        documents.append(f"| {name} | {docs['documents']} | {docs['failed']} | {docs['all_labeled_right']} | {docs['nothing_flagged']} | {docs['wrong_though_nothing_flagged']} | {docs['rows_labeled']} | {docs['rows_missing']} | {docs['rows_extra']} | {docs['mean_seconds']:.0f} |")
+    return [*head, "", *fields, "", *documents]
+
+
+def added_section(bad_sums: Run | None, heldout: Run, outside: list[dict]) -> list[str]:
+    """Runs added after the held-out run. Nothing in them fed back into the pipeline."""
+    if not bad_sums and not outside:
+        return []
+    parts = [
+        "## Added after the held-out run",
+        "",
+        "These runs came after the numbers above were written. The pipeline, prompt, weights and threshold are the ones the held-out set used, and nothing was tuned on these results. Each ran once, with the default model.",
+        "",
+    ]
+    if outside:
+        models = sorted({summary["model"].get("id", "") for summary in outside})
+        parts += [
+            "### Documents this repo didn't generate",
+            "",
+            f"Model `{', '.join(models)}`. Only fields the labels give are scored, so the numbers cover less than the synthetic ones do. \"Amount digits right\" counts an amount whose digits were read correctly even if its notation was parsed wrong, which separates a reading mistake from a parsing one.",
+            "",
+        ]
+        for summary in outside:
+            dataset = summary["dataset"]
+            parts.append(f"- **[{dataset['name']}]({dataset['source']})**, {dataset['license']} (checked {dataset['license_checked']}). {dataset['what_it_is']} {dataset['sampling']} Credit: {dataset['attribution']}")
+        parts += ["", *outside_tables(outside), "", "No document, label or model answer from either dataset is in this repo. The counts are in [outside/](outside/), and the model failures for each run are listed there.", ""]
+    if bad_sums:
+        base = len({d["base_id"] for d in bad_sums.documents})
+        parts += [
+            "### Bad sums",
+            "",
+            f"The held-out set happened to carry no bad arithmetic, so this separate synthetic set of {base} base documents, {len(bad_sums.documents)} renderings, measures flagging instead. Every document has a known mistake printed on it. Failing its own check is the real test: on a damaged scan something gets flagged anyway. One document carries two mistakes and counts under both. Run: [{bad_sums.folder.name}](runs/{bad_sums.folder.name}/summary.md).",
+            "",
+            *bad_sum_table(bad_sums),
+            "",
+            f"The same checks on {heldout.short}'s held-out documents, none of which has a bad sum. A failure here comes from a misread, and it costs a person's time rather than letting a mistake through:",
+            "",
+            *false_alarm_table(heldout),
+            "",
+        ]
+    return parts
 
 
 def summary_lines(default_run: Run, runs: list[Run]) -> list[str]:
@@ -257,7 +353,8 @@ def wrong_examples(run: Run, limit: int = 12) -> list[str]:
     return lines if wrong else ["None."]
 
 
-def render(dev_runs: list[Run], heldout_runs: list[Run], choice: dict) -> str:
+def render(dev_runs: list[Run], heldout_runs: list[Run], choice: dict, *, bad_sums: Run | None = None, outside: list[dict] | None = None) -> str:
+    outside = outside or []
     default_run = next((run for run in heldout_runs if run.model == choice["default"]), heldout_runs[0])
     dev_rows = ["| Model | Documents | No answer | Skip review | Wrong among skipped | Error | Mean seconds | Clears the bar |", "|---|---|---|---|---|---|---|---|"]
     for row in choice["rows"]:
@@ -283,7 +380,7 @@ def render(dev_runs: list[Run], heldout_runs: list[Run], choice: dict) -> str:
         f"- Models: " + "; ".join(f"`{run.model}` ({run.quantization})" for run in heldout_runs) + f". Through LM Studio, {heldout_runs[0].meta.get('model', {}).get('loaded_context_length')} context, temperature {settings.get('temperature')}, max tokens {settings.get('max_tokens')}, strict JSON schema, no page images.",
         "- OCR: Tesseract 5.3.3 on image pages, after straightening and denoising. Digital PDFs use their text layer, checked against the rendered page.",
         f"- Review threshold {THRESHOLD}, with hand-set weights. Both were fixed before these runs, and neither was refit per model. They were tuned against Bonsai's answers on dev, which may favor Bonsai.",
-        "- Public datasets weren't run. FATURA and CORD passed the license review in [DATASETS.md](../docs/DATASETS.md), but this round used no downloads, so nothing here has been tested on documents this repo's generator didn't make. That's the largest gap in this report.",
+        ("- These held-out documents are all from this repo's generator. Runs on two public datasets came afterward, in [their own section](#added-after-the-held-out-run)." if outside else "- Public datasets weren't run. FATURA and CORD passed the license review in [DATASETS.md](../docs/DATASETS.md), but nothing here has been tested on documents this repo's generator didn't make. That's the largest gap in this report."),
         "",
         "## What matters most: values that skipped review",
         "",
@@ -324,6 +421,7 @@ def render(dev_runs: list[Run], heldout_runs: list[Run], choice: dict) -> str:
     ]
     for run in heldout_runs:
         parts += [f"### {run.short}", "", *wrong_examples(run), ""]
+    parts += added_section(bad_sums, default_run, outside)
     parts += [
         "## Model failures during the held-out runs",
         "",
@@ -341,7 +439,7 @@ def render(dev_runs: list[Run], heldout_runs: list[Run], choice: dict) -> str:
         "",
         "`python -m review_desk.evaluation.compare` wrote this file from the runs below. Each folder holds every model answer, every scored value and the commit it ran at.",
         "",
-        *[f"- [{run.folder.name}](runs/{run.folder.name}/summary.md)" for run in [*dev_runs, *heldout_runs]],
+        *[f"- [{run.folder.name}](runs/{run.folder.name}/summary.md)" for run in [*dev_runs, *heldout_runs, *([bad_sums] if bad_sums else [])]],
         "",
     ]
     return "\n".join(parts)
@@ -351,6 +449,8 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(prog="python -m review_desk.evaluation.compare", description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("dev", nargs="+", type=Path, help="dev runs, one per model")
     parser.add_argument("--heldout", nargs="*", type=Path, default=[], help="held-out runs, one per model")
+    parser.add_argument("--bad-sums", type=Path, default=None, help="run on the bad-sums split")
+    parser.add_argument("--outside", nargs="*", type=Path, default=[], help="summaries written by review_desk.evaluation.outside")
     parser.add_argument("--out", type=Path, default=Path("results/REPORT.md"))
     args = parser.parse_args(argv)
     dev_runs = [Run(path) for path in args.dev]
@@ -359,7 +459,9 @@ def main(argv: list[str] | None = None) -> int:
     (Path(args.out).parent / "model-choice.json").write_bytes((json.dumps(choice, indent=1) + "\n").encode("utf-8"))
     print(json.dumps(choice, indent=1))
     if args.heldout:
-        Path(args.out).write_bytes(render(dev_runs, [Run(path) for path in args.heldout], choice).encode("utf-8"))
+        outside = [json.loads(path.read_text(encoding="utf-8")) for path in args.outside]
+        bad_sums = Run(args.bad_sums) if args.bad_sums else None
+        Path(args.out).write_bytes(render(dev_runs, [Run(path) for path in args.heldout], choice, bad_sums=bad_sums, outside=outside).encode("utf-8"))
     return 0
 
 

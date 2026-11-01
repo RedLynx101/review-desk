@@ -6,7 +6,7 @@ import json
 
 import pytest
 
-from review_desk.evaluation.compare import Run, choose_default, main, skip_stats, wilson_upper
+from review_desk.evaluation.compare import Run, bad_sum_table, choose_default, false_alarm_table, main, outside_tables, skip_stats, wilson_upper
 
 
 def record(correct=True, confidence=0.95, condition="clean", truth="1.00", **extra):
@@ -100,3 +100,34 @@ def test_report_writes_side_by_side_and_labels_the_data_synthetic(tmp_path):
 @pytest.mark.parametrize("wrong,total", [(0, 10), (3, 10), (10, 10)])
 def test_upper_bound_never_exceeds_one(wrong, total):
     assert wilson_upper(wrong, total) <= 1.0
+
+
+def test_a_bad_sum_counts_as_caught_only_when_its_own_check_fails(tmp_path):
+    total_caught = {**document(), "doc_id": "a.clean", "anomalies": ["total_mismatch"], "checks": {"totals_sum": "fail", "items_sum": "pass"}, "any_flagged": True}
+    # Flagged for some other reason, with the sum check passing, isn't a catch.
+    total_missed = {**document(), "doc_id": "b.clean", "anomalies": ["total_mismatch"], "checks": {"totals_sum": "pass", "items_sum": "pass"}, "any_flagged": True}
+    line_caught = {**document(), "doc_id": "c.clean", "anomalies": ["line_amount_mismatch"], "checks": {"totals_sum": "pass", "items_sum": "pass"}}
+    records = [record(doc_id="c.clean", kind="cell", signals=["arithmetic.fail"])]
+    run = write_run(tmp_path / "bad", "m", records, [total_caught, total_missed, line_caught])
+    table = "\n".join(bad_sum_table(run))
+    assert "| Total doesn't add up | clean | 2 | 1 | 2 |" in table
+    assert "| Line amount isn't quantity times price | clean | 1 | 1 | 0 |" in table
+
+
+def test_false_alarms_leave_out_documents_with_a_bad_sum(tmp_path):
+    fine = {**document(), "doc_id": "a.clean", "checks": {"totals_sum": "pass"}}
+    alarm = {**document(), "doc_id": "b.clean", "checks": {"items_sum": "fail"}}
+    bad = {**document(), "doc_id": "c.clean", "anomalies": ["total_mismatch"], "checks": {"totals_sum": "fail"}}
+    run = write_run(tmp_path / "held", "m", [record(doc_id="a.clean")], [fine, alarm, bad])
+    assert "| clean | 2 | 1 |" in "\n".join(false_alarm_table(run))
+
+
+def test_outside_tables_read_the_committed_counts():
+    block = {"values": 10, "right": 8, "readable": 9, "skipped": 5, "coverage": 0.5, "wrong_among_skipped": 1, "error": 0.2, "error_upper_95": 0.6, "digits_right": 9, "with_digits": 10}
+    summary = {
+        "dataset": {"name": "Invented set"}, "all": block, "by_field": {"total": block},
+        "documents": {"documents": 3, "failed": 1, "all_labeled_right": 1, "nothing_flagged": 0, "wrong_though_nothing_flagged": 0, "rows_labeled": 4, "rows_missing": 2, "rows_extra": 1, "mean_seconds": 30.0},
+    }
+    text = "\n".join(outside_tables([summary]))
+    assert "| Invented set | 3 | 10 | 50.0% | 1 of 5 | 20.00% | 60.00% |" in text
+    assert "| Invented set | total | 10 | 80.0% (8/10) | 90.0% (9/10) | 90.0% (9/10) | 50.0% | 1 of 5 |" in text

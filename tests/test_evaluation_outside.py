@@ -9,7 +9,7 @@ import pdfplumber
 import pytest
 from PIL import Image
 
-from review_desk.evaluation.outside import aggregate, cord_labels, image_pdf, plain_amount, plain_quantity, score_outside
+from review_desk.evaluation.outside import aggregate, cord_labels, fatura_labels, image_pdf, plain_amount, plain_quantity, score_outside
 from review_desk.synth.content import BAD_SUM_KINDS, make_document
 
 
@@ -118,3 +118,34 @@ def test_bad_total_is_printed_as_the_truth_and_breaks_the_sum():
     doc = next(d for d in (make_document("badsums", index, 20261101) for index in range(12)) if d.anomalies == ["total_mismatch"])
     expected = doc.subtotal - (doc.discount or Decimal("0")) + (doc.shipping or Decimal("0")) + (doc.tax or Decimal("0"))
     assert doc.total != expected
+
+
+def test_fatura_labels_take_the_value_out_of_each_box():
+    labels = fatura_labels({
+        "TABLE": [[{"bbox": [[1, 2], [3, 4]]}]],
+        "INVOICE_INFO": [],
+        "SELLER_NAME": {"text": "Sample, Example and Placeholder"},
+        "BUYER": {"text": "Bill to:Fictitia Sampleton\n1 Sample Road\nTel:+(555)555-0100"},
+        "NUMBER": {"text": "INVOICE # INV/12-34/567"},
+        "DATE": {"text": "Invoice Date: 14-Apr-2022"},
+        "DUE_DATE": {"text": "Due Date : 03/04/2022"},
+        "SUB_TOTAL": {"text": "SUB_TOTAL : 885.25  USD"},
+        "TAX": {"text": "TAX:VAT (3.22%):  28.51 USD"},
+        "TOTAL": {"text": "TOTAL : 1,870.7 USD"},
+    })
+    values = {name: label["value"] for name, label in labels["fields"].items()}
+    assert values == {
+        "vendor_name": "Sample, Example and Placeholder", "bill_to_name": "Fictitia Sampleton", "document_number": "INV/12-34/567",
+        "issue_date": "2022-04-14", "subtotal": "885.25", "tax": "28.51", "total": "1870.7", "currency": "USD",
+    }  # The day-first-or-month-first due date isn't an answer key, so it's left out.
+    assert labels["fields"]["tax"]["printed"] == "28.51"
+    assert labels["items"] == []
+
+
+@pytest.mark.parametrize("box, expected", [("INVOICE # INV/12-34/567", "INV/12-34/567"), ("Invoice number 8990-930", "8990-930"), ("INVOICE ID INV95927699", "INV95927699")])
+def test_fatura_number_is_the_last_word_in_its_box(box, expected):
+    assert fatura_labels({"NUMBER": {"text": box}})["fields"]["document_number"]["value"] == expected
+
+
+def test_fatura_labels_skip_boxes_that_are_missing_or_empty():
+    assert fatura_labels({"SELLER_NAME": {"text": "  "}, "TOTAL": {"text": "TOTAL :"}, "BUYER": []}) == {"fields": {}, "items": []}
