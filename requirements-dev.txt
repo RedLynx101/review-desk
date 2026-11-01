@@ -1,10 +1,12 @@
 # Exact pins for tests. Install together with requirements.txt.
+# pyarrow reads CORD's parquet file for the outside-document evaluation. Nothing else needs it.
 # Browser tests use Playwright's bundled browser, or Chrome or Edge if one is already installed.
 greenlet==3.5.6
 iniconfig==2.3.1
 packaging==26.3
 playwright==1.64.1
 pluggy==1.7.0
+pyarrow==26.0.0
 pyee==14.0.0
 Pygments==2.21.0
 pytest==9.2.0

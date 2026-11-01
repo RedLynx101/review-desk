@@ -82,7 +82,7 @@ def write_run_metadata(run_dir: Path, settings: Settings, *, split, count, condi
         "split": split,
         "base_documents": count,
         "conditions": list(conditions),
-        "synthetic": True,
+        "synthetic": manifest.get("synthetic", True),
         "generator_version": manifest.get("generator_version"),
         "master_seed": manifest.get("master_seed"),
         "model": _model_details(settings),

@@ -51,6 +51,7 @@ VERIFIED = {
     "pycparser": "BSD-3-Clause",
     "pydantic": "MIT",
     "pydantic-core": "MIT",
+    "pyarrow": "Apache-2.0",
     "pyee": "MIT",
     "pygments": "BSD-2-Clause",
     "pypdfium2": "BSD-3-Clause OR Apache-2.0; bundled PDFium build is BSD-3-Clause/Apache-2.0 with permissive parts",

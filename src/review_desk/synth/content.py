@@ -18,7 +18,10 @@ from decimal import Decimal
 
 from .formats import DATE_FORMATS, MONEY_STYLES, MoneyStyle, format_date, round_cents
 
-SPLITS = ("dev", "heldout", "samples")
+SPLITS = ("dev", "heldout", "samples", "badsums")
+#: The bad-sums split exists to measure flagging, and it was added after the held-out run. Every document in it
+#: carries one known arithmetic mistake. Other splits keep their low random rates, and their documents don't change.
+BAD_SUM_KINDS = ("line_amount_mismatch", "subtotal_mismatch", "total_mismatch")
 
 INVOICE_LAYOUTS = ("classic", "banner", "sidebar", "ledger", "boxed")
 RECEIPT_LAYOUTS = ("thermal", "pos_wide", "card_slip")
@@ -39,6 +42,7 @@ _VENDOR_STEMS = {
     ),
 }
 _VENDOR_STEMS["samples"] = _VENDOR_STEMS["dev"]
+_VENDOR_STEMS["badsums"] = _VENDOR_STEMS["heldout"]
 
 _ORGANIZATIONS = (
     "Placeholder Falls Community Theatre", "Mock Harbor Rowing Club",
@@ -468,6 +472,8 @@ def make_document(split: str, index: int, master_seed: int) -> Document:
     money = rng.choice(MONEY_STYLES[locale])
     date_style = rng.choice(DATE_FORMATS[locale])
     anomalies: list[str] = []
+    # Stepping by index // 3 as well spreads the kinds across receipts, which land on every third index.
+    forced = BAD_SUM_KINDS[(index + index // 3) % len(BAD_SUM_KINDS)] if split == "badsums" else None
 
     issue = date(2024, 1, 1) + timedelta(days=rng.randint(0, 1000))
     if document_type == "invoice":
@@ -477,11 +483,11 @@ def make_document(split: str, index: int, master_seed: int) -> Document:
         kind = rng.choice(tuple(_RECEIPT_KINDS))
         items = _receipt_items(rng, kind, layout)
 
-    if rng.random() < 0.03:
+    if rng.random() < 0.03 or forced == "line_amount_mismatch":
         _inject_line_anomaly(rng, items, anomalies)
 
     subtotal = sum((row.amount for row in items), Decimal("0"))
-    if rng.random() < 0.03 and len(items) > 1:
+    if (rng.random() < 0.03 or forced == "subtotal_mismatch") and len(items) > 1:
         # The subtotal was computed before this line was mistyped, so the column no longer adds up.
         row = rng.choice(items)
         row.amount = round_cents(row.amount + Decimal(rng.choice((1, 3, 7))))
@@ -514,7 +520,7 @@ def make_document(split: str, index: int, master_seed: int) -> Document:
 
     tax_total = sum((amount for _, amount in tax_lines), Decimal("0"))
     total = subtotal - (discount or Decimal("0")) + (shipping or Decimal("0")) + tax_total
-    if rng.random() < 0.04:
+    if rng.random() < 0.04 or forced == "total_mismatch" or (forced and not anomalies):
         total = _transposed_total(rng, total)
         anomalies.append("total_mismatch")
 

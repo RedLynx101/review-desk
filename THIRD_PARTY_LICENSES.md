@@ -39,6 +39,7 @@ each package's own files; the script fails if a pin has no entry or a copyleft l
 | packaging | 26.3 | Apache-2.0 OR BSD-2-Clause |
 | playwright | 1.64.1 | Apache-2.0 |
 | pluggy | 1.7.0 | MIT |
+| pyarrow | 26.0.0 | Apache-2.0 |
 | pyee | 14.0.0 | MIT |
 | Pygments | 2.21.0 | BSD-2-Clause |
 | pytest | 9.2.0 | MIT |
