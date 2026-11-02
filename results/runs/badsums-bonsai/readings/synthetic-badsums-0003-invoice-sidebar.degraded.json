@@ -1,0 +1,86 @@
+{
+ "doc_id": "synthetic-badsums-0003-invoice-sidebar.degraded",
+ "pdf_sha256": "39bd77ac843958de3ce01e8129c3172872b5ca6a61966615c149c5d4b608fd2a",
+ "model": "prism-ml/bonsai-27b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "invoice",
+  "vendor_name": {
+   "text": "Instruments Inc.",
+   "line": 2
+  },
+  "document_number": {
+   "text": "FIN 00-003 1089",
+   "line": 11
+  },
+  "issue_date": {
+   "text": "March 3. 2025",
+   "line": 19
+  },
+  "due_date": {
+   "text": null,
+   "line": null
+  },
+  "purchase_order": {
+   "text": null,
+   "line": null
+  },
+  "bill_to_name": {
+   "text": "Lorem Springs Deatal Cooperative",
+   "line": 6
+  },
+  "currency": {
+   "text": "$",
+   "line": 24
+  },
+  "subtotal": {
+   "text": "2,884.94",
+   "line": 24
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": null,
+   "line": null
+  },
+  "tax": [
+   {
+    "text": null,
+    "line": null
+   }
+  ],
+  "total": {
+   "text": "2,884.94",
+   "line": 25
+  },
+  "line_items": [
+   {
+    "description": "Data logger, four channel",
+    "quantity": null,
+    "unit_price": null,
+    "amount": null,
+    "line": 19
+   },
+   {
+    "description": "Data logger, four channel (lot 2)",
+    "quantity": null,
+    "unit_price": null,
+    "amount": null,
+    "line": 22
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 24.8,
+ "attempts": 1,
+ "prompt_tokens": 1005,
+ "completion_tokens": 459,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 2.7,
+ "failure_history": []
+}

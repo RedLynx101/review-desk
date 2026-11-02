@@ -1,0 +1,107 @@
+{
+ "doc_id": "synthetic-badsums-0002-receipt-thermal.clean",
+ "pdf_sha256": "c7c70e30711992185bf01925aaf9246db4a83b4e57b5425a71b3dce69df125f1",
+ "model": "prism-ml/bonsai-27b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "receipt",
+  "vendor_name": {
+   "text": "BUMBLEWICK BAKEHOUSE CO.",
+   "line": 1
+  },
+  "document_number": {
+   "text": "12-2-65508",
+   "line": 8
+  },
+  "issue_date": {
+   "text": "06/11/2025",
+   "line": 7
+  },
+  "due_date": {
+   "text": null,
+   "line": null
+  },
+  "purchase_order": {
+   "text": null,
+   "line": null
+  },
+  "bill_to_name": {
+   "text": null,
+   "line": null
+  },
+  "currency": {
+   "text": "$",
+   "line": 20
+  },
+  "subtotal": {
+   "text": "$40.36",
+   "line": 20
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": null,
+   "line": null
+  },
+  "tax": [
+   {
+    "text": "$2.62",
+    "line": 21
+   }
+  ],
+  "total": {
+   "text": "$51.98",
+   "line": 22
+  },
+  "line_items": [
+   {
+    "description": "Sourdough loaf",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "$10.80",
+    "line": 11
+   },
+   {
+    "description": "Almond croissant",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "$8.26",
+    "line": 13
+   },
+   {
+    "description": "Rye rolls, half doz",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "$5.88",
+    "line": 15
+   },
+   {
+    "description": "Quiche slice",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "$6.54",
+    "line": 16
+   },
+   {
+    "description": "Oat cookie",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "$8.88",
+    "line": 17
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 29.6,
+ "attempts": 1,
+ "prompt_tokens": 914,
+ "completion_tokens": 610,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 0.5,
+ "failure_history": []
+}

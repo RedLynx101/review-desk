@@ -1,0 +1,186 @@
+{
+ "added_after_heldout": true,
+ "all": {
+  "coverage": 0.44753086419753085,
+  "digits_right": 101,
+  "error": 0.020689655172413793,
+  "error_upper_95": 0.0590605150784368,
+  "readable": 317,
+  "right": 301,
+  "skipped": 145,
+  "values": 324,
+  "with_digits": 105,
+  "wrong_among_skipped": 3
+ },
+ "by_field": {
+  "bill_to_name": {
+   "coverage": 0.34210526315789475,
+   "digits_right": 0,
+   "error": 0.23076923076923078,
+   "error_upper_95": 0.5025687399512693,
+   "readable": 36,
+   "right": 32,
+   "skipped": 13,
+   "values": 38,
+   "with_digits": 0,
+   "wrong_among_skipped": 3
+  },
+  "currency": {
+   "coverage": 1.0,
+   "digits_right": 0,
+   "error": 0.0,
+   "error_upper_95": 0.13319649395317873,
+   "readable": 25,
+   "right": 25,
+   "skipped": 25,
+   "values": 25,
+   "with_digits": 0,
+   "wrong_among_skipped": 0
+  },
+  "discount": {
+   "coverage": 0.0,
+   "digits_right": 10,
+   "error": null,
+   "error_upper_95": null,
+   "readable": 12,
+   "right": 10,
+   "skipped": 0,
+   "values": 12,
+   "with_digits": 12,
+   "wrong_among_skipped": 0
+  },
+  "document_number": {
+   "coverage": 0.5681818181818182,
+   "digits_right": 0,
+   "error": 0.0,
+   "error_upper_95": 0.13319649395317873,
+   "readable": 41,
+   "right": 39,
+   "skipped": 25,
+   "values": 44,
+   "with_digits": 0,
+   "wrong_among_skipped": 0
+  },
+  "due_date": {
+   "coverage": 0.5172413793103449,
+   "digits_right": 0,
+   "error": 0.0,
+   "error_upper_95": 0.20388926630434784,
+   "readable": 29,
+   "right": 29,
+   "skipped": 15,
+   "values": 29,
+   "with_digits": 0,
+   "wrong_among_skipped": 0
+  },
+  "issue_date": {
+   "coverage": 0.6938775510204082,
+   "digits_right": 0,
+   "error": 0.0,
+   "error_upper_95": 0.10151790621961015,
+   "readable": 49,
+   "right": 48,
+   "skipped": 34,
+   "values": 49,
+   "with_digits": 0,
+   "wrong_among_skipped": 0
+  },
+  "subtotal": {
+   "coverage": 0.23529411764705882,
+   "digits_right": 34,
+   "error": 0.0,
+   "error_upper_95": 0.3244156195108769,
+   "readable": 34,
+   "right": 34,
+   "skipped": 8,
+   "values": 34,
+   "with_digits": 34,
+   "wrong_among_skipped": 0
+  },
+  "tax": {
+   "coverage": 0.0,
+   "digits_right": 17,
+   "error": null,
+   "error_upper_95": null,
+   "readable": 18,
+   "right": 17,
+   "skipped": 0,
+   "values": 19,
+   "with_digits": 19,
+   "wrong_among_skipped": 0
+  },
+  "total": {
+   "coverage": 0.0,
+   "digits_right": 40,
+   "error": null,
+   "error_upper_95": null,
+   "readable": 40,
+   "right": 40,
+   "skipped": 0,
+   "values": 40,
+   "with_digits": 40,
+   "wrong_among_skipped": 0
+  },
+  "vendor_name": {
+   "coverage": 0.7352941176470589,
+   "digits_right": 0,
+   "error": 0.0,
+   "error_upper_95": 0.13319649395317873,
+   "readable": 33,
+   "right": 27,
+   "skipped": 25,
+   "values": 34,
+   "with_digits": 0,
+   "wrong_among_skipped": 0
+  }
+ },
+ "dataset": {
+  "attribution": "FATURA: A Multi-Layout Invoice Image Dataset for Document Analysis and Understanding. Limam, Dhiaf, Kessentini. Zenodo.",
+  "documents": 50,
+  "license": "CC BY 4.0",
+  "license_checked": "2026-11-01",
+  "name": "FATURA v2, sample",
+  "sampling": "One invoice per template in template order, chosen with seed 20261101, up to 50 documents.",
+  "source": "https://zenodo.org/records/10371464",
+  "source_file": "FATURA2.zip",
+  "source_sha256": "984e3812b8b7c632e668a2dd92afab5ae44631face24efe53e543910e5fca474",
+  "templates_in_sample": 50,
+  "what_it_is": "Template-generated invoice images from 50 templates, made by another team, at 595 by 841 pixels. Not real paper. Its labels are boxes with text: vendor, bill-to, number, dates, currency and amounts map onto this schema, and tables have no text labels, so line items aren't scored."
+ },
+ "documents": {
+  "all_labeled_right": 33,
+  "documents": 50,
+  "failed": 0,
+  "mean_seconds": 28.5,
+  "nothing_flagged": 0,
+  "rows_extra": 123,
+  "rows_labeled": 0,
+  "rows_missing": 0,
+  "with_labels": 50,
+  "wrong_though_nothing_flagged": 0
+ },
+ "git": {
+  "commit": "df9521ec9bf42ebc4bac26f3ffb577517c102b99",
+  "dirty": true
+ },
+ "model": {
+  "arch": "qwen35",
+  "id": "prism-ml/bonsai-27b",
+  "loaded_context_length": 8192,
+  "max_context_length": 262144,
+  "publisher": "prism-ml",
+  "quantization": "Q1_0",
+  "state": "loaded",
+  "type": "vlm"
+ },
+ "model_failures": {},
+ "model_settings": {
+  "images_sent_for_scans": false,
+  "max_tokens": 3500,
+  "strict_json_schema": true,
+  "temperature": 0.0
+ },
+ "no_tuning": "Run once with the pipeline, prompt, weights and threshold used on the held-out set.",
+ "run_created": "2026-11-01T17:51:15-0600",
+ "threshold": 0.9
+}

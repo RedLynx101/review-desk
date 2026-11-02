@@ -1,0 +1,71 @@
+{
+ "doc_id": "synthetic-badsums-0011-receipt-thermal.degraded",
+ "pdf_sha256": "93e5951354ad05f3713798e26beedfbb6e7c8e080ec14ef4163a1a8d15a65c55",
+ "model": "prism-ml/bonsai-27b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "receipt",
+  "vendor_name": {
+   "text": null,
+   "line": null
+  },
+  "document_number": {
+   "text": null,
+   "line": null
+  },
+  "issue_date": {
+   "text": null,
+   "line": null
+  },
+  "due_date": {
+   "text": null,
+   "line": null
+  },
+  "purchase_order": {
+   "text": null,
+   "line": null
+  },
+  "bill_to_name": {
+   "text": null,
+   "line": null
+  },
+  "currency": {
+   "text": null,
+   "line": null
+  },
+  "subtotal": {
+   "text": null,
+   "line": null
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": null,
+   "line": null
+  },
+  "tax": [
+   {
+    "text": null,
+    "line": null
+   }
+  ],
+  "total": {
+   "text": null,
+   "line": null
+  },
+  "line_items": []
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 13.9,
+ "attempts": 1,
+ "prompt_tokens": 1341,
+ "completion_tokens": 209,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 4.3,
+ "failure_history": []
+}

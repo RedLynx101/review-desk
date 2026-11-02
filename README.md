@@ -1,15 +1,73 @@
-﻿# Review Desk
+# Review Desk
 
 Upload an invoice or receipt PDF and get checked data out, with no outside connections. Fields are
 extracted against a strict schema, each with a confidence score built from checks you can inspect and
 its source highlighted on the page. Low-confidence fields go to a review queue, nothing exports until a
 person approves it, and a hash-chained audit log records what happened.
 
-**Status: under construction.** Milestones 1 to 4 of 5 are done: synthetic test documents, the extraction pipeline,
-the review queue with its audit log, and a held-out accuracy report. The demo and gallery are still to come. No client
-deployment yet.
+**[Watch the demo](docs/media/demo.mp4)** (73 seconds, no sound). It uses synthetic documents and replays saved
+answers from a real evaluation run.
 
-Built with AI coding agents under Noah Hicks's review.
+![The review screen: a flagged vendor name, its source highlighted on a synthetic invoice, and the checks behind its score](docs/media/01-review-screen.png)
+
+**A portfolio project, with no client deployment yet.** Built with AI coding agents under Noah Hicks's review.
+
+## What it measured
+
+These come from a held-out set of 30 synthetic base documents, 90 renderings, at a 0.90 threshold. Its vendor names and
+three of its layouts were never used while tuning, it ran once per model, and the threshold and scoring rules were fixed first.
+"Skip review" means a person isn't asked to check that value, so the last column is the number that matters most.
+
+| Condition | Values | Skip review | Wrong among those skipped |
+|---|---|---|---|
+| Clean PDF | 1262 | 96.8% | 3 of 1222 (0.25%) |
+| Light scan | 1262 | 87.5% | 7 of 1104 (0.63%) |
+| **Degraded scan** | 1294 | **8.2%** | **8 of 106 (7.55%)** |
+
+If you check scanned paperwork, read this part:
+
+- **Degraded scans are weak.** Few values skip review there, and 7.55% of those that did were wrong. Check every value on a
+  bad scan, whatever its score says.
+- **Heavy scan damage fails.** 1.9% of printed values came out right, because OCR could read only 15.7% of them. Moderate
+  damage got 51.5% right. A light scan got 96.0%, and a clean PDF 98.8%.
+- **Real receipt photos go badly.** On CORD v2's test split of 100 real receipts, 18.8% of labeled values came out right and OCR
+  could read 56.1% of them. 3.7% skipped review, 4 of those 37 were wrong (10.81%), and no receipt passed with nothing flagged. A
+  person ends up checking nearly everything, so this build saves little reading work on photos.
+- **Other people's templates go better, on clean images.** On 50 template-generated FATURA invoices, 92.9% of labeled values
+  came out right. 44.8% skipped review and 3 of those 145 were wrong (2.07%). No invoice passed with nothing flagged.
+- **Wrong values do get through.** Across the held-out conditions, 18 of the 2432 values that skipped review were wrong. Many are a
+  name or description that looks fine and has no arithmetic to catch it.
+- **It's slow.** About a minute per synthetic document on an 8 GB GPU, with the model reading OCR text and no page images. A
+  vision model or better OCR on photos is the obvious next test, and neither has been run here.
+
+CORD and FATURA were added after the held-out run and tuned on nothing. CORD's labels cover only line items, subtotal, tax, discount and
+total. FATURA is generated from templates, so it isn't real paper. A small synthetic set for bad arithmetic came afterward too, because the held-out
+set happened to have none: all 36 renderings carrying a known bad sum had something flagged, and the sum's own check failed on 11 of 13 clean PDFs,
+9 of 13 light scans and 4 of 13 degraded scans. One document carries two mistakes and counts under both.
+
+The model is `prism-ml/bonsai-27b` (1-bit quantization, 8192 context, temperature 0). It was picked over `granite-4.1-8b` on the dev
+split alone, by [a bar committed before any Granite run](docs/MODEL_CHOICE.md). Granite's held-out numbers sit beside it in the report: 60.4%
+skipped with 1.04% wrong, against 63.7% with 0.74%, at half the time per document. Every table, by field and by condition, is in
+**[results/REPORT.md](results/REPORT.md)**, and every number there traces to a run under [results/](results/README.md).
+
+| | |
+|---|---|
+| ![Approval dialog on a synthetic invoice](docs/media/03-approval.png) | ![Audit log with the chain verified](docs/media/04-audit-log.png) |
+| ![A badly damaged synthetic scan with nearly every value flagged](docs/media/05-damaged-scan.png) | ![Results table](docs/media/06-results.png) |
+
+## Try it without a model
+
+Needs Python 3.12 and [Tesseract](https://github.com/tesseract-ocr/tesseract) 5. If Tesseract isn't on your PATH, set `TESSERACT_CMD`.
+
+```
+python -m venv .venv
+.venv/Scripts/python -m pip install -r requirements.txt -r requirements-dev.txt -e .   # .venv/bin/python on macOS and Linux
+.venv/Scripts/python -m review_desk.synth generate --split dev --count 15
+.venv/Scripts/python -m review_desk.desk serve --replay results/runs/dev-bonsai
+```
+
+Open http://127.0.0.1:8765 and drop in PDFs from `data/synthetic/dev`. To read your own documents, point it at any OpenAI-compatible
+server: copy `.env.example` to `.env`, and leave out `--replay`.
 
 ## How a document gets read
 
@@ -79,38 +137,6 @@ newest hash somewhere else closes that, and every export carries the hash at tha
   other sites can't drive it: state-changing requests need a custom header, Host and Origin are checked, and a
   strict content security policy keeps scripts local. Nothing loads from outside, including fonts.
 
-## Accuracy
-
-Full tables, by field and by condition, are in [results/REPORT.md](results/REPORT.md). The numbers below come from a held-out
-set of 30 synthetic base documents, 90 renderings per model. Its vendor names and three of its layouts were never used
-while tuning, and each model ran it once. The threshold and scoring rules were fixed first.
-
-The model is `prism-ml/bonsai-27b` (1-bit quantization, 8192 context, temperature 0, no page images). It was picked over
-`granite-4.1-8b` on the dev split alone, by [a bar committed before any Granite run](docs/MODEL_CHOICE.md).
-
-| Condition | Values | Skip review at 0.90 | Wrong among those skipped |
-|---|---|---|---|
-| Clean PDF | 1262 | 96.8% | 3 of 1222 (0.25%) |
-| Scanned | 1262 | 87.5% | 7 of 1104 (0.63%) |
-| Degraded | 1294 | 8.2% | 8 of 106 (7.55%) |
-
-| Scan quality | Documents | Printed values right | Printed values OCR could read |
-|---|---|---|---|
-| Clean PDF | 30 | 98.8% (1126/1140) | 100% |
-| Light scan | 30 | 96.0% (1094/1140) | 98.9% |
-| Moderate damage | 12 | 51.5% (203/394) | 80.2% |
-| Heavy damage | 18 | 1.9% (14/746) | 15.7% |
-
-What those don't hide:
-
-- **Degraded scans are weak.** Few values skip review there, but 7.55% of the ones that did were wrong. Check every
-  value on a bad scan, whatever its score.
-- **Wrong values do get through.** They were 18 of the 2432 that skipped review. The report and `scored.jsonl` list them, and many are
-  a name or description that looks fine and has no arithmetic to catch it.
-- **It's slow.** About a minute per document on an 8 GB GPU.
-- **These documents are all synthetic.** No public dataset was run, and they say nothing yet about a particular
-  business's paperwork.
-
 ## Synthetic test documents
 
 Accuracy needs known answers, and real invoices can't be published. `review_desk.synth` generates
@@ -152,7 +178,8 @@ The documents carry the traps that catch extractors out:
   amount that disagrees with its quantity and price, a missing invoice number. The truth records what's
   printed, not what should have been.
 
-`samples/` holds a few generated documents to look at. Everything else regenerates from the seed.
+`samples/` holds a few generated documents to look at. Everything else regenerates from the seed. The demo and images come from
+[scripts/record_demo.py](scripts/record_demo.py), which drives the real app on these documents.
 
 ## Licensing
 
@@ -160,4 +187,5 @@ MIT, `Copyright (c) 2026 Noah Hicks`. Every pinned dependency is under a permiss
 `scripts/check_licenses.py` fails if that stops being true. See [THIRD_PARTY_LICENSES.md](THIRD_PARTY_LICENSES.md).
 PyMuPDF is deliberately not used, because it's AGPL or commercial.
 
-Public datasets considered for evaluation, and why some were rejected: [docs/DATASETS.md](docs/DATASETS.md).
+Public datasets considered for evaluation, why some were rejected, and credit for the two that ran (CORD and FATURA, both CC BY 4.0):
+[docs/DATASETS.md](docs/DATASETS.md). None of their documents, labels or answers are in this repo, only aggregate counts.

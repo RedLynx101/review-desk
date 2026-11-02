@@ -1,0 +1,86 @@
+{
+ "doc_id": "synthetic-badsums-0004-invoice-ledger.degraded",
+ "pdf_sha256": "dfbe77a18f3cdc1a01b7774718f836d17f02f76afadf7e444a24c820f3e4824f",
+ "model": "prism-ml/bonsai-27b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "invoice",
+  "vendor_name": {
+   "text": "RAVELSTITCH GASKET WORKS CO.",
+   "line": 1
+  },
+  "document_number": {
+   "text": null,
+   "line": null
+  },
+  "issue_date": {
+   "text": "January 36, 2025",
+   "line": 8
+  },
+  "due_date": {
+   "text": null,
+   "line": null
+  },
+  "purchase_order": {
+   "text": null,
+   "line": null
+  },
+  "bill_to_name": {
+   "text": "Testwick Model Railway Guiid",
+   "line": 12
+  },
+  "currency": {
+   "text": "$",
+   "line": 19
+  },
+  "subtotal": {
+   "text": "307.46",
+   "line": 25
+  },
+  "discount": {
+   "text": "-15.37",
+   "line": 26
+  },
+  "shipping": {
+   "text": null,
+   "line": null
+  },
+  "tax": [
+   {
+    "text": "$16.99",
+    "line": 27
+   }
+  ],
+  "total": {
+   "text": "338.08",
+   "line": 28
+  },
+  "line_items": [
+   {
+    "description": "Rush cutting fee",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "$3.46",
+    "line": 19
+   },
+   {
+    "description": "EPDM flange seal, 2 in,",
+    "quantity": "2",
+    "unit_price": ".34",
+    "amount": null,
+    "line": 20
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 25.5,
+ "attempts": 1,
+ "prompt_tokens": 979,
+ "completion_tokens": 469,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 3.3,
+ "failure_history": []
+}

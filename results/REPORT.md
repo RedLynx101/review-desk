@@ -1,6 +1,6 @@
 # Accuracy report
 
-Every document here is synthetic: generated from a seed, with invented names and known answers. Nothing here comes from a client, and there's no client deployment yet. These numbers say how the pipeline does on these documents. They don't predict any particular business's paperwork.
+The held-out documents are synthetic: generated from a seed, with invented names and known answers. A later section adds two public datasets. Nothing here comes from a client, and there's no client deployment yet. These numbers say how the pipeline does on these documents. They don't predict any particular business's paperwork.
 
 **Default model: `prism-ml/bonsai-27b`.** Higher share of values skipping review.
 
@@ -10,13 +10,17 @@ At a 0.9 threshold on the held-out set, bonsai-27b let 96.8% of values on clean 
 
 Across all conditions bonsai-27b skipped review on 63.7% of values with 0.74% wrong. granite-4.1-8b skipped 60.4% with 1.04% wrong, and took 28 seconds per document against 56.
 
+**CORD v2, test split, added afterward:** 18.8% (186/991) of labeled values came out right, and OCR could read 56.1% of them. 3.7% skipped review, and 4 of those 37 were wrong (10.81%). 0 of 100 documents passed with nothing flagged.
+
+**FATURA v2, sample, added afterward:** 92.9% (301/324) of labeled values came out right, and OCR could read 97.8% of them. 44.8% skipped review, and 3 of those 145 were wrong (2.07%). 0 of 50 documents passed with nothing flagged.
+
 ## Setup
 
 - Held-out set: 30 base documents, each rendered clean, scanned and degraded, 90 renderings per model. The split has its own vendor names and three layouts that were never rendered while tuning. Each model ran it once.
 - Models: `prism-ml/bonsai-27b` (Q1_0); `granite-4.1-8b` (Q4_K_M). Through LM Studio, 8192 context, temperature 0.0, max tokens 3500, strict JSON schema, no page images.
 - OCR: Tesseract 5.3.3 on image pages, after straightening and denoising. Digital PDFs use their text layer, checked against the rendered page.
 - Review threshold 0.9, with hand-set weights. Both were fixed before these runs, and neither was refit per model. They were tuned against Bonsai's answers on dev, which may favor Bonsai.
-- Public datasets weren't run. FATURA and CORD passed the license review in [DATASETS.md](../docs/DATASETS.md), but this round used no downloads, so nothing here has been tested on documents this repo's generator didn't make. That's the largest gap in this report.
+- These held-out documents are all from this repo's generator. Runs on two public datasets came afterward, in [their own section](#added-after-the-held-out-run).
 
 ## What matters most: values that skipped review
 
@@ -106,7 +110,7 @@ A document nobody needs to touch is the real saving, and a single flagged value 
 | granite-4.1-8b | scanned | 30 | 0 | 7 | 0 | 0 | 0 of 218 | 33 |
 | granite-4.1-8b | degraded | 30 | 0 | 0 | 0 | 0 | 156 of 218 | 19 |
 
-Printed mistakes are built into some documents. A sum that doesn't work should reach a person. A missing number is different: leaving it blank is the right answer, so nothing has to be flagged. No document in this set carries a bad sum, so it doesn't test whether those reach a person.
+Printed mistakes are built into some documents. A sum that doesn't work should reach a person. A missing number is different: leaving it blank is the right answer, so nothing has to be flagged. No document in this set carries a bad sum, so it doesn't test whether those reach a person. The bad-sums set further down does.
 
 | Model | Printed mistake | Documents | Flagged for review |
 |---|---|---|---|
@@ -151,6 +155,76 @@ Printed mistakes are built into some documents. A sum that doesn't work should r
 | heldout-0013-invoice-sidebar.degraded | currency | USD | GBP | 0.95 |
 | 12 more in `scored.jsonl` | | | | |
 
+## Added after the held-out run
+
+These runs came after the numbers above were written. The pipeline, prompt, weights and threshold are the ones the held-out set used, and nothing was tuned on these results. Each ran once, with the default model.
+
+### Documents this repo didn't generate
+
+Model `prism-ml/bonsai-27b`. Only fields the labels give are scored, so the numbers cover less than the synthetic ones do. "Amount digits right" counts an amount whose digits were read correctly even if its notation was parsed wrong, which separates a reading mistake from a parsing one. In these runs the two columns match, so the misses are reading mistakes.
+
+- **[CORD v2, test split](https://huggingface.co/datasets/naver-clova-ix/cord-v2)**, CC BY 4.0 (checked 2026-11-01). Real Indonesian shop and restaurant receipts, photographed and scanned. Store and payment details were removed by its authors, so only line items, subtotal, tax, discount and total have labels. The whole test split, in order. The train and validation splits were never read. Credit: CORD: A Consolidated Receipt Dataset for Post-OCR Parsing. Park, Shin, Lee, Lee, Park, Seo, Oh, Kim, Lee. Document Intelligence Workshop at NeurIPS 2019.
+- **[FATURA v2, sample](https://zenodo.org/records/10371464)**, CC BY 4.0 (checked 2026-11-01). Template-generated invoice images from 50 templates, made by another team, at 595 by 841 pixels. Not real paper. Its labels are boxes with text: vendor, bill-to, number, dates, currency and amounts map onto this schema, and tables have no text labels, so line items aren't scored. One invoice per template in template order, chosen with seed 20261101, up to 50 documents. Credit: FATURA: A Multi-Layout Invoice Image Dataset for Document Analysis and Understanding. Limam, Dhiaf, Kessentini. Zenodo.
+
+| Dataset | Documents | Labeled values | Skip review | Wrong among skipped | Error | Upper 95% |
+|---|---|---|---|---|---|---|
+| CORD v2, test split | 100 | 991 | 3.7% | 4 of 37 | 10.81% | 24.71% |
+| FATURA v2, sample | 50 | 324 | 44.8% | 3 of 145 | 2.07% | 5.91% |
+
+| Dataset | Field | Values | Right | Amount digits right | OCR could read | Skip review | Wrong among skipped |
+|---|---|---|---|---|---|---|---|
+| CORD v2, test split | amount | 246 | 23.2% (57/246) | 23.2% (57/246) | 56.5% (139/246) | 4.1% | 0 of 10 |
+| CORD v2, test split | description | 251 | 18.7% (47/251) |  | 39.0% (98/251) | 6.8% | 4 of 17 |
+| CORD v2, test split | discount | 6 | 16.7% (1/6) | 16.7% (1/6) | 83.3% (5/6) | 0.0% | 0 of 0 |
+| CORD v2, test split | quantity | 220 | 11.8% (26/220) |  | 80.9% (178/220) | 0.0% | 0 of 0 |
+| CORD v2, test split | subtotal | 65 | 35.4% (23/65) | 35.4% (23/65) | 47.7% (31/65) | 6.2% | 0 of 4 |
+| CORD v2, test split | tax | 41 | 14.6% (6/41) | 14.6% (6/41) | 39.0% (16/41) | 2.4% | 0 of 1 |
+| CORD v2, test split | total | 95 | 24.2% (23/95) | 24.2% (23/95) | 47.4% (45/95) | 2.1% | 0 of 2 |
+| CORD v2, test split | unit_price | 67 | 4.5% (3/67) | 4.5% (3/67) | 65.7% (44/67) | 4.5% | 0 of 3 |
+| FATURA v2, sample | bill_to_name | 38 | 84.2% (32/38) |  | 94.7% (36/38) | 34.2% | 3 of 13 |
+| FATURA v2, sample | currency | 25 | 100.0% (25/25) |  | 100.0% (25/25) | 100.0% | 0 of 25 |
+| FATURA v2, sample | discount | 12 | 83.3% (10/12) | 83.3% (10/12) | 100.0% (12/12) | 0.0% | 0 of 0 |
+| FATURA v2, sample | document_number | 44 | 88.6% (39/44) |  | 93.2% (41/44) | 56.8% | 0 of 25 |
+| FATURA v2, sample | due_date | 29 | 100.0% (29/29) |  | 100.0% (29/29) | 51.7% | 0 of 15 |
+| FATURA v2, sample | issue_date | 49 | 98.0% (48/49) |  | 100.0% (49/49) | 69.4% | 0 of 34 |
+| FATURA v2, sample | subtotal | 34 | 100.0% (34/34) | 100.0% (34/34) | 100.0% (34/34) | 23.5% | 0 of 8 |
+| FATURA v2, sample | tax | 19 | 89.5% (17/19) | 89.5% (17/19) | 94.7% (18/19) | 0.0% | 0 of 0 |
+| FATURA v2, sample | total | 40 | 100.0% (40/40) | 100.0% (40/40) | 100.0% (40/40) | 0.0% | 0 of 0 |
+| FATURA v2, sample | vendor_name | 34 | 79.4% (27/34) |  | 97.1% (33/34) | 73.5% | 0 of 25 |
+
+| Dataset | Documents | Failed | Every labeled value right | Nothing flagged | Wrong though nothing flagged | Rows labeled | Rows missed | Rows extra | Mean seconds |
+|---|---|---|---|---|---|---|---|---|---|
+| CORD v2, test split | 100 | 0 | 1 | 0 | 0 | 251 | 145 | 40 | 20 |
+| FATURA v2, sample | 50 | 0 | 33 | 0 | 0 | not scored | not scored | not scored | 28 |
+
+No document, label or model answer from either dataset is in this repo. The counts are in [outside/](outside/). Neither run had a model failure or a server crash.
+
+### Bad sums
+
+The held-out set happened to carry no bad arithmetic, so this separate synthetic set of 12 base documents, 36 renderings, measures flagging instead. Every document has a known mistake printed on it. Failing its own check is the real test: on a damaged scan something gets flagged anyway. One document carries two mistakes and counts under both. Run: [badsums-bonsai](runs/badsums-bonsai/summary.md).
+
+| Printed mistake | Condition | Documents | Its sum check failed | Something flagged for review |
+|---|---|---|---|---|
+| Line amount isn't quantity times price | clean | 4 | 3 | 4 |
+| Line amount isn't quantity times price | scanned | 4 | 3 | 4 |
+| Line amount isn't quantity times price | degraded | 4 | 2 | 4 |
+| Column doesn't reach the subtotal | clean | 4 | 3 | 4 |
+| Column doesn't reach the subtotal | scanned | 4 | 2 | 4 |
+| Column doesn't reach the subtotal | degraded | 4 | 1 | 4 |
+| Total doesn't add up | clean | 5 | 5 | 5 |
+| Total doesn't add up | scanned | 5 | 4 | 5 |
+| Total doesn't add up | degraded | 5 | 1 | 5 |
+
+On clean PDFs and light scans, every miss is a document where the model didn't return the values that check needs, or, once, ran out of tokens on a 36-row invoice. On each one, something else was still flagged. On degraded scans the values these checks need usually aren't read, so a result there says little either way.
+
+The same checks on bonsai-27b's held-out documents, none of which has a bad sum. A failure here comes from a misread, and it costs a person's time rather than letting a mistake through:
+
+| Condition | Documents with no bad sum | Some sum check failed |
+|---|---|---|
+| clean | 30 | 0 |
+| scanned | 30 | 2 |
+| degraded | 30 | 24 |
+
 ## Model failures during the held-out runs
 
 Counts every attempt, including ones a retry got past.
@@ -175,3 +249,4 @@ From dev only, by the bar committed before any Granite run in [MODEL_CHOICE.md](
 - [dev-granite](runs/dev-granite/summary.md)
 - [heldout-bonsai](runs/heldout-bonsai/summary.md)
 - [heldout-granite](runs/heldout-granite/summary.md)
+- [badsums-bonsai](runs/badsums-bonsai/summary.md)

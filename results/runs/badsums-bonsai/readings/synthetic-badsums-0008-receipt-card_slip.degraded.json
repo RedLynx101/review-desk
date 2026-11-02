@@ -1,0 +1,93 @@
+{
+ "doc_id": "synthetic-badsums-0008-receipt-card_slip.degraded",
+ "pdf_sha256": "0ad59558d21f9e96373c82eccca879b0029d1d9881e33665e3b52650ab65d625",
+ "model": "prism-ml/bonsai-27b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "receipt",
+  "vendor_name": {
+   "text": "Sprocketmoor Stationers GmbH",
+   "line": 3
+  },
+  "document_number": {
+   "text": null,
+   "line": null
+  },
+  "issue_date": {
+   "text": "15.03.2024",
+   "line": 4
+  },
+  "due_date": {
+   "text": null,
+   "line": null
+  },
+  "purchase_order": {
+   "text": null,
+   "line": null
+  },
+  "bill_to_name": {
+   "text": null,
+   "line": null
+  },
+  "currency": {
+   "text": "\u20ac",
+   "line": 4
+  },
+  "subtotal": {
+   "text": "37.90",
+   "line": 13
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": null,
+   "line": null
+  },
+  "tax": [
+   {
+    "text": "7.58",
+    "line": 14
+   }
+  ],
+  "total": {
+   "text": null,
+   "line": null
+  },
+  "line_items": [
+   {
+    "description": "Paper chips, tin",
+    "quantity": "3",
+    "unit_price": "10.75",
+    "amount": null,
+    "line": 6
+   },
+   {
+    "description": "Sketchdook, A5",
+    "quantity": null,
+    "unit_price": "9.49",
+    "amount": null,
+    "line": 8
+   },
+   {
+    "description": "Gel pens, 6 pack",
+    "quantity": "3",
+    "unit_price": null,
+    "amount": "24.66",
+    "line": 10
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 27.4,
+ "attempts": 1,
+ "prompt_tokens": 744,
+ "completion_tokens": 495,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 2.5,
+ "failure_history": []
+}

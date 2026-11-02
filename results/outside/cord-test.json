@@ -1,0 +1,161 @@
+{
+ "added_after_heldout": true,
+ "all": {
+  "coverage": 0.03733602421796166,
+  "digits_right": 113,
+  "error": 0.10810810810810811,
+  "error_upper_95": 0.24708846415167166,
+  "readable": 556,
+  "right": 186,
+  "skipped": 37,
+  "values": 991,
+  "with_digits": 520,
+  "wrong_among_skipped": 4
+ },
+ "by_field": {
+  "amount": {
+   "coverage": 0.04065040650406504,
+   "digits_right": 57,
+   "error": 0.0,
+   "error_upper_95": 0.2775401687666165,
+   "readable": 139,
+   "right": 57,
+   "skipped": 10,
+   "values": 246,
+   "with_digits": 246,
+   "wrong_among_skipped": 0
+  },
+  "description": {
+   "coverage": 0.06772908366533864,
+   "digits_right": 0,
+   "error": 0.23529411764705882,
+   "error_upper_95": 0.47262245889171606,
+   "readable": 98,
+   "right": 47,
+   "skipped": 17,
+   "values": 251,
+   "with_digits": 0,
+   "wrong_among_skipped": 4
+  },
+  "discount": {
+   "coverage": 0.0,
+   "digits_right": 1,
+   "error": null,
+   "error_upper_95": null,
+   "readable": 5,
+   "right": 1,
+   "skipped": 0,
+   "values": 6,
+   "with_digits": 6,
+   "wrong_among_skipped": 0
+  },
+  "quantity": {
+   "coverage": 0.0,
+   "digits_right": 0,
+   "error": null,
+   "error_upper_95": null,
+   "readable": 178,
+   "right": 26,
+   "skipped": 0,
+   "values": 220,
+   "with_digits": 0,
+   "wrong_among_skipped": 0
+  },
+  "subtotal": {
+   "coverage": 0.06153846153846154,
+   "digits_right": 23,
+   "error": 0.0,
+   "error_upper_95": 0.48990002040399916,
+   "readable": 31,
+   "right": 23,
+   "skipped": 4,
+   "values": 65,
+   "with_digits": 65,
+   "wrong_among_skipped": 0
+  },
+  "tax": {
+   "coverage": 0.024390243902439025,
+   "digits_right": 6,
+   "error": 0.0,
+   "error_upper_95": 0.7934567085261071,
+   "readable": 16,
+   "right": 6,
+   "skipped": 1,
+   "values": 41,
+   "with_digits": 41,
+   "wrong_among_skipped": 0
+  },
+  "total": {
+   "coverage": 0.021052631578947368,
+   "digits_right": 23,
+   "error": 0.0,
+   "error_upper_95": 0.6576280471103807,
+   "readable": 45,
+   "right": 23,
+   "skipped": 2,
+   "values": 95,
+   "with_digits": 95,
+   "wrong_among_skipped": 0
+  },
+  "unit_price": {
+   "coverage": 0.04477611940298507,
+   "digits_right": 3,
+   "error": 0.0,
+   "error_upper_95": 0.5615060804490177,
+   "readable": 44,
+   "right": 3,
+   "skipped": 3,
+   "values": 67,
+   "with_digits": 67,
+   "wrong_among_skipped": 0
+  }
+ },
+ "dataset": {
+  "attribution": "CORD: A Consolidated Receipt Dataset for Post-OCR Parsing. Park, Shin, Lee, Lee, Park, Seo, Oh, Kim, Lee. Document Intelligence Workshop at NeurIPS 2019.",
+  "documents": 100,
+  "license": "CC BY 4.0",
+  "license_checked": "2026-11-01",
+  "name": "CORD v2, test split",
+  "sampling": "The whole test split, in order. The train and validation splits were never read.",
+  "source": "https://huggingface.co/datasets/naver-clova-ix/cord-v2",
+  "source_file": "cord-test.parquet",
+  "source_sha256": "51c65f1788faff392abe2a0b55b023eb23e9be551c509138eaa3a832514224e7",
+  "what_it_is": "Real Indonesian shop and restaurant receipts, photographed and scanned. Store and payment details were removed by its authors, so only line items, subtotal, tax, discount and total have labels."
+ },
+ "documents": {
+  "all_labeled_right": 1,
+  "documents": 100,
+  "failed": 0,
+  "mean_seconds": 19.7,
+  "nothing_flagged": 0,
+  "rows_extra": 40,
+  "rows_labeled": 251,
+  "rows_missing": 145,
+  "with_labels": 100,
+  "wrong_though_nothing_flagged": 0
+ },
+ "git": {
+  "commit": "df9521ec9bf42ebc4bac26f3ffb577517c102b99",
+  "dirty": true
+ },
+ "model": {
+  "arch": "qwen35",
+  "id": "prism-ml/bonsai-27b",
+  "loaded_context_length": 8192,
+  "max_context_length": 262144,
+  "publisher": "prism-ml",
+  "quantization": "Q1_0",
+  "state": "loaded",
+  "type": "vlm"
+ },
+ "model_failures": {},
+ "model_settings": {
+  "images_sent_for_scans": false,
+  "max_tokens": 3500,
+  "strict_json_schema": true,
+  "temperature": 0.0
+ },
+ "no_tuning": "Run once with the pipeline, prompt, weights and threshold used on the held-out set.",
+ "run_created": "2026-11-01T17:09:58-0600",
+ "threshold": 0.9
+}

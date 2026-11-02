@@ -1,0 +1,18 @@
+{
+ "doc_id": "synthetic-badsums-0010-invoice-sidebar.clean",
+ "pdf_sha256": "057246887a1d6764c7814181b1d1efb3f123aa7ead264bb53093bb534ba72013",
+ "model": "prism-ml/bonsai-27b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": null,
+ "error_code": "truncated",
+ "error_message": "The model ran out of tokens before finishing its answer.",
+ "raw_text_if_invalid": null,
+ "seconds": null,
+ "attempts": null,
+ "prompt_tokens": null,
+ "completion_tokens": null,
+ "finish_reason": null,
+ "images_sent": 0,
+ "text_seconds": 2.8,
+ "failure_history": []
+}

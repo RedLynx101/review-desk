@@ -1,0 +1,107 @@
+{
+ "doc_id": "synthetic-badsums-0000-invoice-classic.scanned",
+ "pdf_sha256": "db49d04a3f8b86f2ea9070bd249195e54c6090ddab0f2a3cbf83b64396666284",
+ "model": "prism-ml/bonsai-27b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "invoice",
+  "vendor_name": {
+   "text": "Sprocketmoor Signal Repair Co.",
+   "line": 1
+  },
+  "document_number": {
+   "text": "00043718",
+   "line": 3
+  },
+  "issue_date": {
+   "text": "Sep 7, 2025",
+   "line": 4
+  },
+  "due_date": {
+   "text": "Nov 6, 2025",
+   "line": 6
+  },
+  "purchase_order": {
+   "text": "037294",
+   "line": 7
+  },
+  "bill_to_name": {
+   "text": "Testwick Model Railway Guild",
+   "line": 10
+  },
+  "currency": {
+   "text": "$",
+   "line": 19
+  },
+  "subtotal": {
+   "text": "2,686.32",
+   "line": 19
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": null,
+   "line": null
+  },
+  "tax": [
+   {
+    "text": "221.62",
+    "line": 20
+   }
+  ],
+  "total": {
+   "text": "2,907.94",
+   "line": 21
+  },
+  "line_items": [
+   {
+    "description": "Replacement relay module, 24 V",
+    "quantity": "8",
+    "unit_price": "48.79",
+    "amount": "390.32",
+    "line": 14
+   },
+   {
+    "description": "On-site diagnostic visit",
+    "quantity": "2",
+    "unit_price": "195.81",
+    "amount": "391.62",
+    "line": 15
+   },
+   {
+    "description": "On-site diagnostic visit (lot 2)",
+    "quantity": "2",
+    "unit_price": "115.63",
+    "amount": "232.26",
+    "line": 16
+   },
+   {
+    "description": "On-site diagnostic visit (lot 3)",
+    "quantity": "2",
+    "unit_price": "117.50",
+    "amount": "235.00",
+    "line": 17
+   },
+   {
+    "description": "Preventive maintenance, includes filter swap and belt inspection",
+    "quantity": "4",
+    "unit_price": "359.28",
+    "amount": "1,437.12",
+    "line": 18
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 29.0,
+ "attempts": 1,
+ "prompt_tokens": 1000,
+ "completion_tokens": 703,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 1.6,
+ "failure_history": []
+}

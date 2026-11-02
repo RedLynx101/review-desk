@@ -1,0 +1,114 @@
+{
+ "doc_id": "synthetic-badsums-0007-invoice-classic.degraded",
+ "pdf_sha256": "aeaaf44fa4a72f9dbbdd1e03b12b5d2f1825c6d999c516cf04425e5b8994348b",
+ "model": "prism-ml/bonsai-27b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "invoice",
+  "vendor_name": {
+   "text": "Hazelknot Cartage & Freight .        GmbH",
+   "line": 1
+  },
+  "document_number": {
+   "text": "RS41545",
+   "line": 3
+  },
+  "issue_date": {
+   "text": "24.01.2026",
+   "line": 5
+  },
+  "due_date": {
+   "text": "31.01.2026",
+   "line": 6
+  },
+  "purchase_order": {
+   "text": "K1703",
+   "line": 7
+  },
+  "bill_to_name": {
+   "text": "Fictitia Sampleton",
+   "line": 10
+  },
+  "currency": {
+   "text": "$",
+   "line": 21
+  },
+  "subtotal": {
+   "text": "2.607,87 \u20ac",
+   "line": 29
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": null,
+   "line": null
+  },
+  "tax": [
+   {
+    "text": "$21,57 \u20ac",
+    "line": 30
+   }
+  ],
+  "total": {
+   "text": "3.129,44 \u20ac",
+   "line": 31
+  },
+  "line_items": [
+   {
+    "description": "Local cartage, per stop",
+    "quantity": "6",
+    "unit_price": "48,98",
+    "amount": "303,88",
+    "line": 15
+   },
+   {
+    "description": "Liftgate service",
+    "quantity": "3",
+    "unit_price": "71,32",
+    "amount": "213,96",
+    "line": 17
+   },
+   {
+    "description": "Fuel surcharge",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "$130,73",
+    "line": 21
+   },
+   {
+    "description": "Crating. custom size",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "179,74",
+    "line": 23
+   },
+   {
+    "description": "Crating, custom size (lot 2)",
+    "quantity": "3",
+    "unit_price": "192,37",
+    "amount": "$77.11",
+    "line": 25
+   },
+   {
+    "description": "Crating, castom size (lot 3)",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "179,74",
+    "line": 27
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 41.9,
+ "attempts": 1,
+ "prompt_tokens": 1054,
+ "completion_tokens": 736,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 3.3,
+ "failure_history": []
+}

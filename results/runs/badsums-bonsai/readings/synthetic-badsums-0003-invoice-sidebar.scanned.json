@@ -1,0 +1,100 @@
+{
+ "doc_id": "synthetic-badsums-0003-invoice-sidebar.scanned",
+ "pdf_sha256": "0148e16bf220a4cb6667a02a36597a5d7bfd09c1d85e81235c177bcf579e759f",
+ "model": "prism-ml/bonsai-27b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "invoice",
+  "vendor_name": {
+   "text": "Instruments Inc.",
+   "line": 3
+  },
+  "document_number": {
+   "text": "UH09503",
+   "line": 10
+  },
+  "issue_date": {
+   "text": "March 3, 2025",
+   "line": 14
+  },
+  "due_date": {
+   "text": "April 17, 2025",
+   "line": 18
+  },
+  "purchase_order": {
+   "text": null,
+   "line": null
+  },
+  "bill_to_name": {
+   "text": "Lorem Springs Dental Cooperative",
+   "line": 5
+  },
+  "currency": {
+   "text": "$",
+   "line": 20
+  },
+  "subtotal": {
+   "text": "2,884.94",
+   "line": 20
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": null,
+   "line": null
+  },
+  "tax": [
+   {
+    "text": null,
+    "line": null
+   }
+  ],
+  "total": {
+   "text": "2,884.94",
+   "line": 22
+  },
+  "line_items": [
+   {
+    "description": "Thermocouple probe, type K",
+    "quantity": "6",
+    "unit_price": "46.97",
+    "amount": "281.82",
+    "line": 11
+   },
+   {
+    "description": "Annual calibration certificate",
+    "quantity": "5",
+    "unit_price": "72.53",
+    "amount": "362.65",
+    "line": 13
+   },
+   {
+    "description": "Data logger, four channel",
+    "quantity": "2",
+    "unit_price": "468.44",
+    "amount": "936.88",
+    "line": 15
+   },
+   {
+    "description": "Data logger, four channel (lot 2)",
+    "quantity": "3",
+    "unit_price": "434.53",
+    "amount": "1,310.59",
+    "line": 18
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 32.0,
+ "attempts": 1,
+ "prompt_tokens": 986,
+ "completion_tokens": 612,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 2.5,
+ "failure_history": []
+}

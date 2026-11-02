@@ -88,12 +88,14 @@ class Recorder:
         self.resume()
 
     def resume(self) -> None:
+        # A late frame can arrive after a pause, so the cut goes on whichever frame came last.
+        if self.frames:
+            self.cuts.add(len(self.frames) - 1)
         self.session.send("Page.startScreencast", {"format": "jpeg", "quality": 95, "everyNthFrame": 1})
 
     def pause(self) -> None:
-        """Leave the wait out of the video, so the frame before it doesn't hold for the whole wait."""
+        """Leave a wait out of the video. The frame before it holds briefly rather than for the whole wait."""
         self.session.send("Page.stopScreencast")
-        self.cuts.add(len(self.frames) - 1)
 
     def _frame(self, event: dict) -> None:
         path = self.folder / f"f{len(self.frames):05d}.jpg"
@@ -133,10 +135,13 @@ def closing_card(results: Path) -> str:
         for label, skip, wrong, error, warn in rows
     )
     outside = []
+    receipts_note = ""
     for name, label in (("cord-test.json", "Real receipts (CORD v2, labeled fields only)"), ("fatura-sample.json", "Template-generated invoices (FATURA, sample)")):
         path = results / "outside" / name
         if path.is_file():
             block = json.loads(path.read_text(encoding="utf-8"))["all"]
+            if name == "cord-test.json":
+                receipts_note = f"<p class='heavy'>Real receipt photos: {block['right'] / block['values']:.1%} of labeled values came out right, so a person checks nearly everything.</p>"
             outside.append(
                 f"<tr><th>{html.escape(label)}</th><td>{block['coverage']:.1%}</td><td>{block['wrong_among_skipped']} of {block['skipped']}</td><td>{block['error']:.2%}</td></tr>"
             )
@@ -146,14 +151,14 @@ def closing_card(results: Path) -> str:
     )
     return f"""<!doctype html><meta charset="utf-8"><title>Results</title><style>
     html,body{{margin:0;height:100%;background:#f8fafc;color:#0f172a;font-family:"Segoe UI",system-ui,sans-serif}}
-    main{{box-sizing:border-box;width:{WIDTH}px;height:{HEIGHT}px;padding:54px 110px;display:flex;flex-direction:column;justify-content:center}}
+    main{{box-sizing:border-box;width:{WIDTH}px;height:{HEIGHT}px;padding:36px 110px;display:flex;flex-direction:column;justify-content:center}}
     h1{{font-size:38px;margin:0 0 8px;font-weight:650}} p{{margin:0}} .sub{{font-size:19px;color:#475569;margin-bottom:26px}}
     h2{{font-size:18px;font-weight:600;color:#334155;margin:24px 0 6px}}
     table{{border-collapse:collapse;width:100%;font-size:22px;background:#fff;border:1px solid #e2e8f0}}
     th,td{{padding:12px 20px;border-bottom:1px solid #e2e8f0;text-align:right;font-weight:400}} th{{text-align:left}}
     thead th,thead td{{font-size:15px;color:#475569;font-weight:600;text-align:right}} thead th:first-child{{text-align:left}}
     tr.warn th,tr.warn td{{background:#fff7ed;color:#9a3412;font-weight:650}}
-    .heavy{{font-size:23px;line-height:1.35;margin-top:22px;color:#9a3412;font-weight:600}}
+    .heavy{{font-size:22px;line-height:1.35;margin-top:16px;color:#9a3412;font-weight:600}}
     .foot{{font-size:18px;color:#475569;margin-top:20px}}
     </style><main>
     <h1>What the held-out test measured</h1>
@@ -161,6 +166,7 @@ def closing_card(results: Path) -> str:
     <table><thead><tr><th></th><td>Skip review</td><td>Wrong among skipped</td><td>Error</td></tr></thead><tbody>{cells}</tbody></table>
     {outside_table}
     <p class="heavy">Heavy scan damage: {heavy_right:.1%} of printed values came out right. A damaged scan needs a person on every value, whatever its score says.</p>
+    {receipts_note}
     <p class="foot">No client deployment yet. Built with AI coding agents under Noah Hicks's review.</p>
     </main>"""
 

@@ -1,0 +1,86 @@
+{
+ "doc_id": "synthetic-badsums-0005-receipt-pos_wide.degraded",
+ "pdf_sha256": "a0374a93763db068881d2c9c3e1f303da813e59ae5cfc646df252411abbf55af",
+ "model": "prism-ml/bonsai-27b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "receipt",
+  "vendor_name": {
+   "text": ".        Stationers .        Inc.        Pig\nTurnipshire",
+   "line": 2
+  },
+  "document_number": {
+   "text": "1349",
+   "line": 8
+  },
+  "issue_date": {
+   "text": "December 2, 2025",
+   "line": 7
+  },
+  "due_date": {
+   "text": null,
+   "line": null
+  },
+  "purchase_order": {
+   "text": null,
+   "line": null
+  },
+  "bill_to_name": {
+   "text": null,
+   "line": null
+  },
+  "currency": {
+   "text": "$",
+   "line": 16
+  },
+  "subtotal": {
+   "text": "29.99",
+   "line": 12
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": null,
+   "line": null
+  },
+  "tax": [
+   {
+    "text": "$3.00",
+    "line": 15
+   }
+  ],
+  "total": {
+   "text": "$32.99",
+   "line": 16
+  },
+  "line_items": [
+   {
+    "description": "Fountain    ink",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "29.99",
+    "line": 12
+   },
+   {
+    "description": "pen",
+    "quantity": "1",
+    "unit_price": null,
+    "amount": null,
+    "line": 13
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 25.0,
+ "attempts": 1,
+ "prompt_tokens": 843,
+ "completion_tokens": 449,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 1.4,
+ "failure_history": []
+}

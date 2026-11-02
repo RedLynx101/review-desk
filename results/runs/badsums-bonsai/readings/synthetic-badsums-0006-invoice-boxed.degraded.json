@@ -1,0 +1,79 @@
+{
+ "doc_id": "synthetic-badsums-0006-invoice-boxed.degraded",
+ "pdf_sha256": "a96b16546b1b4dab227dddbcd1426296d11817f96b32441b8a331fd9c4fc3f1a",
+ "model": "prism-ml/bonsai-27b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "invoice",
+  "vendor_name": {
+   "text": "Ravelstitch Sign Painters & Sons Ltd",
+   "line": 1
+  },
+  "document_number": {
+   "text": "INV-2024-94742",
+   "line": 9
+  },
+  "issue_date": {
+   "text": "27 November 2024",
+   "line": 8
+  },
+  "due_date": {
+   "text": null,
+   "line": null
+  },
+  "purchase_order": {
+   "text": null,
+   "line": null
+  },
+  "bill_to_name": {
+   "text": "Lorem Springs Dental Cooperative",
+   "line": 12
+  },
+  "currency": {
+   "text": "$",
+   "line": 23
+  },
+  "subtotal": {
+   "text": null,
+   "line": null
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": null,
+   "line": null
+  },
+  "tax": [
+   {
+    "text": null,
+    "line": null
+   }
+  ],
+  "total": {
+   "text": null,
+   "line": null
+  },
+  "line_items": [
+   {
+    "description": "window sign",
+    "quantity": null,
+    "unit_price": null,
+    "amount": null,
+    "line": 21
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 22.2,
+ "attempts": 1,
+ "prompt_tokens": 888,
+ "completion_tokens": 387,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 3.0,
+ "failure_history": []
+}

@@ -1,0 +1,93 @@
+{
+ "doc_id": "synthetic-badsums-0009-invoice-banner.clean",
+ "pdf_sha256": "c67eb86a2ef0b4cee37437f492a8f911dc66276863d7c8d347fd8bfc1b7ea1e7",
+ "model": "prism-ml/bonsai-27b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "invoice",
+  "vendor_name": {
+   "text": "Sprocketmoor Paper Goods Inc.",
+   "line": 1
+  },
+  "document_number": {
+   "text": "00050090",
+   "line": 5
+  },
+  "issue_date": {
+   "text": "2024-02-18",
+   "line": 5
+  },
+  "due_date": {
+   "text": "2024-02-25",
+   "line": 5
+  },
+  "purchase_order": {
+   "text": null,
+   "line": null
+  },
+  "bill_to_name": {
+   "text": "Sample Q. Customer\n615 Hypothetical Way\nMockford, ZZ 00026",
+   "line": 9
+  },
+  "currency": {
+   "text": "$",
+   "line": 16
+  },
+  "subtotal": {
+   "text": "$900.73",
+   "line": 16
+  },
+  "discount": {
+   "text": "-$90.07",
+   "line": 17
+  },
+  "shipping": {
+   "text": null,
+   "line": null
+  },
+  "tax": [
+   {
+    "text": "$81.07",
+    "line": 18
+   }
+  ],
+  "total": {
+   "text": "$891.73",
+   "line": 19
+  },
+  "line_items": [
+   {
+    "description": "Kraft envelopes, 9 x 12, box of 250",
+    "quantity": "14",
+    "unit_price": "36.52",
+    "amount": "511.28",
+    "line": 13
+   },
+   {
+    "description": "Kraft envelopes, 9 x 12, box of 250 (lot 2)",
+    "quantity": "12",
+    "unit_price": "28.25",
+    "amount": "339.00",
+    "line": 14
+   },
+   {
+    "description": "Index tabs, assorted colors",
+    "quantity": "15",
+    "unit_price": "3.23",
+    "amount": "50.45",
+    "line": 15
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 35.3,
+ "attempts": 1,
+ "prompt_tokens": 1001,
+ "completion_tokens": 607,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 1.1,
+ "failure_history": []
+}

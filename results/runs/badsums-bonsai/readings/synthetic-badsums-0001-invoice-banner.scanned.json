@@ -1,0 +1,79 @@
+{
+ "doc_id": "synthetic-badsums-0001-invoice-banner.scanned",
+ "pdf_sha256": "bb0c49e3c7afd05f880b8cedddcc65c39997ac21516986728ad861d262da33ae",
+ "model": "prism-ml/bonsai-27b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "invoice",
+  "vendor_name": {
+   "text": "Marrowfen Field Instruments LLC S",
+   "line": 4
+  },
+  "document_number": {
+   "text": "ZZ-0214-D",
+   "line": 11
+  },
+  "issue_date": {
+   "text": "2025-02-06",
+   "line": 11
+  },
+  "due_date": {
+   "text": "2025-02-13",
+   "line": 11
+  },
+  "purchase_order": {
+   "text": "K9725",
+   "line": 11
+  },
+  "bill_to_name": {
+   "text": "Testa McExample",
+   "line": 15
+  },
+  "currency": {
+   "text": "$",
+   "line": 20
+  },
+  "subtotal": {
+   "text": "$87.12",
+   "line": 20
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": null,
+   "line": null
+  },
+  "tax": [
+   {
+    "text": "$7.19",
+    "line": 21
+   }
+  ],
+  "total": {
+   "text": "$94.40",
+   "line": 22
+  },
+  "line_items": [
+   {
+    "description": "Carrying case, foam lined",
+    "quantity": "1",
+    "unit_price": "87.12",
+    "amount": "87.12",
+    "line": 19
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 21.3,
+ "attempts": 1,
+ "prompt_tokens": 946,
+ "completion_tokens": 437,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 2.3,
+ "failure_history": []
+}

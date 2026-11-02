@@ -1,0 +1,93 @@
+{
+ "doc_id": "synthetic-badsums-0008-receipt-card_slip.clean",
+ "pdf_sha256": "6ac4be685bd4d7fb6bee9116cb909066e99fcc2d32e6c6ccf731efc863132c43",
+ "model": "prism-ml/bonsai-27b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "receipt",
+  "vendor_name": {
+   "text": "Sprocketmoor Stationers GmbH",
+   "line": 2
+  },
+  "document_number": {
+   "text": "#TXN0880814",
+   "line": 5
+  },
+  "issue_date": {
+   "text": "15.03.2024",
+   "line": 4
+  },
+  "due_date": {
+   "text": null,
+   "line": null
+  },
+  "purchase_order": {
+   "text": null,
+   "line": null
+  },
+  "bill_to_name": {
+   "text": null,
+   "line": null
+  },
+  "currency": {
+   "text": "\u20ac",
+   "line": 4
+  },
+  "subtotal": {
+   "text": "37,90 \u20ac",
+   "line": 9
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": null,
+   "line": null
+  },
+  "tax": [
+   {
+    "text": "TVA 20%        7,58 \u20ac",
+    "line": 10
+   }
+  ],
+  "total": {
+   "text": "45,48 \u20ac",
+   "line": 11
+  },
+  "line_items": [
+   {
+    "description": "Paper clips, tin",
+    "quantity": "x 3",
+    "unit_price": null,
+    "amount": "10,75 \u20ac",
+    "line": 6
+   },
+   {
+    "description": "Sketchbook, A5",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "9,49 \u20ac",
+    "line": 7
+   },
+   {
+    "description": "Gel pens, 6 pack",
+    "quantity": "x 3",
+    "unit_price": null,
+    "amount": "24,66 \u20ac",
+    "line": 8
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 30.7,
+ "attempts": 1,
+ "prompt_tokens": 825,
+ "completion_tokens": 527,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 0.8,
+ "failure_history": []
+}

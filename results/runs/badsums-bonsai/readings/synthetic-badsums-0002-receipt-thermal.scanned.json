@@ -1,0 +1,128 @@
+{
+ "doc_id": "synthetic-badsums-0002-receipt-thermal.scanned",
+ "pdf_sha256": "d4a16d434006ede1ba2b6298842e505be0a1bd656b213e388a936d7fcf58d062",
+ "model": "prism-ml/bonsai-27b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "receipt",
+  "vendor_name": {
+   "text": "BUMBLEWICK BAKEHOUSE  CO.",
+   "line": 1
+  },
+  "document_number": {
+   "text": "Receipt 12-2-65508",
+   "line": 7
+  },
+  "issue_date": {
+   "text": "06/11/2025",
+   "line": 6
+  },
+  "due_date": {
+   "text": null,
+   "line": null
+  },
+  "purchase_order": {
+   "text": null,
+   "line": null
+  },
+  "bill_to_name": {
+   "text": null,
+   "line": null
+  },
+  "currency": {
+   "text": "$",
+   "line": 17
+  },
+  "subtotal": {
+   "text": "$40.36",
+   "line": 17
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": null,
+   "line": null
+  },
+  "tax": [
+   {
+    "text": "$2.62",
+    "line": 18
+   }
+  ],
+  "total": {
+   "text": "$51.98",
+   "line": 19
+  },
+  "line_items": [
+   {
+    "description": "Sourdough loaf",
+    "quantity": null,
+    "unit_price": "10.80",
+    "amount": null,
+    "line": 9
+   },
+   {
+    "description": "2  x   5.40",
+    "quantity": null,
+    "unit_price": null,
+    "amount": null,
+    "line": 10
+   },
+   {
+    "description": "Almond  croissant",
+    "quantity": null,
+    "unit_price": "8.26",
+    "amount": null,
+    "line": 11
+   },
+   {
+    "description": "2  x   4.13",
+    "quantity": null,
+    "unit_price": null,
+    "amount": null,
+    "line": 12
+   },
+   {
+    "description": "Rye  rolls,  half  doz",
+    "quantity": null,
+    "unit_price": "5.88",
+    "amount": null,
+    "line": 13
+   },
+   {
+    "description": "Quiche  slice",
+    "quantity": null,
+    "unit_price": "6.54",
+    "amount": null,
+    "line": 14
+   },
+   {
+    "description": "Oat  cookie",
+    "quantity": null,
+    "unit_price": "8.88",
+    "amount": null,
+    "line": 15
+   },
+   {
+    "description": "4  x   2.22",
+    "quantity": null,
+    "unit_price": null,
+    "amount": null,
+    "line": 16
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 37.6,
+ "attempts": 1,
+ "prompt_tokens": 915,
+ "completion_tokens": 774,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 1.2,
+ "failure_history": []
+}

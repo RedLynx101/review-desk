@@ -7,7 +7,14 @@ Start with [REPORT.md](REPORT.md), which `python -m review_desk.evaluation.compa
 |---|---|
 | `heldout-bonsai`, `heldout-granite` | The held-out set, run once per model. |
 | `dev-bonsai`, `dev-granite` | The dev runs used to pick the default model. |
+| `badsums-bonsai` | Added after the held-out run: a small synthetic set where every document carries a known arithmetic mistake, run once. |
 | `dev-first` | The first dev run, from before the prompt and scoring settled. Kept as history, with numbers that stand as of commit `eb20086`. |
+
+[outside/](outside/) holds aggregate counts for runs on two public datasets, also added after the held-out run. Their documents, labels,
+model answers and per-value scores hold the datasets' contents, so they aren't in this repo, and these two runs can't be rescored from it.
+`python -m review_desk.evaluation.outside` regenerates them from the source files, whose SHA-256 hashes are in the JSON. Each JSON's `git` block
+shows `dirty: true` because docs and result files were being written while those runs went on: `git diff 3d526ec df9521e -- src/review_desk`
+shows only the evaluation code and the generator's new split changed after the held-out run.
 
 One answer is edited by hand. On a degraded receipt in `heldout-granite`, OCR garbled a synthetic `(555) 555-01xx` number
 into digits that could belong to someone real, and Granite returned them as the vendor name. The first six digits are masked
@@ -30,4 +37,4 @@ python -m review_desk.synth generate --split dev --count 60
 python -m review_desk.evaluation score --split dev --run results/runs/<name>
 ```
 
-OCR output is cached under `data/cache/`, which isn't committed, because it regenerates. The documents are synthetic throughout. Nothing here comes from a client.
+OCR output is cached under `data/cache/`, which isn't committed, because it regenerates. The documents under `runs/` are synthetic throughout. Nothing here comes from a client.

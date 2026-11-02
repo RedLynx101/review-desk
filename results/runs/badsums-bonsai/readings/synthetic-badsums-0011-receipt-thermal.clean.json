@@ -1,0 +1,114 @@
+{
+ "doc_id": "synthetic-badsums-0011-receipt-thermal.clean",
+ "pdf_sha256": "61e1fe6b61611bbc162ace398adebeb4b73010b865c21fd2f741f05de060eb6e",
+ "model": "prism-ml/bonsai-27b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "receipt",
+  "vendor_name": {
+   "text": "TINDERFOOT NOODLE BAR B.V.",
+   "line": 1
+  },
+  "document_number": {
+   "text": "R-000670",
+   "line": 8
+  },
+  "issue_date": {
+   "text": "05.02.2026",
+   "line": 7
+  },
+  "due_date": {
+   "text": null,
+   "line": null
+  },
+  "purchase_order": {
+   "text": null,
+   "line": null
+  },
+  "bill_to_name": {
+   "text": null,
+   "line": null
+  },
+  "currency": {
+   "text": "\u20ac",
+   "line": 18
+  },
+  "subtotal": {
+   "text": "52,09",
+   "line": 18
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": null,
+   "line": null
+  },
+  "tax": [
+   {
+    "text": "10,94",
+    "line": 19
+   }
+  ],
+  "total": {
+   "text": "63,12",
+   "line": 20
+  },
+  "line_items": [
+   {
+    "description": "Pork dumplings, 6",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "29,49",
+    "line": 11
+   },
+   {
+    "description": "3 x 9,83",
+    "quantity": null,
+    "unit_price": null,
+    "amount": null,
+    "line": 12
+   },
+   {
+    "description": "Miso noodle bowl",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "12,30",
+    "line": 13
+   },
+   {
+    "description": "Barley tea",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "7,20",
+    "line": 14
+   },
+   {
+    "description": "3 x 2,40",
+    "quantity": null,
+    "unit_price": null,
+    "amount": null,
+    "line": 15
+   },
+   {
+    "description": "Extra broth",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "3,10",
+    "line": 16
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 37.7,
+ "attempts": 1,
+ "prompt_tokens": 869,
+ "completion_tokens": 663,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 0.5,
+ "failure_history": []
+}

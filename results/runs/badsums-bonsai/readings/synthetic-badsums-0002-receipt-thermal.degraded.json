@@ -1,0 +1,79 @@
+{
+ "doc_id": "synthetic-badsums-0002-receipt-thermal.degraded",
+ "pdf_sha256": "283808956780c9766e841822ce91e99dd75c7c242dcd114271f076467a8fb7d2",
+ "model": "prism-ml/bonsai-27b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "invoice",
+  "vendor_name": {
+   "text": "BUMBLEWICK BAKEHOUSE CO.",
+   "line": 8
+  },
+  "document_number": {
+   "text": null,
+   "line": null
+  },
+  "issue_date": {
+   "text": null,
+   "line": null
+  },
+  "due_date": {
+   "text": null,
+   "line": null
+  },
+  "purchase_order": {
+   "text": null,
+   "line": null
+  },
+  "bill_to_name": {
+   "text": null,
+   "line": null
+  },
+  "currency": {
+   "text": null,
+   "line": null
+  },
+  "subtotal": {
+   "text": null,
+   "line": null
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": null,
+   "line": null
+  },
+  "tax": [
+   {
+    "text": "083.90",
+    "line": 42
+   }
+  ],
+  "total": {
+   "text": null,
+   "line": null
+  },
+  "line_items": [
+   {
+    "description": "Rye rolls, halt. doz",
+    "quantity": null,
+    "unit_price": null,
+    "amount": null,
+    "line": 34
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 20.6,
+ "attempts": 1,
+ "prompt_tokens": 1122,
+ "completion_tokens": 368,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 3.3,
+ "failure_history": []
+}

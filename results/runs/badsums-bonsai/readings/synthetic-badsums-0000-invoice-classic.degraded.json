@@ -1,0 +1,107 @@
+{
+ "doc_id": "synthetic-badsums-0000-invoice-classic.degraded",
+ "pdf_sha256": "3b939dacf0a4a534a867800fc0799aa26daaa23709d0925e490d67e288d52fae",
+ "model": "prism-ml/bonsai-27b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "invoice",
+  "vendor_name": {
+   "text": "Sprocketmoor Signal Repair Co.",
+   "line": 1
+  },
+  "document_number": {
+   "text": "00043718",
+   "line": 4
+  },
+  "issue_date": {
+   "text": "Sep 7 2025",
+   "line": 6
+  },
+  "due_date": {
+   "text": "Nov 6. 2025",
+   "line": 7
+  },
+  "purchase_order": {
+   "text": "037294",
+   "line": 8
+  },
+  "bill_to_name": {
+   "text": "Testwick Model Raitway Guild",
+   "line": 11
+  },
+  "currency": {
+   "text": "$",
+   "line": 5
+  },
+  "subtotal": {
+   "text": "32",
+   "line": 19
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": null,
+   "line": null
+  },
+  "tax": [
+   {
+    "text": "$221.62",
+    "line": 20
+   }
+  ],
+  "total": {
+   "text": "$2,907.94",
+   "line": 21
+  },
+  "line_items": [
+   {
+    "description": "reiay module,  24 V",
+    "quantity": "8",
+    "unit_price": "48.79",
+    "amount": "390.32",
+    "line": 14
+   },
+   {
+    "description": "vied",
+    "quantity": "2",
+    "unit_price": "195.81",
+    "amount": "391,62",
+    "line": 15
+   },
+   {
+    "description": "On-site Glagnostic visit (lot 2)",
+    "quantity": "2",
+    "unit_price": "115.63",
+    "amount": "232.26",
+    "line": 16
+   },
+   {
+    "description": "On-site Giagnostic visit (lot 3)",
+    "quantity": "2",
+    "unit_price": "117.50",
+    "amount": "235.00",
+    "line": 17
+   },
+   {
+    "description": "Preventive mamtenance. nciudes Mier swap and bell inspection",
+    "quantity": "4",
+    "unit_price": "359.28",
+    "amount": "1437.12",
+    "line": 18
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 29.0,
+ "attempts": 1,
+ "prompt_tokens": 990,
+ "completion_tokens": 702,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 1.9,
+ "failure_history": []
+}

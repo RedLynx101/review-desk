@@ -1,0 +1,93 @@
+{
+ "doc_id": "synthetic-badsums-0009-invoice-banner.scanned",
+ "pdf_sha256": "effab6a1df9a46f38ab0e7674ab15a13941b2b4b3ce0d95d05033238edb40aca",
+ "model": "prism-ml/bonsai-27b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "invoice",
+  "vendor_name": {
+   "text": "Paper Goods",
+   "line": 1
+  },
+  "document_number": {
+   "text": "00050090",
+   "line": 7
+  },
+  "issue_date": {
+   "text": "2024-02-18",
+   "line": 7
+  },
+  "due_date": {
+   "text": "2024-02-25",
+   "line": 7
+  },
+  "purchase_order": {
+   "text": null,
+   "line": null
+  },
+  "bill_to_name": {
+   "text": "Sample Q. Customer\n615 Hypothetical Way\nMockford, ZZ 00026",
+   "line": 11
+  },
+  "currency": {
+   "text": "$",
+   "line": 18
+  },
+  "subtotal": {
+   "text": "$900.73",
+   "line": 18
+  },
+  "discount": {
+   "text": "-$90.07",
+   "line": 19
+  },
+  "shipping": {
+   "text": null,
+   "line": null
+  },
+  "tax": [
+   {
+    "text": "$81.07",
+    "line": 20
+   }
+  ],
+  "total": {
+   "text": "$891.73",
+   "line": 21
+  },
+  "line_items": [
+   {
+    "description": "Kraft envelopes, 9 x 12, box of 250",
+    "quantity": "14",
+    "unit_price": "36.52",
+    "amount": "511.28",
+    "line": 15
+   },
+   {
+    "description": "Kraft envelopes, 9 x 12, box of 250 (lot 2)",
+    "quantity": "12",
+    "unit_price": "28.25",
+    "amount": "339.00",
+    "line": 16
+   },
+   {
+    "description": "Index tabs, assorted colors",
+    "quantity": "15",
+    "unit_price": "3.23",
+    "amount": "50.45",
+    "line": 17
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 33.9,
+ "attempts": 1,
+ "prompt_tokens": 998,
+ "completion_tokens": 602,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 3.1,
+ "failure_history": []
+}

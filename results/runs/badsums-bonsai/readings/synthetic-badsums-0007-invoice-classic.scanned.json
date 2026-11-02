@@ -1,0 +1,121 @@
+{
+ "doc_id": "synthetic-badsums-0007-invoice-classic.scanned",
+ "pdf_sha256": "b8d04dd8d1b167e73abb276e72b2826c2c6e61694c326e6a8b6ac847d7428cb0",
+ "model": "prism-ml/bonsai-27b",
+ "prompt_sha256": "83da1fd519d13bab",
+ "reading": {
+  "document_type": "invoice",
+  "vendor_name": {
+   "text": "Hazelknot Cartage & Freight GmbH",
+   "line": 2
+  },
+  "document_number": {
+   "text": "RS41545",
+   "line": 4
+  },
+  "issue_date": {
+   "text": "24.01.2026",
+   "line": 5
+  },
+  "due_date": {
+   "text": "31.01.2026",
+   "line": 6
+  },
+  "purchase_order": {
+   "text": "K1703",
+   "line": 8
+  },
+  "bill_to_name": {
+   "text": "Fictitia Sampleton",
+   "line": 11
+  },
+  "currency": {
+   "text": "\u20ac",
+   "line": 24
+  },
+  "subtotal": {
+   "text": "2.607,87 \u20ac",
+   "line": 22
+  },
+  "discount": {
+   "text": null,
+   "line": null
+  },
+  "shipping": {
+   "text": null,
+   "line": null
+  },
+  "tax": [
+   {
+    "text": "521,57 \u20ac",
+    "line": 23
+   }
+  ],
+  "total": {
+   "text": "3.129,44 \u20ac",
+   "line": 24
+  },
+  "line_items": [
+   {
+    "description": "Local cartage, per stop",
+    "quantity": "6",
+    "unit_price": "48,98",
+    "amount": "303,88",
+    "line": 15
+   },
+   {
+    "description": "Liftgate service",
+    "quantity": "3",
+    "unit_price": "71,32",
+    "amount": "213,96",
+    "line": 16
+   },
+   {
+    "description": "Fuel surcharge",
+    "quantity": "1",
+    "unit_price": "48,23",
+    "amount": "48,23",
+    "line": 17
+   },
+   {
+    "description": "Crating, custom size",
+    "quantity": null,
+    "unit_price": null,
+    "amount": "653,65",
+    "line": 18
+   },
+   {
+    "description": "Crating, custom size (lot 2)",
+    "quantity": "4",
+    "unit_price": "179,74",
+    "amount": "718,96",
+    "line": 19
+   },
+   {
+    "description": "Crating, custom size (lot 3)",
+    "quantity": "3",
+    "unit_price": "192,37",
+    "amount": "577,11",
+    "line": 20
+   },
+   {
+    "description": "Pallet storage, per week",
+    "quantity": "4",
+    "unit_price": "23,02",
+    "amount": "92,08",
+    "line": 21
+   }
+  ]
+ },
+ "error_code": null,
+ "error_message": null,
+ "raw_text_if_invalid": null,
+ "seconds": 45.0,
+ "attempts": 1,
+ "prompt_tokens": 1039,
+ "completion_tokens": 808,
+ "finish_reason": "stop",
+ "images_sent": 0,
+ "text_seconds": 3.0,
+ "failure_history": []
+}

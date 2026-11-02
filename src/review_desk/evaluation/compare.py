@@ -260,7 +260,9 @@ def outside_tables(summaries: list[dict]) -> list[str]:
         for field, entry in summary["by_field"].items():
             digits = _ratio(entry["digits_right"], entry["with_digits"]) if entry["with_digits"] else ""
             fields.append(f"| {name} | {field} | {entry['values']} | {_ratio(entry['right'], entry['values'])} | {digits} | {_ratio(entry['readable'], entry['values'])} | {_percent(entry['coverage'])} | {entry['wrong_among_skipped']} of {entry['skipped']} |")
-        documents.append(f"| {name} | {docs['documents']} | {docs['failed']} | {docs['all_labeled_right']} | {docs['nothing_flagged']} | {docs['wrong_though_nothing_flagged']} | {docs['rows_labeled']} | {docs['rows_missing']} | {docs['rows_extra']} | {docs['mean_seconds']:.0f} |")
+        # With no labeled rows, rows the model returned can't be called extra or missed.
+        rows = f"{docs['rows_labeled']} | {docs['rows_missing']} | {docs['rows_extra']}" if docs["rows_labeled"] else "not scored | not scored | not scored"
+        documents.append(f"| {name} | {docs['documents']} | {docs['failed']} | {docs['all_labeled_right']} | {docs['nothing_flagged']} | {docs['wrong_though_nothing_flagged']} | {rows} | {docs['mean_seconds']:.0f} |")
     return [*head, "", *fields, "", *documents]
 
 
@@ -279,13 +281,13 @@ def added_section(bad_sums: Run | None, heldout: Run, outside: list[dict]) -> li
         parts += [
             "### Documents this repo didn't generate",
             "",
-            f"Model `{', '.join(models)}`. Only fields the labels give are scored, so the numbers cover less than the synthetic ones do. \"Amount digits right\" counts an amount whose digits were read correctly even if its notation was parsed wrong, which separates a reading mistake from a parsing one.",
+            f"Model `{', '.join(models)}`. Only fields the labels give are scored, so the numbers cover less than the synthetic ones do. \"Amount digits right\" counts an amount whose digits were read correctly even if its notation was parsed wrong, which separates a reading mistake from a parsing one. In these runs the two columns match, so the misses are reading mistakes.",
             "",
         ]
         for summary in outside:
             dataset = summary["dataset"]
             parts.append(f"- **[{dataset['name']}]({dataset['source']})**, {dataset['license']} (checked {dataset['license_checked']}). {dataset['what_it_is']} {dataset['sampling']} Credit: {dataset['attribution']}")
-        parts += ["", *outside_tables(outside), "", "No document, label or model answer from either dataset is in this repo. The counts are in [outside/](outside/), and the model failures for each run are listed there.", ""]
+        parts += ["", *outside_tables(outside), "", "No document, label or model answer from either dataset is in this repo. The counts are in [outside/](outside/). Neither run had a model failure or a server crash.", ""]
     if bad_sums:
         base = len({d["base_id"] for d in bad_sums.documents})
         parts += [
@@ -295,12 +297,27 @@ def added_section(bad_sums: Run | None, heldout: Run, outside: list[dict]) -> li
             "",
             *bad_sum_table(bad_sums),
             "",
+            "On clean PDFs and light scans, every miss is a document where the model didn't return the values that check needs, or, once, ran out of tokens on a 36-row invoice. On each one, something else was still flagged. On degraded scans the values these checks need usually aren't read, so a result there says little either way.",
+            "",
             f"The same checks on {heldout.short}'s held-out documents, none of which has a bad sum. A failure here comes from a misread, and it costs a person's time rather than letting a mistake through:",
             "",
             *false_alarm_table(heldout),
             "",
         ]
     return parts
+
+
+def outside_summary(summaries: list[dict]) -> list[str]:
+    """The synthetic numbers flatter this pipeline, so the top of the report says so when it knows."""
+    lines = []
+    for summary in summaries:
+        block, docs = summary["all"], summary["documents"]
+        lines += [
+            f"**{summary['dataset']['name']}, added afterward:** {_ratio(block['right'], block['values'])} of labeled values came out right, and OCR could read {_percent(block['readable'] / block['values'])} of them. "
+            f"{_percent(block['coverage'])} skipped review, and {block['wrong_among_skipped']} of those {block['skipped']} were wrong ({_percent(block['error'], 2)}). {docs['nothing_flagged']} of {docs['documents']} documents passed with nothing flagged.",
+            "",
+        ]
+    return lines
 
 
 def summary_lines(default_run: Run, runs: list[Run]) -> list[str]:
@@ -367,13 +384,15 @@ def render(dev_runs: list[Run], heldout_runs: list[Run], choice: dict, *, bad_su
     parts = [
         "# Accuracy report",
         "",
-        "Every document here is synthetic: generated from a seed, with invented names and known answers. Nothing here comes from a client, and "
-        "there's no client deployment yet. These numbers say how the pipeline does on these documents. They don't predict any particular business's paperwork.",
+        ("The held-out documents are synthetic: generated from a seed, with invented names and known answers. A later section adds two public datasets. " if outside else
+         "Every document here is synthetic: generated from a seed, with invented names and known answers. ") +
+        "Nothing here comes from a client, and there's no client deployment yet. These numbers say how the pipeline does on these documents. They don't predict any particular business's paperwork.",
         "",
         f"**Default model: `{choice['default']}`.** {choice['reason']}" + ("" if choice["bar_met"] else " The bar wasn't met."),
         "",
         *summary_lines(default_run, heldout_runs),
         "",
+        *outside_summary(outside),
         "## Setup",
         "",
         f"- Held-out set: {base} base documents, each rendered clean, scanned and degraded, {len(heldout_runs[0].documents)} renderings per model. The split has its own vendor names and three layouts that were never rendered while tuning. Each model ran it once.",
